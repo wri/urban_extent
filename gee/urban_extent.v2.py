@@ -24,8 +24,8 @@ CITY_CENTROIDS_ID='projects/wri-datalab/AUE/city_data-2010pop100k'
 
 
 MAX_INFLUENCE_DISTANCE=2000
+MIN_INFLUENCE_DISTANCE=100
 GROWTH_RATE=0.1
-MIN_BUFF=100
 GREEN_ZONE=100
 MAX_ERROR=1
 MAX_BUFFER_ERROR=10
@@ -118,12 +118,6 @@ def geom_contains_pixels(geom,im):
   ).getNumber('count').gt(0)
 
 
-# *****************
-# NEW
-# *****************
-
-
-
 def get_influence_distance(geom):
   return ee.Geometry(geom).area(MAX_ERROR).sqrt().multiply(GROWTH_RATE)
 
@@ -133,26 +127,14 @@ def get_influence_distance(geom):
 #
 # MAIN
 #
-
-# *****************
-
-#
-# 1. Select City, Get Centroid
-#
 def city_extent(city_name):
-
     city=cities.filter(ee.Filter.eq('City Name',city_name)).first()
     centroid=city.geometry()
-    # print(city.toDictionary().getInfo(),centroid.getInfo())
-
-
-
     #
-    # 2. URBAN/SUBURBAN IMAGE
+    # URBAN/SUBURBAN IMAGE:
     # => usubu: 0 rural, 1 suburban, 2 urban
     # => city_center: nearest non-null centroid
     #
-
     usubu_rededucer=ee.Reducer.mean()
     usubu_kernel=ee.Kernel.circle(
       radius=math.ceil(584/SCALE), 
@@ -160,7 +142,6 @@ def city_extent(city_name):
       normalize=True,
       magnitude=1
     )
-    # usubuc=bu.unmask(0).reduceNeighborhood(
     usubuc=bu.unmask(0).updateMask(not_water).reduceNeighborhood(
       reducer=usubu_rededucer,
       kernel=usubu_kernel,
@@ -169,18 +150,13 @@ def city_extent(city_name):
 
     usubu=ee.Image(0).where(usubuc.gte(0.25).And(usubuc.lt(0.5)),1).where(usubuc.gte(0.5),2)
     city_center=nearest_non_null(centroid,usubu.selfMask())
-
-
-
-
-
-
-    # 4. Select all of built-up pixels that are contiguous to p0, and merge these pixels to create study area s1. 
-    # >>> already since no rural pix: Merge the contiguous suburban and urban pixels in s1 to create interim cluster t1. 
-
+    #
+    # VECTORIZE:
+    # s1: features containing city_center
+    # sN: features not containing city_center
+    #
     MIN_CC=5
     geom=city_center.buffer(KM_RADIUS*1000,MAX_BUFFER_ERROR)
-    # cc=bu.connectedPixelCount(MIN_CC,True).reproject(bu.projection()).eq(MIN_CC)
     cc=bu.connectedPixelCount(MIN_CC,True).eq(MIN_CC)
     feats=cc.selfMask().reduceToVectors(
       reducer=ee.Reducer.countEvery(),
@@ -194,48 +170,23 @@ def city_extent(city_name):
     s1=feats.filter(center_filter)
     sN=feats.filter(center_filter.Not())
 
-
-    # # 5. Incorporate urbanized open spaces by 
-    # # - adding a 100 meter fringe open space buffer to interim cluster t1, === buffer t1 100 meter
-    # # - filling holes
-
+    # Incorporate urbanized open spaces by 
+    # - adding a 100 meter fringe open space buffer to interim cluster t1, === buffer t1 100 meter
+    # - filling holes
     s1=ee.FeatureCollection(h.flatten_to_polygons(s1))
     s1=s1.map(fill_small,True)
     g1=s1.geometry().buffer(GREEN_ZONE,MAX_BUFFER_ERROR)
     s1=ee.FeatureCollection([ee.Feature(g1)])
     d1=get_influence_distance(g1)
-
-
-
-    # print('boomtown')
-    # print(ee.Dictionary({
-    #   'd1': d1,
-    #   's1': s1.size(),
-    #   # 'sn':sN.size(),
-    #   # 'sn_infl':sN_infl.size(),
-    #   # 'example':sN_infl.first().toDictionary()
-    # }).getInfo())
-
     #
     # get all regions where the sum of the influence zones overlap
     #
-
     sN=sN.filter(ee.Filter.withinDistance(
       distance=MAX_INFLUENCE_DISTANCE, 
       leftField='.geo',
       rightValue=g1, 
       maxError=1
     ))
-
-
-    # print('boomtown1')
-    # print(ee.Dictionary({
-    #   # 'd1': d1,
-    #   # 's1': s1.size(),
-    #   'sn':sN.size(),
-    #   # 'sn_infl':sN_infl.size(),
-    #   # 'example':sN_infl.first().toDictionary()
-    # }).getInfo())
 
     def _influence_check(f):
       f=ee.Feature(f)
@@ -244,24 +195,11 @@ def city_extent(city_name):
       test=g1.withinDistance(right=g, distance=d1.add(d), maxError=MAX_ERROR)
       return ee.Algorithms.If(test,f.set('influence_distance',d),None)
 
-
     sN_infl=sN.map(_influence_check,True)
-
-    # print('boomtown2')
-    # print(ee.Dictionary({
-    #   # 'd1': d1,
-    #   # 'sn':sN.size(),
-    #   'sn_infl':sN_infl.size(),
-    #   'example':sN_infl.first().toDictionary()
-    # }).getInfo())
-
-
-    # #
-    # # only keep polygons containing urban pix
-    # #
+    # 
+    # only keep polygons containing urban pix
+    #
     urban=usubu.eq(2).selfMask()
-
-
     def has_urban_pixel(feat):
       return geom_contains_pixels(ee.Feature(feat).geometry(),urban)
 
@@ -270,23 +208,11 @@ def city_extent(city_name):
         's1_influence_distance': d1
     }
     #
-    # COMBINE FEATURES
+    # combine features
     #
-    # print(ee.Dictionary(data).getInfo())
-
     feats=ee.FeatureCollection([s1,sN_urbn]).flatten()
-
-    # print('bOOM')
-    # print(ee.Dictionary({
-    #   'feats':feats.size(),
-    #   'feat':feats.first().toDictionary()
-    # }).getInfo())
-
     return ee.Feature(feats.geometry(maxError=MAX_ERROR).dissolve(MAX_ERROR)).copyProperties(city).set(data)
 
-# out=city_extent(CITY_NAMES[0])
-# print('kapow')
-# print(ee.Feature(out).toDictionary().getInfo())
 
 features=ee.FeatureCollection(ee.List(CITY_NAMES).map(city_extent))
 
