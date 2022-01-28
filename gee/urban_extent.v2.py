@@ -21,33 +21,43 @@ MINBUFF=1000
 CITY_CENTROIDS_ID='projects/wri-datalab/AUE/city_data-2010pop100k'
 
 
+
+
+MAX_INFLUENCE_DISTANCE=2000
+GROWTH_RATE=0.1
+MIN_BUFF=100
+GREEN_ZONE=100
+MAX_ERROR=1
+MAX_BUFFER_ERROR=10
+
+
 # dw=ee.ImageCollection('GOOGLE/DYNAMICWORLD/V1')
 # not_water=dw.select(['label']).filterDate('2018-01-01','2018-07-01').reduce(ee.Reducer.mode()).neq(0)
 inlandwater=ee.ImageCollection("GLCF/GLS_WATER").reduce(ee.Reducer.firstNonNull())
 not_water=inlandwater.neq(2)
 
 
-# CITY_NAMES=['Medan','Shenzhen, Guangdong']
+CITY_NAMES=['Medan','Shenzhen, Guangdong']
 # CITY_NAMES=['Shenzhen, Guangdong']
 # CITY_NAMES=['Medan']
-# asset_name=f'ue_ghsl_{KM_RADIUS}-{SCALE}'+'MedanShenzhen'
+asset_name=f'v2_{KM_RADIUS}-{SCALE}'+'MedanShenzhen'
 
 
 #
 # ASSETS
 #
 cities=ee.FeatureCollection(CITY_CENTROIDS_ID).sort('City Name')
-ALL_NAMES=cities.toList(6000).map(lambda c: ee.Feature(c).get('City Name')).getInfo()
-print('NAME COUNT:',len(ALL_NAMES))
-MATCHED_NAMES=[n for n in data.AUE_CITIES if n in ALL_NAMES]
-print('MATCHED COUNT:',len(MATCHED_NAMES))
-CITY_NAMES=MATCHED_NAMES[N*BS:(N+1)*BS]
-print(N*BS,(N+1)*BS,CITY_NAMES)
+# ALL_NAMES=cities.toList(6000).map(lambda c: ee.Feature(c).get('City Name')).getInfo()
+# print('NAME COUNT:',len(ALL_NAMES))
+# MATCHED_NAMES=[n for n in data.AUE_CITIES if n in ALL_NAMES]
+# print('MATCHED COUNT:',len(MATCHED_NAMES))
+# CITY_NAMES=MATCHED_NAMES[N*BS:(N+1)*BS]
+# print(N*BS,(N+1)*BS,CITY_NAMES)
 
-asset_name=f'ue_wsl-water_msk_r{KM_RADIUS}_s{SCALE}_n{BS}-{N+1}'
+# asset_name=f'ue_wsl-water_msk_r{KM_RADIUS}_s{SCALE}_n{BS}-{N+1}'
 
-CITY_NAMES=['Alexandria']
-asset_name=f'ue_joint-Alexandria_pix_inw_mb_{MINBUFF}_r{KM_RADIUS}_s{SCALE}_n{BS}-{N+1}'
+# CITY_NAMES=['Alexandria']
+# asset_name=f'ue_joint_v2-Alexandria_pix_inw_mb_{MINBUFF}_r{KM_RADIUS}_s{SCALE}_n{BS}-{N+1}'
 
 
 print(asset_name,CITY_NAMES)
@@ -89,7 +99,7 @@ def nearest_non_null(centroid,im,max_distance=MAX_NNN_DISTANCE,scale=SCALE):
     distance_im=ee.FeatureCollection([centroid]).distance(max_distance)
     nearest=distance_im.addBands(ee.Image.pixelLonLat()).updateMask(im).reduceRegion(
       reducer=ee.Reducer.min(3), 
-      geometry=centroid.buffer(max_distance), 
+      geometry=centroid.buffer(max_distance,MAX_BUFFER_ERROR), 
       scale=scale
     )
     return ee.Geometry.Point([nearest.getNumber('min1'), nearest.getNumber('min2')])
@@ -106,6 +116,17 @@ def geom_contains_pixels(geom,im):
     geometry=ee.Geometry(geom),
     scale=SCALE
   ).getNumber('count').gt(0)
+
+
+# *****************
+# NEW
+# *****************
+
+
+
+def get_influence_distance(geom):
+  return ee.Geometry(geom).area(MAX_ERROR).sqrt().multiply(GROWTH_RATE)
+
 
 
 
@@ -158,7 +179,7 @@ def city_extent(city_name):
     # >>> already since no rural pix: Merge the contiguous suburban and urban pixels in s1 to create interim cluster t1. 
 
     MIN_CC=5
-    geom=city_center.buffer(KM_RADIUS*1000)
+    geom=city_center.buffer(KM_RADIUS*1000,MAX_BUFFER_ERROR)
     # cc=bu.connectedPixelCount(MIN_CC,True).reproject(bu.projection()).eq(MIN_CC)
     cc=bu.connectedPixelCount(MIN_CC,True).eq(MIN_CC)
     feats=cc.selfMask().reduceToVectors(
@@ -167,75 +188,105 @@ def city_extent(city_name):
       geometry=geom,
       maxPixels=1e11
     )
-    s1=feats.filterBounds(city_center)#.geometry()
+
+    center_filter=ee.Filter.intersects(leftField='.geo',rightValue=city_center,maxError=MAX_BUFFER_ERROR)
+
+    s1=feats.filter(center_filter)
+    sN=feats.filter(center_filter.Not())
+
+
+    # # 5. Incorporate urbanized open spaces by 
+    # # - adding a 100 meter fringe open space buffer to interim cluster t1, === buffer t1 100 meter
+    # # - filling holes
+
+    s1=ee.FeatureCollection(h.flatten_to_polygons(s1))
+    s1=s1.map(fill_small,True)
+    g1=s1.geometry().buffer(GREEN_ZONE,MAX_BUFFER_ERROR)
+    s1=ee.FeatureCollection([ee.Feature(g1)])
+    d1=get_influence_distance(g1)
 
 
 
-    # 5. Incorporate urbanized open spaces by 
-    # - adding a 100 meter fringe open space buffer to interim cluster t1, === buffer t1 100 meter
-    # - filling holes
-
-
-    t1=ee.FeatureCollection(h.flatten_to_polygons(s1))
-    t1=t1.map(fill_small,True)
-    t1=t1.geometry().buffer(100)
-
-    # 9. Around cluster c1, create a buffer equal to 1/4 the area of cluster c1. 
-
-    buff1=h.growth_buffer(t1,0.25,0.01)
-    buff=ee.Number(buff1).max(MINBUFF)
-    t2=t1.buffer(buff)
-    buffer_area=t2.difference(t1)
-
-
-    # 
-    #  GROWTH CHECK
-    # 
-    a1=t1.area(1)
-    a2=t2.area(1)
-    ab=buffer_area.area(1)
+    # print('boomtown')
     # print(ee.Dictionary({
-    #     'buffer': buff,
-    #     'a1':a1,
-    #     'a2':a2,
-    #     'buffer_area': ab,
-    #     'rb1':ab.divide(a1),
-    #     'r21':a2.divide(a1)
+    #   'd1': d1,
+    #   's1': s1.size(),
+    #   # 'sn':sN.size(),
+    #   # 'sn_infl':sN_infl.size(),
+    #   # 'example':sN_infl.first().toDictionary()
+    # }).getInfo())
+
+    #
+    # get all regions where the sum of the influence zones overlap
+    #
+
+    sN=sN.filter(ee.Filter.withinDistance(
+      distance=MAX_INFLUENCE_DISTANCE, 
+      leftField='.geo',
+      rightValue=g1, 
+      maxError=1
+    ))
+
+
+    # print('boomtown1')
+    # print(ee.Dictionary({
+    #   # 'd1': d1,
+    #   # 's1': s1.size(),
+    #   'sn':sN.size(),
+    #   # 'sn_infl':sN_infl.size(),
+    #   # 'example':sN_infl.first().toDictionary()
+    # }).getInfo())
+
+    def _influence_check(f):
+      f=ee.Feature(f)
+      g=f.geometry()
+      d=get_influence_distance(g)
+      test=g1.withinDistance(right=g, distance=d1.add(d), maxError=MAX_ERROR)
+      return ee.Algorithms.If(test,f.set('influence_distance',d),None)
+
+
+    sN_infl=sN.map(_influence_check,True)
+
+    # print('boomtown2')
+    # print(ee.Dictionary({
+    #   # 'd1': d1,
+    #   # 'sn':sN.size(),
+    #   'sn_infl':sN_infl.size(),
+    #   'example':sN_infl.first().toDictionary()
     # }).getInfo())
 
 
-    #
-    # EXTENDED AREA
-    #
-    s2=feats.filterBounds(buffer_area).geometry()
-
-
-
-    #
-    # ISOLOTATE NEW POLYGONS
-    #
-    s3=s2.difference(s1,1)
+    # #
+    # # only keep polygons containing urban pix
+    # #
     urban=usubu.eq(2).selfMask()
 
 
     def has_urban_pixel(feat):
       return geom_contains_pixels(ee.Feature(feat).geometry(),urban)
 
-    t3g=ee.FeatureCollection(h.flatten_to_polygons(s3,has_urban_pixel))
+    sN_urbn=ee.FeatureCollection(h.flatten_to_polygons(sN_infl,has_urban_pixel))
     data={
-        'buffer': buff
+        's1_influence_distance': d1
     }
     #
     # COMBINE FEATURES
     #
-    # print('bOOM')
     # print(ee.Dictionary(data).getInfo())
-    feat=ee.FeatureCollection([ee.FeatureCollection([t1]),t3g]).flatten()
-    # feat=ee.FeatureCollection([ee.FeatureCollection([t1])]).flatten()
-    # feat=s1
-    return ee.Feature(feat.geometry().dissolve(1)).copyProperties(city).set(data)
 
-# city_extent(CITY_NAMES[0])
+    feats=ee.FeatureCollection([s1,sN_urbn]).flatten()
+
+    # print('bOOM')
+    # print(ee.Dictionary({
+    #   'feats':feats.size(),
+    #   'feat':feats.first().toDictionary()
+    # }).getInfo())
+
+    return ee.Feature(feats.geometry(maxError=MAX_ERROR).dissolve(MAX_ERROR)).copyProperties(city).set(data)
+
+# out=city_extent(CITY_NAMES[0])
+# print('kapow')
+# print(ee.Feature(out).toDictionary().getInfo())
 
 features=ee.FeatureCollection(ee.List(CITY_NAMES).map(city_extent))
 
