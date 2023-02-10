@@ -1,4 +1,6 @@
 import ee
+from pprint import pprint
+
 MAX_ERR=1
 
 #
@@ -88,11 +90,45 @@ def fill_polygons(feats):
     return feats.geometry().dissolve()
 
 
-def fill_holes(feat,max_fill):
+def fill_holes_ALGO(feat,max_fill):
     def _filler(coords):
         poly=ee.Geometry.Polygon(coords)
         return ee.Algorithms.If(poly.area(MAX_ERR).gt(max_fill),coords)
     feat=ee.Feature(feat)
     ncoords=feat.geometry().coordinates().map(_filler,True)
     return ee.Algorithms.If( ncoords.size(),feat.setGeometry(ee.Geometry.Polygon(ncoords)) )
+
+
+
+def fill_holes(feat,max_fill):
+    coords_list=feat.geometry().coordinates()
+    outer=coords_list.slice(0,1)
+    inner=coords_list.slice(1,-1)
+    def _coords_feat(coords):
+        poly=ee.Geometry.Polygon(coords)
+        return ee.Feature(poly,{
+            'area':poly.area(MAX_ERR),
+            'coords': coords
+        })
+    coords_fc=ee.FeatureCollection(inner.map(_coords_feat))
+    coords_fc=coords_fc.filter(ee.Filter.gte('area',max_fill))
+    def _get_coords(feat):
+        return ee.Feature(feat).get('coords')
+    coords_list=coords_fc.toList(coords_fc.size().add(1)).map(_get_coords)
+    coords_list=outer.cat(coords_list)
+    return feat.setGeometry(ee.Geometry.Polygon(coords_list))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -5,31 +5,29 @@ import math
 ee.Initialize()
 
 
-BS=1
-N=0
-BU_TYPE='joint'
+BS=25
+N=4  # Nmax ~7
 
+# SCALE=10
+SCALE=38
 #
 # CONSTANTS
 #
+STUDY_AREAS_ID='projects/wri-datalab/urban_land_use/data/study_area_features-partial_124'
+
 MAX_AREA=2e6
 MAX_NNN_DISTANCE=1000
-KM_RADIUS=80
-MINBUFF=1000
-CITY_CENTROIDS_ID='projects/wri-datalab/AUE/city_data-2010pop100k'
+# KM_RADIUS=80
+# MINBUFF=1000
 
-GROWTH_RATE=0.1
-GREEN_ZONE=100
-MAX_ERROR=1
-MAX_BUFFER_ERROR=10
+# GROWTH_RATE=0.07
+# GREEN_ZONE=None
+# MAX_ERROR=1
+# MAX_BUFFER_ERROR=10
 
-MAX_INFLUENCE_DISTANCE=4000
-MIN_INFLUENCE_DISTANCE=100
-BUFFER_SN=False
-ASSET_PREFIX='urban_extent'
+# MIN_INFLUENCE_DISTANCE=1000
+ASSET_PREFIX='sa_ue-p124'
 
-if BUFFER_SN:
-  ASSET_PREFIX=f'{ASSET_PREFIX}-bsn'
 
 """
 A=p * r^2
@@ -45,6 +43,14 @@ M=0.118/sqrt(p)
 
 ==> p=PI: M=0.06659354695
 ==> p=4:  M=0.05901699437
+
+
+* NO MAX  !!!-DONE
+* MIN 1000  !!!-DONE
+* REMOVE GREEN BUFFER  !!!-DONE
+
+TODO:   ADD SENTENCE TO about green buffer to paper
+
 """
 
 
@@ -63,6 +69,7 @@ print('MATCHED COUNT:',len(MATCHED_NAMES))
 CITY_NAMES=MATCHED_NAMES[N*BS:(N+1)*BS]
 print(N*BS,(N+1)*BS,CITY_NAMES)
 
+STUDY_AREAS=ee.FeatureCollection(STUDY_AREAS_ID)
 
 BUILT_UP_ID1='JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1'
 builtup_im1=ee.Image(BUILT_UP_ID1)
@@ -72,20 +79,17 @@ BUILT_UP_ID2="DLR/WSF/WSF2015/v1"
 builtup_im2=ee.Image(BUILT_UP_ID2)
 bu2=builtup_im2.eq(255).selfMask()
 
-if BU_TYPE=='ghsl':
-  SCALE=38
-  bu=bu1.selfMask().toInt().rename('bu')
-elif BU_TYPE=='wsl':
-  SCALE=10
-  bu=bu2.selfMask().toInt().rename('bu')
-else:
-  SCALE=10
-  bu=ee.ImageCollection([
-    bu1.selfMask().toInt().rename('bu'),
-    bu2.selfMask().toInt().rename('bu')
-  ]).reduce(ee.Reducer.firstNonNull())
 
-asset_name=f'{ASSET_PREFIX}-r{KM_RADIUS}_s{SCALE}_n{BS}-{N+1}'
+bu=ee.ImageCollection([
+  bu1.selfMask().toInt().rename('bu'),
+  bu2.selfMask().toInt().rename('bu')
+]).reduce(ee.Reducer.firstNonNull())
+
+
+
+# bu=bu.reproject(crs='epsg:4326',scale=SCALE)
+
+asset_name=f'S1s100_carea_{ASSET_PREFIX}-r{KM_RADIUS}_s{SCALE}_n{BS}-{N+1}'
 print('DEST:',asset_name)
 #
 # HELPERS
@@ -101,10 +105,6 @@ def nearest_non_null(centroid,im,max_distance=MAX_NNN_DISTANCE,scale=SCALE):
     return ee.Geometry.Point([nearest.getNumber('min1'), nearest.getNumber('min2')])
 
 
-def fill_small(feat):
-    feat=ee.Feature(feat)
-    return h.fill_holes(feat,MAX_AREA)
-
 
 def geom_contains_pixel(geom,im):
   return im.rename(['contains_pixel']).reduceRegion(
@@ -114,12 +114,10 @@ def geom_contains_pixel(geom,im):
   ).getNumber('contains_pixel').eq(1)
 
 
-MIN_INFLUENCE_DISTANCE=MIN_INFLUENCE_DISTANCE or 0
-MAX_INFLUENCE_DISTANCE=MAX_INFLUENCE_DISTANCE or math.sqrt(math.pi)*KM_RADIUS*1000*GROWTH_RATE
 
-def get_influence_distance(geom):
-  d=ee.Geometry(geom).area(MAX_ERROR).sqrt().multiply(GROWTH_RATE)
-  return d.clamp(MIN_INFLUENCE_DISTANCE,MIN_INFLUENCE_DISTANCE)
+def get_influence_distance(area):
+  d=area.sqrt().multiply(GROWTH_RATE)
+  return d.max(MIN_INFLUENCE_DISTANCE)
 
 
 
@@ -128,30 +126,12 @@ def get_influence_distance(geom):
 # MAIN
 #
 def city_extent(city_name):
-    city=cities.filter(ee.Filter.eq('City Name',city_name)).first()
+    city_filter=ee.Filter.eq('City Name',city_name)
+    city=cities.filter(city_filter).first()
+    sa=STUDY_AREAS.filter(city_filter)
     centroid=city.geometry()
-    #
-    # URBAN/SUBURBAN IMAGE:
-    # => usubu: 0 rural, 1 suburban, 2 urban
-    # => city_center: nearest non-null centroid
-    #
-    usubu_rededucer=ee.Reducer.mean()
-    usubu_kernel=ee.Kernel.circle(
-      radius=math.ceil(584/SCALE), 
-      units='pixels', 
-      normalize=True,
-      magnitude=1
-    )
-    usubuc=bu.unmask(0).updateMask(not_water).reduceNeighborhood(
-      reducer=usubu_rededucer,
-      kernel=usubu_kernel,
-      skipMasked=True,
-    ).updateMask(bu.gte(0))
+    s1=sa.filterBounds(centroid)
 
-    usubu=ee.Image(0).where(usubuc.gte(0.25).And(usubuc.lt(0.5)),1).where(usubuc.gte(0.5),2)
-    urban=usubu.eq(2).selfMask().rename('IS_URBAN')
-
-    city_center=nearest_non_null(centroid,usubu.selfMask())
     #
     # VECTORIZE:
     # s1: features containing city_center
@@ -170,41 +150,48 @@ def city_extent(city_name):
 
     center_filter=ee.Filter.intersects(leftField='.geo',rightValue=city_center,maxError=MAX_BUFFER_ERROR)
     s1=feats.filter(center_filter)
-    sN=feats.filter(center_filter.Not())
+    # sN=feats.filter(center_filter.Not())
 
-    g1=s1.geometry().buffer(GREEN_ZONE,MAX_BUFFER_ERROR)
-    infl1=get_influence_distance(g1)
-    s1=ee.FeatureCollection([ee.Feature(g1)])
+    if GREEN_ZONE:
+      g1=s1.geometry().buffer(GREEN_ZONE,MAX_BUFFER_ERROR)
+    else:
+      g1=s1.geometry()
+    g1=g1.simplify(100)
+    a1=ee.Geometry(g1).area(MAX_ERROR)
+    infl1=get_influence_distance(a1)
+    s1=ee.Feature(g1)
 
-    sN=sN.filter(ee.Filter.withinDistance(
-      distance=infl1.multiply(2), 
-      leftField='.geo', 
-      rightValue=g1, 
-      maxError=MAX_BUFFER_ERROR
-    ))
+    # sN=sN.filter(ee.Filter.withinDistance(
+    #   distance=infl1.multiply(2), 
+    #   leftField='.geo', 
+    #   rightValue=g1, 
+    #   maxError=MAX_BUFFER_ERROR
+    # ))
 
-    sN_urban=urban.reduceRegions(
-      collection=sN,
-      reducer=ee.Reducer.firstNonNull(),
-      scale=SCALE    
-    ).filter(ee.Filter.eq('IS_URBAN',1))
+    # sN_urban=urban.reduceRegions(
+    #   collection=sN,
+    #   reducer=ee.Reducer.firstNonNull(),
+    #   scale=SCALE    
+    # ).filter(ee.Filter.eq('IS_URBAN',1))
 
-    def _feature_data(feat):
-      feat=ee.Feature(feat)
-      g=feat.geometry()
-      if BUFFER_SN:
-        g=g.buffer(GREEN_ZONE,MAX_BUFFER_ERROR)
-      infl=get_influence_distance(g)
-      distance=g1.distance(g,MAX_ERROR)
-      include=distance.subtract(infl).subtract(infl1).lte(0)
-      return feat.set({ 'include': include })
+    # def _feature_data(feat):
+    #   feat=ee.Feature(feat)
+    #   g=feat.geometry()
+    #   infl=get_influence_distance(g)
+    #   distance=g1.distance(g,MAX_ERROR)
+    #   include=distance.subtract(infl).subtract(infl1).lte(0)
+    #   return feat.set({ 'include': include })
 
-    sN_urban=sN_urban.map(_feature_data).filter(ee.Filter.eq('include',1))
-    #
-    # combine features
-    #
-    feats=ee.FeatureCollection([s1,sN_urban]).flatten()
-    return feats
+    # sN_urban=sN_urban.map(_feature_data).filter(ee.Filter.eq('include',1))
+    # #
+    # # combine features
+    # #
+    # feats=ee.FeatureCollection([s1,sN_urban]).flatten()
+    return s1.set({
+        'city_name': city_name,
+        'influence_distance': infl1,
+        'center_area': a1
+      })
 
 
 # test=city_extent(CITY_NAMES[0])
@@ -212,7 +199,7 @@ def city_extent(city_name):
 # print(test.getInfo())
 
 features=ee.FeatureCollection(ee.List(CITY_NAMES).map(city_extent))
-features=ee.FeatureCollection(ee.List(CITY_NAMES).map(city_extent)).flatten()
+# features=ee.FeatureCollection(ee.List(CITY_NAMES).map(city_extent)).flatten()
 
 task=ee.batch.Export.table.toAsset(
       collection=features, 

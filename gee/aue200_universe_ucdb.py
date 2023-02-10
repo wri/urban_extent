@@ -8,12 +8,14 @@ ee.Initialize()
 #
 # CONSTANTS
 #
+# POP_SORT=True
+POP_SORT=False
 MIN_POP=100000
 CITY_DATA_ID='projects/wri-datalab/AUE/AUEUniverseofCities'
-BUILT_UP1_ID='JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1'
-BUILT_UP2_ID="DLR/WSF/WSF2015/v1"
 AUE_UE_ID='projects/wri-datalab/AUE/urban_edge/urban_edge_t3-v2'
 UCDB_ID='projects/wri-datalab/GHSL_UCDB'
+DEST_NAME='AUE200_Universe_UCDB-NM_BNDS'
+
 
 UCDB_ID_KEY='ID_HDC_G0'
 INCOME_KEY='GDP15_SM'
@@ -73,26 +75,60 @@ def count_matches(feat):
   geom=feat.geometry()
   point=geom.centroid()
   bounds=geom.bounds()
-  fc=CITY_DATA_FC.filterBounds(bounds)
-  ucdb=UCDB.filterBounds(bounds)
+  ue_city_name=feat.getString('City Name')
+  ue_city_name_part=ue_city_name.slice(0,5)
 
-  fc=fc.map(lambda f: ee.Feature(f).set('distance',centroid_distance(f,point))).sort('distance')
+  search_region=bounds
+
+  fc=CITY_DATA_FC.filterBounds(search_region)
+  ucdb=UCDB.filterBounds(search_region)
+
+  if POP_SORT:
+    fc=fc.map(lambda f: ee.Feature(f).set('distance',centroid_distance(f,point))).sort('Pop_2010')
+  else:
+    fc=fc.map(lambda f: ee.Feature(f).set('distance',centroid_distance(f,point))).sort('distance')
+
   cities=fc.aggregate_array('City Name')
   distances=fc.aggregate_array('distance')
+  
+  fcm=fc.filter(ee.Filter.stringContains(
+      'City Name',
+      ue_city_name_part
+    ))
 
-  ucdb=ucdb.map(lambda f: ee.Feature(f).set('distance',centroid_distance(f,point))).sort('distance')
+  fcm=ee.Algorithms.If(
+    fcm.size(),
+    fcm.first(),
+    fc.first()
+  )
+
+
+  if POP_SORT:
+    ucdb=ucdb.map(lambda f: ee.Feature(f).set('distance',centroid_distance(f,point))).sort('P15')
+  else:
+    ucdb=ucdb.map(lambda f: ee.Feature(f).set('distance',centroid_distance(f,point))).sort('distance')
   ucdb_cities=ucdb.aggregate_array('UC_NM_MN')
   ucdb_distances=ucdb.aggregate_array('distance')
+  ucdbm=ucdb.filter(ee.Filter.stringContains(
+      'UC_NM_MN',
+      ue_city_name_part
+    ))
+
+  ucdbm=ee.Algorithms.If(
+    ucdbm.size(),
+    ucdbm.first(),
+    ucdb.first()
+  )
 
   return feat.set({
     'match_count': fc.size(),
     'matched_cities': cities,
     'matched_distances': distances,
-    'matched_feat': fc.first(),
+    'matched_feat': fcm,
     'ucdb_match_count': ucdb.size(),
     'ucdb_matched_cities': ucdb_cities,
     'ucdb_matched_distances': ucdb_distances,
-    'ucdb_matched_feat': ucdb.first()
+    'ucdb_matched_feat': ucdbm
   })
 
 
@@ -114,6 +150,7 @@ def extract_matches(feat):
 
 
   return match.set({
+    'ue_area': feat.geometry().area(10),
     'ue_city_name': ue_city_name,
     'match_count': mcount,
     'matched_distances': matched_distances,
@@ -124,6 +161,13 @@ def extract_matches(feat):
     }).copyProperties(ucdb_matched_feat)
 
 
+# # test=UE.filter(ee.Filter.stringContains('City Name','Zhengzhou')).first()
+# test=UE.filter(ee.Filter.eq('City Name','Raleigh')).first()
+
+# out=count_matches(test)
+# out2=extract_matches(out)
+# pprint(out2.toDictionary().getInfo())
+
 #
 # RUN
 #
@@ -131,23 +175,22 @@ uem=UE.map(count_matches,False).filter(
   ee.Filter.And(
     ee.Filter.gt('match_count',0),
     ee.Filter.gt('ucdb_match_count',0)))
-print('MATCHED CITIES COUNT:',uem.size().getInfo())
-pprint(uem.aggregate_histogram('match_count').getInfo())
-pprint(uem.aggregate_histogram('ucdb_match_count').getInfo())
-print()
-
+print('---')
 univ_ucdb=uem.map(extract_matches)
-ex=univ_ucdb.first()
-pprint(ex.toDictionary().getInfo())
+print('---')
+
 
 
 #
 # EXPORT
 #
+name=DEST_NAME
+if POP_SORT:
+  name=f'{name}-psort'
 task=ee.batch.Export.table.toAsset(
       collection=univ_ucdb, 
-      description='AUE200_Universe_UCDB', 
-      assetId=f'projects/wri-datalab/AUE/AUE200_Universe_UCDB')
+      description=name, 
+      assetId=f'projects/wri-datalab/AUE/{name}')
 
 task.start()
 print('-'*100)
