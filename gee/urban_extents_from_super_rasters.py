@@ -50,7 +50,10 @@ if INPUT_VECTOR_SCALE:
 else:
   SR_ID=f'{ROOT}/super_extents/builtup_density_WC21'
 
-
+if RASTER_BUFFER:
+  RASTER_BUFFER_KERNEL=ee.Kernel.euclidean(RASTER_BUFFER,'meters')
+else:
+  RASTER_BUFFER_KERNEL=None
 #
 # IMPORTS
 #
@@ -120,7 +123,9 @@ def urban_extent(im):
   pa=ee.Image.pixelArea()
   bu_pixels=bu.gt(0)
   if RASTER_BUFFER:
-    bu_pixels=bu_pixels.distance(RASTER_BUFFER,False).gte(0)
+    bu_pixels=bu_pixels.distance(
+      kernel=RASTER_BUFFER_KERNEL,
+      skipMasked=False).gte(0)
   pa=bu_pixels.selfMask().addBands([
       pa.multiply(bu_class.eq(0)),
       pa.multiply(bu_class.eq(1)),
