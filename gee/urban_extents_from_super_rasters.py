@@ -12,17 +12,19 @@ VECTOR_SCALE=None
 INPUT_VECTOR_SCALE=VECTOR_SCALE
 LIMIT=None
 DRY_RUN=False
+RASTER_BUFFER=False
 VECTOR_BUFFER=None
 TEST_CITY=None
 
+RASTER_BUFFER=100
 # VECTOR_SCALE=100
-VECTOR_SCALE=250
-INPUT_VECTOR_SCALE=None
+# VECTOR_SCALE=250
+# INPUT_VECTOR_SCALE=None
 # OFFSET=157
 # LIMIT=10
 # DRY_RUN=True
 # VECTOR_BUFFER=100
-VECTOR_BUFFER=500
+# VECTOR_BUFFER=500
 # TEST_CITY='Tokyo'
 # TEST_CITY='Berlin'
 
@@ -116,7 +118,10 @@ def urban_extent(im):
   bu=im.select('builtup')
   bu_class=im.select('builtup_class')
   pa=ee.Image.pixelArea()
-  pa=bu.gt(0).selfMask().addBands([
+  bu_pixels=bu.gt(0)
+  if RASTER_BUFFER:
+    bu_pixels=bu_pixels.distance(RASTER_BUFFER,False).gte(0)
+  pa=bu_pixels.selfMask().addBands([
       pa.multiply(bu_class.eq(0)),
       pa.multiply(bu_class.eq(1)),
       pa.multiply(bu_class.eq(2))
@@ -169,6 +174,8 @@ if VECTOR_BUFFER:
   name=f'{name}-b{VECTOR_BUFFER}'
 if VECTOR_SCALE:
   name=f'{name}-vs{VECTOR_SCALE}'
+if RASTER_BUFFER:
+  name=f'{name}-rb{RASTER_BUFFER}'
 
 description=re.sub('[\.\,\/]','--',name)
 urban_extents_fc=ee.FeatureCollection(SUPER_IC.map(urban_extent))
