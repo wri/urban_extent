@@ -103,7 +103,7 @@ def fill_holes_ALGO(feat,max_fill):
 def fill_holes(feat,max_fill):
     coords_list=feat.geometry().coordinates()
     outer=coords_list.slice(0,1)
-    inner=coords_list.slice(1,-1)
+    inner=coords_list.slice(1)
     def _coords_feat(coords):
         poly=ee.Geometry.Polygon(coords)
         return ee.Feature(poly,{

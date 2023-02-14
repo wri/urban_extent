@@ -9,16 +9,20 @@ ee.Initialize()
 # CONFIG
 #
 VECTOR_SCALE=None
+INPUT_VECTOR_SCALE=VECTOR_SCALE
 LIMIT=None
 DRY_RUN=False
 VECTOR_BUFFER=None
 TEST_CITY=None
 
 # VECTOR_SCALE=100
+VECTOR_SCALE=250
+INPUT_VECTOR_SCALE=None
 # OFFSET=157
 # LIMIT=10
 # DRY_RUN=True
-VECTOR_BUFFER=100
+# VECTOR_BUFFER=100
+VECTOR_BUFFER=500
 # TEST_CITY='Tokyo'
 # TEST_CITY='Berlin'
 
@@ -39,8 +43,8 @@ AREA_REDUCER=ee.Reducer.sum().combine(
 
 ROOT='projects/wri-datalab/urban_land_use/data'
 DEST_NAME=f'urban_extents/ue_WSF15_GHSL16_WC21'
-if VECTOR_SCALE:
-  SR_ID=f'{ROOT}/super_extents/builtup_density_WC21-vs{VECTOR_SCALE}'
+if INPUT_VECTOR_SCALE:
+  SR_ID=f'{ROOT}/super_extents/builtup_density_WC21-vs{INPUT_VECTOR_SCALE}'
 else:
   SR_ID=f'{ROOT}/super_extents/builtup_density_WC21'
 
