@@ -121,7 +121,7 @@ def urban_extent(im):
   bu=im.select('builtup')
   bu_class=im.select('builtup_class')
   pa=ee.Image.pixelArea()
-  bu_pixels=bu.gt(0)
+  bu_pixels=bu_class.gt(0).multiply(bu)
   if RASTER_BUFFER:
     bu_pixels=bu_pixels.distance(
       kernel=RASTER_BUFFER_KERNEL,
