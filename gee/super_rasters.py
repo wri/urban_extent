@@ -3,31 +3,11 @@ import helpers as h
 import data
 import math
 import re
+from unidecode import unidecode
 from pprint import pprint
 ee.Initialize()
 
-""" FOR DELETION 
-# INFLUENCE_SCALE=1
-# NB_BUFFER_PIX=10
-# NB_BUFFER_PIX=3
-# ESTIMATE_INFLUENCE_DISTANCE=False
-# INFLUENCE_DISTANCE=False
-# INFLUENCE_DISTANCE=200
-# INFLUENCE_DISTANCE=500
-# INFLUENCE_DISTANCE=1000
-# MAX_REDUCTION=True
-# MAX_AREA_MULTIPLIER=3
 
-
-NON_NULL_SCALE=10
-# NON_NULL_SCALE=38
-
-
-
-def get_point(feat,prop):
-  coords=ee.Geometry(feat.get(prop)).coordinates()
-  return ee.Geometry.Point(coords)
-"""
 
 #
 # CONFIG
@@ -50,16 +30,24 @@ VECTOR_SCALE=None
 OFFSET=None
 LIMIT=None
 DRY_RUN=False
-# OFFSET=100
-# LIMIT=2
+OFFSET=0
+# LIMIT=500
+
+# OFFSET=500
+# LIMIT=5
+
+"""
+ RUN 1 ERRORS:  [4189, 2292, 1500, 2062]   
+"""
+
 # DRY_RUN=True
 
 
 #
 # CONSTANTS
 #
-ROOT='projects/wri-datalab/urban_land_use/data/super_extents'
-IC_ID=f'{ROOT}/builtup_density_WC21'
+ROOT='projects/wri-datalab/cities/urban_land_use/data'
+IC_ID=f'{ROOT}/builtup_density_GHSL_WSF1519_WC21'
 if VECTOR_SCALE:
   IC_ID=f'{IC_ID}-vs{VECTOR_SCALE}'
 
@@ -76,6 +64,26 @@ GROWTH_RATE=0.0666
 DENSITY_RADIUS=564
 DENSITY_UNIT='meters'
 CENTROID_SEARCH_RADIUS=200
+USE_COM=False
+# USE_COM=True
+COM_CITIES=[
+  'Bidar',
+  'Boras',
+  'Budaun',
+  'Chandausi',
+  'Godhra',
+  'Ingolstad',
+  'Jaranwala',
+  'Johnson City',
+  'La Victoria',
+  'Mahendranagar',
+  'Salzgitter',
+  'Sawai Madhopur',
+  'Tadepalligudem',
+  'Tando Adam',
+  'Thunder Bay',
+  'Yeosu']
+
 PI=ee.Number.expression('Math.PI')
 
 PPOLICY={
@@ -130,12 +138,13 @@ FIT_PARAMS=ee.Dictionary({
 #
 # IMPORTS
 #
-CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUE200_Universe')
+# CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUE200_Universe')
+CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUEUniverseofCities')
 GHSL=ee.Image('JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1')
 WSF=ee.ImageCollection("users/mattia80/WSF2015_v1").reduce(ee.Reducer.firstNonNull())
-WSF19=ee.ImageCollection("users/mattia80/WSF2019_20211102").reduce(ee.Reducer.firstNonNull())
-DW=ee.ImageCollection("GOOGLE/DYNAMICWORLD/V1").select('label').filterDate('2022-03-01','2022-11-01').mode()
 WC21=ee.ImageCollection("ESA/WorldCover/v200").reduce(ee.Reducer.firstNonNull())
+WSF19=ee.ImageCollection("users/mattia80/WSF2019_20211102").reduce(ee.Reducer.firstNonNull())
+# DW=ee.ImageCollection("GOOGLE/DYNAMICWORLD/V1").select('label').filterDate('2022-03-01','2022-11-01').mode()
 
 
 _proj=GHSL.select('built').projection().getInfo()
@@ -154,13 +163,14 @@ else:
 #
 BU_GHSL=GHSL.select(['built']).gte(3).selfMask().rename(['bu']).toUint8()
 BU_WSF=WSF.eq(255).selfMask().rename(['bu']).toUint8()
-BU_WSF19=WSF19.eq(255).selfMask().rename(['bu']).toUint8()
-BU_DW=DW.eq(6).selfMask().rename(['bu']).toUint8()
 BU_WC21=WC21.eq(50).selfMask().rename(['bu']).toUint8()
+BU_WSF19=WSF19.eq(255).selfMask().rename(['bu']).toUint8()
+# BU_DW=DW.eq(6).selfMask().rename(['bu']).toUint8()
 BU=ee.ImageCollection([
     BU_WSF,
     BU_GHSL,
-    BU_WC21
+    BU_WC21,
+    BU_WSF19
     ]).reduce(ee.Reducer.firstNonNull()).rename('bu')
 IS_BUILTUP=BU.gt(0).rename(['builtup'])
 _usubu_rededucer=ee.Reducer.mean()
@@ -178,7 +188,7 @@ _density=IS_BUILTUP.unmask(0).reduceNeighborhood(
 _usubu=ee.Image(0).where(_density.gte(SUBURBAN_BOUND).And(_density.lt(URBAN_BOUND)),1).where(_density.gte(URBAN_BOUND),2).rename(['builtup_class'])
 _density=_density.multiply(100).rename(['density'])
 BU_DENSITY_CAT=_usubu.addBands([_density,IS_BUILTUP]).toUint8()
-BU_CONNECTED=IS_BUILTUP.connectedPixelCount(MINPIXS).eq(MINPIXS).selfMask()
+BU_CONNECTED=IS_BUILTUP.multiply(_usubu.gt(0)).selfMask().connectedPixelCount(MINPIXS).eq(MINPIXS).selfMask()
 BU_LATLON=BU_CONNECTED.addBands(ee.Image.pixelLonLat())
 
 
@@ -206,7 +216,19 @@ safe_prop_names=prop_names.map(safe_keys)
 CITY_DATA=CITY_DATA.select(prop_names,safe_prop_names)
 
 
+COMPLETED_IDS=ee.ImageCollection(IC_ID).aggregate_array('City__ID__Number')
+COMPLETED_FILTER=ee.Filter.inList('City__ID__Number',COMPLETED_IDS)
+CITY_DATA=CITY_DATA.filter(COMPLETED_FILTER.Not())
 
+COM_FILTER=ee.Filter.inList('City__Name',COM_CITIES)
+if USE_COM:
+  CITY_DATA=CITY_DATA.filter(COM_FILTER)
+else:
+  CITY_DATA=CITY_DATA.filter(COM_FILTER.Not())
+
+
+# pprint(CITY_DATA.sort('City__Name').aggregate_array('City__Name').getInfo())
+# raise
 
 #
 # HELPERS
@@ -334,9 +356,7 @@ def get_circle_data(feat):
   feat=ee.Feature(feat)
   cname=feat.get('City__Name')
   centroid=feat.geometry()
-  bu_centroid_xy=ee.List(nearest_non_null(centroid))
-  bu_centroid=ee.Geometry.Point(bu_centroid_xy)
-  crs=get_crs(bu_centroid)
+  crs=get_crs(centroid)
   region=ee.String(feat.get('Reg_Name')).trim()
   pop=feat.getNumber('Pop_2010')
   est_area=get_area(pop,region)
@@ -346,6 +366,11 @@ def get_circle_data(feat):
   study_bounds=centroid.buffer(radius,MAX_ERR)
   center_of_mass=ee.Geometry(get_com(study_bounds))
   study_bounds=center_of_mass.buffer(radius,MAX_ERR)
+  if USE_COM:
+    bu_centroid_xy=ee.List(nearest_non_null(center_of_mass))
+  else:
+    bu_centroid_xy=ee.List(nearest_non_null(centroid))    
+  bu_centroid=ee.Geometry.Point(bu_centroid_xy)
   return ee.Feature(
       study_bounds,
       {
@@ -357,7 +382,8 @@ def get_circle_data(feat):
         'scaled_area': scaled_area,
         'study_radius': radius,
         'est_influence_distance': est_influence_distance,
-        'study_area_scale_factor': STUDY_AREA_SCALE_FACTOR
+        'study_area_scale_factor': STUDY_AREA_SCALE_FACTOR,
+        'use_center_of_mass': USE_COM
     }).copyProperties(feat)
 
 
@@ -386,8 +412,6 @@ def vectorize(data):
   feats=feats.filter(centroid_filter)
   feats=fill_polygons(feats)
   return ee.Feature(feats.geometry()).copyProperties(data)
-  # feat=ee.Feature(feats.first())
-  # return feat.copyProperties(data)
 
 
 def get_super_feat(feat):
@@ -399,11 +423,54 @@ def get_super_feat(feat):
 #
 # EXPORT
 #
+# FILTER CITIES HACK
+#
+# CITIES=[
+#   'Dubai',
+# ]
+# CITY_DATA=CITY_DATA.filter(ee.Filter.inList('City__Name',CITIES))
+# print(CITY_DATA.size().getInfo())
+
+
+pprint(CITY_DATA.sort('City__Name').aggregate_array('City__Name').getInfo())
+# print('--')
+
+
+# FAILED_IDS=[
+#     # 1126,
+#     # 1057,
+#     # 2701,
+#     2516,#-
+#     # 1750,
+#     # 4467,
+#     2431,#-
+#     # 2600,
+#     # 2063,
+#     # 2728,
+#     # 1241,
+#     # 5156,
+#     # 5013,
+#     # 1012,
+#     # 5146,
+#     # 1111,
+#     # 5047,
+#     # 2464,
+#     4765,#-
+#     # 4618
+# ]
+# CITY_DATA=CITY_DATA.filter(ee.Filter.inList('City__ID__Number',FAILED_IDS))
+# pprint(CITY_DATA.sort('City__Name').aggregate_array('City__Name').getInfo())
+# print('--')
+# raise
+
+
 print(f'DEST: {IC_ID}')
-CITY_DATA=CITY_DATA.sort('Pop_2010')
+# CITY_DATA=CITY_DATA.sort('Pop_2010')
+CITY_DATA=CITY_DATA.sort('Pop_2010',False)
 if OFFSET and LIMIT:
   LIMIT=LIMIT+OFFSET
 IDS=CITY_DATA.aggregate_array('City__ID__Number').getInfo()[OFFSET:LIMIT]
+FAILURES=[]
 # 
 for i,ident in enumerate(IDS):
   feat=ee.Feature(CITY_DATA.filter(ee.Filter.eq('City__ID__Number',ident)).first())
@@ -413,7 +480,8 @@ for i,ident in enumerate(IDS):
   feat=ee.Feature(get_super_feat(feat))
   # print_info(super_feat=feat.toDictionary())
   print('='*100)
-  asset_name=re.sub('[\ \.\,\/]','',f'{city_name}-{ident}')
+  asset_name=unidecode(f'{city_name}-{ident}')
+  asset_name=re.sub(r'[^A-Za-z0-9\-\_]+', '', asset_name)
   bu=ee.Image(BU_DENSITY_CAT.copyProperties(feat))
   geom=feat.geometry()
   task=ee.batch.Export.image.toAsset(
@@ -429,12 +497,31 @@ for i,ident in enumerate(IDS):
   if DRY_RUN:
     print('-- dry_run:',asset_name)
   else:
-    task.start()
-    print('TASK SUBMITTED:',asset_name,task.status(),'\n')
+    try:
+      task.start()
+      print('TASK SUBMITTED:',asset_name,task.status(),'\n')
+    except Exception as e:
+      print('\n'*2)
+      print('*'*100)
+      print('*'*100)
+      print('\n'*1)
+      print(f'CITY_NAME: {city_name}')
+      print(f'CITY_ID: {ident}')
+      print(f'ASSET_NAME: {asset_name}')
+      print(f'ERROR: {e}')
+      print('\n'*1)
+      print('*'*100)
+      print('*'*100)
+      print('\n'*2)
+      FAILURES.append(ident)
   print('\n'*1)
+else:
+  print('-')
 
 
-
+print('COMPLETE')
+print('NB_ERRORS:',len(FAILURES))
+print(FAILURES)
 
 
 
