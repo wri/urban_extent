@@ -33,6 +33,7 @@ DRY_RUN=False
 OFFSET=0
 # LIMIT=500
 
+# DRY_RUN=True
 # OFFSET=500
 # LIMIT=5
 
@@ -72,9 +73,9 @@ COM_CITIES=[
   'Budaun',
   'Chandausi',
   'Godhra',
-  'Ingolstad',
-  'Jaranwala',
-  'Johnson City',
+  # 'Ingolstad', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
+  # 'Jaranwala', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
+  # 'Johnson City', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
   'La Victoria',
   'Mahendranagar',
   'Salzgitter',
@@ -83,6 +84,33 @@ COM_CITIES=[
   'Tando Adam',
   'Thunder Bay',
   'Yeosu']
+
+NEW_CENTER_CITIES_CENTROIDS=ee.Dictionary({
+  'Ingolstad': ee.Geometry.Point([11.426204876844523,48.76507718332393]),
+  'Jaranwala': ee.Geometry.Point([73.42116841076808,31.336663434272804]),
+  'Johnson City': ee.Geometry.Point([-82.35209572307961,36.316573488567336]),
+})
+# NEW_CENTER_CITIES_CENTROIDS=False
+NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
+
+""" ERIC CENTROIDS
+ 'Bidar', [77.52078709614943,17.91547247737295]
+ 'Boras', [12.938561020772944,57.720750492018205]
+ 'Budaun', [79.12604991161326,28.03265316498389]
+ 'Chandausi', [78.78058247689171,28.448365699750184]
+ 'Godhra', [73.61165263489295,22.776999673547973]
+ 'Ingolstad', [11.426204876844523,48.76507718332393]
+ 'Jaranwala', [73.42116841076808,31.336663434272804]
+ 'Johnson City', [-82.35209572307961,36.316573488567336]
+ 'La Victoria', [-67.3305393088188,10.228463012210497]
+ 'Mahendranagar', [80.18115644779526,28.96697665223218]
+ 'Salzgitter', [10.349910259625208,52.15521892854932]
+ 'Sawai Madhopur', [76.35285818958363,26.018074137423426]
+ 'Tadepalligudem', [81.53108158157536,16.811913769903555]
+ 'Tando Adam', [68.65803649614065,25.762683447436615]
+ 'Thunder Bay', [-89.24631353030803,48.383971133391135]
+ 'Yeosu' [127.66493701053658,34.762903988911475]
+"""
 
 PI=ee.Number.expression('Math.PI')
 
@@ -226,8 +254,12 @@ if USE_COM:
 else:
   CITY_DATA=CITY_DATA.filter(COM_FILTER.Not())
 
+if NEW_CENTER_CITIES:
+  NCC_FILTER=ee.Filter.inList('City__Name',NEW_CENTER_CITIES)
+  CITY_DATA=CITY_DATA.filter(NCC_FILTER)
 
-# pprint(CITY_DATA.sort('City__Name').aggregate_array('City__Name').getInfo())
+pprint(CITY_DATA.sort('City__Name').aggregate_array('City__Name').getInfo())
+pprint(CITY_DATA.sort('City__Name').aggregate_array('Reg_Name').getInfo())
 # raise
 
 #
@@ -368,8 +400,16 @@ def get_circle_data(feat):
   study_bounds=center_of_mass.buffer(radius,MAX_ERR)
   if USE_COM:
     bu_centroid_xy=ee.List(nearest_non_null(center_of_mass))
+    _use_inspected_centroid=False
+  elif NEW_CENTER_CITIES:
+    print('ncc',cname.getInfo())
+    inspected_centroid=NEW_CENTER_CITIES_CENTROIDS.get(cname)
+    inspected_centroid=ee.Geometry(inspected_centroid)
+    bu_centroid_xy=ee.List(nearest_non_null(inspected_centroid))
+    _use_inspected_centroid=True
   else:
     bu_centroid_xy=ee.List(nearest_non_null(centroid))    
+    _use_inspected_centroid=False
   bu_centroid=ee.Geometry.Point(bu_centroid_xy)
   return ee.Feature(
       study_bounds,
@@ -383,7 +423,8 @@ def get_circle_data(feat):
         'study_radius': radius,
         'est_influence_distance': est_influence_distance,
         'study_area_scale_factor': STUDY_AREA_SCALE_FACTOR,
-        'use_center_of_mass': USE_COM
+        'use_center_of_mass': USE_COM,
+        'use_inspected_centroid': _use_inspected_centroid
     }).copyProperties(feat)
 
 
