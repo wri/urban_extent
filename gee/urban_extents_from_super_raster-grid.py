@@ -39,7 +39,7 @@ REGION_INDEX=5
 VECTOR_SCALE=None
 INPUT_VECTOR_SCALE=VECTOR_SCALE
 LIMIT=3
-DRY_RUN=False
+DRY_RUN=True
 RASTER_BUFFER=False
 VECTOR_BUFFER=None
 TEST_CITY=None
@@ -184,7 +184,7 @@ def urban_grid(bu_class):
     reducer=ee.Reducer.max(), 
     scale=5, 
     crs=GRID_PROJ)
-  return grid.filter(ee.Filter.eq('max',2))
+  return grid.filter(ee.Filter.gte('max',1))
 
 
 def get_cell_feature(cell,pa): 

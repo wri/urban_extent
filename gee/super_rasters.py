@@ -29,7 +29,7 @@ VECTOR_SCALE=100
 VECTOR_SCALE=None
 OFFSET=None
 LIMIT=None
-DRY_RUN=False
+DRY_RUN=True
 OFFSET=0
 # LIMIT=500
 
@@ -260,7 +260,7 @@ if NEW_CENTER_CITIES:
 
 pprint(CITY_DATA.sort('City__Name').aggregate_array('City__Name').getInfo())
 pprint(CITY_DATA.sort('City__Name').aggregate_array('Reg_Name').getInfo())
-# raise
+raise
 
 #
 # HELPERS
