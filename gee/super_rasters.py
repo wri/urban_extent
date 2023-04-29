@@ -29,7 +29,7 @@ VECTOR_SCALE=100
 VECTOR_SCALE=None
 OFFSET=None
 LIMIT=None
-DRY_RUN=True
+DRY_RUN=False
 OFFSET=0
 # LIMIT=500
 
@@ -47,8 +47,10 @@ OFFSET=0
 #
 # CONSTANTS
 #
-ROOT='projects/wri-datalab/cities/urban_land_use/data'
-IC_ID=f'{ROOT}/builtup_density_GHSL_WSF1519_WC21'
+# ROOT='projects/wri-datalab/cities/urban_land_use/data'
+# IC_ID=f'{ROOT}/builtup_density_GHSL_WSF1519_WC21'
+ROOT = 'users/emackres'
+IC_ID=f'{ROOT}/builtup_density_WSFevo_2015'
 if VECTOR_SCALE:
   IC_ID=f'{IC_ID}-vs{VECTOR_SCALE}'
 
@@ -66,6 +68,7 @@ DENSITY_RADIUS=564
 DENSITY_UNIT='meters'
 CENTROID_SEARCH_RADIUS=200
 USE_COM=False
+USE_TESTCITIES=True
 # USE_COM=True
 COM_CITIES=[
   'Bidar',
@@ -111,6 +114,19 @@ NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
  'Thunder Bay', [-89.24631353030803,48.383971133391135]
  'Yeosu' [127.66493701053658,34.762903988911475]
 """
+
+test_cities=[
+  # "Dhaka",
+  # "Hong Kong, Hong Kong",
+  # "Wuhan, Hubei", 
+  # "Bangkok",
+  # "Cairo",
+  # "Minneapolis-St. Paul", 
+  # "Baku", 
+  # "Bogota", 
+  # "Kinshasa", 
+  "Madrid" 
+]
 
 PI=ee.Number.expression('Math.PI')
 
@@ -175,7 +191,29 @@ WSF19=ee.ImageCollection("users/mattia80/WSF2019_20211102").reduce(ee.Reducer.fi
 # DW=ee.ImageCollection("GOOGLE/DYNAMICWORLD/V1").select('label').filterDate('2022-03-01','2022-11-01').mode()
 
 
+# https://gee-community-catalog.org/projects/wsf/
+wsf_evo = ee.ImageCollection("projects/sat-io/open-datasets/WSF/WSF_EVO")
+wsf_evoImg = wsf_evo.reduce(ee.Reducer.firstNonNull()).selfMask().rename(['bu'])
+
+GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN");
+# Map.addLayer(GHSL2023release.gte(500).reduce(ee.Reducer.anyNonZero()).selfMask(),{palette:['red','blue']},"GHSLraw",false)
+# b1: 1950, b2: 1955, b3: 1960, b4: 1965, b5: 1970, b6: 1975, b7: 1980, b8: 1985, b9: 1990, b10: 1995, b11: 2000, b12: 2005, b13: 2010, b14: 2015, b15: 2020, b16: 2025, b17: 2030)
+count = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,2020,2025,2030]
+GHSL2023releaseYear = GHSL2023release.gte(2000).selfMask().reduce(ee.Reducer.count()).remap(count.reverse(),year).selfMask().rename(['bu']) 
+
+mapYear = 2015
+
+wsfyear = wsf_evoImg.updateMask(wsf_evoImg.lte(mapYear)).gt(0)
+GHSLyear = GHSL2023releaseYear.updateMask(GHSL2023releaseYear.lte(mapYear)).gt(0)
+
+GHSL_WSFcomb = wsfyear.unmask().gt(0).add(GHSLyear.unmask().gt(0)).selfMask()
+GHSL_WSFintersect = GHSL_WSFcomb.updateMask(GHSL_WSFcomb.eq(2)).gt(0)
+GHSL_WSFunion = GHSL_WSFcomb.updateMask(GHSL_WSFcomb.gte(1)).gt(0)
+
+
 _proj=GHSL.select('built').projection().getInfo()
+# _proj=wsf_evoImg.projection().getInfo()
 GHSL_CRS=_proj['crs']
 GHSL_TRANSFORM=_proj['transform']
 print("GHSL PROJ:",GHSL_CRS,GHSL_TRANSFORM)
@@ -189,17 +227,19 @@ else:
 #
 # BU IMAGE
 #
-BU_GHSL=GHSL.select(['built']).gte(3).selfMask().rename(['bu']).toUint8()
-BU_WSF=WSF.eq(255).selfMask().rename(['bu']).toUint8()
-BU_WC21=WC21.eq(50).selfMask().rename(['bu']).toUint8()
-BU_WSF19=WSF19.eq(255).selfMask().rename(['bu']).toUint8()
-# BU_DW=DW.eq(6).selfMask().rename(['bu']).toUint8()
-BU=ee.ImageCollection([
-    BU_WSF,
-    BU_GHSL,
-    BU_WC21,
-    BU_WSF19
-    ]).reduce(ee.Reducer.firstNonNull()).rename('bu')
+# BU_GHSL=GHSL.select(['built']).gte(3).selfMask().rename(['bu']).toUint8()
+# BU_WSF=WSF.eq(255).selfMask().rename(['bu']).toUint8()
+# BU_WC21=WC21.eq(50).selfMask().rename(['bu']).toUint8()
+# BU_WSF19=WSF19.eq(255).selfMask().rename(['bu']).toUint8()
+# # BU_DW=DW.eq(6).selfMask().rename(['bu']).toUint8()
+# BU=ee.ImageCollection([
+#     BU_WSF,
+#     BU_GHSL,
+#     BU_WC21,
+#     BU_WSF19
+#     ]).reduce(ee.Reducer.firstNonNull()).rename('bu')
+BU = GHSL_WSFunion
+
 IS_BUILTUP=BU.gt(0).rename(['builtup'])
 _usubu_rededucer=ee.Reducer.mean()
 _usubu_kernel=ee.Kernel.circle(
@@ -254,13 +294,19 @@ if USE_COM:
 else:
   CITY_DATA=CITY_DATA.filter(COM_FILTER.Not())
 
+TEST_FILTER=ee.Filter.inList('City__Name',test_cities)
+if USE_TESTCITIES:
+  CITY_DATA=CITY_DATA.filter(TEST_FILTER)
+else:
+  CITY_DATA=CITY_DATA.filter(TEST_FILTER.Not())
+
 if NEW_CENTER_CITIES:
   NCC_FILTER=ee.Filter.inList('City__Name',NEW_CENTER_CITIES)
   CITY_DATA=CITY_DATA.filter(NCC_FILTER)
 
 pprint(CITY_DATA.sort('City__Name').aggregate_array('City__Name').getInfo())
 pprint(CITY_DATA.sort('City__Name').aggregate_array('Reg_Name').getInfo())
-raise
+# raise
 
 #
 # HELPERS
