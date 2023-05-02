@@ -51,6 +51,10 @@ OFFSET=0
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSF1519_WC21'
 ROOT = 'users/emackres'
 IC_ID=f'{ROOT}/builtup_density_WSFevo_2015'
+# IC_ID=f'{ROOT}/builtup_density_GHSL2023_2015'
+# IC_ID=f'{ROOT}/builtup_density_GHSL_WSFunion_2015'
+# IC_ID=f'{ROOT}/builtup_density_GHSL_WSFintersection_2015'
+
 if VECTOR_SCALE:
   IC_ID=f'{IC_ID}-vs{VECTOR_SCALE}'
 
@@ -67,8 +71,9 @@ GROWTH_RATE=0.0666
 DENSITY_RADIUS=564
 DENSITY_UNIT='meters'
 CENTROID_SEARCH_RADIUS=200
-USE_COM=False
 USE_TESTCITIES=True
+USE_COMPLETED_FILTER=True
+USE_COM=False
 # USE_COM=True
 COM_CITIES=[
   'Bidar',
@@ -93,8 +98,10 @@ NEW_CENTER_CITIES_CENTROIDS=ee.Dictionary({
   'Jaranwala': ee.Geometry.Point([73.42116841076808,31.336663434272804]),
   'Johnson City': ee.Geometry.Point([-82.35209572307961,36.316573488567336]),
 })
-# NEW_CENTER_CITIES_CENTROIDS=False
-NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
+NEW_CENTER_CITIES_CENTROIDS=False
+# NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
+NEW_CENTER_CITIES=False
+
 
 """ ERIC CENTROIDS
  'Bidar', [77.52078709614943,17.91547247737295]
@@ -116,16 +123,16 @@ NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
 """
 
 test_cities=[
-  # "Dhaka",
-  # "Hong Kong, Hong Kong",
-  # "Wuhan, Hubei", 
-  # "Bangkok",
-  # "Cairo",
-  # "Minneapolis-St. Paul", 
-  # "Baku", 
-  # "Bogota", 
-  # "Kinshasa", 
-  "Madrid" 
+  "Dhaka",
+  "Hong Kong, Hong Kong",
+  "Wuhan, Hubei", 
+  "Bangkok",
+  "Cairo",
+  "Minneapolis-St. Paul", 
+  "Baku", 
+  "Bogota", 
+  "Kinshasa", 
+  "Madrid"
 ]
 
 PI=ee.Number.expression('Math.PI')
@@ -198,11 +205,12 @@ wsf_evoImg = wsf_evo.reduce(ee.Reducer.firstNonNull()).selfMask().rename(['bu'])
 GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN");
 # Map.addLayer(GHSL2023release.gte(500).reduce(ee.Reducer.anyNonZero()).selfMask(),{palette:['red','blue']},"GHSLraw",false)
 # b1: 1950, b2: 1955, b3: 1960, b4: 1965, b5: 1970, b6: 1975, b7: 1980, b8: 1985, b9: 1990, b10: 1995, b11: 2000, b12: 2005, b13: 2010, b14: 2015, b15: 2020, b16: 2025, b17: 2030)
-count = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+# count = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
+count = [17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
 year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,2020,2025,2030]
-GHSL2023releaseYear = GHSL2023release.gte(2000).selfMask().reduce(ee.Reducer.count()).remap(count.reverse(),year).selfMask().rename(['bu']) 
+GHSL2023releaseYear = GHSL2023release.gte(2000).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
 
-mapYear = 2015
+mapYear = 1985
 
 wsfyear = wsf_evoImg.updateMask(wsf_evoImg.lte(mapYear)).gt(0)
 GHSLyear = GHSL2023releaseYear.updateMask(GHSL2023releaseYear.lte(mapYear)).gt(0)
@@ -238,7 +246,7 @@ else:
 #     BU_WC21,
 #     BU_WSF19
 #     ]).reduce(ee.Reducer.firstNonNull()).rename('bu')
-BU = GHSL_WSFunion
+BU = wsfyear
 
 IS_BUILTUP=BU.gt(0).rename(['builtup'])
 _usubu_rededucer=ee.Reducer.mean()
@@ -283,10 +291,14 @@ prop_names=prop_names.remove(HALTON_TYPE_KEY)
 safe_prop_names=prop_names.map(safe_keys)
 CITY_DATA=CITY_DATA.select(prop_names,safe_prop_names)
 
-
 COMPLETED_IDS=ee.ImageCollection(IC_ID).aggregate_array('City__ID__Number')
-COMPLETED_FILTER=ee.Filter.inList('City__ID__Number',COMPLETED_IDS)
-CITY_DATA=CITY_DATA.filter(COMPLETED_FILTER.Not())
+COMPLETED_FILTER=ee.Filter.And(ee.Filter.inList('City__ID__Number',COMPLETED_IDS),ee.Filter.equals('builtup_year',mapYear))
+COMPLETED_CITIES_LIST=ee.ImageCollection(IC_ID).filter(COMPLETED_FILTER).aggregate_array('City__Name')
+
+if USE_COMPLETED_FILTER:
+  CITY_DATA=CITY_DATA.filter(ee.Filter.inList('City__Name',COMPLETED_CITIES_LIST).Not())
+else:
+  CITY_DATA=CITY_DATA
 
 COM_FILTER=ee.Filter.inList('City__Name',COM_CITIES)
 if USE_COM:
@@ -294,11 +306,11 @@ if USE_COM:
 else:
   CITY_DATA=CITY_DATA.filter(COM_FILTER.Not())
 
-TEST_FILTER=ee.Filter.inList('City__Name',test_cities)
+TESTCITIES_FILTER=ee.Filter.inList('City__Name',test_cities)
 if USE_TESTCITIES:
-  CITY_DATA=CITY_DATA.filter(TEST_FILTER)
+  CITY_DATA=CITY_DATA.filter(TESTCITIES_FILTER)
 else:
-  CITY_DATA=CITY_DATA.filter(TEST_FILTER.Not())
+  CITY_DATA=CITY_DATA
 
 if NEW_CENTER_CITIES:
   NCC_FILTER=ee.Filter.inList('City__Name',NEW_CENTER_CITIES)
@@ -470,7 +482,8 @@ def get_circle_data(feat):
         'est_influence_distance': est_influence_distance,
         'study_area_scale_factor': STUDY_AREA_SCALE_FACTOR,
         'use_center_of_mass': USE_COM,
-        'use_inspected_centroid': _use_inspected_centroid
+        'use_inspected_centroid': _use_inspected_centroid,
+        'builtup_year': mapYear
     }).copyProperties(feat)
 
 
@@ -567,7 +580,7 @@ for i,ident in enumerate(IDS):
   feat=ee.Feature(get_super_feat(feat))
   # print_info(super_feat=feat.toDictionary())
   print('='*100)
-  asset_name=unidecode(f'{city_name}-{ident}')
+  asset_name=unidecode(f'{city_name}-{ident}-{mapYear}')
   asset_name=re.sub(r'[^A-Za-z0-9\-\_]+', '', asset_name)
   bu=ee.Image(BU_DENSITY_CAT.copyProperties(feat))
   geom=feat.geometry()
