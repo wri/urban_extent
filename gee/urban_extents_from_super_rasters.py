@@ -33,7 +33,7 @@ SPLIT_INDEX=False
 # TEST_CITY='Tokyo'
 # TEST_CITY='Berlin'
 
-SPLIT_INDEX=1
+# SPLIT_INDEX=1
 
 
 
@@ -71,13 +71,16 @@ AREA_REDUCER=ee.Reducer.sum().combine(
           ee.Reducer.sum(),outputPrefix=f'urban_area_')
 
 
-ROOT='projects/wri-datalab/cities/urban_land_use/data'
-SUFFIX='GHSL_WSF1519_WC21'
+ROOT='users/emackres'
+SUFFIX='GHSL_WSFunion_2015' # 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
 
 REGION=REGIONS[REGION_INDEX]
 REGION_SHORT=REGIONS_SHORT[REGION_INDEX]
-DEST_NAME=f'{REGION_SHORT}_{SUFFIX}'
+# DEST_NAME=f'{REGION_SHORT}_{SUFFIX}'
+DEST_NAME=f'{SUFFIX}'
+
+# YEAR = 2015
 
 
 if RASTER_BUFFER:
@@ -87,8 +90,8 @@ else:
 #
 # IMPORTS
 #
-SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('Reg_Name',REGION))
-print(REGION,REGION_SHORT,SUPER_IC.size().getInfo())
+SUPER_IC=ee.ImageCollection(SR_ID)#.filter(ee.Filter.eq('builtup_year',YEAR))#.filter(ee.Filter.eq('Reg_Name',REGION))
+print(DEST_NAME,REGION,REGION_SHORT,SUPER_IC.size().getInfo())
 
 
 if VECTOR_SCALE:

@@ -47,13 +47,15 @@ OFFSET=0
 #
 # CONSTANTS
 #
-# ROOT='projects/wri-datalab/cities/urban_land_use/data'
+# ROOT='projects/wri-datalab/cities/urban_land_use/data/dev'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSF1519_WC21'
 ROOT = 'users/emackres'
-IC_ID=f'{ROOT}/builtup_density_WSFevo_2015'
+# IC_ID=f'{ROOT}/builtup_density_WSFevo_2015'
 # IC_ID=f'{ROOT}/builtup_density_GHSL2023_2015'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSFunion_2015'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSFintersection_2015'
+IC_ID=f'{ROOT}/builtup_density_WSFevo'
+
 
 if VECTOR_SCALE:
   IC_ID=f'{IC_ID}-vs{VECTOR_SCALE}'
@@ -71,7 +73,8 @@ GROWTH_RATE=0.0666
 DENSITY_RADIUS=564
 DENSITY_UNIT='meters'
 CENTROID_SEARCH_RADIUS=200
-USE_TESTCITIES=True
+USE_TESTCITIES=False
+USE_REGION_FILTER=True
 USE_COMPLETED_FILTER=True
 USE_COM=False
 # USE_COM=True
@@ -210,7 +213,7 @@ count = [17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
 year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,2020,2025,2030]
 GHSL2023releaseYear = GHSL2023release.gte(2000).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
 
-mapYear = 1985
+mapYear = 2015
 
 wsfyear = wsf_evoImg.updateMask(wsf_evoImg.lte(mapYear)).gt(0)
 GHSLyear = GHSL2023releaseYear.updateMask(GHSL2023releaseYear.lte(mapYear)).gt(0)
@@ -246,7 +249,7 @@ else:
 #     BU_WC21,
 #     BU_WSF19
 #     ]).reduce(ee.Reducer.firstNonNull()).rename('bu')
-BU = wsfyear
+BU = GHSL_WSFunion
 
 IS_BUILTUP=BU.gt(0).rename(['builtup'])
 _usubu_rededucer=ee.Reducer.mean()
@@ -309,6 +312,12 @@ else:
 TESTCITIES_FILTER=ee.Filter.inList('City__Name',test_cities)
 if USE_TESTCITIES:
   CITY_DATA=CITY_DATA.filter(TESTCITIES_FILTER)
+else:
+  CITY_DATA=CITY_DATA
+
+REGION_FILTER=ee.Filter.eq('Reg_Name','East Asia and the Pacific (EAP)')
+if USE_REGION_FILTER:
+  CITY_DATA=CITY_DATA.filter(REGION_FILTER)
 else:
   CITY_DATA=CITY_DATA
 
