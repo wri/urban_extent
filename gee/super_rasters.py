@@ -35,7 +35,7 @@ OFFSET=0
 
 # DRY_RUN=True
 # OFFSET=500
-# LIMIT=5
+LIMIT=22
 
 """
  RUN 1 ERRORS:  [4189, 2292, 1500, 2062]   
@@ -54,7 +54,12 @@ ROOT = 'users/emackres'
 # IC_ID=f'{ROOT}/builtup_density_GHSL2023_2015'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSFunion_2015'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSFintersection_2015'
-IC_ID=f'{ROOT}/builtup_density_WSFevo'
+# IC_ID=f'{ROOT}/builtup_density_WSFevo'
+# IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion'
+# IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct'
+IC_ID=f'{ROOT}/builtup_density_GHSL_GHSLthresh2pct'
+
+
 
 
 if VECTOR_SCALE:
@@ -73,8 +78,8 @@ GROWTH_RATE=0.0666
 DENSITY_RADIUS=564
 DENSITY_UNIT='meters'
 CENTROID_SEARCH_RADIUS=200
-USE_TESTCITIES=False
-USE_REGION_FILTER=True
+USE_TESTCITIES=True
+USE_REGION_FILTER=False
 USE_COMPLETED_FILTER=True
 USE_COM=False
 # USE_COM=True
@@ -93,13 +98,15 @@ COM_CITIES=[
   'Sawai Madhopur',
   'Tadepalligudem',
   'Tando Adam',
-  'Thunder Bay',
+  # 'Thunder Bay',
   'Yeosu']
 
 NEW_CENTER_CITIES_CENTROIDS=ee.Dictionary({
   'Ingolstad': ee.Geometry.Point([11.426204876844523,48.76507718332393]),
   'Jaranwala': ee.Geometry.Point([73.42116841076808,31.336663434272804]),
   'Johnson City': ee.Geometry.Point([-82.35209572307961,36.316573488567336]),
+  'Poughkeepsie-Newburgh': ee.Geometry.Point([-73.93297541879508,41.7040681411346]),
+  'Thunder Bay': ee.Geometry.Point([-89.24631353030803,48.383971133391135])
 })
 NEW_CENTER_CITIES_CENTROIDS=False
 # NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
@@ -123,19 +130,38 @@ NEW_CENTER_CITIES=False
  'Tando Adam', [68.65803649614065,25.762683447436615]
  'Thunder Bay', [-89.24631353030803,48.383971133391135]
  'Yeosu' [127.66493701053658,34.762903988911475]
+
+New additions 6/3/2023 - missing or very small builtup density images 
+  'Gandhinagar', [72.64005494165245,23.21867028416773]
+  'Poughkeepsie-Newburgh', [-73.93297541879508,41.7040681411346]
+  'Satkhira', [89.07194075069569,22.717846552580642]
+  'Valsad', [72.92758546565402,20.607285530986754]
+  'Ipswich', [1.1554162793974454,52.052821477844404]
+  'Boras', [12.938771515859585,57.722630559655784]
+  'Bimbo', [18.521348031397014,4.328534006175151]
+  'Billings', [-108.5025730262764,45.784598612542126]
+  'Giessen', [8.670619693008112,50.58343761451457]
+  'El Centro--Calexico, CA', [-115.56038988156142,32.79286256561882]
+  'Clarksville', [-87.35841285561979,36.52914617995032]
+  'Barnstable Town', [-70.28320083696039,41.65598777966051]
+  'Yuma', [-114.62665249045568,32.692377527395266]
+  'South Lyon-Howell-Brighton', [-83.78094233241319,42.52974952964617]
+  'Aberdeen-Havre de Grace-Bel Air', [-76.16867584833608,39.506544432212074]
 """
 
 test_cities=[
-  "Dhaka",
-  "Hong Kong, Hong Kong",
-  "Wuhan, Hubei", 
-  "Bangkok",
-  "Cairo",
-  "Minneapolis-St. Paul", 
-  "Baku", 
-  "Bogota", 
-  "Kinshasa", 
-  "Madrid"
+  # "Dhaka",
+  # "Hong Kong, Hong Kong",
+  # "Wuhan, Hubei", 
+  # "Bangkok",
+  # "Cairo",
+  # "Minneapolis-St. Paul", 
+  # "Baku", 
+  # "Bogota", 
+  # "Kinshasa", 
+  # "Madrid"
+  "Shanghai, Shanghai",
+  # "New York-Newark"
 ]
 
 PI=ee.Number.expression('Math.PI')
@@ -211,7 +237,8 @@ GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN"
 # count = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
 count = [17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
 year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,2020,2025,2030]
-GHSL2023releaseYear = GHSL2023release.gte(2000).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
+BuiltAreaThresh = 200 # minimum m2 built out of possible 10000 for each GHSL grid cell included
+GHSL2023releaseYear = GHSL2023release.gte(BuiltAreaThresh).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
 
 mapYear = 2015
 
@@ -224,7 +251,8 @@ GHSL_WSFunion = GHSL_WSFcomb.updateMask(GHSL_WSFcomb.gte(1)).gt(0)
 
 
 _proj=GHSL.select('built').projection().getInfo()
-# _proj=wsf_evoImg.projection().getInfo()
+# _proj=GHSL2023releaseYear.select('bu').projection().getInfo()
+# _proj=wsf_evoImg.select('bu').projection().getInfo()
 GHSL_CRS=_proj['crs']
 GHSL_TRANSFORM=_proj['transform']
 print("GHSL PROJ:",GHSL_CRS,GHSL_TRANSFORM)
@@ -249,7 +277,7 @@ else:
 #     BU_WC21,
 #     BU_WSF19
 #     ]).reduce(ee.Reducer.firstNonNull()).rename('bu')
-BU = GHSL_WSFunion
+BU = GHSLyear
 
 IS_BUILTUP=BU.gt(0).rename(['builtup'])
 _usubu_rededucer=ee.Reducer.mean()
@@ -294,15 +322,6 @@ prop_names=prop_names.remove(HALTON_TYPE_KEY)
 safe_prop_names=prop_names.map(safe_keys)
 CITY_DATA=CITY_DATA.select(prop_names,safe_prop_names)
 
-COMPLETED_IDS=ee.ImageCollection(IC_ID).aggregate_array('City__ID__Number')
-COMPLETED_FILTER=ee.Filter.And(ee.Filter.inList('City__ID__Number',COMPLETED_IDS),ee.Filter.equals('builtup_year',mapYear))
-COMPLETED_CITIES_LIST=ee.ImageCollection(IC_ID).filter(COMPLETED_FILTER).aggregate_array('City__Name')
-
-if USE_COMPLETED_FILTER:
-  CITY_DATA=CITY_DATA.filter(ee.Filter.inList('City__Name',COMPLETED_CITIES_LIST).Not())
-else:
-  CITY_DATA=CITY_DATA
-
 COM_FILTER=ee.Filter.inList('City__Name',COM_CITIES)
 if USE_COM:
   CITY_DATA=CITY_DATA.filter(COM_FILTER)
@@ -315,7 +334,7 @@ if USE_TESTCITIES:
 else:
   CITY_DATA=CITY_DATA
 
-REGION_FILTER=ee.Filter.eq('Reg_Name','East Asia and the Pacific (EAP)')
+REGION_FILTER=ee.Filter.eq('Reg_Name','Land-Rich Developed Countries (LRDC)')
 if USE_REGION_FILTER:
   CITY_DATA=CITY_DATA.filter(REGION_FILTER)
 else:
@@ -325,8 +344,20 @@ if NEW_CENTER_CITIES:
   NCC_FILTER=ee.Filter.inList('City__Name',NEW_CENTER_CITIES)
   CITY_DATA=CITY_DATA.filter(NCC_FILTER)
 
-pprint(CITY_DATA.sort('City__Name').aggregate_array('City__Name').getInfo())
-pprint(CITY_DATA.sort('City__Name').aggregate_array('Reg_Name').getInfo())
+if LIMIT:
+  CITY_DATA=CITY_DATA.limit(LIMIT,'Pop_2010',False)
+
+COMPLETED_IDS=ee.ImageCollection(IC_ID).aggregate_array('City__ID__Number')
+COMPLETED_FILTER=ee.Filter.And(ee.Filter.inList('City__ID__Number',COMPLETED_IDS),ee.Filter.equals('builtup_year',mapYear))
+COMPLETED_CITIES_LIST=ee.ImageCollection(IC_ID).filter(COMPLETED_FILTER).aggregate_array('City__Name')
+
+if USE_COMPLETED_FILTER:
+  CITY_DATA=CITY_DATA.filter(ee.Filter.inList('City__Name',COMPLETED_CITIES_LIST).Not())
+else:
+  CITY_DATA=CITY_DATA
+
+pprint(CITY_DATA.aggregate_array('City__Name').getInfo())
+pprint(CITY_DATA.aggregate_array('Reg_Name').getInfo())
 # raise
 
 #
@@ -506,7 +537,7 @@ def vectorize(data):
     scale=VECTOR_SCALE,
     crsTransform=TRANSFORM,
     geometry=study_area,
-    maxPixels=1e11,
+    maxPixels=1e13,
     bestEffort=True
   )
   centroid_filter=ee.Filter.withinDistance(
@@ -601,7 +632,7 @@ for i,ident in enumerate(IDS):
     region=geom,
     crs=GHSL_CRS,
     crsTransform=GHSL_TRANSFORM,
-    maxPixels=1e11,
+    maxPixels=1e13, #1e11
   )
   if DRY_RUN:
     print('-- dry_run:',asset_name)

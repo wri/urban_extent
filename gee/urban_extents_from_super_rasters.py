@@ -20,13 +20,13 @@ TEST_CITY=None
 ENSURE_FEATS=False
 SPLIT_INDEX=False
 
-# ENSURE_FEATS=True
+ENSURE_FEATS=True
 # RASTER_BUFFER=100
 # VECTOR_SCALE=100
 # VECTOR_SCALE=250
 # INPUT_VECTOR_SCALE=None
 # OFFSET=157
-# LIMIT=10
+LIMIT=20
 # DRY_RUN=True
 # VECTOR_BUFFER=100
 # VECTOR_BUFFER=500
@@ -72,15 +72,16 @@ AREA_REDUCER=ee.Reducer.sum().combine(
 
 
 ROOT='users/emackres'
-SUFFIX='GHSL_WSFunion_2015' # 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
+SUFFIX='WSFevo' # 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
+
+YEAR = 2015
 
 REGION=REGIONS[REGION_INDEX]
 REGION_SHORT=REGIONS_SHORT[REGION_INDEX]
-# DEST_NAME=f'{REGION_SHORT}_{SUFFIX}'
-DEST_NAME=f'{SUFFIX}'
+DEST_NAME=f'{REGION_SHORT}_{SUFFIX}_{YEAR}'
+DEST_NAME=f'{SUFFIX}_{YEAR}_ShanghaiOnly'
 
-# YEAR = 2015
 
 
 if RASTER_BUFFER:
@@ -196,11 +197,12 @@ def urban_extent(im):
 # EXPORT
 #
 name=DEST_NAME
+count=SUPER_IC.size()
+split_pos=count.divide(2).toInt()
+limit_pos=count.subtract(LIMIT)
 
 if SPLIT_INDEX is not False:
   name=f'{name}_split{SPLIT_INDEX}'
-  count=SUPER_IC.size()
-  split_pos=count.divide(2).toInt()
   if SPLIT_INDEX==1:
     SUPER_IC=SUPER_IC.limit(count.subtract(split_pos),'City__Name',False)  
   else:
@@ -212,8 +214,10 @@ if TEST_CITY:
   SUPER_IC=SUPER_IC.filter(ee.Filter.eq('City__Name',TEST_CITY))
 else:
   if LIMIT:
-    SUPER_IC=SUPER_IC.limit(LIMIT,'Pop_2010')
+    SUPER_IC=SUPER_IC.limit(LIMIT,'Pop_2010',False).filter(ee.Filter.inList('City__Name',['Shanghai, Shanghai']))
     name=f'{name}-lim{LIMIT}'
+    # SUPER_IC=SUPER_IC.limit(limit_pos,'Pop_2010',True).sort('system:asset_size')
+    # name=f'{name}-lim{LIMIT}remainder'
   else:
     SUPER_IC=SUPER_IC.sort('Pop_2010')
 
@@ -233,6 +237,8 @@ description=re.sub('[\.\,\/]','--',name)
 asset_id=f'{ROOT}/urban_extents/{name}'
 print('\n'*1)
 print(f'EXPORTING [{SUPER_IC.size().getInfo()}]:',asset_id)
+pprint(SUPER_IC.aggregate_array('City__Name').getInfo())
+
 task=ee.batch.Export.table.toAsset(
       collection=urban_extents_fc, 
       description=description, 
