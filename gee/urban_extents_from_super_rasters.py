@@ -26,7 +26,7 @@ ENSURE_FEATS=True
 # VECTOR_SCALE=250
 # INPUT_VECTOR_SCALE=None
 # OFFSET=157
-LIMIT=20
+# LIMIT=20
 # DRY_RUN=True
 # VECTOR_BUFFER=100
 # VECTOR_BUFFER=500
@@ -72,15 +72,15 @@ AREA_REDUCER=ee.Reducer.sum().combine(
 
 
 ROOT='users/emackres'
-SUFFIX='WSFevo' # 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
+SUFFIX='GHSL_GHSLthresh2pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
 
-YEAR = 2015
+YEAR = 1985
 
 REGION=REGIONS[REGION_INDEX]
 REGION_SHORT=REGIONS_SHORT[REGION_INDEX]
 DEST_NAME=f'{REGION_SHORT}_{SUFFIX}_{YEAR}'
-DEST_NAME=f'{SUFFIX}_{YEAR}_ShanghaiOnly'
+DEST_NAME=f'{SUFFIX}_{YEAR}'
 
 
 
@@ -91,16 +91,20 @@ else:
 #
 # IMPORTS
 #
-SUPER_IC=ee.ImageCollection(SR_ID)#.filter(ee.Filter.eq('builtup_year',YEAR))#.filter(ee.Filter.eq('Reg_Name',REGION))
+SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('builtup_year',YEAR))#.filter(ee.Filter.eq('Reg_Name',REGION))
 print(DEST_NAME,REGION,REGION_SHORT,SUPER_IC.size().getInfo())
 
 
 if VECTOR_SCALE:
   TRANSFORM=None
 else:
-  GHSL=ee.Image('JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1')
-  _proj=GHSL.select('built').projection().getInfo()
-  GHSL_CRS=_proj['crs']
+  # GHSL=ee.Image('JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1')
+  # _proj=GHSL.select('built').projection().getInfo()
+  # GHSL_CRS=_proj['crs']
+  GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN")
+  _proj=GHSL2023release.projection().getInfo()
+  GHSL_CRS= "EPSG:3857"
+  
   GHSL_TRANSFORM=_proj['transform']
   print("GHSL PROJ:",GHSL_CRS,GHSL_TRANSFORM)
   TRANSFORM=GHSL_TRANSFORM
@@ -214,7 +218,7 @@ if TEST_CITY:
   SUPER_IC=SUPER_IC.filter(ee.Filter.eq('City__Name',TEST_CITY))
 else:
   if LIMIT:
-    SUPER_IC=SUPER_IC.limit(LIMIT,'Pop_2010',False).filter(ee.Filter.inList('City__Name',['Shanghai, Shanghai']))
+    SUPER_IC=SUPER_IC.limit(LIMIT,'Pop_2010',False)#.filter(ee.Filter.inList('City__Name',['Shanghai, Shanghai']))
     name=f'{name}-lim{LIMIT}'
     # SUPER_IC=SUPER_IC.limit(limit_pos,'Pop_2010',True).sort('system:asset_size')
     # name=f'{name}-lim{LIMIT}remainder'

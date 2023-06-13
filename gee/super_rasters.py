@@ -25,7 +25,7 @@ ratio=A(circle)/A ~ alpha^2 * pi
 Note that city centers might be far from "centered"
 """""""""""""""""""""""""""""""""""""""""""""""""""
 STUDY_AREA_SCALE_FACTOR=20
-VECTOR_SCALE=100
+# VECTOR_SCALE=100
 VECTOR_SCALE=None
 OFFSET=None
 LIMIT=None
@@ -58,6 +58,10 @@ ROOT = 'users/emackres'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct'
 IC_ID=f'{ROOT}/builtup_density_GHSL_GHSLthresh2pct'
+# IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct_WSFres'
+# IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct_GHSLres'
+
+
 
 
 
@@ -78,7 +82,7 @@ GROWTH_RATE=0.0666
 DENSITY_RADIUS=564
 DENSITY_UNIT='meters'
 CENTROID_SEARCH_RADIUS=200
-USE_TESTCITIES=True
+USE_TESTCITIES=False
 USE_REGION_FILTER=False
 USE_COMPLETED_FILTER=True
 USE_COM=False
@@ -150,18 +154,18 @@ New additions 6/3/2023 - missing or very small builtup density images
 """
 
 test_cities=[
-  # "Dhaka",
-  # "Hong Kong, Hong Kong",
-  # "Wuhan, Hubei", 
-  # "Bangkok",
-  # "Cairo",
-  # "Minneapolis-St. Paul", 
-  # "Baku", 
-  # "Bogota", 
-  # "Kinshasa", 
-  # "Madrid"
+  "Dhaka",
+  "Hong Kong, Hong Kong",
+  "Wuhan, Hubei", 
+  "Bangkok",
+  "Cairo",
+  "Minneapolis-St. Paul", 
+  "Baku", 
+  "Bogota", 
+  "Kinshasa", 
+  "Madrid",
   "Shanghai, Shanghai",
-  # "New York-Newark"
+  # "New York-Newark",
 ]
 
 PI=ee.Number.expression('Math.PI')
@@ -231,7 +235,7 @@ WSF19=ee.ImageCollection("users/mattia80/WSF2019_20211102").reduce(ee.Reducer.fi
 wsf_evo = ee.ImageCollection("projects/sat-io/open-datasets/WSF/WSF_EVO")
 wsf_evoImg = wsf_evo.reduce(ee.Reducer.firstNonNull()).selfMask().rename(['bu'])
 
-GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN");
+GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN")
 # Map.addLayer(GHSL2023release.gte(500).reduce(ee.Reducer.anyNonZero()).selfMask(),{palette:['red','blue']},"GHSLraw",false)
 # b1: 1950, b2: 1955, b3: 1960, b4: 1965, b5: 1970, b6: 1975, b7: 1980, b8: 1985, b9: 1990, b10: 1995, b11: 2000, b12: 2005, b13: 2010, b14: 2015, b15: 2020, b16: 2025, b17: 2030)
 # count = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
@@ -240,7 +244,7 @@ year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,20
 BuiltAreaThresh = 200 # minimum m2 built out of possible 10000 for each GHSL grid cell included
 GHSL2023releaseYear = GHSL2023release.gte(BuiltAreaThresh).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
 
-mapYear = 2015
+mapYear = 1985
 
 wsfyear = wsf_evoImg.updateMask(wsf_evoImg.lte(mapYear)).gt(0)
 GHSLyear = GHSL2023releaseYear.updateMask(GHSL2023releaseYear.lte(mapYear)).gt(0)
@@ -250,10 +254,12 @@ GHSL_WSFintersect = GHSL_WSFcomb.updateMask(GHSL_WSFcomb.eq(2)).gt(0)
 GHSL_WSFunion = GHSL_WSFcomb.updateMask(GHSL_WSFcomb.gte(1)).gt(0)
 
 
-_proj=GHSL.select('built').projection().getInfo()
-# _proj=GHSL2023releaseYear.select('bu').projection().getInfo()
-# _proj=wsf_evoImg.select('bu').projection().getInfo()
-GHSL_CRS=_proj['crs']
+# _proj=GHSL.select('built').projection().getInfo()
+_proj=GHSL2023release.projection().getInfo()
+# _proj=wsf_evo.first().projection().getInfo()
+
+# GHSL_CRS=_proj['crs']
+GHSL_CRS= "EPSG:3857" #"ESRI:54009" # for use with GHSL2023release image which doesn't have CRS in metadata. 
 GHSL_TRANSFORM=_proj['transform']
 print("GHSL PROJ:",GHSL_CRS,GHSL_TRANSFORM)
 
@@ -630,6 +636,7 @@ for i,ident in enumerate(IDS):
     assetId=f'{IC_ID}/{asset_name}',
     pyramidingPolicy=PPOLICY,
     region=geom,
+    scale=VECTOR_SCALE, 
     crs=GHSL_CRS,
     crsTransform=GHSL_TRANSFORM,
     maxPixels=1e13, #1e11
