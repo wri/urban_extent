@@ -72,15 +72,15 @@ AREA_REDUCER=ee.Reducer.sum().combine(
 
 
 ROOT='users/emackres'
-SUFFIX='GHSL_GHSLthresh2pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
+SUFFIX= 'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
 
-YEAR = 1985
+YEAR = 2015
 
 REGION=REGIONS[REGION_INDEX]
 REGION_SHORT=REGIONS_SHORT[REGION_INDEX]
 DEST_NAME=f'{REGION_SHORT}_{SUFFIX}_{YEAR}'
-DEST_NAME=f'{SUFFIX}_{YEAR}'
+DEST_NAME=f'{SUFFIX}'#_{YEAR}'
 
 
 
@@ -91,7 +91,7 @@ else:
 #
 # IMPORTS
 #
-SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('builtup_year',YEAR))#.filter(ee.Filter.eq('Reg_Name',REGION))
+SUPER_IC=ee.ImageCollection(SR_ID)#.filter(ee.Filter.eq('builtup_year',YEAR))#.filter(ee.Filter.eq('Reg_Name',REGION))
 print(DEST_NAME,REGION,REGION_SHORT,SUPER_IC.size().getInfo())
 
 

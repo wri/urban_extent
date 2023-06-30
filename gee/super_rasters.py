@@ -35,7 +35,7 @@ OFFSET=0
 
 # DRY_RUN=True
 # OFFSET=500
-LIMIT=22
+# LIMIT=22
 
 """
  RUN 1 ERRORS:  [4189, 2292, 1500, 2062]   
@@ -57,9 +57,13 @@ ROOT = 'users/emackres'
 # IC_ID=f'{ROOT}/builtup_density_WSFevo'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct'
-IC_ID=f'{ROOT}/builtup_density_GHSL_GHSLthresh2pct'
+# IC_ID=f'{ROOT}/builtup_density_GHSL_GHSLthresh2pct'
+# IC_ID=f'{ROOT}/builtup_density_GHSL_GHSLthresh5pct'
+# IC_ID=f'{ROOT}/builtup_density_GHSL_GHSLthresh10pct'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct_WSFres'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct_GHSLres'
+IC_ID=f'{ROOT}/builtup_density_Kigali_GHSL_GHSLthresh10pct'
+
 
 
 
@@ -82,7 +86,7 @@ GROWTH_RATE=0.0666
 DENSITY_RADIUS=564
 DENSITY_UNIT='meters'
 CENTROID_SEARCH_RADIUS=200
-USE_TESTCITIES=False
+USE_TESTCITIES=True
 USE_REGION_FILTER=False
 USE_COMPLETED_FILTER=True
 USE_COM=False
@@ -154,18 +158,19 @@ New additions 6/3/2023 - missing or very small builtup density images
 """
 
 test_cities=[
-  "Dhaka",
-  "Hong Kong, Hong Kong",
-  "Wuhan, Hubei", 
-  "Bangkok",
-  "Cairo",
-  "Minneapolis-St. Paul", 
-  "Baku", 
-  "Bogota", 
-  "Kinshasa", 
-  "Madrid",
-  "Shanghai, Shanghai",
+  # "Dhaka",
+  # "Hong Kong, Hong Kong",
+  # "Wuhan, Hubei", 
+  # "Bangkok",
+  # "Cairo",
+  # "Minneapolis-St. Paul", 
+  # "Baku", 
+  # "Bogota", 
+  # "Kinshasa", 
+  # "Madrid",
+  # "Shanghai, Shanghai",
   # "New York-Newark",
+  "Kigali",
 ]
 
 PI=ee.Number.expression('Math.PI')
@@ -241,10 +246,10 @@ GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN"
 # count = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
 count = [17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
 year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,2020,2025,2030]
-BuiltAreaThresh = 200 # minimum m2 built out of possible 10000 for each GHSL grid cell included
+BuiltAreaThresh = 1000 # minimum m2 built out of possible 10000 for each GHSL grid cell included
 GHSL2023releaseYear = GHSL2023release.gte(BuiltAreaThresh).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
 
-mapYear = 1985
+mapYear = 1995
 
 wsfyear = wsf_evoImg.updateMask(wsf_evoImg.lte(mapYear)).gt(0)
 GHSLyear = GHSL2023releaseYear.updateMask(GHSL2023releaseYear.lte(mapYear)).gt(0)
@@ -351,7 +356,7 @@ if NEW_CENTER_CITIES:
   CITY_DATA=CITY_DATA.filter(NCC_FILTER)
 
 if LIMIT:
-  CITY_DATA=CITY_DATA.limit(LIMIT,'Pop_2010',False)
+  CITY_DATA=CITY_DATA.limit(LIMIT,'Pop_2010',False)#.filter(ee.Filter.inList('City__Name',['Beijing, Beijing']))
 
 COMPLETED_IDS=ee.ImageCollection(IC_ID).aggregate_array('City__ID__Number')
 COMPLETED_FILTER=ee.Filter.And(ee.Filter.inList('City__ID__Number',COMPLETED_IDS),ee.Filter.equals('builtup_year',mapYear))
