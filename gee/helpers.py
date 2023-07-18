@@ -119,7 +119,7 @@ def fill_holes(feat,max_fill):
     return feat.setGeometry(ee.Geometry.Polygon(coords_list))
 
 
-# test fixes for built-up exclude during hole filling
+#  fixes for built-up excluded during hole filling
 
 def add_coord_length(feat):
   feat=ee.Feature(feat)

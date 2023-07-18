@@ -80,7 +80,7 @@ YEAR = 2020
 REGION=REGIONS[REGION_INDEX]
 REGION_SHORT=REGIONS_SHORT[REGION_INDEX]
 DEST_NAME=f'{SUFFIX}_{YEAR}_{REGION_SHORT}'
-DEST_NAME=f'Kigali_{SUFFIX}'#_{YEAR}'
+# DEST_NAME=f'Kigali_{SUFFIX}'#_{YEAR}'
 
 
 
@@ -91,7 +91,7 @@ else:
 #
 # IMPORTS
 #
-SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('builtup_year',YEAR)).filter(ee.Filter.eq('City__Name','Kigali'))#.filter(ee.Filter.eq('Reg_Name',REGION))
+SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('builtup_year',YEAR)).filter(ee.Filter.eq('Reg_Name',REGION))#.filter(ee.Filter.eq('City__Name','Kigali'))#
 print(DEST_NAME,REGION,REGION_SHORT,SUPER_IC.size().getInfo())
 
 

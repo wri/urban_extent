@@ -161,7 +161,7 @@ NEW_CENTER_CITIES_CENTROIDS=ee.Dictionary({
 
 })
 NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
-USE_NEW_CENTER_CITIES=False
+USE_NEW_CENTER_CITIES=True
 
 
 """ ERIC CENTROIDS
@@ -295,7 +295,7 @@ year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,20
 BuiltAreaThresh = 1000 # minimum m2 built out of possible 10000 for each GHSL grid cell included
 GHSL2023releaseYear = GHSL2023release.gte(BuiltAreaThresh).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
 
-mapYear = 1980
+mapYear = 2000
 
 wsfyear = wsf_evoImg.updateMask(wsf_evoImg.lte(mapYear)).gt(0)
 GHSLyear = GHSL2023releaseYear.updateMask(GHSL2023releaseYear.lte(mapYear)).gt(0)
