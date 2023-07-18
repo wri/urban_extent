@@ -8,7 +8,7 @@ ee.Initialize()
 #
 # CONFIG
 #
-REGION_INDEX=2
+REGION_INDEX=0
 
 VECTOR_SCALE=None
 INPUT_VECTOR_SCALE=VECTOR_SCALE
@@ -31,7 +31,7 @@ ENSURE_FEATS=True
 # VECTOR_BUFFER=100
 # VECTOR_BUFFER=500
 # TEST_CITY='Tokyo'
-# TEST_CITY='Berlin'
+# TEST_CITY='Shanghai'
 
 # SPLIT_INDEX=1
 
@@ -71,16 +71,16 @@ AREA_REDUCER=ee.Reducer.sum().combine(
           ee.Reducer.sum(),outputPrefix=f'urban_area_')
 
 
-ROOT='users/emackres'
-SUFFIX= 'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
+ROOT= 'projects/wri-datalab/cities/urban_land_use/data' #'users/emackres'
+SUFFIX= 'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
 
-YEAR = 2015
+YEAR = 2020
 
 REGION=REGIONS[REGION_INDEX]
 REGION_SHORT=REGIONS_SHORT[REGION_INDEX]
-DEST_NAME=f'{REGION_SHORT}_{SUFFIX}_{YEAR}'
-DEST_NAME=f'{SUFFIX}'#_{YEAR}'
+DEST_NAME=f'{SUFFIX}_{YEAR}_{REGION_SHORT}'
+DEST_NAME=f'Kigali_{SUFFIX}'#_{YEAR}'
 
 
 
@@ -91,7 +91,7 @@ else:
 #
 # IMPORTS
 #
-SUPER_IC=ee.ImageCollection(SR_ID)#.filter(ee.Filter.eq('builtup_year',YEAR))#.filter(ee.Filter.eq('Reg_Name',REGION))
+SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('builtup_year',YEAR)).filter(ee.Filter.eq('City__Name','Kigali'))#.filter(ee.Filter.eq('Reg_Name',REGION))
 print(DEST_NAME,REGION,REGION_SHORT,SUPER_IC.size().getInfo())
 
 
@@ -179,16 +179,19 @@ def urban_extent(im):
     selectors=AREA_PROPS
   )
   data=data.rename(['sum','suburban_area_sum','urban_area_sum'],AREA_PROPS)
-  feats=h.flatten_to_polygons(feats)
-  feats=feats.map(add_coord_length)
-  flat_feats=feats.filter(ee.Filter.eq('coord_length',1))
-  complex_feats=feats.filter(ee.Filter.gt('coord_length',1))
-  complex_feats=complex_feats.map(fill_small)
-  feats=ee.FeatureCollection([
-    flat_feats,
-    complex_feats
-  ]).flatten()    
+  feats=h.flatten_to_polygons_and_fill_holes(feats,MAX_FILL)
+  # feats=h.flatten_to_polygons(feats)
+  # feats=feats.map(add_coord_length)
+  # flat_feats=feats.filter(ee.Filter.eq('coord_length',1))
+  # complex_feats=feats.filter(ee.Filter.gt('coord_length',1))
+  # complex_feats=complex_feats.map(fill_small)
+  # feats=ee.FeatureCollection([
+  #   flat_feats,
+  #   complex_feats
+  # ]).flatten()    
   feat=ee.Feature(feats.geometry(MAX_ERR),data)
+  # feat=h.flatten_to_polygons_and_fill_holes(ee.FeatureCollection([feat]),MAX_FILL)
+  # feat=ee.Feature(feat.geometry(MAX_ERR),data)
   if VECTOR_BUFFER:
     feat=feat.buffer(VECTOR_BUFFER,MAX_ERR)
   if ENSURE_FEATS:

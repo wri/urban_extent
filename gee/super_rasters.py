@@ -35,7 +35,7 @@ OFFSET=0
 
 # DRY_RUN=True
 # OFFSET=500
-# LIMIT=22
+# LIMIT=5000
 
 """
  RUN 1 ERRORS:  [4189, 2292, 1500, 2062]   
@@ -48,8 +48,9 @@ OFFSET=0
 # CONSTANTS
 #
 # ROOT='projects/wri-datalab/cities/urban_land_use/data/dev'
+ROOT='projects/wri-datalab/cities/urban_land_use/data'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSF1519_WC21'
-ROOT = 'users/emackres'
+# ROOT = 'users/emackres'
 # IC_ID=f'{ROOT}/builtup_density_WSFevo_2015'
 # IC_ID=f'{ROOT}/builtup_density_GHSL2023_2015'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSFunion_2015'
@@ -62,7 +63,8 @@ ROOT = 'users/emackres'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_GHSLthresh10pct'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct_WSFres'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct_GHSLres'
-IC_ID=f'{ROOT}/builtup_density_Kigali_GHSL_GHSLthresh10pct'
+# IC_ID=f'{ROOT}/builtup_density_Kigali_GHSL_GHSLthresh10pct'
+IC_ID=f'{ROOT}/builtup_density_GHSL_BUthresh10pct'
 
 
 
@@ -86,39 +88,80 @@ GROWTH_RATE=0.0666
 DENSITY_RADIUS=564
 DENSITY_UNIT='meters'
 CENTROID_SEARCH_RADIUS=200
-USE_TESTCITIES=True
+USE_TESTCITIES=False
 USE_REGION_FILTER=False
 USE_COMPLETED_FILTER=True
 USE_COM=False
 # USE_COM=True
 COM_CITIES=[
-  'Bidar',
-  'Boras',
-  'Budaun',
-  'Chandausi',
-  'Godhra',
-  # 'Ingolstad', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
-  # 'Jaranwala', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
-  # 'Johnson City', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
-  'La Victoria',
-  'Mahendranagar',
-  'Salzgitter',
-  'Sawai Madhopur',
-  'Tadepalligudem',
-  'Tando Adam',
-  # 'Thunder Bay',
-  'Yeosu']
+  # 'Bidar',
+  # 'Boras',
+  # 'Budaun',
+  # 'Chandausi',
+  # 'Godhra',
+  # # 'Ingolstad', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
+  # # 'Jaranwala', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
+  # # 'Johnson City', ## <=== FAILED Error: Image.clip: The geometry for image clipping must not be empty. 
+  # 'La Victoria',
+  # 'Mahendranagar',
+  # 'Salzgitter',
+  # 'Sawai Madhopur',
+  # 'Tadepalligudem',
+  # 'Tando Adam',
+  # # 'Thunder Bay',
+  # 'Yeosu'
+  ]
 
 NEW_CENTER_CITIES_CENTROIDS=ee.Dictionary({
+  'Bidar': ee.Geometry.Point([77.52078709614943,17.91547247737295]),
+  # 'Boras': ee.Geometry.Point([12.938561020772944,57.720750492018205]), 
+  'Boras': ee.Geometry.Point([12.94152909517508,57.72269986139307]), #alternative centroid
+  'Budaun': ee.Geometry.Point([79.12604991161326,28.03265316498389]),
+  'Chandausi': ee.Geometry.Point([78.78058247689171,28.448365699750184]),
+  'Godhra': ee.Geometry.Point([73.61165263489295,22.776999673547973]),
   'Ingolstad': ee.Geometry.Point([11.426204876844523,48.76507718332393]),
   'Jaranwala': ee.Geometry.Point([73.42116841076808,31.336663434272804]),
   'Johnson City': ee.Geometry.Point([-82.35209572307961,36.316573488567336]),
   'Poughkeepsie-Newburgh': ee.Geometry.Point([-73.93297541879508,41.7040681411346]),
-  'Thunder Bay': ee.Geometry.Point([-89.24631353030803,48.383971133391135])
+  'Thunder Bay': ee.Geometry.Point([-89.24631353030803,48.383971133391135]),
+  'La Victoria': ee.Geometry.Point([-67.3305393088188,10.228463012210497]),
+  'Mahendranagar': ee.Geometry.Point([80.18115644779526,28.96697665223218]),
+  'Salzgitter': ee.Geometry.Point([10.349910259625208,52.15521892854932]),
+  'Sawai Madhopur': ee.Geometry.Point([76.35285818958363,26.018074137423426]),
+  'Tadepalligudem': ee.Geometry.Point([81.53108158157536,16.811913769903555]),
+  'Tando Adam': ee.Geometry.Point([68.65803649614065,25.762683447436615]),
+  'Yeosu': ee.Geometry.Point([127.66493701053658,34.762903988911475]),
+  'Gandhinagar': ee.Geometry.Point([72.64005494165245,23.21867028416773]),
+  'Satkhira': ee.Geometry.Point([89.07194075069569,22.717846552580642]),
+  'Valsad': ee.Geometry.Point([72.92758546565402,20.607285530986754]),
+  'Ipswich': ee.Geometry.Point([1.1554162793974454,52.052821477844404]),
+  'Bimbo': ee.Geometry.Point([18.521348031397014,4.328534006175151]),
+  # 'Billings': ee.Geometry.Point([-108.5025730262764,45.784598612542126]),
+  'Billings': ee.Geometry.Point([-108.50067893095184,45.786345365857734]), #alternative centroid
+  'Giessen': ee.Geometry.Point([8.670619693008112,50.58343761451457]),
+  'El Centro--Calexico, CA                                                                             ': ee.Geometry.Point([-115.56038988156142,32.79286256561882]),
+  'Clarksville': ee.Geometry.Point([-87.35841285561979,36.52914617995032]),
+  'Barnstable Town': ee.Geometry.Point([-70.28320083696039,41.65598777966051]),
+  # 'Yuma': ee.Geometry.Point([-114.62665249045568,32.692377527395266]),
+  'Yuma': ee.Geometry.Point([-114.62853956542635,32.704680060058834]), #alternative centroid
+  'South Lyon-Howell-Brighton': ee.Geometry.Point([-83.78094233241319,42.52974952964617]),
+  # 'Aberdeen-Havre de Grace-Bel Air': ee.Geometry.Point([-76.16867584833608,39.506544432212074]),
+  'Aberdeen-Havre de Grace-Bel Air': ee.Geometry.Point([-76.16709854779967,39.50839272273559]), #alternative centroid
+  # failed under GHSL10pct runs
+  'Evpatoriya': ee.Geometry.Point([33.365710964210336,45.19421580338069]),
+  'Jagdalpur': ee.Geometry.Point([82.02425198674257,19.088325507126125]),
+  'Male': ee.Geometry.Point([73.50692301285711,4.171185236260825]),
+  'Moncton': ee.Geometry.Point([-64.77742662666752,46.08857439979821]),
+  'Cayenne': ee.Geometry.Point([-52.33198615900898,4.940096831911476]),
+  'Ottappalam': ee.Geometry.Point([76.37593172251849,10.773660271424795]),
+  'Sunchonn': ee.Geometry.Point([125.93430009790484,39.42582405887188]),
+  'Sambalpur': ee.Geometry.Point([83.97330824785912,21.465209994433234]),
+  'Bokaro Steel City': ee.Geometry.Point([86.14564361652216,23.667304104607762]),
+  'Nay Pyi Taw': ee.Geometry.Point([96.11973911325958,19.744494778674444]),
+
 })
-NEW_CENTER_CITIES_CENTROIDS=False
-# NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
-NEW_CENTER_CITIES=False
+NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
+USE_NEW_CENTER_CITIES=False
 
 
 """ ERIC CENTROIDS
@@ -155,6 +198,9 @@ New additions 6/3/2023 - missing or very small builtup density images
   'Yuma', [-114.62665249045568,32.692377527395266]
   'South Lyon-Howell-Brighton', [-83.78094233241319,42.52974952964617]
   'Aberdeen-Havre de Grace-Bel Air', [-76.16867584833608,39.506544432212074]
+
+Missing cities needed?
+  'San Jose, CA', [-121.89081977186525,37.33545249552986] # or alternative population needed for 'San Francisco-Oakland', 7150739
 """
 
 test_cities=[
@@ -249,7 +295,7 @@ year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,20
 BuiltAreaThresh = 1000 # minimum m2 built out of possible 10000 for each GHSL grid cell included
 GHSL2023releaseYear = GHSL2023release.gte(BuiltAreaThresh).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
 
-mapYear = 1995
+mapYear = 1980
 
 wsfyear = wsf_evoImg.updateMask(wsf_evoImg.lte(mapYear)).gt(0)
 GHSLyear = GHSL2023releaseYear.updateMask(GHSL2023releaseYear.lte(mapYear)).gt(0)
@@ -337,7 +383,7 @@ COM_FILTER=ee.Filter.inList('City__Name',COM_CITIES)
 if USE_COM:
   CITY_DATA=CITY_DATA.filter(COM_FILTER)
 else:
-  CITY_DATA=CITY_DATA.filter(COM_FILTER.Not())
+  CITY_DATA=CITY_DATA#.filter(COM_FILTER.Not())
 
 TESTCITIES_FILTER=ee.Filter.inList('City__Name',test_cities)
 if USE_TESTCITIES:
@@ -345,25 +391,29 @@ if USE_TESTCITIES:
 else:
   CITY_DATA=CITY_DATA
 
-REGION_FILTER=ee.Filter.eq('Reg_Name','Land-Rich Developed Countries (LRDC)')
+REGION_FILTER=ee.Filter.eq('Reg_Name','East Asia and the Pacific (EAP)') # 'Land-Rich Developed Countries (LRDC)'
 if USE_REGION_FILTER:
   CITY_DATA=CITY_DATA.filter(REGION_FILTER)
 else:
   CITY_DATA=CITY_DATA
 
-if NEW_CENTER_CITIES:
-  NCC_FILTER=ee.Filter.inList('City__Name',NEW_CENTER_CITIES)
+NCC_FILTER=ee.Filter.inList('City__Name',NEW_CENTER_CITIES)
+if USE_NEW_CENTER_CITIES:
   CITY_DATA=CITY_DATA.filter(NCC_FILTER)
+else:
+  CITY_DATA=CITY_DATA.filter(NCC_FILTER.Not())
 
 if LIMIT:
-  CITY_DATA=CITY_DATA.limit(LIMIT,'Pop_2010',False)#.filter(ee.Filter.inList('City__Name',['Beijing, Beijing']))
+  CITY_DATA=CITY_DATA.limit(LIMIT,'Pop_2010',False)#.filter(ee.Filter.inList('City__Name',['Yingtan, Jiangxi']))
+else:
+  CITY_DATA=CITY_DATA
 
 COMPLETED_IDS=ee.ImageCollection(IC_ID).aggregate_array('City__ID__Number')
 COMPLETED_FILTER=ee.Filter.And(ee.Filter.inList('City__ID__Number',COMPLETED_IDS),ee.Filter.equals('builtup_year',mapYear))
-COMPLETED_CITIES_LIST=ee.ImageCollection(IC_ID).filter(COMPLETED_FILTER).aggregate_array('City__Name')
+COMPLETED_CITIES_LIST=ee.ImageCollection(IC_ID).filter(COMPLETED_FILTER).aggregate_array('City__ID__Number')
 
 if USE_COMPLETED_FILTER:
-  CITY_DATA=CITY_DATA.filter(ee.Filter.inList('City__Name',COMPLETED_CITIES_LIST).Not())
+  CITY_DATA=CITY_DATA.filter(ee.Filter.inList('City__ID__Number',COMPLETED_CITIES_LIST).Not())
 else:
   CITY_DATA=CITY_DATA
 
@@ -394,7 +444,8 @@ def nearest_non_null(centroid):
       reducer=ee.Reducer.min(3),
       geometry=bounds,
       crs=GHSL_CRS,
-      crsTransform=GHSL_TRANSFORM)
+      crsTransform=GHSL_TRANSFORM
+      )
     return [nearest.getNumber('min1'), nearest.getNumber('min2')]
 
 
@@ -510,7 +561,7 @@ def get_circle_data(feat):
   if USE_COM:
     bu_centroid_xy=ee.List(nearest_non_null(center_of_mass))
     _use_inspected_centroid=False
-  elif NEW_CENTER_CITIES:
+  elif USE_NEW_CENTER_CITIES:
     print('ncc',cname.getInfo())
     inspected_centroid=NEW_CENTER_CITIES_CENTROIDS.get(cname)
     inspected_centroid=ee.Geometry(inspected_centroid)

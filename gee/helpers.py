@@ -119,6 +119,46 @@ def fill_holes(feat,max_fill):
     return feat.setGeometry(ee.Geometry.Polygon(coords_list))
 
 
+# test fixes for built-up exclude during hole filling
+
+def add_coord_length(feat):
+  feat=ee.Feature(feat)
+  geom=feat.geometry()
+  coord_length=geom.coordinates().size()
+  return feat.set({
+      'coord_length': coord_length
+    })
+
+def hole_filling_method(feats,max_fill):
+    feats=feats.map(add_coord_length)
+    flat_feats=feats.filter(ee.Filter.lte('coord_length',1))
+    complex_feats=feats#.filter(ee.Filter.gt('coord_length',1))
+    def fill_small(feat):
+        return fill_holes(feat,max_fill)
+    complex_feats=complex_feats.map(fill_small)
+    feats=ee.FeatureCollection([
+    #    flat_feats,
+       complex_feats
+    ]).flatten()  
+    return feats  
+
+def flatten_to_polygons_and_fill_holes(feats,max_fill):
+    feats=ee.FeatureCollection(feats)
+    feats=feats.map(_geom_type)
+    gc_filter=ee.Filter.eq('geomType', 'GeometryCollection')
+    mpoly_filter=ee.Filter.eq('geomType', 'MultiPolygon')
+    other_filter=ee.Filter.Or(gc_filter,mpoly_filter).Not()
+    gc_data = feats.filter(gc_filter).map(flatten_geometry_collection).flatten()
+    mpoly_data = feats.filter(mpoly_filter).map(flatten_multipolygon).flatten()
+    other_data = feats.filter(other_filter)
+
+    gc_data=hole_filling_method(gc_data,max_fill)
+    mpoly_data=hole_filling_method(mpoly_data,max_fill)
+    other_data=hole_filling_method(other_data,max_fill)
+
+    feats=other_data.merge(gc_data).merge(mpoly_data)
+    return feats
+
 
 
 
