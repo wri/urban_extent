@@ -8,7 +8,7 @@ ee.Initialize()
 #
 # CONFIG
 #
-REGION_INDEX=0
+REGION_INDEX=7
 
 VECTOR_SCALE=None
 INPUT_VECTOR_SCALE=VECTOR_SCALE
@@ -75,12 +75,12 @@ ROOT= 'projects/wri-datalab/cities/urban_land_use/data' #'users/emackres'
 SUFFIX= 'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
 
-YEAR = 2020
+YEAR = 2015
 
 REGION=REGIONS[REGION_INDEX]
 REGION_SHORT=REGIONS_SHORT[REGION_INDEX]
-DEST_NAME=f'{SUFFIX}_{YEAR}_{REGION_SHORT}'
-# DEST_NAME=f'Kigali_{SUFFIX}'#_{YEAR}'
+DEST_NAME=f'{SUFFIX}_{YEAR}'#_{REGION_SHORT}'
+# DEST_NAME=f'{SUFFIX}'#_{YEAR}'
 
 
 
@@ -91,7 +91,7 @@ else:
 #
 # IMPORTS
 #
-SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('builtup_year',YEAR)).filter(ee.Filter.eq('Reg_Name',REGION))#.filter(ee.Filter.eq('City__Name','Kigali'))#
+SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('builtup_year',YEAR))#.filter(ee.Filter.eq('Reg_Name',REGION))#.filter(ee.Filter.eq('City__Name','Kigali'))#
 print(DEST_NAME,REGION,REGION_SHORT,SUPER_IC.size().getInfo())
 
 

@@ -47,6 +47,8 @@ OFFSET=0
 #
 # CONSTANTS
 #
+# Set output image collection for all processed cities
+#
 # ROOT='projects/wri-datalab/cities/urban_land_use/data/dev'
 ROOT='projects/wri-datalab/cities/urban_land_use/data'
 # IC_ID=f'{ROOT}/builtup_density_GHSL_WSF1519_WC21'
@@ -161,7 +163,7 @@ NEW_CENTER_CITIES_CENTROIDS=ee.Dictionary({
 
 })
 NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
-USE_NEW_CENTER_CITIES=True
+USE_NEW_CENTER_CITIES=False
 
 
 """ ERIC CENTROIDS
@@ -199,9 +201,230 @@ New additions 6/3/2023 - missing or very small builtup density images
   'South Lyon-Howell-Brighton', [-83.78094233241319,42.52974952964617]
   'Aberdeen-Havre de Grace-Bel Air', [-76.16867584833608,39.506544432212074]
 
+New additions 8/9/2023 - Cities that work in some later year(s), but for 1980 receive Error: Image.clip: The geometry for image clipping must not be empty. (Error code: 3)
+  'Abuja': ee.Geometry.Point([7.478280522539826,9.063242749572446]),
+  'Yantai, Shandong': ee.Geometry.Point([121.3749378997016,37.547713687836136]), 
+  'Malappuram': ee.Geometry.Point([76.08188061368155,11.04189898978775]), 
+  'Nashik': ee.Geometry.Point([73.79145731999836,20.000012251988963]), 
+  'Palembang': ee.Geometry.Point([104.76365120290319,-2.9796579529336444]), 
+  'Taizhou, Zhejiang': ee.Geometry.Point([121.43429069821823,28.6817640387459]), 
+  'Yancheng, Jiangsu': ee.Geometry.Point([120.13168862294013,33.394676035552955]), 
+  'Islamabad': ee.Geometry.Point([73.04056229885364,33.68780139164149]), 
+  'Dongying, Shandong': ee.Geometry.Point([118.50351106829504,37.45873900992769]), 
+  'Zamboanga City': ee.Geometry.Point([122.0762901968634,6.937038761068384]), 
+  'Rajshahi': ee.Geometry.Point([88.58521451461779,24.373335615864278]), 
+  'Warangal': ee.Geometry.Point([79.59920807579847,17.98366119193612]), 
+  'Aden': ee.Geometry.Point([45.0083038082666,12.792403911840374]), 
+  'Lilongwe': ee.Geometry.Point([33.77344389179475,-13.97754300371363]), 
+  'Jinhua, Zhejiang': ee.Geometry.Point([119.64028627257649,29.10402766701154]), 
+  'Yixing, Jiangsu': ee.Geometry.Point([119.8132470013679,31.369521760803412]), 
+  'Yichun, Heilongjiang': ee.Geometry.Point([128.8894324851581,47.72415021954703]), 
+  'Uyo': ee.Geometry.Point([7.92176004833856,5.032193499857169]), 
+  'Mangalore': ee.Geometry.Point([74.83509800462366,12.864616697377642]), 
+  'Jiujiang, Jiangxi': ee.Geometry.Point([115.97424022409739,29.719992498318497]), 
+  'Zhoushan, Zhejiang': ee.Geometry.Point([122.23816470490492,29.969200590789747]), 
+  'Bacolod': ee.Geometry.Point([122.94906706835545,10.66794952770812]), 
+  'Erdos, Inner Mongolia': ee.Geometry.Point([109.99582280020206,39.81559591604334]), 
+  # 'Feira De Santana': ee.Geometry.Point(), # GHSL model problem 
+  'Linhai, Zhejiang': ee.Geometry.Point([121.12606568700242,28.846819764887197]), 
+  'Nasiriyah': ee.Geometry.Point([46.252282948154,31.044915158338185]), 
+  'Matamoros': ee.Geometry.Point([-103.23035765665854,25.529377881382633]), 
+  'Bazhong, Sichuan': ee.Geometry.Point([106.76211868650547,31.85258212620844]), 
+  'Tongchuan, Shaanxi': ee.Geometry.Point(), 
+  'Sanya, Hainan': ee.Geometry.Point(), 
+  'Temecula-Murrieta': ee.Geometry.Point(), 
+  'Iloilo City': ee.Geometry.Point(), 
+  'Yongcheng, Henan': ee.Geometry.Point(), 
+  'Port Sudan': ee.Geometry.Point(), 
+  'Yamunanagar': ee.Geometry.Point(), 
+  'Las Palmas': ee.Geometry.Point(), 
+  'Ahmadnagar': ee.Geometry.Point(), 
+  'Ziyang, Sichuan': ee.Geometry.Point(), 
+  'Buenaventura': ee.Geometry.Point(), 
+  'Meishan, Sichuan': ee.Geometry.Point(), 
+  'Pattaya, Bang Lamung': ee.Geometry.Point(), 
+  'Guangan, Sichuan': ee.Geometry.Point(), 
+  'Habra': ee.Geometry.Point(), 
+  'Iquique': ee.Geometry.Point(), 
+  'Karimnagar': ee.Geometry.Point(), 
+  'Aizawl': ee.Geometry.Point(), 
+  'Thanjavur': ee.Geometry.Point(), 
+  'Dindigul': ee.Geometry.Point(), 
+  'Wah': ee.Geometry.Point(), 
+  'Anand': ee.Geometry.Point(), 
+  'Ratlam': ee.Geometry.Point(), 
+  'Yakutsk': ee.Geometry.Point(), 
+  'Pengzhou, Sichuan': ee.Geometry.Point(), 
+  'Los Mochis': ee.Geometry.Point(), 
+  'Long Xuyen': ee.Geometry.Point(), 
+  'Lianyuan, Hunan': ee.Geometry.Point(), 
+  'Hurghada': ee.Geometry.Point(), 
+  'Paramaribo': ee.Geometry.Point(), 
+  'Yanbu': ee.Geometry.Point(), 
+  'Jayapura': ee.Geometry.Point(),  
+  'Milton Keynes': ee.Geometry.Point(), 
+  'Udhagamandalam': ee.Geometry.Point(), 
+  'Kanhangad': ee.Geometry.Point(), 
+  'Palmas': ee.Geometry.Point(), 
+  'Buon Me Thoat': ee.Geometry.Point(), 
+  'Mage': ee.Geometry.Point(), 
+  'Tokchon': ee.Geometry.Point(), 
+  'Proddatur': ee.Geometry.Point(), 
+  'Mahbubnagar': ee.Geometry.Point(), 
+  'Haldia': ee.Geometry.Point(), 
+  'Hechi, Guangxi': ee.Geometry.Point(), 
+  'Fenhu, Jiangsu': ee.Geometry.Point(), 
+  'Siem Reap city': ee.Geometry.Point(), 
+  'Liangshi, Hunan': ee.Geometry.Point(), 
+  'Hardoi': ee.Geometry.Point(), 
+  'Sullana': ee.Geometry.Point(), 
+  'Chhindwara': ee.Geometry.Point(), 
+  'La Ceiba': ee.Geometry.Point(), 
+  'Zhili, Zhejiang': ee.Geometry.Point(), 
+  '10th of Ramadan City': ee.Geometry.Point(), 
+  'Kolar Gold Fields': ee.Geometry.Point(), 
+  'Jiande, Zhejiang': ee.Geometry.Point(), 
+  'Bhuj': ee.Geometry.Point(), 
+  'Bobai, Guangxi': ee.Geometry.Point(), 
+  'Botshabelo': ee.Geometry.Point(), 
+  'Shivapuri': ee.Geometry.Point(), 
+  'Bintulu': ee.Geometry.Point(), 
+  'Neyveli': ee.Geometry.Point(), 
+  'Samawah': ee.Geometry.Point(), 
+  'Weitang, Zhejiang': ee.Geometry.Point(), 
+  'Madanapalle': ee.Geometry.Point(), 
+  'Shuangjiang, Chongqing': ee.Geometry.Point(), 
+  'Anju': ee.Geometry.Point(), 
+  'Shimla': ee.Geometry.Point(), 
+  'Chengguan, Anhui': ee.Geometry.Point(), 
+  'Phan Rang': ee.Geometry.Point(), 
+  'Sirajgang': ee.Geometry.Point(), 
+  'Robertson Pet': ee.Geometry.Point(), 
+  'Chengguan, Guizhou': ee.Geometry.Point(), 
+  'Jalpaiguri': ee.Geometry.Point(), 
+  'Balurghat': ee.Geometry.Point(), 
+  'Luziania': ee.Geometry.Point(), 
+  'Mancherial': ee.Geometry.Point(), 
+  'Zhongwei, Ningxia': ee.Geometry.Point(), 
+  'Zhongwei, Ningxia': ee.Geometry.Point(), 
+  'Dundee': ee.Geometry.Point(), 
+  'Lashio': ee.Geometry.Point(), 
+  'Aguas Lindas de Goias': ee.Geometry.Point(), 
+  'San Cristobal de las Casas': ee.Geometry.Point(), 
+  'Iraklion': ee.Geometry.Point(), 
+  'Nampa': ee.Geometry.Point(), 
+  'Thanesar': ee.Geometry.Point(), 
+  'Beichuan, Sichuan': ee.Geometry.Point(), 
+  'Beichuan, Sichuan': ee.Geometry.Point(), 
+  'Mughalsarai': ee.Geometry.Point(), 
+  'Bhadravati': ee.Geometry.Point(), 
+  'Quevedo': ee.Geometry.Point(), 
+  'Weitang, Zhejiang': ee.Geometry.Point(), 
+  'Damoh': ee.Geometry.Point(), 
+  'Satara': ee.Geometry.Point(), 
+  'Viet Tri': ee.Geometry.Point(), 
+  'Chhatarpur': ee.Geometry.Point(), 
+  'Yongan, Chongqing': ee.Geometry.Point(), 
+  'Basirhat': ee.Geometry.Point(), 
+  'Fushi, Sichuan': ee.Geometry.Point(), 
+  'Ankleshwar': ee.Geometry.Point(), 
+  'Wudan, Inner Mongolia': ee.Geometry.Point(), 
+  'Jishan, Anhui': ee.Geometry.Point(), 
+  'Khairpur': ee.Geometry.Point(), 
+  'Gonda': ee.Geometry.Point([81.96501485068623,27.132157339565275]), 
+  'Bankura': ee.Geometry.Point(), 
+  'Jimma': ee.Geometry.Point(), 
+  'Kolar': ee.Geometry.Point(), 
+  'Yima, Henan': ee.Geometry.Point(), 
+  'Linghai, Liaoning': ee.Geometry.Point(), 
+  'Fuji, Sichuan': ee.Geometry.Point(), 
+  'Lalitpur': ee.Geometry.Point(), 
+  'Manzanillo': ee.Geometry.Point(), 
+  'Darjiling': ee.Geometry.Point(), 
+  'Chowmohoni': ee.Geometry.Point(), 
+  'Jizan': ee.Geometry.Point(), 
+  'Fengcheng, Shanxi': ee.Geometry.Point(), 
+  'Georgetown': ee.Geometry.Point(), 
+  'Gaoliangjian, Jiangsu': ee.Geometry.Point(), 
+  'Raniganj': ee.Geometry.Point(), 
+  'Shunling, Hunan': ee.Geometry.Point(), 
+  'Bangtou, Fujian': ee.Geometry.Point(), 
+  'Ekibastuz': ee.Geometry.Point(), 
+  'Alipurduar': ee.Geometry.Point(), 
+  'Changanassery': ee.Geometry.Point(), 
+  'Cua': ee.Geometry.Point(),
+  'Marica': ee.Geometry.Point(), 
+  'Motihari': ee.Geometry.Point(), 
+  'Alagoinhas': ee.Geometry.Point(), 
+  'Barreiras': ee.Geometry.Point(), 
+  'Wanzhi, Anhui': ee.Geometry.Point(), 
+  'Bhairab': ee.Geometry.Point(), 
+  'Chunxi, Jiangsu': ee.Geometry.Point(), 
+  'Yuting, Jiangxi': ee.Geometry.Point(), 
+  'Quibdo': ee.Geometry.Point(), 
+  'Shengfang, Hebei': ee.Geometry.Point(), 
+  'Pithampur': ee.Geometry.Point(), 
+  'Dumaguete': ee.Geometry.Point(), 
+  'Dharmavaram': ee.Geometry.Point(), 
+  'Bole, Xinjiang': ee.Geometry.Point(), 
+  'Longxun, Fujian': ee.Geometry.Point(), 
+  'Churu': ee.Geometry.Point(), 
+  'Gudivada': ee.Geometry.Point(), 
+  'Kipushi': ee.Geometry.Point(), 
+  'Chikmagalur': ee.Geometry.Point(), 
+  'Yuyue, Hubei': ee.Geometry.Point(), 
+  'Pudukkottai': ee.Geometry.Point(),
+  'Hoshangabad': ee.Geometry.Point(), 
+  'Butwal': ee.Geometry.Point(), 
+  'Vaniyambadi': ee.Geometry.Point(), 
+  'Fotang, Zhejiang': ee.Geometry.Point(), 
+  'Songyang, Yunnan': ee.Geometry.Point(), 
+  'Amanfrom': ee.Geometry.Point(), 
+  'Ambur': ee.Geometry.Point(), 
+  'Haiyu, Jiangsu': ee.Geometry.Point(), 
+  'Hongguo, Guizhou': ee.Geometry.Point(), 
+  'Meishan, Anhui': ee.Geometry.Point(), 
+  'Myeik': ee.Geometry.Point(), 
+  'Baerum': ee.Geometry.Point(), 
+  'Funchal': ee.Geometry.Point(), 
+  'Noakhali': ee.Geometry.Point(), 
+  'Matou, Guangxi': ee.Geometry.Point(), 
+  'Dera Ismail Khan': ee.Geometry.Point(), 
+  'Kothamangalam': ee.Geometry.Point(), 
+  'Nazilli': ee.Geometry.Point(), 
+  'Hecheng, Zhejiang': ee.Geometry.Point(), 
+  'Chujiang, Hunan': ee.Geometry.Point(), 
+  'Achinsk': ee.Geometry.Point(), 
+  'Tangjiawan, Guangdong': ee.Geometry.Point(), 
+  'Firozpur': ee.Geometry.Point(), 
+  'Xiazhen, Shandong': ee.Geometry.Point(), 
+  'Jiaxiang, Shandong': ee.Geometry.Point(), 
+  'Huayuan, Hubei': ee.Geometry.Point(), 
+  'Chengguan, Henan': ee.Geometry.Point(), 
+  'Aflou': ee.Geometry.Point(), 
+  'Jingchuan, Anhui': ee.Geometry.Point(), 
+  'Gaosha Town, Hunan': ee.Geometry.Point(), 
+  'Paoy Pet': ee.Geometry.Point(), 
+  'Wardha': ee.Geometry.Point(), 
+  'Ranibennur': ee.Geometry.Point(), 
+  'Lufu, Yunnan': ee.Geometry.Point(), 
+  'Ocumaredel Tuy': ee.Geometry.Point(), 
+  'Ishwardi': ee.Geometry.Point(), 
+  'Mormugao': ee.Geometry.Point(), 
+  'Maoping, Hubei': ee.Geometry.Point(), 
+  'Anuradhapura': ee.Geometry.Point(), 
+  'Fengting, Fujian': ee.Geometry.Point(), 
+  'Navapolack': ee.Geometry.Point(), 
+  ....
+
 Missing cities needed?
   'San Jose, CA', [-121.89081977186525,37.33545249552986] # or alternative population needed for 'San Francisco-Oakland', 7150739
-"""
+
+Cities for which current algorythm may be excluding important urban clusters:
+  'Brasilia',
+  'Rio de Janerio'
+  
+  """
 
 test_cities=[
   # "Dhaka",
@@ -273,14 +496,16 @@ FIT_PARAMS=ee.Dictionary({
 #
 # IMPORTS
 #
+# City centroids
 # CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUE200_Universe')
 CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUEUniverseofCities')
+
+# Built-up layer options
 GHSL=ee.Image('JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1')
 WSF=ee.ImageCollection("users/mattia80/WSF2015_v1").reduce(ee.Reducer.firstNonNull())
 WC21=ee.ImageCollection("ESA/WorldCover/v200").reduce(ee.Reducer.firstNonNull())
 WSF19=ee.ImageCollection("users/mattia80/WSF2019_20211102").reduce(ee.Reducer.firstNonNull())
 # DW=ee.ImageCollection("GOOGLE/DYNAMICWORLD/V1").select('label').filterDate('2022-03-01','2022-11-01').mode()
-
 
 # https://gee-community-catalog.org/projects/wsf/
 wsf_evo = ee.ImageCollection("projects/sat-io/open-datasets/WSF/WSF_EVO")
@@ -292,19 +517,21 @@ GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN"
 # count = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17]
 count = [17,16,15,14,13,12,11,10,9,8,7,6,5,4,3,2,1]
 year = [1950,1955,1960,1965,1970,1975,1980,1985,1990,1995,2000,2005,2010,2015,2020,2025,2030]
+# select pixel built-up density threshold for GHSL2023release
 BuiltAreaThresh = 1000 # minimum m2 built out of possible 10000 for each GHSL grid cell included
 GHSL2023releaseYear = GHSL2023release.gte(BuiltAreaThresh).selfMask().reduce(ee.Reducer.count()).remap(count,year).selfMask().rename(['bu']) 
 
-mapYear = 2000
+# set the built-up year for which to produce extents
+mapYear = 1980
 
+# input options for built-up layers
 wsfyear = wsf_evoImg.updateMask(wsf_evoImg.lte(mapYear)).gt(0)
 GHSLyear = GHSL2023releaseYear.updateMask(GHSL2023releaseYear.lte(mapYear)).gt(0)
-
 GHSL_WSFcomb = wsfyear.unmask().gt(0).add(GHSLyear.unmask().gt(0)).selfMask()
 GHSL_WSFintersect = GHSL_WSFcomb.updateMask(GHSL_WSFcomb.eq(2)).gt(0)
 GHSL_WSFunion = GHSL_WSFcomb.updateMask(GHSL_WSFcomb.gte(1)).gt(0)
 
-
+# obtain projection, CRS and Transform for input layer
 # _proj=GHSL.select('built').projection().getInfo()
 _proj=GHSL2023release.projection().getInfo()
 # _proj=wsf_evo.first().projection().getInfo()
@@ -321,7 +548,7 @@ else:
   TRANSFORM=GHSL_TRANSFORM
   VECTOR_SCALE=None
 #
-# BU IMAGE
+# Select built-up IMAGE
 #
 # BU_GHSL=GHSL.select(['built']).gte(3).selfMask().rename(['bu']).toUint8()
 # BU_WSF=WSF.eq(255).selfMask().rename(['bu']).toUint8()
@@ -336,7 +563,10 @@ else:
 #     ]).reduce(ee.Reducer.firstNonNull()).rename('bu')
 BU = GHSLyear
 
+# create band ("builtup") with binary builtup value
 IS_BUILTUP=BU.gt(0).rename(['builtup'])
+
+# create band ("density") with the percent of pixels that are built-up within radius of each pixel
 _usubu_rededucer=ee.Reducer.mean()
 _usubu_kernel=ee.Kernel.circle(
   radius=DENSITY_RADIUS, 
@@ -349,9 +579,11 @@ _density=IS_BUILTUP.unmask(0).reduceNeighborhood(
   kernel=_usubu_kernel,
   skipMasked=True,
 )
+# create band ("builtup_class") with built-up classification (urban, suburban, rural) for each built-up pixel based on its "density" value
 _usubu=ee.Image(0).where(_density.gte(SUBURBAN_BOUND).And(_density.lt(URBAN_BOUND)),1).where(_density.gte(URBAN_BOUND),2).rename(['builtup_class'])
 _density=_density.multiply(100).rename(['density'])
 BU_DENSITY_CAT=_usubu.addBands([_density,IS_BUILTUP]).toUint8()
+# create image of all urban or suburban builtup pixels that have at least MINPIXS neighbors that are also urban or suburban builtup pixels
 BU_CONNECTED=IS_BUILTUP.multiply(_usubu.gt(0)).selfMask().connectedPixelCount(MINPIXS).eq(MINPIXS).selfMask()
 BU_LATLON=BU_CONNECTED.addBands(ee.Image.pixelLonLat())
 
@@ -379,6 +611,7 @@ prop_names=prop_names.remove(HALTON_TYPE_KEY)
 safe_prop_names=prop_names.map(safe_keys)
 CITY_DATA=CITY_DATA.select(prop_names,safe_prop_names)
 
+# filter options to select subsets of cities
 COM_FILTER=ee.Filter.inList('City__Name',COM_CITIES)
 if USE_COM:
   CITY_DATA=CITY_DATA.filter(COM_FILTER)
@@ -408,6 +641,7 @@ if LIMIT:
 else:
   CITY_DATA=CITY_DATA
 
+# filter to limit cities to be run to those not already in the output ImageCollection. 
 COMPLETED_IDS=ee.ImageCollection(IC_ID).aggregate_array('City__ID__Number')
 COMPLETED_FILTER=ee.Filter.And(ee.Filter.inList('City__ID__Number',COMPLETED_IDS),ee.Filter.equals('builtup_year',mapYear))
 COMPLETED_CITIES_LIST=ee.ImageCollection(IC_ID).filter(COMPLETED_FILTER).aggregate_array('City__ID__Number')
@@ -593,6 +827,7 @@ def vectorize(data):
   data=ee.Feature(data)
   study_area=data.geometry()
   bu_centroid=ee.Geometry(data.get('bu_city_center'))
+  # create vectors from BU_CONNECTED image where it overlaps with city study_area
   feats=BU_CONNECTED.reduceToVectors(
     reducer=ee.Reducer.countEvery(),
     crs=GHSL_CRS,
@@ -608,11 +843,16 @@ def vectorize(data):
     rightValue=bu_centroid, 
     maxError=MAX_ERR
   )
+  # buffer each vector feature by its influence distance (function of its area)
   feats=ee.FeatureCollection(feats.map(buffered_feat))
+  # dissolve all vectors to merge overlapping influence area features
   geoms=feats.geometry(MAX_ERR).dissolve(MAX_ERR).geometries()
   feats=ee.FeatureCollection(geoms.map(geom_feat))
+  # filter to retain only merged vector features that are within CENTROID_SEARCH_RADIUS of bu_centroid 
   feats=feats.filter(centroid_filter)
+  # fill holes in vector polygons
   feats=fill_polygons(feats)
+  # return vector polygons as a single feature
   return ee.Feature(feats.geometry()).copyProperties(data)
 
 
@@ -675,10 +915,12 @@ IDS=CITY_DATA.aggregate_array('City__ID__Number').getInfo()[OFFSET:LIMIT]
 FAILURES=[]
 # 
 for i,ident in enumerate(IDS):
+  # get on city centroid feature 
   feat=ee.Feature(CITY_DATA.filter(ee.Filter.eq('City__ID__Number',ident)).first())
   city_name=feat.getString('City__Name').getInfo()
   print('\n'*1)
   print(f'{i}: {city_name} [{ident}]')
+  # get feature for city boundary as defined by vectorize function
   feat=ee.Feature(get_super_feat(feat))
   # print_info(super_feat=feat.toDictionary())
   print('='*100)
@@ -686,6 +928,7 @@ for i,ident in enumerate(IDS):
   asset_name=re.sub(r'[^A-Za-z0-9\-\_]+', '', asset_name)
   bu=ee.Image(BU_DENSITY_CAT.copyProperties(feat))
   geom=feat.geometry()
+  # Export image to output ImageCollection with 3 builtup information bands for area within the city boundary 
   task=ee.batch.Export.image.toAsset(
     image=bu,
     description=asset_name,
