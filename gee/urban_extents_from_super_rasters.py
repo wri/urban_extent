@@ -8,7 +8,7 @@ ee.Initialize()
 #
 # CONFIG
 #
-REGION_INDEX=2
+REGION_INDEX=7
 
 VECTOR_SCALE=None
 INPUT_VECTOR_SCALE=VECTOR_SCALE
@@ -20,20 +20,20 @@ TEST_CITY=None
 ENSURE_FEATS=False
 SPLIT_INDEX=False
 
-# ENSURE_FEATS=True
+ENSURE_FEATS=True
 # RASTER_BUFFER=100
 # VECTOR_SCALE=100
 # VECTOR_SCALE=250
 # INPUT_VECTOR_SCALE=None
 # OFFSET=157
-# LIMIT=10
+# LIMIT=20
 # DRY_RUN=True
 # VECTOR_BUFFER=100
 # VECTOR_BUFFER=500
 # TEST_CITY='Tokyo'
-# TEST_CITY='Berlin'
+# TEST_CITY='Shanghai'
 
-SPLIT_INDEX=1
+# SPLIT_INDEX=1
 
 
 
@@ -71,13 +71,17 @@ AREA_REDUCER=ee.Reducer.sum().combine(
           ee.Reducer.sum(),outputPrefix=f'urban_area_')
 
 
-ROOT='projects/wri-datalab/cities/urban_land_use/data'
-SUFFIX='GHSL_WSF1519_WC21'
+ROOT= 'projects/wri-datalab/cities/urban_land_use/data' #'users/emackres'
+SUFFIX= 'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
+
+YEAR = 2015
 
 REGION=REGIONS[REGION_INDEX]
 REGION_SHORT=REGIONS_SHORT[REGION_INDEX]
-DEST_NAME=f'{REGION_SHORT}_{SUFFIX}'
+DEST_NAME=f'{SUFFIX}_{YEAR}'#_{REGION_SHORT}'
+# DEST_NAME=f'{SUFFIX}'#_{YEAR}'
+
 
 
 if RASTER_BUFFER:
@@ -87,16 +91,20 @@ else:
 #
 # IMPORTS
 #
-SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('Reg_Name',REGION))
-print(REGION,REGION_SHORT,SUPER_IC.size().getInfo())
+SUPER_IC=ee.ImageCollection(SR_ID).filter(ee.Filter.eq('builtup_year',YEAR))#.filter(ee.Filter.eq('Reg_Name',REGION))#.filter(ee.Filter.eq('City__Name','Kigali'))#
+print(DEST_NAME,REGION,REGION_SHORT,SUPER_IC.size().getInfo())
 
 
 if VECTOR_SCALE:
   TRANSFORM=None
 else:
-  GHSL=ee.Image('JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1')
-  _proj=GHSL.select('built').projection().getInfo()
-  GHSL_CRS=_proj['crs']
+  # GHSL=ee.Image('JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1')
+  # _proj=GHSL.select('built').projection().getInfo()
+  # GHSL_CRS=_proj['crs']
+  GHSL2023release = ee.Image("users/emackres/GHS_BUILT_S_MT_2023_100_BUTOT_MEDIAN")
+  _proj=GHSL2023release.projection().getInfo()
+  GHSL_CRS= "EPSG:3857"
+  
   GHSL_TRANSFORM=_proj['transform']
   print("GHSL PROJ:",GHSL_CRS,GHSL_TRANSFORM)
   TRANSFORM=GHSL_TRANSFORM
@@ -171,16 +179,19 @@ def urban_extent(im):
     selectors=AREA_PROPS
   )
   data=data.rename(['sum','suburban_area_sum','urban_area_sum'],AREA_PROPS)
-  feats=h.flatten_to_polygons(feats)
-  feats=feats.map(add_coord_length)
-  flat_feats=feats.filter(ee.Filter.eq('coord_length',1))
-  complex_feats=feats.filter(ee.Filter.gt('coord_length',1))
-  complex_feats=complex_feats.map(fill_small)
-  feats=ee.FeatureCollection([
-    flat_feats,
-    complex_feats
-  ]).flatten()    
+  feats=h.flatten_to_polygons_and_fill_holes(feats,MAX_FILL)
+  # feats=h.flatten_to_polygons(feats)
+  # feats=feats.map(add_coord_length)
+  # flat_feats=feats.filter(ee.Filter.eq('coord_length',1))
+  # complex_feats=feats.filter(ee.Filter.gt('coord_length',1))
+  # complex_feats=complex_feats.map(fill_small)
+  # feats=ee.FeatureCollection([
+  #   flat_feats,
+  #   complex_feats
+  # ]).flatten()    
   feat=ee.Feature(feats.geometry(MAX_ERR),data)
+  # feat=h.flatten_to_polygons_and_fill_holes(ee.FeatureCollection([feat]),MAX_FILL)
+  # feat=ee.Feature(feat.geometry(MAX_ERR),data)
   if VECTOR_BUFFER:
     feat=feat.buffer(VECTOR_BUFFER,MAX_ERR)
   if ENSURE_FEATS:
@@ -193,11 +204,12 @@ def urban_extent(im):
 # EXPORT
 #
 name=DEST_NAME
+count=SUPER_IC.size()
+split_pos=count.divide(2).toInt()
+limit_pos=count.subtract(LIMIT)
 
 if SPLIT_INDEX is not False:
   name=f'{name}_split{SPLIT_INDEX}'
-  count=SUPER_IC.size()
-  split_pos=count.divide(2).toInt()
   if SPLIT_INDEX==1:
     SUPER_IC=SUPER_IC.limit(count.subtract(split_pos),'City__Name',False)  
   else:
@@ -209,8 +221,10 @@ if TEST_CITY:
   SUPER_IC=SUPER_IC.filter(ee.Filter.eq('City__Name',TEST_CITY))
 else:
   if LIMIT:
-    SUPER_IC=SUPER_IC.limit(LIMIT,'Pop_2010')
+    SUPER_IC=SUPER_IC.limit(LIMIT,'Pop_2010',False)#.filter(ee.Filter.inList('City__Name',['Shanghai, Shanghai']))
     name=f'{name}-lim{LIMIT}'
+    # SUPER_IC=SUPER_IC.limit(limit_pos,'Pop_2010',True).sort('system:asset_size')
+    # name=f'{name}-lim{LIMIT}remainder'
   else:
     SUPER_IC=SUPER_IC.sort('Pop_2010')
 
@@ -230,6 +244,8 @@ description=re.sub('[\.\,\/]','--',name)
 asset_id=f'{ROOT}/urban_extents/{name}'
 print('\n'*1)
 print(f'EXPORTING [{SUPER_IC.size().getInfo()}]:',asset_id)
+pprint(SUPER_IC.aggregate_array('City__Name').getInfo())
+
 task=ee.batch.Export.table.toAsset(
       collection=urban_extents_fc, 
       description=description, 
