@@ -67,7 +67,8 @@ ROOT='projects/wri-datalab/cities/urban_land_use/data'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct_WSFres'
 # IC_ID=f'{ROOT}/builtup_density_GHSL-WSFunion_GHSLthresh2pct_GHSLres'
 # IC_ID=f'{ROOT}/builtup_density_Kigali_GHSL_GHSLthresh10pct'
-IC_ID=f'{ROOT}/builtup_density_GHSL_BUthresh10pct'
+IC_ID=f'{ROOT}/builtup_density_non-Universe_GHSL_BUthresh10pct'
+# IC_ID=f'{ROOT}/builtup_density_GHSL_BUthresh10pct'
 
 
 
@@ -116,17 +117,12 @@ COM_CITIES=[
   ]
 
 NEW_CENTER_CITIES_CENTROIDS=alt_cent.NEW_CENTER_CITIES_CENTROIDS
-NEW_CENTER_CITIES_CENTROIDS_IDs=alt_cent.NEW_CENTER_CITIES_CENTROIDS_IDs
-# print(NEW_CENTER_CITIES_CENTROIDS_IDs.getInfo())
+NEW_CENTER_CITIES_CENTROIDS_IDS=alt_cent.NEW_CENTER_CITIES_CENTROIDS_IDS
 
 NEW_CENTER_CITIES=NEW_CENTER_CITIES_CENTROIDS.keys()
-NEW_CENTER_CITIES_IDs=NEW_CENTER_CITIES_CENTROIDS_IDs.keys()
-def toInt(StringInt):
-    return ee.Number.parse(StringInt)
-NEW_CENTER_CITIES_IDs=NEW_CENTER_CITIES_IDs.map(toInt)
+NEW_CENTER_CITIES_IDS=NEW_CENTER_CITIES_CENTROIDS_IDS.keys()
 
-USE_NEW_CENTER_CITIES=True
-
+USE_NEW_CENTER_CITIES=False
 
 test_cities=[
   # "Dhaka",
@@ -200,7 +196,10 @@ FIT_PARAMS=ee.Dictionary({
 #
 # City centroids
 # CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUE200_Universe')
-CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUEUniverseofCities')
+# CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUEUniverseofCities')
+# CITY_DATA=ee.FeatureCollection('projects/wri-datalab/AUE/AUEUniverseofCities-updatedcentroidsSept2023')
+CITY_DATA=ee.FeatureCollection(alt_cent.NON_UNIVERSE_CITIES)
+
 
 # Built-up layer options
 GHSL=ee.Image('JRC/GHSL/P2016/BUILT_LDSMT_GLOBE_V1')
@@ -318,7 +317,7 @@ COM_FILTER=ee.Filter.inList('City__Name',COM_CITIES)
 if USE_COM:
   CITY_DATA=CITY_DATA.filter(COM_FILTER)
 else:
-  CITY_DATA=CITY_DATA#.filter(COM_FILTER.Not())
+  CITY_DATA=CITY_DATA.filter(COM_FILTER.Not())
 
 TESTCITIES_FILTER=ee.Filter.inList('City__Name',test_cities)
 if USE_TESTCITIES:
@@ -333,12 +332,14 @@ else:
   CITY_DATA=CITY_DATA
 
 NCC_FILTER=ee.Filter.inList('City__Name',NEW_CENTER_CITIES)
-NCC_ID_FILTER=ee.Filter.inList('City__ID__Number',NEW_CENTER_CITIES_IDs)
+def toInt(StringInt):
+    return ee.Number.parse(StringInt)
+NCC_ID_FILTER=ee.Filter.inList('City__ID__Number',NEW_CENTER_CITIES_IDS.map(toInt))
 COMB_NCC_FILTER=ee.Filter.Or(NCC_FILTER,NCC_ID_FILTER)
 if USE_NEW_CENTER_CITIES:
   CITY_DATA=CITY_DATA.filter(COMB_NCC_FILTER)
 else:
-  CITY_DATA=CITY_DATA.filter(COMB_NCC_FILTER.Not())
+  CITY_DATA=CITY_DATA#.filter(COMB_NCC_FILTER.Not())
 
 if LIMIT:
   CITY_DATA=CITY_DATA.limit(LIMIT,'Pop_2010',False)#.filter(ee.Filter.inList('City__Name',['Yingtan, Jiangxi']))
@@ -357,6 +358,8 @@ else:
 
 pprint(CITY_DATA.aggregate_array('City__Name').getInfo())
 pprint(CITY_DATA.aggregate_array('Reg_Name').getInfo())
+pprint(CITY_DATA.aggregate_array('City__ID__Number').getInfo())
+
 # raise
 
 #
@@ -485,6 +488,7 @@ def buffered_feat_area(feat,area):
 def get_circle_data(feat):
   feat=ee.Feature(feat)
   cname=feat.get('City__Name')
+  cID=feat.get('City__ID__Number')
   centroid=feat.geometry()
   crs=get_crs(centroid)
   region=ee.String(feat.get('Reg_Name')).trim()
@@ -501,9 +505,14 @@ def get_circle_data(feat):
     _use_inspected_centroid=False
   elif USE_NEW_CENTER_CITIES:
     print('ncc',cname.getInfo())
-    inspected_centroid=NEW_CENTER_CITIES_CENTROIDS.get(cname)
+    v = NEW_CENTER_CITIES_CENTROIDS.get(cname,"NA").getInfo()
+    if v == "NA":
+      inspected_centroid=NEW_CENTER_CITIES_CENTROIDS_IDS.get(ee.Number(cID).format())
+    else:
+      inspected_centroid=NEW_CENTER_CITIES_CENTROIDS.get(cname)
     inspected_centroid=ee.Geometry(inspected_centroid)
     bu_centroid_xy=ee.List(nearest_non_null(inspected_centroid))
+    # print(bu_centroid_xy.getInfo())
     _use_inspected_centroid=True
   else:
     bu_centroid_xy=ee.List(nearest_non_null(centroid))    
