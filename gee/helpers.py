@@ -1,8 +1,111 @@
 import ee
+ee.Initialize()
+
 from pprint import pprint
+
+import config
+import geelayers
+import cities
 
 MAX_ERR=1
 
+
+
+#
+# MAIN
+#
+def get_circle_data(feat):
+    feat = ee.Feature(feat)
+    cname = feat.get('UC_NM_MN')
+    cID = feat.get('ID_HDC_G0')
+    centroid = feat.geometry()
+    crs = get_crs(centroid)
+    region = ee.String(feat.get('GRGN_L2')).trim()
+    # region = ee.String(feat.get('GRGN_L1')).trim()
+    pop = feat.getNumber('P15')
+    est_area = get_area(pop, region)
+    est_influence_distance = get_influence_distance(est_area)
+    scaled_area = est_area.multiply(config.STUDY_AREA_SCALE_FACTOR)
+    radius = get_radius(scaled_area)
+    study_bounds = centroid.buffer(radius, MAX_ERR)
+    center_of_mass = ee.Geometry(get_com(study_bounds))
+    study_bounds = center_of_mass.buffer(radius, MAX_ERR)
+    if config.USE_COM:
+        bu_centroid_xy = ee.List(nearest_non_null(center_of_mass))
+        _use_inspected_centroid = False
+    elif config.USE_NEW_CENTER_CITIES:
+        print('ncc', cname.getInfo())
+        v = config.NEW_CENTER_CITIES_CENTROIDS.get(cname, "NA").getInfo()
+        if v == "NA":
+            inspected_centroid = config.NEW_CENTER_CITIES_CENTROIDS_IDS.get(
+                ee.Number(cID).format())
+        else:
+            inspected_centroid = config.NEW_CENTER_CITIES_CENTROIDS.get(cname)
+        inspected_centroid = ee.Geometry(inspected_centroid)
+        bu_centroid_xy = ee.List(nearest_non_null(inspected_centroid))
+        # print(bu_centroid_xy.getInfo())
+        _use_inspected_centroid = True
+    else:
+        bu_centroid_xy = ee.List(nearest_non_null(centroid))
+        _use_inspected_centroid = False
+    bu_centroid = ee.Geometry.Point(bu_centroid_xy)
+    return ee.Feature(
+        study_bounds,
+        {
+            'city_center': centroid,
+            'bu_city_center': bu_centroid,
+            'crs': crs,
+            'center_of_mass': center_of_mass,
+            'est_area': est_area,
+            'scaled_area': scaled_area,
+            'study_radius': radius,
+            'est_influence_distance': est_influence_distance,
+            'study_area_scale_factor': config.STUDY_AREA_SCALE_FACTOR,
+            'use_center_of_mass': config.USE_COM,
+            'use_inspected_centroid': _use_inspected_centroid,
+            'builtup_year': config.mapYear
+        }).copyProperties(feat)
+
+
+def vectorize(data):
+    data = ee.Feature(data)
+    study_area = data.geometry()
+    bu_centroid = ee.Geometry(data.get('bu_city_center'))
+    # create vectors from BU_CONNECTED image where it overlaps with city study_area
+    feats = geelayers.BU_CONNECTED.reduceToVectors(
+        reducer=ee.Reducer.countEvery(),
+        crs=geelayers.GHSL_CRS,
+        scale=config.VECTOR_SCALE,
+        crsTransform=geelayers.TRANSFORM,
+        geometry=study_area,
+        maxPixels=1e13,
+        bestEffort=True
+    )
+    centroid_filter = ee.Filter.withinDistance(
+        distance=config.CENTROID_SEARCH_RADIUS,
+        leftField='.geo',
+        rightValue=bu_centroid,
+        maxError=MAX_ERR
+    )
+    # buffer each vector feature by its influence distance (function of its area)
+    feats = ee.FeatureCollection(feats.map(buffered_feat))
+    # dissolve all vectors to merge overlapping influence area features
+    geoms = feats.geometry(MAX_ERR).dissolve(MAX_ERR).geometries()
+    feats = ee.FeatureCollection(geoms.map(geom_feat))
+    # filter to retain only merged vector features that are within CENTROID_SEARCH_RADIUS of bu_centroid
+    feats = feats.filter(centroid_filter)
+    # fill holes in vector polygons
+    feats = fill_polygons(feats)
+    # return vector polygons as a single feature
+    return ee.Feature(feats.geometry()).copyProperties(data)
+
+
+def get_super_feat(feat):
+    feat = get_circle_data(feat)
+    feat = vectorize(feat)
+    return feat
+
+    
 #
 # ESTIMATED GROWTH BUFFER
 #
@@ -161,9 +264,136 @@ def flatten_to_polygons_and_fill_holes(feats,max_fill):
 
 
 
+#
+# HELPERS
+#
+
+def get_area(pop, region):
+    pop = ee.Number(pop).log()
+    params = ee.Dictionary(cities.FIT_PARAMS.get(region))
+    slope = params.getNumber('slope')
+    intercept = params.getNumber('intercept')
+    log_area = slope.multiply(pop).add(intercept)
+    return log_area.exp()
 
 
+def get_radius(area):
+    return ee.Number(area).divide(config.PI).sqrt()
 
+
+def nearest_non_null(centroid):
+    distance_im = ee.FeatureCollection([centroid]).distance(config.MAX_NNN_DISTANCE)
+    bounds = ee.Geometry.Point(centroid.coordinates()).buffer(
+        config.MAX_NNN_DISTANCE, MAX_ERR)
+    nearest = distance_im.addBands(ee.Image.pixelLonLat()).updateMask(geelayers.BU).reduceRegion(
+        reducer=ee.Reducer.min(3),
+        geometry=bounds,
+        crs=geelayers.GHSL_CRS,
+        crsTransform=geelayers.GHSL_TRANSFORM
+    )
+    return [nearest.getNumber('min1'), nearest.getNumber('min2')]
+
+
+def get_com(geom):
+    pts = geelayers.BU_LATLON.sample(
+        region=geom,
+        scale=10,
+        numPixels=config.NB_COM_SAMPLES,
+        seed=config.COM_SEED,
+        dropNulls=True,
+        geometries=False
+    )
+    return ee.Algorithms.If(
+        pts.size(),
+        ee.Geometry.Point([
+            pts.aggregate_mean('longitude'),
+            pts.aggregate_mean('latitude')]),
+        geom.centroid(10)
+    )
+
+
+def get_crs(point):
+    coords = point.coordinates()
+    lon = ee.Number(coords.get(0))
+    lat = ee.Number(coords.get(1))
+    zone = ee.Number(32700).subtract((lat.add(45).divide(90)).round().multiply(
+        100)).add(((lon.add(183)).divide(6)).round())
+    zone = zone.toInt().format()
+    return ee.String('EPSG:').cat(zone)
+
+
+def get_influence_distance(area):
+    return ee.Number(area).sqrt().multiply(config.GROWTH_RATE)
+
+
+def polygon_feat_boundry(feat):
+    feat = ee.Feature(feat)
+    geom = ee.Geometry.Polygon(feat.geometry().coordinates().get(0))
+    return ee.Feature(geom)
+
+
+def set_geom_type(feat):
+    feat = ee.Feature(feat)
+    return feat.set('geomType', feat.geometry().type())
+
+
+def geom_feat(g):
+    return ee.Feature(ee.Geometry(g))
+
+
+def coords_feat(coords):
+    return ee.Feature(ee.Geometry.Polygon(coords))
+
+
+def flatten_geometry_collection(feat):
+    feat = ee.Feature(feat)
+    geoms = feat.geometry().geometries()
+    return ee.FeatureCollection(geoms.map(geom_feat))
+
+
+def flatten_multipolygon(feat):
+    coords_list = ee.Feature(feat).geometry().coordinates()
+    return ee.FeatureCollection(coords_list.map(coords_feat))
+
+
+def fill_polygons(feats):
+    feats = feats.map(set_geom_type)
+    gc_filter = ee.Filter.eq('geomType', 'GeometryCollection')
+    mpoly_filter = ee.Filter.eq('geomType', 'MultiPolygon')
+    poly_filter = ee.Filter.eq('geomType', 'Polygon')
+    gc_data = feats.filter(gc_filter).map(
+        flatten_geometry_collection).flatten()
+    mpoly_data = feats.filter(mpoly_filter).map(flatten_multipolygon).flatten()
+    poly_data = feats.filter(poly_filter)
+    feats = ee.FeatureCollection([
+        poly_data,
+        gc_data,
+        mpoly_data]).flatten()
+    feats = feats.map(set_geom_type).filter(poly_filter)
+    feats = feats.map(polygon_feat_boundry)
+    return feats
+
+
+def buffered_feat(feat):
+    feat = ee.Feature(feat)
+    area = feat.area(MAX_ERR)
+    return buffered_feat_area(feat, area)
+
+
+def buffered_feat_area(feat, area):
+    feat = ee.Feature(feat)
+    area = ee.Number(area)
+    infl = get_influence_distance(area)
+    return feat.buffer(infl, MAX_ERR).set('buffer', infl)
+
+
+def replace_geometry(feature):
+    # Get the UC_NM_MN property from the feature
+    city_name = feature.get('UC_NM_MN')
+    # Check if the city_name is a key in the NEW_CENTER_CITIES_CENTROIDS dictionary
+    # If yes, update the geometry; if not, return the feature unchanged
+    new_geometry = ee.Geometry(config.NEW_CENTER_CITIES_CENTROIDS.get(city_name, feature.geometry()))
+    return feature.setGeometry(new_geometry)
 
 
 
