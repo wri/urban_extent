@@ -23,6 +23,8 @@ postprocess/regions/qgis.layer.style.qml
 # SUBLIME
 *sftp-config.json*
 
+# VSCode
+
 
 # GITNB
 notebooks/
