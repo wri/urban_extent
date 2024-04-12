@@ -22,14 +22,14 @@ Note that city centers might be far from "centered"
 STUDY_AREA_SCALE_FACTOR = 100
 VECTOR_SCALE = None
 OFFSET = None
-LIMIT = 1
+LIMIT = None
 DRY_RUN = False
 OFFSET = 0
 
 # Set output image collection for all processed cities
 #os.chdir(os.getcwd()+'/gee')
-ROOT = 'data'
-IC_ID = f'{ROOT}/test_chris_Apr2024/builtup_density_JRCs_50compare_L2_100'
+ROOT='projects/wri-datalab/cities/urban_land_use/data'
+IC_ID = f'{ROOT}/test_chris_Apr2024/test1'
 
 MAX_NNN_DISTANCE = 2500
 MAX_ERR = 10

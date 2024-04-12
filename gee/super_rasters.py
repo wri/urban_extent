@@ -12,13 +12,13 @@ import helpers
 
 
 # Create a function called get_super_feat
-def get_urban_extents(IDS):
+def get_urban_extents(IDS, CITIES_LIST):
 
     FAILURES = []
 
     for i, ident in enumerate(IDS):
         # if i > 9706 and i < 9712:
-        if ident in cities.id_hdc_g0_250:
+        if ident in CITIES_LIST:
         # if ident == 5250:
             print(i, ident)
             # get on city centroid feature
