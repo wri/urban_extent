@@ -4,39 +4,6 @@ ee.Initialize()
 import geemap.foliumap as geemap
 import config
 
-
-def interactive_map():
-
-    Map = geemap.Map(center=[40,-100], zoom=4)
-
-    # Map.addLayer(ee_object, vis_params, name, shown, opacity)
-    # Urban Extent layers
-    Map.addLayer(CITY_DATA_POLY, {}, 'New City Data Polygons', True)
-    Map.addLayer(CITY_DATA, city_points_vis, 'New City Data Points', True)
-    Map.addLayer(GHSL, {}, 'Old Builtup Density', False)
-    Map.addLayer(GHSL_2020, {}, 'Old Builtup Density 2020', False)
-    Map.addLayer(BU, {}, 'New Built up Surface input', False)
-    Map.addLayer(IS_BUILTUP, {}, 'New Built up Surface binary', False)
-    Map.addLayer(BU_DENSITY_CAT, {}, 'Builtup Density Categories', False)
-    # Add 2 other bands from BU_DENSITY_CAT
-    Map.addLayer(BU_LATLON, {}, 'Connected Builtup Pixels LatLon', False)
-    # Add 1 other bands from BU_LATLON
-
-
-    # # Example layers
-    # Map.addLayer(states, {}, "US States", False)
-    # Map.addLayer(dem, dem_vis, 'SRTM DEM', False, 0.5)
-    # Map.addLayer(landcover, {}, 'Land cover', False)
-    # Map.addLayer(landsat7, landsat_vis, 'Landsat 7', False)
-
-    Map.addLayerControl()
-    Map.setCenter(-71.0589, 42.3601, 8)
-    return Map
-
-
-
-
-
 #
 # GET DATA
 #
@@ -51,7 +18,6 @@ GHSL_2020 = GHSL.filter(ee.Filter.stringContains('system:index', '2020'))
 # New City data
 ## Polygons
 CITY_DATA_POLY = ee.FeatureCollection('projects/wri-datalab/AUE/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2')
-
 ## Centroids
 ### Function to convert each polygon feature to a point feature based on 'lat' and 'long' attributes
 def polygon_to_point(feature):
@@ -59,15 +25,23 @@ def polygon_to_point(feature):
     long = ee.Number(feature.get('GCPNT_LON'))
     point = ee.Geometry.Point([long, lat])
     return ee.Feature(point, feature.toDictionary())
-    
 ### Map the conversion function over the polygon FeatureCollection
 CITY_DATA = CITY_DATA_POLY.map(polygon_to_point)
+
+
+if config.USE_COMPLETED_FILTER:
+    COMPLETED_IDS = ee.ImageCollection(config.IC_ID).aggregate_array('ID_HDC_G0')
+    COMPLETED_FILTER = ee.Filter.And(ee.Filter.inList('ID_HDC_G0', COMPLETED_IDS), ee.Filter.equals('builtup_year', config.mapYear))
+    COMPLETED_CITIES_LIST = ee.ImageCollection(config.IC_ID).filter(COMPLETED_FILTER).aggregate_array('ID_HDC_G0')
+    CITY_DATA = CITY_DATA.filter(ee.Filter.inList('ID_HDC_G0', COMPLETED_CITIES_LIST).Not())
+else:
+    CITY_DATA = CITY_DATA
+
 
 
 # Built up area mask
 # based on public GHS data using BuiltAreaThresh
 GHSLyear = ee.Image(f"JRC/GHSL/P2023A/GHS_BUILT_S/{config.mapYear}").gte(config.BuiltAreaThresh).selfMask().select('built_surface').rename(['bu'])
-
 
 # obtain projection, CRS and Transform for input layer
 _proj = GHSLyear.projection().getInfo()
@@ -76,12 +50,6 @@ _proj = GHSLyear.projection().getInfo()
 GHSL_CRS = "EPSG:3857"
 GHSL_TRANSFORM = _proj['transform']
 print("GHSL PROJ:", GHSL_CRS, GHSL_TRANSFORM)
-
-if config.VECTOR_SCALE:
-    TRANSFORM = None
-else:
-    TRANSFORM = GHSL_TRANSFORM
-    VECTOR_SCALE = None
 
 #
 # Select built-up IMAGE
@@ -116,6 +84,27 @@ BU_LATLON = BU_CONNECTED.addBands(ee.Image.pixelLonLat())
 
 
 
+def interactive_map():
+
+    Map = geemap.Map(center=[40,-100], zoom=4)
+
+    # Map.addLayer(ee_object, vis_params, name, shown, opacity)
+    # Urban Extent layers
+    Map.addLayer(CITY_DATA_POLY, {}, 'New City Data Polygons', True)
+    Map.addLayer(CITY_DATA, city_points_vis, 'New City Data Points', True)
+    Map.addLayer(GHSL, {}, 'Old Builtup Density', False)
+    Map.addLayer(GHSL_2020, {}, 'Old Builtup Density 2020', False)
+    Map.addLayer(BU, {}, 'New Built up Surface input', False)
+    Map.addLayer(IS_BUILTUP, {}, 'New Built up Surface binary', False)
+    Map.addLayer(BU_DENSITY_CAT, {}, 'Builtup Density Categories', False)
+    # Add 2 other bands from BU_DENSITY_CAT
+    Map.addLayer(BU_LATLON, {}, 'Connected Builtup Pixels LatLon', False)
+    # Add 1 other bands from BU_LATLON
+
+
+    Map.addLayerControl()
+    Map.setCenter(-71.0589, 42.3601, 8)
+    return Map
 
 # Get some example datasets
 dem = ee.Image('USGS/SRTMGL1_003')
