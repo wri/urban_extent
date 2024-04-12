@@ -1,7 +1,9 @@
 import ee
 ee.Initialize()
 
-import geemap.foliumap as geemap
+import geemap
+import ipyleaflet
+import ipywidgets as widgets
 import config
 
 #
@@ -84,15 +86,89 @@ BU_LATLON = BU_CONNECTED.addBands(ee.Image.pixelLonLat())
 
 
 
-def interactive_map():
+def interactive_map(collection):
+    # Get image collection to explore by image via a dropdown
+     
+    explore_image_collection = ee.ImageCollection(collection)
 
-    Map = geemap.Map(center=[40,-100], zoom=4)
+    ## Select Image
+    ### Count the number of images in the collection
+    size = explore_image_collection.size().getInfo()
+    print(size)
+    ### Extract image names as a list
+    images = explore_image_collection.toList(size).getInfo()
+    image_names = [item['properties']['UC_NM_MN'] for item in images]
 
+    selected_image = explore_image_collection.filter(ee.Filter.stringContains('UC_NM_MN', image_names[0])).first()
+
+    #
+    # SUB FUNCTIONS
+    #
+    ## Define a function to zoom to an image
+    def zoom_to_image(change):
+        if change['type'] == 'change' and change['name'] == 'value':
+            # Get the selected image based on the dropdown value
+            selected_image = explore_image_collection.filter(ee.Filter.stringContains('UC_NM_MN', change['new'])).first()
+            # Get the image from the collection based on name
+            Map.centerObject(selected_image)
+
+    ## Define a function to change the band displayed
+    def change_band(change):
+        if change['type'] == 'change' and change['name'] == 'value':
+            # Remove old image collection
+            Map.remove_layer('explore_image_collection')
+            # Add updated image collection back
+            Map.addLayer(explore_image_collection.select(change['new']), {}, 'explore_image_collection', True)
+            explore_layer = Map.find_layer("explore_image_collection")
+            explore_layer.interact(opacity=(0, 1, 0.1))
+
+
+    #
+    # WIDGETS
+    #
+    display(collection)
+
+    ### Create a dropdown widget
+    image_selector = widgets.Dropdown(
+    options=image_names,
+    description="Select Image:",
+    )
+    ### Display the dropdown widget
+    display(image_selector)
+
+
+    ## Select Band
+    ### Extract band names as a list
+    band_names = selected_image.bandNames().getInfo()
+    ### Create a dropdown widget
+    band_selector = widgets.Dropdown(
+    options=band_names,
+    description="Select Band:",
+    )
+    ### Display the dropdown widget
+    display(band_selector)
+
+
+
+    #
+    # MAP
+    #
+    ## Create a map
+    Map = geemap.Map()
+
+    ## Layer template
     # Map.addLayer(ee_object, vis_params, name, shown, opacity)
-    # Urban Extent layers
+
+    ## Add Layer for dropdown
+    Map.addLayer(explore_image_collection.select(band_names[0]), {}, 'explore_image_collection', True)
+    ## Center on image collection
+    Map.centerObject(selected_image)
+
+
+    ## Add other Urban Extent layers
     Map.addLayer(CITY_DATA_POLY, {}, 'New City Data Polygons', True)
     Map.addLayer(CITY_DATA, city_points_vis, 'New City Data Points', True)
-    Map.addLayer(GHSL, {}, 'Old Builtup Density', False)
+    Map.addLayer(GHSL, {}, 'Old Builtup Density', False, 1)
     Map.addLayer(GHSL_2020, {}, 'Old Builtup Density 2020', False)
     Map.addLayer(BU, {}, 'New Built up Surface input', False)
     Map.addLayer(IS_BUILTUP, {}, 'New Built up Surface binary', False)
@@ -100,30 +176,28 @@ def interactive_map():
     # Add 2 other bands from BU_DENSITY_CAT
     Map.addLayer(BU_LATLON, {}, 'Connected Builtup Pixels LatLon', False)
     # Add 1 other bands from BU_LATLON
-
-
+    
+    ## Controls
     Map.addLayerControl()
-    Map.setCenter(-71.0589, 42.3601, 8)
-    return Map
+    explore_layer = Map.find_layer("explore_image_collection")
+    display(explore_layer.interact(opacity=(0, 1, 0.1)))
 
-# Get some example datasets
-dem = ee.Image('USGS/SRTMGL1_003')
-landcover = ee.Image("ESA/GLOBCOVER_L4_200901_200912_V2_3").select('landcover')
-landsat7 = ee.Image('LANDSAT/LE7_TOA_5YEAR/1999_2003')
-states = ee.FeatureCollection("TIGER/2018/States")
+    ## Display the map
+    display(Map)
+
+    #
+    # OBSERVERS
+    #
+    ## Observe the image_selector dropdown widget for changes
+    image_selector.observe(zoom_to_image, names='value')
+
+    ## Observe the band_selector dropdown widget for changes
+    band_selector.observe(change_band, names='value')
+
+
+    
 
 # Custom vis_params
-dem_vis = {
-'min': 0,
-'max': 4000,
-'palette': ['006633', 'E5FFCC', '662A00', 'D8D8D8', 'F5F5F5']}
-
-landsat_vis = {
-    'min': 20,
-    'max': 200,
-    'bands': ['B4', 'B3', 'B2']
-}
-
 city_points_vis = {
     'color': 'yellow',
     'pointSize': 25,
