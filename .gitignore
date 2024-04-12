@@ -29,7 +29,7 @@ notebooks/
 nbpy/
 nbpy_nb/
 gitnb.config.yaml
-*.ipynb
+.ipynb_checkpoints/
 
 
 # Distribution / packaging
@@ -52,3 +52,6 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+
+# Data files
+*.csv
