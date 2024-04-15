@@ -52,8 +52,8 @@ def get_circle_data(feat):
             'study_radius': radius,
             'est_influence_distance': est_influence_distance,
             'study_area_scale_factor': config.STUDY_AREA_SCALE_FACTOR,
-            'use_center_of_mass': config.USE_COM,
-            'use_inspected_centroid': config.USE_INSPECTED_CENTROIDS,
+            'use_center_of_mass': str(config.USE_COM),
+            'use_inspected_centroid': str(config.USE_INSPECTED_CENTROIDS),
             'builtup_year': config.mapYear
         }).copyProperties(feat)
 
@@ -375,4 +375,3 @@ def buffered_feat_area(feat, area):
     area = ee.Number(area)
     infl = get_influence_distance(area)
     return feat.buffer(infl, config.MAX_ERR).set('buffer', infl)
-

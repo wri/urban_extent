@@ -1,6 +1,5 @@
 import ee
 import helpers as h
-import data
 import math
 import re
 from pprint import pprint
@@ -37,8 +36,8 @@ AREA_REDUCER=ee.Reducer.sum().combine(
           ee.Reducer.sum(),outputPrefix=f'urban_area_')
 
 
-ROOT= 'projects/wri-datalab/cities/urban_land_use/data/test-tori-Apr2024' #'users/emackres'
-SUFFIX= 'JRCs_50compare_L2' #'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
+ROOT= 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024' #'users/emackres'
+SUFFIX= 'JRCs_50compare_L2_20_wP' #'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
 
 YEAR = 2020
@@ -184,8 +183,8 @@ if ENSURE_FEATS:
 description=re.sub('[\.\,\/]','--',name)
 asset_id=f'{ROOT}/GHSL_BUthresh10pct_{name}'
 print('\n'*1)
-print(f'EXPORTING [{SUPER_IC.size().getInfo()}]:',asset_id)
-pprint(SUPER_IC.aggregate_array('City__Name').getInfo())
+print(f'EXPORTING [{SUPER_IC.size().getInfo()}]:', asset_id)
+# pprint(SUPER_IC.aggregate_array('ID_HDC_G0').getInfo())
 
 task=ee.batch.Export.table.toAsset(
       collection=urban_extents_fc, 
@@ -197,3 +196,29 @@ else:
   task.start()
   print(task.status())
 
+
+# post vector check
+# Define function to create circle features
+def check_buffer_contains(feature):
+    # Create the point geometry from the latitude and longitude
+    point = ee.Geometry.Point([feature.get('study_center_lon'), feature.get('study_center_lat')])
+    # Create the circle buffer around the point with the specified radius
+    circle = point.buffer(ee.Number(feature.get('study_radius')).add(ee.Number(feature.get('est_influence_distance'))))
+    # Check if the feature geometry is completely within the circle
+    geometry = feature.geometry()
+    contains = circle.contains(geometry)
+    # Copy all the properties from the original feature
+    circle = ee.Feature(circle, feature.toDictionary())
+    # Add a new property indicating whether the city passed the buffer check
+    circle = circle.set('pass_buffer_check', contains)
+
+    return circle
+
+
+# Map the function over the feature collection to create circles
+circleCollection = ee.FeatureCollection(asset_id).map(check_buffer_contains)
+# Filter the circle collection
+filteredCircleCollection = circleCollection.filter(ee.Filter.eq('pass_buffer_check', False))
+alt_scale_factor_ids = filteredCircleCollection.aggregate_array('fid').getInfo()
+
+len(alt_scale_factor_ids)

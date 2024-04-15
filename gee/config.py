@@ -3,6 +3,7 @@ import ee
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
 ee.Initialize()
 
 
@@ -52,7 +53,7 @@ PPOLICY = {
 }
 
 USE_COMPLETED_FILTER = True # used
-USE_COM = True # used
+USE_COM = False # used
 
 
 import inspected_centroids as insp_cent
@@ -99,4 +100,15 @@ for region in df['GRGN_L2'].unique():
         'slope': model.coef_[0],
         'score': model.score(X, Y)
     }
+    
+    # # Plotting
+    # plt.scatter(X, Y, label='Data')
+    # plt.plot(X, model.predict(X), color='red', label='Linear Regression')
+    # plt.title(region)
+    # plt.xlabel('pop 2015')
+    # plt.ylabel('builtup 2015')
+    # plt.grid(True)
+    # plt.legend()
+    # plt.show()
+
 FIT_PARAMS = ee.Dictionary(results)
