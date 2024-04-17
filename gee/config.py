@@ -100,15 +100,20 @@ for region in df['GRGN_L2'].unique():
         'slope': model.coef_[0],
         'score': model.score(X, Y)
     }
-    
-    # # Plotting
-    # plt.scatter(X, Y, label='Data')
-    # plt.plot(X, model.predict(X), color='red', label='Linear Regression')
-    # plt.title(region)
-    # plt.xlabel('pop 2015')
-    # plt.ylabel('builtup 2015')
-    # plt.grid(True)
-    # plt.legend()
-    # plt.show()
+
+    # subset = subset[subset['ID_HDC_G0'].isin(id_hdc_g0_250 + id_hdc_g0_50)]
+    # subset_error = subset[subset['ID_HDC_G0'].isin(alt_scale_factor_ids)]
+    # if len(subset)>0:
+    #     # Plotting
+    #     plt.scatter(np.log(subset[['P15']]), np.log(subset['B15']*1000000), label='Data')
+    #     if len(subset_error)>0:
+    #         plt.scatter(np.log(subset_error[['P15']]), np.log(subset_error['B15']*1000000), label='Buffer Error')
+    #     plt.plot(np.log(subset[['P15']]), model.predict(np.log(subset[['P15']])), color='red', label='Linear Regression')
+    #     plt.title(region)
+    #     plt.xlabel('pop 2015')
+    #     plt.ylabel('builtup 2015')
+    #     plt.grid(True)
+    #     plt.legend()
+    #     plt.show()
 
 FIT_PARAMS = ee.Dictionary(results)

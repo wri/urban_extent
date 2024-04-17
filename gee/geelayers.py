@@ -97,9 +97,9 @@ def interactive_map(collection):
     print(size)
     ### Extract image names as a list
     images = explore_image_collection.toList(size).getInfo()
-    image_names = [item['properties']['UC_NM_MN'] for item in images]
+    image_names = [item['properties']['system:index'] for item in images]
 
-    selected_image = explore_image_collection.filter(ee.Filter.stringContains('UC_NM_MN', image_names[0])).first()
+    selected_image = explore_image_collection.filter(ee.Filter.stringContains('system:index', image_names[0])).first()
 
     #
     # SUB FUNCTIONS
@@ -108,7 +108,7 @@ def interactive_map(collection):
     def zoom_to_image(change):
         if change['type'] == 'change' and change['name'] == 'value':
             # Get the selected image based on the dropdown value
-            selected_image = explore_image_collection.filter(ee.Filter.stringContains('UC_NM_MN', change['new'])).first()
+            selected_image = explore_image_collection.filter(ee.Filter.stringContains('system:index', change['new'])).first()
             # Get the image from the collection based on name
             Map.centerObject(selected_image)
 
@@ -168,7 +168,7 @@ def interactive_map(collection):
     ## Add other Urban Extent layers
     Map.addLayer(CITY_DATA_POLY, {}, 'New City Data Polygons', True)
     Map.addLayer(CITY_DATA, city_points_vis, 'New City Data Points', True)
-    Map.addLayer(GHSL, {}, 'Old Builtup Density', False, 1)
+    # Map.addLayer(GHSL, {}, 'Old Builtup Density', False, 1)
     Map.addLayer(GHSL_2020, {}, 'Old Builtup Density 2020', False)
     Map.addLayer(BU, {}, 'New Built up Surface input', False)
     Map.addLayer(IS_BUILTUP, {}, 'New Built up Surface binary', False)

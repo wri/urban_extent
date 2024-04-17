@@ -156,7 +156,7 @@ def flatten_multipolygon(feat):
 
 def fill_polygon(feat):
     geom=ee.Feature(feat).geometry()
-    return f.setGeometry(ee.Geometry.Polygon(geom.coordinates().get(0)))
+    return feat.setGeometry(ee.Geometry.Polygon(geom.coordinates().get(0)))
 
 
 def flatten_to_polygons(feats,valid_check=None):
