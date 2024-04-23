@@ -29,7 +29,10 @@ def get_urban_extents(IDS, CITIES_LIST):
             city_name = feat.getString('UC_NM_MN').getInfo()
             print(f'{i}: {city_name} [{ident}]')
             # get feature for city boundary as defined by vectorize function
-            feat = ee.Feature(helpers.get_super_feat(feat))
+            # feat = ee.Feature(helpers.get_super_feat(feat))
+            circle_feat = helpers.get_circle_data(feat)
+            feat = helpers.vectorize(circle_feat)
+            feat = feat.set({'scale_factor_set':ee.Algorithms.If(ee.Feature(circle_feat).contains(ee.Feature(feat)),'True','False')})
             # print_info(super_feat=feat.toDictionary())
             print('='*100)
             asset_name = unidecode(f'{city_name}-{ident}-{config.mapYear}')
@@ -73,56 +76,57 @@ def get_urban_extents(IDS, CITIES_LIST):
     return TASKS, FAILURES
 
 
-IDS = geelayers.CITY_DATA.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
-CITIES_LIST = cities.id_hdc_g0_250
-TASKS, FAILURES = get_urban_extents(IDS, CITIES_LIST)
-
-
 # post task check
-print('Total tasks submitted: ' + str(len(TASKS)))
-READY = 0
-RUNNING = 0
-COMPLETED = 0
-FAILED = 0
-CANCELLED = 0
-for task in TASKS:
-    if task.status()['state']=='COMPLETED':
-        COMPLETED = COMPLETED + 1
-    elif task.status()['state']=='RUNNING':
-        RUNNING = RUNNING + 1
-    elif task.status()['state']=='READY':
-        READY = READY + 1
-    elif 'CANCEL' in task.status()['state']:
-        CANCELLED = CANCELLED + 1
-    elif task.status()['state']=='FAILED':
-        FAILED = FAILED + 1
-        FAILURES[task.status()['description']] = task.status()['error_message']
+def post_urban_extents_check(TASKS, FAILURES):
+    print('Total tasks submitted: ' + str(len(TASKS)))
+    READY = 0
+    RUNNING = 0
+    COMPLETED = 0
+    FAILED = 0
+    CANCELLED = 0
+    for task in TASKS:
+        if task.status()['state']=='COMPLETED':
+            COMPLETED = COMPLETED + 1
+        elif task.status()['state']=='RUNNING':
+            RUNNING = RUNNING + 1
+        elif task.status()['state']=='READY':
+            READY = READY + 1
+        elif 'CANCEL' in task.status()['state']:
+            CANCELLED = CANCELLED + 1
+        elif task.status()['state']=='FAILED':
+            FAILED = FAILED + 1
+            FAILURES[task.status()['description']] = task.status()['error_message']
 
-if RUNNING > 0 or READY > 0:
-    print('Still running for cities.')
-print('READY tasks: '+ str(READY))
-print('RUNNING tasks: '+ str(RUNNING))
-print('CANCELED tasks: '+ str(CANCELLED))
-print('COMPLETED tasks: '+ str(COMPLETED))
-print('FALIED tasks: '+ str(FAILED))
+    if RUNNING > 0 or READY > 0:
+        print('Still running for cities.')
+
+    print('READY tasks: '+ str(READY))
+    print('RUNNING tasks: '+ str(RUNNING))
+    print('CANCELED tasks: '+ str(CANCELLED))
+    print('COMPLETED tasks: '+ str(COMPLETED))
+    print('FALIED tasks: '+ str(FAILED))
+
+    direct_rerun = []
+    alt_center = []
+    other_issue = []
+    for key, value in FAILURES.items():
+        # Check if value contains substring 'aaaa'
+        if 'Computation timed out' in value:
+            direct_rerun.append(key)
+        # Check if value contains substring 'bbb'
+        elif 'The geometry for image clipping must not be empty' in value:
+            alt_center.append(key)
+        else:
+            other_issue.append(key)
+            
+    direct_rerun_ids = [item.split('-')[1] for item in direct_rerun]
+    alt_center_ids = [item.split('-')[1] for item in alt_center]
+
+    # Print the lists of keys
+    print("direct_rerun: ", direct_rerun_ids)
+    print("alt_center: ", alt_center_ids)
 
 
-direct_rerun = []
-alt_center = []
-other_issue = []
-for key, value in FAILURES.items():
-    # Check if value contains substring 'aaaa'
-    if 'Computation timed out' in value:
-        direct_rerun.append(key)
-    # Check if value contains substring 'bbb'
-    elif 'The geometry for image clipping must not be empty' in value:
-        alt_center.append(key)
-    else:
-        other_issue.append(key)
-        
-direct_rerun_ids = [item.split('-')[1] for item in direct_rerun]
-alt_center_ids = [item.split('-')[1] for item in alt_center]
-
-# Print the lists of keys
-print("direct_rerun: ", direct_rerun_ids)
-print("alt_center: ", alt_center_ids)
+# IDS = geelayers.CITY_DATA.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
+# CITIES_LIST = cities.id_hdc_g0_50+cities.id_hdc_g0_250+cities.id_hdc_g0_700
+# TASKS, FAILURES = get_urban_extents(IDS, CITIES_LIST)

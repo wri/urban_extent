@@ -90,10 +90,10 @@ def vectorize(data):
     return ee.Feature(feats.geometry()).copyProperties(data)
 
 
-def get_super_feat(feat):
-    feat = get_circle_data(feat)
-    feat = vectorize(feat)
-    return feat
+# def get_super_feat(feat):
+#     feat = get_circle_data(feat)
+#     feat = vectorize(feat)
+#     return feat
 
     
 # #
