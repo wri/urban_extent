@@ -28,16 +28,16 @@ def polygon_to_point(feature):
     point = ee.Geometry.Point([long, lat])
     return ee.Feature(point, feature.toDictionary())
 ### Map the conversion function over the polygon FeatureCollection
-CITY_DATA = CITY_DATA_POLY.map(polygon_to_point)
+CITY_DATA_POINT = CITY_DATA_POLY.map(polygon_to_point)
 
 
 if config.USE_COMPLETED_FILTER:
     COMPLETED_IDS = ee.ImageCollection(config.IC_ID).aggregate_array('ID_HDC_G0')
     COMPLETED_FILTER = ee.Filter.And(ee.Filter.inList('ID_HDC_G0', COMPLETED_IDS), ee.Filter.equals('builtup_year', config.mapYear))
     COMPLETED_CITIES_LIST = ee.ImageCollection(config.IC_ID).filter(COMPLETED_FILTER).aggregate_array('ID_HDC_G0')
-    CITY_DATA = CITY_DATA.filter(ee.Filter.inList('ID_HDC_G0', COMPLETED_CITIES_LIST).Not())
+    CITY_DATA = CITY_DATA_POINT.filter(ee.Filter.inList('ID_HDC_G0', COMPLETED_CITIES_LIST).Not())
 else:
-    CITY_DATA = CITY_DATA
+    CITY_DATA = CITY_DATA_POINT
 
 
 
@@ -85,16 +85,16 @@ BU_LATLON = BU_CONNECTED.addBands(ee.Image.pixelLonLat())
 
 
 
-
 def interactive_map(collection):
     # Get image collection to explore by image via a dropdown
      
     explore_image_collection = ee.ImageCollection(collection)
+    # explore_image_collection = explore_image_collection.filter(ee.Filter.stringContains('scale_factor_set', 'False'))
 
     ## Select Image
     ### Count the number of images in the collection
     size = explore_image_collection.size().getInfo()
-    print(size)
+    # print(size)
     ### Extract image names as a list
     images = explore_image_collection.toList(size).getInfo()
     image_names = [item['properties']['system:index'] for item in images]
@@ -122,12 +122,73 @@ def interactive_map(collection):
             explore_layer = Map.find_layer("explore_image_collection")
             explore_layer.interact(opacity=(0, 1, 0.1))
 
+    ## Define a function to change the scale factor subset
+    def change_scale_factor(change):
+        if change['type'] == 'change' and change['name'] == 'value':
+            # Remove old image collection
+            Map.remove_layer('explore_image_collection')
+            # Filter image collection by selected scale factor
+            filtered_collection = explore_image_collection.filter(ee.Filter.eq('study_area_scale_factor', change['new']))
+            # Add updated image collection back
+            Map.addLayer(filtered_collection, new_bu_vis, 'explore_image_collection', True)
+            # Update image names
+            size = filtered_collection.size().getInfo()
+            images = filtered_collection.toList(size).getInfo()
+            image_names = [item['properties']['system:index'] for item in images]
+            # Update options of image_selector widget
+            image_selector.options = image_names
+            # Update selected image
+            selected_image = filtered_collection.first()
+            Map.centerObject(selected_image)
+            explore_layer = Map.find_layer("explore_image_collection")
+            explore_layer.interact(opacity=(0, 1, 0.1))
+            if change['new'] == 20:
+                pass_selector = widgets.Dropdown(
+                options=['True', 'False'],
+                description="Pass scale factor check:",
+                )
+                ### Display the dropdown widget
+                display(pass_selector)
+
+                ## Observe the pass_selector dropdown widget for changes
+                pass_selector.observe(change_pass, names='value')
+    
+    ## Define a function to change the scale factor subset
+    def change_pass(change):
+        if change['type'] == 'change' and change['name'] == 'value':
+            # Remove old image collection
+            Map.remove_layer('explore_image_collection')
+            # Filter image collection by selected scale factor
+            filtered_collection = explore_image_collection.filter(ee.Filter.eq('study_area_scale_factor', 20)).filter(ee.Filter.eq('scale_factor_set', change['new']))
+            # Add updated image collection back
+            Map.addLayer(filtered_collection, new_bu_vis, 'explore_image_collection', True)
+            # Update image names
+            size = filtered_collection.size().getInfo()
+            images = filtered_collection.toList(size).getInfo()
+            image_names = [item['properties']['system:index'] for item in images]
+            # Update options of image_selector widget
+            image_selector.options = image_names
+            # Update selected image
+            selected_image = filtered_collection.first()
+            Map.centerObject(selected_image)
+            explore_layer = Map.find_layer("explore_image_collection")
+            explore_layer.interact(opacity=(0, 1, 0.1))
+
+
 
     #
     # WIDGETS
     #
-    display(collection)
+    # Filter by scale factor
+    ### Create a dropdown widget
+    scale_selector = widgets.Dropdown(
+    options=[20,50,80,120,200,400,800,2000],
+    description="Select Scale Factor:",
+    )
+    ### Display the dropdown widget
+    display(scale_selector)
 
+    # display(collection)
     ### Create a dropdown widget
     image_selector = widgets.Dropdown(
     options=image_names,
@@ -153,30 +214,52 @@ def interactive_map(collection):
     #
     # MAP
     #
+    # Custom vis_params
+    city_point_vis = {
+        'color': 'yellow',
+        'pointSize': 25,
+        'pointShape': 'circle',
+        'width': 1
+    }
+    old_bu_vis = {
+        'bands': ['builtup_class'],
+        'min': 0,
+        'max': 2,
+        'palette': ['lightcoral', 'indianred', 'darkred']
+    }
+    new_bu_vis = {
+        'bands': ['builtup_class'],
+        'min': 0,
+        'max': 2,
+        'palette': ['lightblue', 'dodgerblue', 'navy']
+    }
+
     ## Create a map
     Map = geemap.Map()
 
     ## Layer template
     # Map.addLayer(ee_object, vis_params, name, shown, opacity)
+    
+    ## Add other Urban Extent layers
+    # Map.addLayer(GHSL, {}, 'Old Builtup Density', False, 1)
+    Map.addLayer(CITY_DATA_POLY, {}, 'New City Data Polygons', True)
+    Map.addLayer(GHSL_2020, old_bu_vis, 'Old Builtup Density 2020', True)
+    # Map.addLayer(BU, {}, 'New Built up Surface input', True)
+    # Map.addLayer(IS_BUILTUP, {}, 'New Built up Surface? binary', True)
+    # Map.addLayer(BU_DENSITY_CAT, {}, 'Builtup Density Categories', True)
+    # Add 2 other bands from BU_DENSITY_CAT
+    # Map.addLayer(BU_LATLON, {}, 'Connected Builtup Pixels LatLon', True)
+    # Add 1 other bands from BU_LATLON
+    
 
     ## Add Layer for dropdown
-    Map.addLayer(explore_image_collection.select(band_names[0]), {}, 'explore_image_collection', True)
+    Map.addLayer(explore_image_collection.select(band_names[0]), new_bu_vis, 'explore_image_collection', True)
     ## Center on image collection
     Map.centerObject(selected_image)
 
+    ## Add point layer
+    Map.addLayer(CITY_DATA_POINT, city_point_vis, 'New City Data Points', True)
 
-    ## Add other Urban Extent layers
-    Map.addLayer(CITY_DATA_POLY, {}, 'New City Data Polygons', True)
-    Map.addLayer(CITY_DATA, city_points_vis, 'New City Data Points', True)
-    # Map.addLayer(GHSL, {}, 'Old Builtup Density', False, 1)
-    Map.addLayer(GHSL_2020, {}, 'Old Builtup Density 2020', False)
-    Map.addLayer(BU, {}, 'New Built up Surface input', False)
-    Map.addLayer(IS_BUILTUP, {}, 'New Built up Surface binary', False)
-    Map.addLayer(BU_DENSITY_CAT, {}, 'Builtup Density Categories', False)
-    # Add 2 other bands from BU_DENSITY_CAT
-    Map.addLayer(BU_LATLON, {}, 'Connected Builtup Pixels LatLon', False)
-    # Add 1 other bands from BU_LATLON
-    
     ## Controls
     Map.addLayerControl()
     explore_layer = Map.find_layer("explore_image_collection")
@@ -194,13 +277,5 @@ def interactive_map(collection):
     ## Observe the band_selector dropdown widget for changes
     band_selector.observe(change_band, names='value')
 
-
-    
-
-# Custom vis_params
-city_points_vis = {
-    'color': 'yellow',
-    'pointSize': 25,
-    'pointShape': 'circle',
-    'width': 1
-}
+    ## Observe the scale_selector dropdown widget for changes
+    scale_selector.observe(change_scale_factor, names='value')
