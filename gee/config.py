@@ -33,7 +33,7 @@ OFFSET = 0
 # Set output image collection for all processed cities
 #os.chdir(os.getcwd()+'/gee')
 ROOT='projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024'
-IC_ID = f'{ROOT}/builtup_density_JRCs_50compare_L2_20_wP'
+IC_ID = f'{ROOT}/builtup_density_JRCs_1000'
 
 MAX_NNN_DISTANCE = 2500
 MAX_ERR = 10
