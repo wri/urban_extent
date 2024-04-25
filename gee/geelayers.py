@@ -51,7 +51,7 @@ _proj = GHSLyear.projection().getInfo()
 # "ESRI:54009" # for use with GHSL2023release image which doesn't have CRS in metadata.
 GHSL_CRS = "EPSG:3857"
 GHSL_TRANSFORM = _proj['transform']
-print("GHSL PROJ:", GHSL_CRS, GHSL_TRANSFORM)
+# print("GHSL PROJ:", GHSL_CRS, GHSL_TRANSFORM)
 
 #
 # Select built-up IMAGE
@@ -83,13 +83,11 @@ BU_DENSITY_CAT = _usubu.addBands([_density, IS_BUILTUP]).toUint8()
 BU_CONNECTED = IS_BUILTUP.multiply(_usubu.gt(0)).selfMask().connectedPixelCount(config.MINPIXS).eq(config.MINPIXS).selfMask()
 BU_LATLON = BU_CONNECTED.addBands(ee.Image.pixelLonLat())
 
+CIRCLE_BUFFER = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_1000_circle')
 
 
 def interactive_map(collection):
-    # Get image collection to explore by image via a dropdown
-     
     explore_image_collection = ee.ImageCollection(collection)
-    # explore_image_collection = explore_image_collection.filter(ee.Filter.stringContains('scale_factor_set', 'False'))
 
     ## Select Image
     ### Count the number of images in the collection
@@ -116,21 +114,39 @@ def interactive_map(collection):
     def change_band(change):
         if change['type'] == 'change' and change['name'] == 'value':
             # Remove old image collection
-            Map.remove_layer('explore_image_collection')
+            Map.remove_layer('New Builtup 2020')
+            # Remove old point collection
+            Map.remove_layer('New City Data Points')
             # Add updated image collection back
-            Map.addLayer(explore_image_collection.select(change['new']), {}, 'explore_image_collection', True)
-            explore_layer = Map.find_layer("explore_image_collection")
+            Map.addLayer(explore_image_collection.select(change['new']), {}, 'New Builtup 2020', True)
+            # Add city point back
+            Map.addLayer(CITY_DATA_POINT, city_point_vis, 'New City Data Points', True)
+            explore_layer = Map.find_layer("New Builtup 2020")
             explore_layer.interact(opacity=(0, 1, 0.1))
 
     ## Define a function to change the scale factor subset
     def change_scale_factor(change):
         if change['type'] == 'change' and change['name'] == 'value':
             # Remove old image collection
-            Map.remove_layer('explore_image_collection')
-            # Filter image collection by selected scale factor
-            filtered_collection = explore_image_collection.filter(ee.Filter.eq('study_area_scale_factor', change['new']))
+            Map.remove_layer('New Builtup 2020')
+            # Remove old point collection
+            Map.remove_layer('New City Data Points')
+            if pass_selector.value == 'All':
+                if scale_selector.value == 'All':
+                    filtered_collection = explore_image_collection
+                else:
+                    # Filter image collection by selected scale factor
+                    filtered_collection = explore_image_collection.filter(ee.Filter.eq('study_area_scale_factor', change['new']))
+            else:
+                if scale_selector.value == 'All':
+                    filtered_collection = explore_image_collection.filter(ee.Filter.eq('scale_factor_set', pass_selector.value))
+                else:
+                    # Filter image collection by selected scale factor
+                    filtered_collection = explore_image_collection.filter(ee.Filter.eq('study_area_scale_factor', change['new'])).filter(ee.Filter.eq('scale_factor_set', pass_selector.value))
             # Add updated image collection back
-            Map.addLayer(filtered_collection, new_bu_vis, 'explore_image_collection', True)
+            Map.addLayer(filtered_collection, new_bu_vis, 'New Builtup 2020', True)
+            # Add city point back
+            Map.addLayer(CITY_DATA_POINT, city_point_vis, 'New City Data Points', True)
             # Update image names
             size = filtered_collection.size().getInfo()
             images = filtered_collection.toList(size).getInfo()
@@ -140,28 +156,32 @@ def interactive_map(collection):
             # Update selected image
             selected_image = filtered_collection.first()
             Map.centerObject(selected_image)
-            explore_layer = Map.find_layer("explore_image_collection")
+            explore_layer = Map.find_layer("New Builtup 2020")
             explore_layer.interact(opacity=(0, 1, 0.1))
-            if change['new'] == 20:
-                pass_selector = widgets.Dropdown(
-                options=['True', 'False'],
-                description="Pass scale factor check:",
-                )
-                ### Display the dropdown widget
-                display(pass_selector)
-
-                ## Observe the pass_selector dropdown widget for changes
-                pass_selector.observe(change_pass, names='value')
+                
     
     ## Define a function to change the scale factor subset
     def change_pass(change):
         if change['type'] == 'change' and change['name'] == 'value':
             # Remove old image collection
-            Map.remove_layer('explore_image_collection')
-            # Filter image collection by selected scale factor
-            filtered_collection = explore_image_collection.filter(ee.Filter.eq('study_area_scale_factor', 20)).filter(ee.Filter.eq('scale_factor_set', change['new']))
+            Map.remove_layer('New Builtup 2020')
+            # Remove old point collection
+            Map.remove_layer('New City Data Points')
+            if pass_selector.value == 'All':
+                filtered_collection = explore_image_collection
+                scale_selector.options = ['All', 20, 50, 80, 120, 200, 400, 800, 2000]
+            elif pass_selector.value == 'True':
+                # Filter image collection by if the city pass the scale factor check
+                filtered_collection = explore_image_collection.filter(ee.Filter.eq('scale_factor_set', change['new']))
+                scale_selector.options = ['All', 20, 50, 80, 120, 200, 400, 800, 2000]
+            elif pass_selector.value == 'False':
+                # Filter image collection by if the city pass the scale factor check
+                filtered_collection = explore_image_collection.filter(ee.Filter.eq('scale_factor_set', change['new']))
+                scale_selector.options = [20]
             # Add updated image collection back
-            Map.addLayer(filtered_collection, new_bu_vis, 'explore_image_collection', True)
+            Map.addLayer(filtered_collection, new_bu_vis, 'New Builtup 2020', True)
+            # Add city point back
+            Map.addLayer(CITY_DATA_POINT, city_point_vis, 'New City Data Points', True)
             # Update image names
             size = filtered_collection.size().getInfo()
             images = filtered_collection.toList(size).getInfo()
@@ -171,45 +191,50 @@ def interactive_map(collection):
             # Update selected image
             selected_image = filtered_collection.first()
             Map.centerObject(selected_image)
-            explore_layer = Map.find_layer("explore_image_collection")
+            explore_layer = Map.find_layer("New Builtup 2020")
             explore_layer.interact(opacity=(0, 1, 0.1))
-
 
 
     #
     # WIDGETS
     #
+    # Filter by if the scale factor pass the test
+    pass_selector = widgets.Dropdown(
+        options=['All', 'True', 'False'],
+        description="Pass Scale Factor Check:",
+        style={'description_width': '150px'} 
+    )
+    # Add dropdown widgets
+    display(pass_selector)
+
     # Filter by scale factor
     ### Create a dropdown widget
     scale_selector = widgets.Dropdown(
-    options=[20,50,80,120,200,400,800,2000],
-    description="Select Scale Factor:",
+        options=['All', 20, 50, 80, 120, 200, 400, 800, 2000],
+        description="Select Scale Factor:",
+        style={'description_width': '150px'} 
     )
-    ### Display the dropdown widget
     display(scale_selector)
 
     # display(collection)
     ### Create a dropdown widget
     image_selector = widgets.Dropdown(
-    options=image_names,
-    description="Select Image:",
+        options=image_names,
+        description="Select Image:",
+        style={'description_width': '150px'} 
     )
-    ### Display the dropdown widget
     display(image_selector)
-
 
     ## Select Band
     ### Extract band names as a list
     band_names = selected_image.bandNames().getInfo()
     ### Create a dropdown widget
     band_selector = widgets.Dropdown(
-    options=band_names,
-    description="Select Band:",
+        options=band_names,
+        description="Select Band:",
+        style={'description_width': '150px'} 
     )
-    ### Display the dropdown widget
     display(band_selector)
-
-
 
     #
     # MAP
@@ -242,8 +267,9 @@ def interactive_map(collection):
     
     ## Add other Urban Extent layers
     # Map.addLayer(GHSL, {}, 'Old Builtup Density', False, 1)
-    Map.addLayer(CITY_DATA_POLY, {}, 'New City Data Polygons', True)
-    Map.addLayer(GHSL_2020, old_bu_vis, 'Old Builtup Density 2020', True)
+    Map.addLayer(CITY_DATA_POLY, {}, 'New City Polygons', True)
+    Map.addLayer(CIRCLE_BUFFER, {}, 'New City Circle Buffer', True)
+    Map.addLayer(GHSL_2020, old_bu_vis, 'Old Builtup 2020', True)
     # Map.addLayer(BU, {}, 'New Built up Surface input', True)
     # Map.addLayer(IS_BUILTUP, {}, 'New Built up Surface? binary', True)
     # Map.addLayer(BU_DENSITY_CAT, {}, 'Builtup Density Categories', True)
@@ -253,7 +279,7 @@ def interactive_map(collection):
     
 
     ## Add Layer for dropdown
-    Map.addLayer(explore_image_collection.select(band_names[0]), new_bu_vis, 'explore_image_collection', True)
+    Map.addLayer(explore_image_collection.select(band_names[0]), new_bu_vis, 'New Builtup 2020', True)
     ## Center on image collection
     Map.centerObject(selected_image)
 
@@ -262,7 +288,7 @@ def interactive_map(collection):
 
     ## Controls
     Map.addLayerControl()
-    explore_layer = Map.find_layer("explore_image_collection")
+    explore_layer = Map.find_layer("New Builtup 2020")
     display(explore_layer.interact(opacity=(0, 1, 0.1)))
 
     ## Display the map
@@ -271,11 +297,11 @@ def interactive_map(collection):
     #
     # OBSERVERS
     #
-    ## Observe the image_selector dropdown widget for changes
-    image_selector.observe(zoom_to_image, names='value')
-
-    ## Observe the band_selector dropdown widget for changes
-    band_selector.observe(change_band, names='value')
-
+    ## Observe the pass_selector dropdown widget for changes
+    pass_selector.observe(change_pass, names='value')
     ## Observe the scale_selector dropdown widget for changes
     scale_selector.observe(change_scale_factor, names='value')
+    ## Observe the image_selector dropdown widget for changes
+    image_selector.observe(zoom_to_image, names='value')
+    ## Observe the band_selector dropdown widget for changes
+    band_selector.observe(change_band, names='value')

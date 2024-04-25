@@ -1,4 +1,3 @@
-import os
 import re
 from unidecode import unidecode
 import ee
@@ -110,10 +109,10 @@ def post_urban_extents_check(TASKS, FAILURES):
     alt_center = []
     other_issue = []
     for key, value in FAILURES.items():
-        # Check if value contains substring 'aaaa'
+        # Check if value contains substring
         if 'Computation timed out' in value:
             direct_rerun.append(key)
-        # Check if value contains substring 'bbb'
+        # Check if value contains substring
         elif 'The geometry for image clipping must not be empty' in value:
             alt_center.append(key)
         else:
@@ -130,3 +129,13 @@ def post_urban_extents_check(TASKS, FAILURES):
 # IDS = geelayers.CITY_DATA.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
 # CITIES_LIST = cities.id_hdc_g0_50+cities.id_hdc_g0_250+cities.id_hdc_g0_700
 # TASKS, FAILURES = get_urban_extents(IDS, CITIES_LIST)
+
+## Export circular buffer
+# collection = 'projects/earthengine-legacy/assets/projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_1000'
+# collection = ee.ImageCollection(collection)
+# circle = collection.map(helpers.buffered_feat_circle)
+# task=ee.batch.Export.table.toAsset(
+#       collection=circle, 
+#       description='export circle', 
+#       assetId='projects/earthengine-legacy/assets/projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_1000_circle')
+# task.start()
