@@ -10,7 +10,7 @@ import geelayers
 def get_circle_data(feat):
     feat = ee.Feature(feat)
     cname = feat.get('UC_NM_MN')
-    cID = feat.get('ID_HDC_G0')
+    cID = ee.Number(feat.get('ID_HDC_G0')).toInt()
     centroid = feat.geometry()
     crs = get_crs(centroid)
     region = ee.String(feat.get('GRGN_L2')).trim()
