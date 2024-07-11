@@ -9,7 +9,6 @@ import config
 #
 # CONFIG
 #
-
 VECTOR_SCALE=None
 INPUT_VECTOR_SCALE=VECTOR_SCALE
 LIMIT=None
@@ -19,10 +18,7 @@ VECTOR_BUFFER=None
 TEST_CITY=None
 ENSURE_FEATS=False
 SPLIT_INDEX=False
-
 ENSURE_FEATS=True
-
-
 
 
 #
@@ -37,12 +33,11 @@ AREA_REDUCER=ee.Reducer.sum().combine(
         ee.Reducer.sum(),outputPrefix=f'suburban_area_').combine(
           ee.Reducer.sum(),outputPrefix=f'urban_area_')
 
-
-ROOT= 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024' #'users/emackres'
-SUFFIX= 'JRCs_50compare_L2_20_wP' #'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
-SR_ID=f'{ROOT}/builtup_density_{SUFFIX}'
-
 YEAR = 2020
+
+ROOT= 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024' #'users/emackres'
+SUFFIX= 'JRCs_africa' #'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
+SR_ID=f'{ROOT}/builtup_density_{SUFFIX}_{YEAR}'
 
 
 DEST_NAME=f'{SUFFIX}_{YEAR}'#_{REGION_SHORT}'
@@ -197,70 +192,3 @@ if DRY_RUN:
 else:
   task.start()
   print(task.status())
-
-
-# # post vector check
-# # Define function to create circle features
-# def check_buffer_contains(feature):
-#     # Create the point geometry from the latitude and longitude
-#     point = ee.Geometry.Point([feature.get('study_center_lon'), feature.get('study_center_lat')])
-#     # Create the circle buffer around the point with the specified radius
-#     circle = point.buffer(ee.Number(feature.get('study_radius')).add(ee.Number(feature.get('est_influence_distance'))))
-#     # Check if the feature geometry is completely within the circle
-#     geometry = feature.geometry()
-#     contains = circle.contains(geometry)
-#     # Copy all the properties from the original feature
-#     circle = ee.Feature(circle, feature.toDictionary())
-#     # Add a new property indicating whether the city passed the buffer check
-#     circle = circle.set('pass_buffer_check', contains)
-
-#     return circle
-
-
-# # Map the function over the feature collection to create circles
-# circleCollection = ee.FeatureCollection(asset_id).map(check_buffer_contains)
-# # Filter the circle collection
-# filteredCircleCollection = circleCollection.filter(ee.Filter.eq('pass_buffer_check', False))
-# alt_scale_factor_ids = filteredCircleCollection.aggregate_array('fid').getInfo()
-
-# len(alt_scale_factor_ids)
-
-# filtered_images = ee.ImageCollection(config.IC_ID).filter(ee.Filter.inList('ID_HDC_G0', alt_scale_factor_ids))
-
-
-# import ee
-
-# # Initialize the Earth Engine API
-# ee.Initialize()
-
-# # Define a function to check for intersection
-# def check_intersection(feature):
-#     feature_id = feature.get('system:index')
-#     intersection = featureCollection.filterBounds(feature.geometry()).filterMetadata('system:index', 'not_equals', feature_id).size()
-#     return feature.set('intersect_other_features', intersection.gt(0))
-
-# # Load the feature collection
-# featureCollection = ee.FeatureCollection("projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/GHSL_BUthresh10pct_JRCs_50compare_L2_20_wP_2020_circle")
-
-# # Map the check_intersection function over each feature in the collection
-# resultCollection = featureCollection.map(check_intersection)
-
-# # Print the result
-# print(resultCollection.getInfo())
-
-# filteredCircleCollection = resultCollection.filter(ee.Filter.eq('intersect_other_features', 1))
-# alt_scale_factor_ids = filteredCircleCollection.aggregate_array('fid').getInfo()
-
-# len(alt_scale_factor_ids)
-
-
-
-# ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_1000').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('fid').getInfo()
-
-# # Get image IDs
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_1000').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
-# len(image_ids)
-# # Delete images
-# for image_id in image_ids:
-#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_1000/'+image_id)
-#     print("Deleted:", image_id)

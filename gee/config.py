@@ -6,8 +6,6 @@ from sklearn.linear_model import LinearRegression
 import matplotlib.pyplot as plt
 ee.Initialize()
 
-
-
 #
 # CONFIG
 #
@@ -23,18 +21,11 @@ ratio=A(circle)/A ~ alpha^2 * pi
 
 Note that city centers might be far from "centered"
 """""""""""""""""""""""""""""""""""""""""""""""""""
-# CONSTANTS
-STUDY_AREA_SCALE_FACTOR = 20
+#CONSTANTS
 OFFSET = None
 LIMIT = None
 DRY_RUN = False
 OFFSET = 0
-
-# Set output image collection for all processed cities
-#os.chdir(os.getcwd()+'/gee')
-ROOT='projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024'
-IC_ID = f'{ROOT}/builtup_density_JRCs_1000'
-
 MAX_NNN_DISTANCE = 2500
 MAX_ERR = 10
 MINPIXS = 10
@@ -51,40 +42,39 @@ PPOLICY = {
     'builtup': 'mode',
     'density': 'mean',
 }
-
 USE_COMPLETED_FILTER = True # used
-USE_COM = False # used
 
-
-import inspected_centroids as insp_cent
-
-NEW_INSPECTED_CENTROIDS_IDS = insp_cent.NEW_INSPECTED_CENTROIDS_IDS
-NEW_INSPECTED_CITIES_IDS = NEW_INSPECTED_CENTROIDS_IDS.keys()
-USE_INSPECTED_CENTROIDS = False # not used for now, but may need to use in the future
-
+# Set output image collection for all processed cities
+ROOT='projects/wri-datalab/cities/urban_land_use/data'
+# Update image collection year to [1980, 1990, 2000, 2005, 2010, 2015, 2020]
+IC_ID = f'{ROOT}/african_cities_July2024/builtup_density_JRCs_africa_1980'
+# f'{ROOT}/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980'
+# f'{ROOT}/test_tori_Apr2024/builtup_density_JRCs_Kigali_Nairobi_Addis'
 
 # Built-up layer options
-# select pixel built-up density threshold for GHSL2023release
+# select pixel built-up density threshold
 # minimum m2 built out of possible 10000 for each GHSL grid cell included
 BuiltAreaThresh = 1000
 # set the built-up year for which to produce extents
-mapYear = 2020
+# [1980, 1990, 2000, 2005, 2010, 2015, 2020]
+mapYear = 1980
 
 
-# New City data (13K cities)
-# GRGN_L2
+# City data from Global Human Settlement Layer (GHSL, 13K cities)
+# https://human-settlement.emergency.copernicus.eu/ghs_stat_ucdb2015mt_r2019a.php
 # linear average relationships between population and built-up area
-df = pd.read_csv('GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2.csv', encoding='latin1', low_memory=False)
+df = pd.read_csv('data/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2.csv', encoding='latin1', low_memory=False)
 # Drop rows where all columns are NaN
 df = df.dropna(how='all')
 # Drop rows where B15 is 0
 df = df[df['B15'] != 0]
+
+# Use GRGN_L2 as regions for regression
 # Replace value Polynesia with Melanesia in column 'GRGN_L2'
-# Only one city in Polynesia
+# Only 1 city in Polynesia
 df['GRGN_L2'] = df['GRGN_L2'].replace('Polynesia', 'Melanesia')
 df['GRGN_L2'].value_counts()
 
-# TODO: move to helpers.py
 results = {}
 for region in df['GRGN_L2'].unique():
     subset = df[df['GRGN_L2'] == region]
@@ -100,20 +90,5 @@ for region in df['GRGN_L2'].unique():
         'slope': model.coef_[0],
         'score': model.score(X, Y)
     }
-
-    # subset = subset[subset['ID_HDC_G0'].isin(id_hdc_g0_250 + id_hdc_g0_50)]
-    # subset_error = subset[subset['ID_HDC_G0'].isin(alt_scale_factor_ids)]
-    # if len(subset)>0:
-    #     # Plotting
-    #     plt.scatter(np.log(subset[['P15']]), np.log(subset['B15']*1000000), label='Data')
-    #     if len(subset_error)>0:
-    #         plt.scatter(np.log(subset_error[['P15']]), np.log(subset_error['B15']*1000000), label='Buffer Error')
-    #     plt.plot(np.log(subset[['P15']]), model.predict(np.log(subset[['P15']])), color='red', label='Linear Regression')
-    #     plt.title(region)
-    #     plt.xlabel('pop 2015')
-    #     plt.ylabel('builtup 2015')
-    #     plt.grid(True)
-    #     plt.legend()
-    #     plt.show()
 
 FIT_PARAMS = ee.Dictionary(results)

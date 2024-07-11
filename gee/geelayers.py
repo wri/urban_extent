@@ -9,33 +9,27 @@ import config
 #
 # GET DATA
 #
-
 # Old output built-up density
-#  based GHSL data with built-up threshold of 10%
+# based GHSL data with built-up threshold of 10%
 ## All
 GHSL = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/builtup_density_GHSL_BUthresh10pct')
 ## 2020
 GHSL_2020 = GHSL.filter(ee.Filter.stringContains('system:index', '2020'))
 
-# New City data
+# New City data from GHSL
 ## Polygons
 CITY_DATA_POLY = ee.FeatureCollection('projects/wri-datalab/AUE/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2')
-## Centroids
-### Function to convert each polygon feature to a point feature based on 'lat' and 'long' attributes
-def polygon_to_point(feature):
-    lat = ee.Number(feature.get('GCPNT_LAT'))
-    long = ee.Number(feature.get('GCPNT_LON'))
-    point = ee.Geometry.Point([long, lat])
-    return ee.Feature(point, feature.toDictionary())
-### Map the conversion function over the polygon FeatureCollection
-CITY_DATA_POINT = CITY_DATA_POLY.map(polygon_to_point)
-
+## Checked city points
+CITY_DATA_POINT = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/city_data_checked_africa')
+# 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_checked'
+# 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_Kigali_Nairobi_Addis'
 
 if config.USE_COMPLETED_FILTER:
-    COMPLETED_IDS = ee.ImageCollection(config.IC_ID).aggregate_array('ID_HDC_G0')
-    COMPLETED_FILTER = ee.Filter.And(ee.Filter.inList('ID_HDC_G0', COMPLETED_IDS), ee.Filter.equals('builtup_year', config.mapYear))
-    COMPLETED_CITIES_LIST = ee.ImageCollection(config.IC_ID).filter(COMPLETED_FILTER).aggregate_array('ID_HDC_G0')
-    CITY_DATA = CITY_DATA_POINT.filter(ee.Filter.inList('ID_HDC_G0', COMPLETED_CITIES_LIST).Not())
+    COMPLETED_CITIES = ee.ImageCollection(config.IC_ID).filter(ee.Filter.equals('builtup_year', config.mapYear))
+    COMPLETED_CITIES_LIST = COMPLETED_CITIES.aggregate_array('ID_HDC_G0').getInfo()
+    CITY_LIST = CITY_DATA_POINT.aggregate_array('ID_HDC_G0').getInfo()
+    COMPLETED_FILTER =  [item for item in CITY_LIST if item not in COMPLETED_CITIES_LIST]
+    CITY_DATA = CITY_DATA_POINT.filter(ee.Filter.inList('ID_HDC_G0', COMPLETED_FILTER))
 else:
     CITY_DATA = CITY_DATA_POINT
 
@@ -83,16 +77,14 @@ BU_DENSITY_CAT = _usubu.addBands([_density, IS_BUILTUP]).toUint8()
 BU_CONNECTED = IS_BUILTUP.multiply(_usubu.gt(0)).selfMask().connectedPixelCount(config.MINPIXS).eq(config.MINPIXS).selfMask()
 BU_LATLON = BU_CONNECTED.addBands(ee.Image.pixelLonLat())
 
-CIRCLE_BUFFER = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_1000_circle')
 
-
+# Interactive map
 def interactive_map(collection):
     explore_image_collection = ee.ImageCollection(collection)
 
     ## Select Image
     ### Count the number of images in the collection
     size = explore_image_collection.size().getInfo()
-    # print(size)
     ### Extract image names as a list
     images = explore_image_collection.toList(size).getInfo()
     image_names = [item['properties']['system:index'] for item in images]
@@ -268,7 +260,6 @@ def interactive_map(collection):
     ## Add other Urban Extent layers
     # Map.addLayer(GHSL, {}, 'Old Builtup Density', False, 1)
     Map.addLayer(CITY_DATA_POLY, {}, 'New City Polygons', True)
-    Map.addLayer(CIRCLE_BUFFER, {}, 'New City Circle Buffer', True)
     Map.addLayer(GHSL_2020, old_bu_vis, 'Old Builtup 2020', True)
     # Map.addLayer(BU, {}, 'New Built up Surface input', True)
     # Map.addLayer(IS_BUILTUP, {}, 'New Built up Surface? binary', True)

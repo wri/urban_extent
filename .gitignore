@@ -56,4 +56,4 @@ wheels/
 *.egg
 
 # Data files
-*.csv
+# *.csv

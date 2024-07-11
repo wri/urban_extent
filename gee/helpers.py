@@ -7,33 +7,72 @@ import geelayers
 #
 # MAIN
 #
-def get_circle_data(feat):
+# def get_circle_data(feat, city_track):
+#     feat = ee.Feature(feat)
+#     cname = feat.get('UC_NM_MN')
+#     cID = ee.Number(feat.get('ID_HDC_G0')).toInt()
+#     centroid = feat.geometry()
+#     crs = get_crs(centroid)
+#     region = ee.String(feat.get('GRGN_L2')).trim()
+#     pop = feat.getNumber('P15')
+#     est_area = get_area(pop, region)
+#     est_influence_distance = get_influence_distance(est_area)
+#     scaled_area = est_area.multiply(int(city_track['STUDY_AREA_SCALE_FACTOR']))
+#     radius = get_radius(scaled_area)
+#     study_bounds = centroid.buffer(radius, config.MAX_ERR)
+#     if city_track['USE_COM']:
+#         center_of_mass = ee.Geometry(get_com(study_bounds))
+#         bu_centroid_xy = ee.List(nearest_non_null(center_of_mass))
+#         study_bounds = center_of_mass.buffer(radius, config.MAX_ERR)
+#         study_center = center_of_mass
+#     elif city_track['USE_INSPECTED_CENTROIDS']:
+#         inspected_centroid = config.NEW_INSPECTED_CENTROIDS_IDS.get(cID)
+#         inspected_centroid = ee.Geometry(inspected_centroid)
+#         bu_centroid_xy = ee.List(nearest_non_null(inspected_centroid))
+#         study_bounds = inspected_centroid.buffer(radius, config.MAX_ERR)
+#         study_center = inspected_centroid
+#     else:
+#         bu_centroid_xy = ee.List(nearest_non_null(centroid))
+#         study_center = centroid
+#     bu_centroid = ee.Geometry.Point(bu_centroid_xy)
+#     return ee.Feature(
+#         study_bounds,
+#         {
+#             # 'city_center': centroid,
+#             'bu_city_center': bu_centroid,
+#             'bu_city_center_lon': bu_centroid.coordinates().get(0),
+#             'bu_city_center_lat': bu_centroid.coordinates().get(1),
+#             'crs': crs,
+#             'study_center': study_center,
+#             'study_center_lon': study_center.coordinates().get(0),
+#             'study_center_lat': study_center.coordinates().get(1),
+#             'est_area': est_area,
+#             'scaled_area': scaled_area,
+#             'study_radius': radius,
+#             'est_influence_distance': est_influence_distance,
+#             'study_area_scale_factor': int(city_track['STUDY_AREA_SCALE_FACTOR']),
+#             'use_center_of_mass': str(city_track['USE_COM']),
+#             'use_inspected_centroid': str(city_track['USE_INSPECTED_CENTROIDS']),
+#             'builtup_year': config.mapYear
+#         }).copyProperties(feat)
+
+def get_circle_data_simple(feat, city_track):
     feat = ee.Feature(feat)
-    cname = feat.get('UC_NM_MN')
-    cID = ee.Number(feat.get('ID_HDC_G0')).toInt()
+    # cname = feat.get('UC_NM_MN')
+    # cID = ee.Number(feat.get('ID_HDC_G0')).toInt()
     centroid = feat.geometry()
     crs = get_crs(centroid)
     region = ee.String(feat.get('GRGN_L2')).trim()
     pop = feat.getNumber('P15')
     est_area = get_area(pop, region)
     est_influence_distance = get_influence_distance(est_area)
-    scaled_area = est_area.multiply(config.STUDY_AREA_SCALE_FACTOR)
+    scaled_area = est_area.multiply(int(city_track['STUDY_AREA_SCALE_FACTOR']))
     radius = get_radius(scaled_area)
     study_bounds = centroid.buffer(radius, config.MAX_ERR)
-    if config.USE_COM:
-        center_of_mass = ee.Geometry(get_com(study_bounds))
-        bu_centroid_xy = ee.List(nearest_non_null(center_of_mass))
-        study_bounds = center_of_mass.buffer(radius, config.MAX_ERR)
-        study_center = center_of_mass
-    elif config.USE_INSPECTED_CENTROIDS:
-        inspected_centroid = config.NEW_INSPECTED_CENTROIDS_IDS.get(cID)
-        inspected_centroid = ee.Geometry(inspected_centroid)
-        bu_centroid_xy = ee.List(nearest_non_null(inspected_centroid))
-        study_bounds = inspected_centroid.buffer(radius, config.MAX_ERR)
-        study_center = inspected_centroid
-    else:
-        bu_centroid_xy = ee.List(nearest_non_null(centroid))
-        study_center = centroid
+
+    bu_centroid_xy = ee.List(nearest_non_null(centroid))
+    study_center = centroid
+    
     bu_centroid = ee.Geometry.Point(bu_centroid_xy)
     return ee.Feature(
         study_bounds,
@@ -50,9 +89,9 @@ def get_circle_data(feat):
             'scaled_area': scaled_area,
             'study_radius': radius,
             'est_influence_distance': est_influence_distance,
-            'study_area_scale_factor': config.STUDY_AREA_SCALE_FACTOR,
-            'use_center_of_mass': str(config.USE_COM),
-            'use_inspected_centroid': str(config.USE_INSPECTED_CENTROIDS),
+            'study_area_scale_factor': int(city_track['STUDY_AREA_SCALE_FACTOR']),
+            # 'use_center_of_mass': str(city_track['USE_COM']),
+            # 'use_inspected_centroid': str(city_track['USE_INSPECTED_CENTROIDS']),
             'builtup_year': config.mapYear
         }).copyProperties(feat)
 
@@ -87,47 +126,6 @@ def vectorize(data):
     feats = fill_polygons(feats)
     # return vector polygons as a single feature
     return ee.Feature(feats.geometry()).copyProperties(data)
-
-
-# def get_super_feat(feat):
-#     feat = get_circle_data(feat)
-#     feat = vectorize(feat)
-#     return feat
-
-
-# #
-# # ESTIMATED GROWTH BUFFER
-# #
-# def _get_beta(rho,alpha,delta):
-#     num=ee.Number(rho).multiply(ee.Number(alpha).sqrt().subtract(1))
-#     return ee.Number(2).multiply(delta).divide(num)
-
-
-# def growth_buffer(geom,target_frac,overshoot):
-#     geom=ee.Geometry(geom)
-#     overshoot=overshoot or 0
-#     alpha=ee.Number(target_frac).add(1).add(overshoot)
-#     a0=geom.area(config.MAX_ERR)
-#     p0=geom.perimeter(config.MAX_ERR)
-#     # compute rho=area/perimeter
-#     rho0=a0.divide(p0)
-#     # buffer to give alpha if circle
-#     bC=alpha.sqrt().subtract(1).multiply(rho0)
-#     # buffer geom by and calculate delta=rho(after buffer)/rho(init)
-#     geomC=geom.buffer(bC)
-#     aC=geomC.area(1)
-#     pC=geomC.perimeter(1)
-#     rhoC=aC.divide(pC)
-#     deltaC=rhoC.subtract(rho0)
-#     #
-#     alphaC=aC.divide(a0)
-#     beta=_get_beta(rho0,alphaC,deltaC)
-#     # compute delta (this gives the change in terms of rho)
-#     deltaT=rho0.multiply(beta).multiply(alpha.sqrt().subtract(1)).divide(2)
-#     # convert change in terms of rho back to a "buffer"
-#     # - this assumes bC is close to right and changes slowly
-#     bT=deltaT.multiply(bC).divide(deltaC)
-#     return bT
 
 
 #
@@ -257,7 +255,6 @@ def flatten_to_polygons_and_fill_holes(feats, max_fill):
 #
 # HELPERS
 #
-
 def get_area(pop, region):
     pop = ee.Number(pop).log()
     params = ee.Dictionary(config.FIT_PARAMS.get(region))
