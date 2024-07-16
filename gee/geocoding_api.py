@@ -94,5 +94,5 @@ for cID in df['ID_HDC_G0']:
                         scale=100,
                         maxPixels=1e9
                     ).get('builtup')
-    df.loc[cID, 'COULD_DO'] = bool(ee.Number(non_na_pixels).gt(0).getInfo())
+    df.loc[df['ID_HDC_G0']==cID, 'COULD_DO'] = bool(ee.Number(non_na_pixels).gt(0).getInfo())
 df.to_csv('data/city_data_checked_wz_todo.csv',index=False)

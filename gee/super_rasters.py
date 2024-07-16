@@ -122,7 +122,7 @@ import pandas as pd
 
 IDS = geelayers.CITY_DATA.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
 # FULL_IDS = geelayers.CITY_DATA_POINT.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
-cities_track = pd.read_csv('data/checked_cities_track_todo_1980.csv', encoding='latin1', low_memory=False)
+cities_track = pd.read_csv('data/checked_cities_track_todo_2020.csv', encoding='latin1', low_memory=False)
 cities_track.set_index('ID_HDC_G0', inplace=True)
 # filter out checked cities
 filtered_cities = cities_track[cities_track['NEED_CENTROID_CHECK']!=False]
@@ -143,4 +143,4 @@ while len(TASKS) > 0:
     total_mins = total_mins + 0.5
 print('Success!')
 
-cities_track.to_csv('data/checked_cities_track_todo_1980.csv', encoding='latin1')
+cities_track.to_csv('data/checked_cities_track_todo_2020.csv', encoding='latin1')

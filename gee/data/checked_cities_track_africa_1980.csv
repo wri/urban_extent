@@ -1,2806 +1,2806 @@
 ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_CHECK,DONE
-1450,Mindelo,20,0,False,,
+1450,Mindelo,20,0,FALSE,,
 1451,Jo?o Teves,20,0,,,
-1452,Dakar,20,0,,,True
-1453,MBour,20,0,,,True
-1454,ThiŠs,20,0,,,True
-1455,Serrekunda,20,0,,,True
-1456,Tivaouane,20,0,,,True
-1457,Yundum,40,0,,,True
-1458,Brikama,20,0,,,True
-1459,Nouadhibou,20,0,False,,
-1460,Bambey,20,0,,,True
-1461,Saint-Louis,20,0,,,True
-1462,Fatick,20,0,,,True
-1463,Ziguinchor,20,0,,,True
-1464,Bignona,20,0,,,True
-1465,Diourbel,20,0,,,True
-1466,Louga,20,0,,,True
-1467,Kaolack,20,0,,,True
-1468,Keur Madiabel,20,0,,,True
-1469,Gossas,20,0,,,True
-1470,Darou Mousti,20,0,,,True
-1471,Guinguin‚o,20,0,,,True
-1472,Goudomp,20,0,,,True
-1473,Touba,20,0,,,True
-1474,Nouakchott,20,0,,,True
-1476,Nioro du Rip,20,0,,,True
-1477,Bissau,20,0,,,True
-1478,Rosso S‚n‚gal,20,0,,,True
-1480,Farafenni,20,0,,,True
-1481,S‚dhiou,20,0,,,True
-1482,Richard-Toll,20,0,,,True
-1484,Kaffrine,20,0,,,True
-1485,Dahra Djoloff,20,0,,,True
-1486,Dakhla,20,0,,,True
-1487,Dagana,20,0,False,,
-1489,Kolda,20,0,,,True
-1490,Podor,20,0,,,True
-1491,Koungheul,20,0,,,True
-1492,Bafat ,40,0,,,True
-1493,Kamsar,40,0,,,True
-1496,Koumpentoum,20,0,,,True
-1497,Bok‚,20,0,,,True
-1498,Gab£,20,0,,,True
-1499,Bogu‚,20,0,,,True
-1500,V‚lingara,20,0,,,True
-1501,Sangar‚di,20,0,,,True
-1502,Conakry,20,0,,,True
-1503,Boujdour,20,0,False,,
-1504,Madina Gounass,20,0,,,True
-1505,Fria,20,0,,,True
-1506,Tambacounda,20,0,,,True
-1507,Freetown,20,0,,,True
-1508,Ka‚di,20,0,,,True
-1509,Mahera,80,0,,,True
-1511,Waterloo,40,0,,,True
-1512,Kindia,40,0,,,True
-1513,Waound‚,20,0,,,True
-1515,Lab‚,40,0,,,True
-1516,Mile 91,20,0,,,True
-1517,Kedougou,20,0,,,True
-1518,Mamou,20,0,,,True
-1519,Makeni,20,0,,,True
-1520,Bo,20,0,,,True
-1521,Kayes,40,0,,,True
-1522,Kenema,20,0,,,True
-1523,Kiffa,20,0,,,True
-1524,Koidu Town,40,0,,,True
-1525,Daru,20,0,,,True
-1526,Monrovia,20,0,,,True
-1527,Faranah,20,0,,,True
-1528,Dinguiraye,20,0,,,True
-1529,Kakata,20,0,,,True
-1530,Tan-Tan,20,0,,,True
-1531,Gu‚ck‚dou,40,0,,,True
-1532,Kissidougou,40,0,,,True
-1533,Buchanan,80,0,,,True
-1534,Gbarnga,80,0,,,True
-1535,Macenta,20,0,,,True
-1536,Kita,20,0,,,True
-1537,Guelmim,20,0,,,True
-1538,Banankoro,20,0,,,True
-1539,Kankan,20,0,,,True
-1540,Siguiri,20,0,,,True
-1541,Ganta,40,0,,,True
-1542,Tiznit,20,0,,,True
-1543,Essaouira,20,0,,,True
-1544,Agadir,20,0,,,True
-1545,Nz‚r‚kor‚,20,0,,,True
-1546,Ouled-Teima,20,0,,,True
-1547,Safi,20,0,,,True
-1548,Sinko,20,0,,,True
-1549,Danan‚,20,0,,,True
-1550,Taroudant,20,0,,,True
-1552,Kati,40,0,,,True
-1553,Bamako,20,0,,,True
-1555,S‚nou,20,0,,,True
-1557,Youssoufia ????????? ????????,20,0,,,True
-1558,El Jadida,20,0,,,True
-1560,Sidi Bennour,20,0,,,True
-1561,Tinduf,20,0,,,True
-1562,Man,20,0,,,True
-1563,Guiglo,20,0,,,True
-1564,Azemmour,20,0,,,True
-1565,Bougouni,40,0,,,True
-1567,Duekoue,20,0,,,True
-1570,Marrakesh,20,0,,,True
-1571,Ben Guerir,20,0,,,True
-1574,Dar Bouazza,20,0,False,,
-1575,Casablanca,20,0,,,True
-1577,Settat,20,0,,,True
-1578,Virage de Dioila,80,0,,,True
-1579,Berrechid,20,0,,,True
-1581,Deroua,20,0,False,,
-1582,El Kelaa des Sraghna,20,0,,,True
-1583,San-P‚dro,40,0,,,True
-1585,Soubr‚,20,0,,,True
-1586,Issia,20,0,,,True
-1587,M‚agui,20,0,,,True
-1589,Vavoua,20,0,,,True
-1590,Daloa,20,0,,,True
-1591,Tengr‚la,20,0,,,True
-1592,Ouarzazate,20,0,,,True
-1594,Khouribga,20,0,,,True
-1595,Rabat,20,0,,,True
-1596,S‚gou,20,0,,,True
-1597,Ain El Aouda,20,0,False,,
-1598,Souk Sebt Oulad Nemma,20,0,,,True
-1600,Fkih Ben Salah,20,0,,,True
-1601,Bonon,20,0,,,True
-1603,Gagnoa,20,0,,,True
-1604,Kenitra,20,0,,,True
-1605,Oued Zem,20,0,,,True
-1606,Sinfra,20,0,,,True
-1607,Niono,20,0,,,True
-1608,Beni Mellal,20,0,,,True
-1609,Bejaad,20,0,,,True
-1610,Bouafl‚,20,0,,,True
-1611,Lakota,20,0,,,True
-1612,Kasba Tadla,20,0,,,True
-1613,Tiflet,20,0,,,True
-1614,Sikasso,20,0,,,True
-1615,Korhogo,20,0,,,True
-1616,Sidi Yahya du Gharb,20,0,,,True
-1617,Di‚gon‚fla,20,0,,,True
-1621,Larache,20,0,,,True
-1623,Khemisset,20,0,,,True
-1624,Koutiala,20,0,,,True
-1625,Oum‚,20,0,,,True
-1626,Fassala,20,0,False,,
-1628,Divo,20,0,,,True
-1629,Souk El Arba Du Gharb,20,0,,,True
-1630,Zagora,20,0,False,,
-1631,Sidi Slimane,20,0,,,True
-1633,Yamoussoukro,20,0,,,True
-1634,Ksar el-Kebir,20,0,,,True
-1635,Tangier,20,0,,,True
-1637,Ferk‚ss‚dougou,20,0,,,True
-1639,Ouangolodougou,20,0,,,True
-1640,Sidi Kacem,20,0,,,True
-1641,Khenifra,20,0,,,True
-1642,Bouak‚,20,0,,,True
-1643,Meknes,20,0,,,True
-1644,M'rirt,20,0,,,True
-1645,Ouazzane,20,0,,,True
-1646,Niangoloko,20,0,,,True
-1648,San,20,0,,,True
-1652,T‚touan,20,0,,,True
-1653,Banfora,20,0,,,True
-1657,Martil,20,0,,,True
-1658,Azrou,20,0,,,True
-1660,Chefchaouen,20,0,,,True
-1661,Ain Taoujdate,20,0,,,True
-1664,Fez,20,0,,,True
-1666,Dabou,40,0,,,True
-1668,Sefrou,20,0,,,True
-1669,Bobo-Dioulasso,20,0,,,True
-1670,Midelt,20,0,,,True
-1671,Sid‚radougou,20,0,False,,
-1672,Agboville,40,0,,,True
-1675,Abidjan,20,0,,,True
-1676,Mopti,20,0,,,True
-1679,Socoura,20,0,,,True
-1680,Solenzo,20,0,,,True
-1681,Errachidia,20,0,,,True
-1683,Daoukro,20,0,,,True
-1684,Adzop‚,20,0,,,True
-1685,Barani,20,0,False,,
-1686,Nouna,20,0,,,True
-1687,Ouo,20,0,False,,
-1689,Grand-Bassam,80,0,,,True
-1690,Taza,20,0,,,True
-1692,Lorop‚ni,20,0,False,,
-1693,Abengourou,20,0,,,True
-1694,Al Hoceima,20,0,,,True
-1695,Hound‚,20,0,False,,
-1696,D‚dougou,20,0,,,True
-1704,Aboisso,20,0,,,True
-1706,Agnibil‚krou,40,0,,,True
-1710,Gaoua,20,0,,,True
-1712,Tougan,20,0,,,True
-1714,Guercif,20,0,,,True
-1715,Bouna,20,0,,,True
-1717,Timbuktu,20,0,,,True
-1720,Dormaa Ahenkro,20,0,,,True
-1724,Enchi,20,0,,,True
-1725,Bondoukou,20,0,,,True
-1730,Jirapa,20,0,False,,
-1733,Nador,40,0,,,True
-1734,Melilla,40,0,,,True
-1735,Taourirt,20,0,,,True
-1736,Berekum,20,0,,,True
-1738,Wa,20,0,,,True
-1740,Bole,20,0,False,,
-1743,Sawla,20,0,False,,
-1744,Ouahigouya,20,0,,,True
-1745,Koudougou,20,0,,,True
-1747,Sunyani,20,0,,,True
-1748,Gourcy,20,0,False,,
-1754,Yako,20,0,,,True
-1762,Wenchi,20,0,,,True
-1765,Berkane,20,0,,,True
-1766,Leo,20,0,False,,
-1769,Bashar,20,0,,,True
-1774,Techiman,20,0,,,True
-1779,Takoradi [Sekondi-Takoradi],20,0,,,True
-1783,Dunkwa-on-Ofin,20,0,,,True
-1784,Sapouy,20,0,False,,
-1785,Kumasi,20,0,,,True
-1787,Oujda,20,0,,,True
-1788,Kintampo,20,0,,,True
-1789,Nkoranza,20,0,,,True
-1791,Obuasi,40,0,,,True
-1799,Ouagadougou,20,0,,,True
-1802,Djibo,20,0,False,,
-1804,Maghnia,20,0,,,True
-1807,Kongoussi,20,0,False,,
-1812,Mampong,20,0,,,True
-1817,Ejura,20,0,,,True
-1820,Kombissiri,20,0,,,True
-1822,Cape Coast,20,0,,,True
-1825,Ziniar‚,20,0,False,,
-1826,Sandema,20,0,False,,
-1827,Assin Fosu,20,0,,,True
-1829,Konongo,40,0,,,True
-1832,Tlemcen,20,0,,,True
-1842,Paga,20,0,False,,
-1843,Kaya,20,0,,,True
-1844,Navrongo,20,0,,,True
-1850,Barsalogho,20,0,False,,
-1852,Ain Temouchent,20,0,,,True
-1853,Atebubu,20,0,False,,
-1854,Akim Oda,20,0,,,True
-1866,Tamale,20,0,,,True
-1868,Bolgatanga,20,0,,,True
-1870,Arbinda,20,0,False,,
-1872,Pissila,20,0,False,,
-1873,Savelugu,20,0,,,True
-1875,Walewale,20,0,False,,
-1876,Nkawkaw,40,0,,,True
-1878,Ain Turk,20,0,,,True
-1879,Agona Swedru,20,0,,,True
-1882,Kwame Danso,20,0,,,True
-1883,Asamankese,20,0,,,True
-1884,Yeji,20,0,False,,
-1886,Winneba,40,0,,,True
-1890,Oran,20,0,,,True
-1894,Sidi Bel Abbes,20,0,,,True
-1898,Boulsa,20,0,,,True
-1901,Ain Sefra,20,0,,,True
-1902,Garango,20,0,,,True
-1903,Tougouri,20,0,False,,
-1904,Salaga,20,0,,,True
-1909,Zebilla,20,0,,,True
-1910,Accra,20,0,,,True
-1913,Suhum,20,0,,,True
-1916,Hassi Bounif,20,0,,,True
-1917,Pouytenga,20,0,,,True
-1918,Karaga,20,0,False,,
-1921,New Tafo Akim,20,0,,,True
-1922,Tenkodogo,20,0,,,True
-1925,Nalerigu,20,0,False,,
-1926,Nsawam,20,0,,,True
-1928,Koup‚la,20,0,,,True
-1932,Bitou,20,0,,,True
-1933,Arzew,40,0,,,True
-1934,Adrar,20,0,,,True
-1935,Koforidua,20,0,,,True
-1937,Mecheria,20,0,,,True
-1938,Bawku,20,0,,,True
-1940,Gorom-Gorom,20,0,False,,
-1941,Gushiegu,20,0,False,,
-1942,Manni,20,0,False,,
-1943,Sig,20,0,,,True
-1944,Garu,20,0,,,True
-1949,Bogand‚,20,0,False,,
-1953,Kete Krachi,20,0,,,True
-1954,Gao,20,0,,,True
-1955,Dori,20,0,,,True
-1956,Yendi,20,0,,,True
-1957,Somanya,20,0,,,True
-1958,Cinkass‚,20,0,,,True
-1959,Wulensi,20,0,,,True
-1962,Mostaganem,20,0,,,True
-1963,Mohammadia,20,0,,,True
-1964,Bimbila,20,0,,,True
-1966,,20,0,,,True
-1968,Mascara,20,0,,,True
-1970,Saida,20,0,,,True
-1972,Dambai,20,0,,,True
-1974,Dapaong,20,0,,,True
-1975,Bombouaka,20,0,False,,
-1977,Korbongou,20,0,False,,
-1982,Fada N'Gourma,20,0,,,True
-1985,Ho,20,0,,,True
-1986,Relizane,20,0,,,True
-1987,Hohoe,20,0,,,True
-1988,Sansann‚-Mango,20,0,,,True
-1990,El Abiodh Sidi Cheikh,20,0,,,True
-1992,Tatale,20,0,,,True
-1994,Kpalim‚,20,0,,,True
-1996,Kompienga,20,0,False,,
-1997,T‚ra,20,0,,,True
-1999,Bassar,20,0,,,True
-2001,Akatsi,20,0,,,True
-2002,Oued Rhiou,20,0,,,True
-2007,Frenda,20,0,,,True
-2009,Sotouboua,20,0,,,True
-2011,Blitta-Gare,20,0,,,True
-2013,Cobli,20,0,False,,
-2014,Blitta,20,0,,,True
-2015,Kand‚,20,0,,,True
-2016,Materi,20,0,,,True
-2018,Chettia,20,0,,,True
-2019,Atakpam‚,20,0,,,True
-2020,Lom‚,20,0,,,True
-2021,Sokod‚,20,0,,,True
-2023,Ash Shalif,20,0,,,True
-2024,Tiaret,20,0,,,True
-2025,Nots‚,20,0,False,,
-2026,Kara,20,0,,,True
-2028,Ani‚,20,0,,,True
-2030,Ts‚vi‚,20,0,,,True
+1452,Dakar,20,0,,,TRUE
+1453,MBour,20,0,,,TRUE
+1454,ThiŠs,20,0,,,TRUE
+1455,Serrekunda,20,0,,,TRUE
+1456,Tivaouane,20,0,,,TRUE
+1457,Yundum,40,0,,,TRUE
+1458,Brikama,20,0,,,TRUE
+1459,Nouadhibou,20,0,FALSE,,
+1460,Bambey,20,0,,,TRUE
+1461,Saint-Louis,20,0,,,TRUE
+1462,Fatick,20,0,,,TRUE
+1463,Ziguinchor,20,0,,,TRUE
+1464,Bignona,20,0,,,TRUE
+1465,Diourbel,20,0,,,TRUE
+1466,Louga,20,0,,,TRUE
+1467,Kaolack,20,0,,,TRUE
+1468,Keur Madiabel,20,0,,,TRUE
+1469,Gossas,20,0,,,TRUE
+1470,Darou Mousti,20,0,,,TRUE
+1471,Guinguin‚o,20,0,,,TRUE
+1472,Goudomp,20,0,,,TRUE
+1473,Touba,20,0,,,TRUE
+1474,Nouakchott,20,0,,,TRUE
+1476,Nioro du Rip,20,0,,,TRUE
+1477,Bissau,20,0,,,TRUE
+1478,Rosso S‚n‚gal,20,0,,,TRUE
+1480,Farafenni,20,0,,,TRUE
+1481,S‚dhiou,20,0,,,TRUE
+1482,Richard-Toll,20,0,,,TRUE
+1484,Kaffrine,20,0,,,TRUE
+1485,Dahra Djoloff,20,0,,,TRUE
+1486,Dakhla,20,0,,,TRUE
+1487,Dagana,20,0,FALSE,,
+1489,Kolda,20,0,,,TRUE
+1490,Podor,20,0,,,TRUE
+1491,Koungheul,20,0,,,TRUE
+1492,Bafat ,40,0,,,TRUE
+1493,Kamsar,40,0,,,TRUE
+1496,Koumpentoum,20,0,,,TRUE
+1497,Bok‚,20,0,,,TRUE
+1498,Gab£,20,0,,,TRUE
+1499,Bogu‚,20,0,,,TRUE
+1500,V‚lingara,20,0,,,TRUE
+1501,Sangar‚di,20,0,,,TRUE
+1502,Conakry,20,0,,,TRUE
+1503,Boujdour,20,0,FALSE,,
+1504,Madina Gounass,20,0,,,TRUE
+1505,Fria,20,0,,,TRUE
+1506,Tambacounda,20,0,,,TRUE
+1507,Freetown,20,0,,,TRUE
+1508,Ka‚di,20,0,,,TRUE
+1509,Mahera,80,0,,,TRUE
+1511,Waterloo,40,0,,,TRUE
+1512,Kindia,40,0,,,TRUE
+1513,Waound‚,20,0,,,TRUE
+1515,Lab‚,40,0,,,TRUE
+1516,Mile 91,20,0,,,TRUE
+1517,Kedougou,20,0,,,TRUE
+1518,Mamou,20,0,,,TRUE
+1519,Makeni,20,0,,,TRUE
+1520,Bo,20,0,,,TRUE
+1521,Kayes,40,0,,,TRUE
+1522,Kenema,20,0,,,TRUE
+1523,Kiffa,20,0,,,TRUE
+1524,Koidu Town,40,0,,,TRUE
+1525,Daru,20,0,,,TRUE
+1526,Monrovia,20,0,,,TRUE
+1527,Faranah,20,0,,,TRUE
+1528,Dinguiraye,20,0,,,TRUE
+1529,Kakata,20,0,,,TRUE
+1530,Tan-Tan,20,0,,,TRUE
+1531,Gu‚ck‚dou,40,0,,,TRUE
+1532,Kissidougou,40,0,,,TRUE
+1533,Buchanan,80,0,,,TRUE
+1534,Gbarnga,80,0,,,TRUE
+1535,Macenta,20,0,,,TRUE
+1536,Kita,20,0,,,TRUE
+1537,Guelmim,20,0,,,TRUE
+1538,Banankoro,20,0,,,TRUE
+1539,Kankan,20,0,,,TRUE
+1540,Siguiri,20,0,,,TRUE
+1541,Ganta,40,0,,,TRUE
+1542,Tiznit,20,0,,,TRUE
+1543,Essaouira,20,0,,,TRUE
+1544,Agadir,20,0,,,TRUE
+1545,Nz‚r‚kor‚,20,0,,,TRUE
+1546,Ouled-Teima,20,0,,,TRUE
+1547,Safi,20,0,,,TRUE
+1548,Sinko,20,0,,,TRUE
+1549,Danan‚,20,0,,,TRUE
+1550,Taroudant,20,0,,,TRUE
+1552,Kati,40,0,,,TRUE
+1553,Bamako,20,0,,,TRUE
+1555,S‚nou,20,0,,,TRUE
+1557,Youssoufia ????????? ????????,20,0,,,TRUE
+1558,El Jadida,20,0,,,TRUE
+1560,Sidi Bennour,20,0,,,TRUE
+1561,Tinduf,20,0,,,TRUE
+1562,Man,20,0,,,TRUE
+1563,Guiglo,20,0,,,TRUE
+1564,Azemmour,20,0,,,TRUE
+1565,Bougouni,40,0,,,TRUE
+1567,Duekoue,20,0,,,TRUE
+1570,Marrakesh,20,0,,,TRUE
+1571,Ben Guerir,20,0,,,TRUE
+1574,Dar Bouazza,20,0,FALSE,,
+1575,Casablanca,20,0,,,TRUE
+1577,Settat,20,0,,,TRUE
+1578,Virage de Dioila,80,0,,,TRUE
+1579,Berrechid,20,0,,,TRUE
+1581,Deroua,20,0,FALSE,,
+1582,El Kelaa des Sraghna,20,0,,,TRUE
+1583,San-P‚dro,40,0,,,TRUE
+1585,Soubr‚,20,0,,,TRUE
+1586,Issia,20,0,,,TRUE
+1587,M‚agui,20,0,,,TRUE
+1589,Vavoua,20,0,,,TRUE
+1590,Daloa,20,0,,,TRUE
+1591,Tengr‚la,20,0,,,TRUE
+1592,Ouarzazate,20,0,,,TRUE
+1594,Khouribga,20,0,,,TRUE
+1595,Rabat,20,0,,,TRUE
+1596,S‚gou,20,0,,,TRUE
+1597,Ain El Aouda,20,0,FALSE,,
+1598,Souk Sebt Oulad Nemma,20,0,,,TRUE
+1600,Fkih Ben Salah,20,0,,,TRUE
+1601,Bonon,20,0,,,TRUE
+1603,Gagnoa,20,0,,,TRUE
+1604,Kenitra,20,0,,,TRUE
+1605,Oued Zem,20,0,,,TRUE
+1606,Sinfra,20,0,,,TRUE
+1607,Niono,20,0,,,TRUE
+1608,Beni Mellal,20,0,,,TRUE
+1609,Bejaad,20,0,,,TRUE
+1610,Bouafl‚,20,0,,,TRUE
+1611,Lakota,20,0,,,TRUE
+1612,Kasba Tadla,20,0,,,TRUE
+1613,Tiflet,20,0,,,TRUE
+1614,Sikasso,20,0,,,TRUE
+1615,Korhogo,20,0,,,TRUE
+1616,Sidi Yahya du Gharb,20,0,,,TRUE
+1617,Di‚gon‚fla,20,0,,,TRUE
+1621,Larache,20,0,,,TRUE
+1623,Khemisset,20,0,,,TRUE
+1624,Koutiala,20,0,,,TRUE
+1625,Oum‚,20,0,,,TRUE
+1626,Fassala,20,0,FALSE,,
+1628,Divo,20,0,,,TRUE
+1629,Souk El Arba Du Gharb,20,0,,,TRUE
+1630,Zagora,20,0,FALSE,,
+1631,Sidi Slimane,20,0,,,TRUE
+1633,Yamoussoukro,20,0,,,TRUE
+1634,Ksar el-Kebir,20,0,,,TRUE
+1635,Tangier,20,0,,,TRUE
+1637,Ferk‚ss‚dougou,20,0,,,TRUE
+1639,Ouangolodougou,20,0,,,TRUE
+1640,Sidi Kacem,20,0,,,TRUE
+1641,Khenifra,20,0,,,TRUE
+1642,Bouak‚,20,0,,,TRUE
+1643,Meknes,20,0,,,TRUE
+1644,M'rirt,20,0,,,TRUE
+1645,Ouazzane,20,0,,,TRUE
+1646,Niangoloko,20,0,,,TRUE
+1648,San,20,0,,,TRUE
+1652,T‚touan,20,0,,,TRUE
+1653,Banfora,20,0,,,TRUE
+1657,Martil,20,0,,,TRUE
+1658,Azrou,20,0,,,TRUE
+1660,Chefchaouen,20,0,,,TRUE
+1661,Ain Taoujdate,20,0,,,TRUE
+1664,Fez,20,0,,,TRUE
+1666,Dabou,40,0,,,TRUE
+1668,Sefrou,20,0,,,TRUE
+1669,Bobo-Dioulasso,20,0,,,TRUE
+1670,Midelt,20,0,,,TRUE
+1671,Sid‚radougou,20,0,FALSE,,
+1672,Agboville,40,0,,,TRUE
+1675,Abidjan,20,0,,,TRUE
+1676,Mopti,20,0,,,TRUE
+1679,Socoura,20,0,,,TRUE
+1680,Solenzo,20,0,,,TRUE
+1681,Errachidia,20,0,,,TRUE
+1683,Daoukro,20,0,,,TRUE
+1684,Adzop‚,20,0,,,TRUE
+1685,Barani,20,0,FALSE,,
+1686,Nouna,20,0,,,TRUE
+1687,Ouo,20,0,FALSE,,
+1689,Grand-Bassam,80,0,,,TRUE
+1690,Taza,20,0,,,TRUE
+1692,Lorop‚ni,20,0,FALSE,,
+1693,Abengourou,20,0,,,TRUE
+1694,Al Hoceima,20,0,,,TRUE
+1695,Hound‚,20,0,FALSE,,
+1696,D‚dougou,20,0,,,TRUE
+1704,Aboisso,20,0,,,TRUE
+1706,Agnibil‚krou,40,0,,,TRUE
+1710,Gaoua,20,0,,,TRUE
+1712,Tougan,20,0,,,TRUE
+1714,Guercif,20,0,,,TRUE
+1715,Bouna,20,0,,,TRUE
+1717,Timbuktu,20,0,,,TRUE
+1720,Dormaa Ahenkro,20,0,,,TRUE
+1724,Enchi,20,0,,,TRUE
+1725,Bondoukou,20,0,,,TRUE
+1730,Jirapa,20,0,FALSE,,
+1733,Nador,40,0,,,TRUE
+1734,Melilla,40,0,,,TRUE
+1735,Taourirt,20,0,,,TRUE
+1736,Berekum,20,0,,,TRUE
+1738,Wa,20,0,,,TRUE
+1740,Bole,20,0,FALSE,,
+1743,Sawla,20,0,FALSE,,
+1744,Ouahigouya,20,0,,,TRUE
+1745,Koudougou,20,0,,,TRUE
+1747,Sunyani,20,0,,,TRUE
+1748,Gourcy,20,0,FALSE,,
+1754,Yako,20,0,,,TRUE
+1762,Wenchi,20,0,,,TRUE
+1765,Berkane,20,0,,,TRUE
+1766,Leo,20,0,FALSE,,
+1769,Bashar,20,0,,,TRUE
+1774,Techiman,20,0,,,TRUE
+1779,Takoradi [Sekondi-Takoradi],20,0,,,TRUE
+1783,Dunkwa-on-Ofin,20,0,,,TRUE
+1784,Sapouy,20,0,FALSE,,
+1785,Kumasi,20,0,,,TRUE
+1787,Oujda,20,0,,,TRUE
+1788,Kintampo,20,0,,,TRUE
+1789,Nkoranza,20,0,,,TRUE
+1791,Obuasi,40,0,,,TRUE
+1799,Ouagadougou,20,0,,,TRUE
+1802,Djibo,20,0,FALSE,,
+1804,Maghnia,20,0,,,TRUE
+1807,Kongoussi,20,0,FALSE,,
+1812,Mampong,20,0,,,TRUE
+1817,Ejura,20,0,,,TRUE
+1820,Kombissiri,20,0,,,TRUE
+1822,Cape Coast,20,0,,,TRUE
+1825,Ziniar‚,20,0,FALSE,,
+1826,Sandema,20,0,FALSE,,
+1827,Assin Fosu,20,0,,,TRUE
+1829,Konongo,40,0,,,TRUE
+1832,Tlemcen,20,0,,,TRUE
+1842,Paga,20,0,FALSE,,
+1843,Kaya,20,0,,,TRUE
+1844,Navrongo,20,0,,,TRUE
+1850,Barsalogho,20,0,FALSE,,
+1852,Ain Temouchent,20,0,,,TRUE
+1853,Atebubu,20,0,FALSE,,
+1854,Akim Oda,20,0,,,TRUE
+1866,Tamale,20,0,,,TRUE
+1868,Bolgatanga,20,0,,,TRUE
+1870,Arbinda,20,0,FALSE,,
+1872,Pissila,20,0,FALSE,,
+1873,Savelugu,20,0,,,TRUE
+1875,Walewale,20,0,FALSE,,
+1876,Nkawkaw,40,0,,,TRUE
+1878,Ain Turk,20,0,,,TRUE
+1879,Agona Swedru,20,0,,,TRUE
+1882,Kwame Danso,20,0,,,TRUE
+1883,Asamankese,20,0,,,TRUE
+1884,Yeji,20,0,FALSE,,
+1886,Winneba,40,0,,,TRUE
+1890,Oran,20,0,,,TRUE
+1894,Sidi Bel Abbes,20,0,,,TRUE
+1898,Boulsa,20,0,,,TRUE
+1901,Ain Sefra,20,0,,,TRUE
+1902,Garango,20,0,,,TRUE
+1903,Tougouri,20,0,FALSE,,
+1904,Salaga,20,0,,,TRUE
+1909,Zebilla,20,0,,,TRUE
+1910,Accra,20,0,,,TRUE
+1913,Suhum,20,0,,,TRUE
+1916,Hassi Bounif,20,0,,,TRUE
+1917,Pouytenga,20,0,,,TRUE
+1918,Karaga,20,0,FALSE,,
+1921,New Tafo Akim,20,0,,,TRUE
+1922,Tenkodogo,20,0,,,TRUE
+1925,Nalerigu,20,0,FALSE,,
+1926,Nsawam,20,0,,,TRUE
+1928,Koup‚la,20,0,,,TRUE
+1932,Bitou,20,0,,,TRUE
+1933,Arzew,40,0,,,TRUE
+1934,Adrar,20,0,,,TRUE
+1935,Koforidua,20,0,,,TRUE
+1937,Mecheria,20,0,,,TRUE
+1938,Bawku,20,0,,,TRUE
+1940,Gorom-Gorom,20,0,FALSE,,
+1941,Gushiegu,20,0,FALSE,,
+1942,Manni,20,0,FALSE,,
+1943,Sig,20,0,,,TRUE
+1944,Garu,20,0,,,TRUE
+1949,Bogand‚,20,0,FALSE,,
+1953,Kete Krachi,20,0,,,TRUE
+1954,Gao,20,0,,,TRUE
+1955,Dori,20,0,,,TRUE
+1956,Yendi,20,0,,,TRUE
+1957,Somanya,20,0,,,TRUE
+1958,Cinkass‚,20,0,,,TRUE
+1959,Wulensi,20,0,,,TRUE
+1962,Mostaganem,20,0,,,TRUE
+1963,Mohammadia,20,0,,,TRUE
+1964,Bimbila,20,0,,,TRUE
+1966,,20,0,,,TRUE
+1968,Mascara,20,0,,,TRUE
+1970,Saida,20,0,,,TRUE
+1972,Dambai,20,0,,,TRUE
+1974,Dapaong,20,0,,,TRUE
+1975,Bombouaka,20,0,FALSE,,
+1977,Korbongou,20,0,FALSE,,
+1982,Fada N'Gourma,20,0,,,TRUE
+1985,Ho,20,0,,,TRUE
+1986,Relizane,20,0,,,TRUE
+1987,Hohoe,20,0,,,TRUE
+1988,Sansann‚-Mango,20,0,,,TRUE
+1990,El Abiodh Sidi Cheikh,20,0,,,TRUE
+1992,Tatale,20,0,,,TRUE
+1994,Kpalim‚,20,0,,,TRUE
+1996,Kompienga,20,0,FALSE,,
+1997,T‚ra,20,0,,,TRUE
+1999,Bassar,20,0,,,TRUE
+2001,Akatsi,20,0,,,TRUE
+2002,Oued Rhiou,20,0,,,TRUE
+2007,Frenda,20,0,,,TRUE
+2009,Sotouboua,20,0,,,TRUE
+2011,Blitta-Gare,20,0,,,TRUE
+2013,Cobli,20,0,FALSE,,
+2014,Blitta,20,0,,,TRUE
+2015,Kand‚,20,0,,,TRUE
+2016,Materi,20,0,,,TRUE
+2018,Chettia,20,0,,,TRUE
+2019,Atakpam‚,20,0,,,TRUE
+2020,Lom‚,20,0,,,TRUE
+2021,Sokod‚,20,0,,,TRUE
+2023,Ash Shalif,20,0,,,TRUE
+2024,Tiaret,20,0,,,TRUE
+2025,Nots‚,20,0,FALSE,,
+2026,Kara,20,0,,,TRUE
+2028,Ani‚,20,0,,,TRUE
+2030,Ts‚vi‚,20,0,,,TRUE
 2031,Libiri,20,0,,,
-2034,Tanguieta,20,0,,,True
-2036,K‚tao,20,0,,,True
-2037,Sougueur,20,0,,,True
-2039,Lardjem,20,0,,,True
-2041,Natitingou,20,0,,,True
-2042,Tchamba,20,0,,,True
-2044,Tillab‚ri,20,0,,,True
-2047,Kantchari,20,0,False,,
-2049,An‚ho,40,0,,,True
-2050,Tissemsilt,20,0,,,True
-2052,Djougou,20,0,,,True
-2053,Makalondi,20,0,False,,
-2055,Ain Defla,40,0,,,True
-2056,Lokossa,20,0,,,True
+2034,Tanguieta,20,0,,,TRUE
+2036,K‚tao,20,0,,,TRUE
+2037,Sougueur,20,0,,,TRUE
+2039,Lardjem,20,0,,,TRUE
+2041,Natitingou,20,0,,,TRUE
+2042,Tchamba,20,0,,,TRUE
+2044,Tillab‚ri,20,0,,,TRUE
+2047,Kantchari,20,0,FALSE,,
+2049,An‚ho,40,0,,,TRUE
+2050,Tissemsilt,20,0,,,TRUE
+2052,Djougou,20,0,,,TRUE
+2053,Makalondi,20,0,FALSE,,
+2055,Ain Defla,40,0,,,TRUE
+2056,Lokossa,20,0,,,TRUE
 2058,Ti‚l‚l,20,0,,,
-2059,Sirimbana,20,0,False,,
-2060,Aflou,20,0,,,True
-2062,Khemis Miliana,20,0,,,True
-2063,Savalou,20,0,,,True
-2064,Bohicon,80,0,,,True
-2067,Niamey,20,0,,,True
-2068,Ksar Chellala,20,0,,,True
-2070,Whydah,20,0,,,True
-2073,Tindji,20,0,,,True
-2074,Allada,20,0,,,True
-2077,Dassa-Zoum‚,20,0,,,True
-2078,Cotonou,20,0,,,True
-2081,Kollo,20,0,False,,
-2084,Kolea ???????,20,0,,,True
-2085,Say,20,0,,,True
-2088,Medea,20,0,,,True
-2089,Blida,20,0,,,True
-2090,Banikoara,20,0,,,True
-2091,OuŠssŠ,20,0,,,True
-2092,Ksar El Boukhari,20,0,,,True
-2095,Algiers,20,0,,,True
-2096,Boufarik,20,0,,,True
-2097,Laghouat,20,0,,,True
-2098,Berrouaghia,40,0,,,True
-2099,Ain Oussara,20,0,,,True
-2100,Parakou,20,0,,,True
-2101,Porto-Novo,20,0,,,True
-2102,K‚tou,20,0,,,True
-2103,,20,0,,,True
-2105,El Menia,80,0,,,True
-2107,PobŠ,20,0,,,True
-2108,Hassi Bahbah,20,0,,,True
-2109,Bougara,20,0,,,True
-2110,Idiroko,40,0,,,True
-2111,Larbaa,20,0,,,True
-2113,Meftah,20,0,,,True
-2114,Meko,20,0,,,True
-2115,Birni N'Gaour‚,20,0,,,True
-2116,Djelfa,20,0,,,True
-2117,Khemis El Khechna,40,0,,,True
-2118,Badagry,320,0,,,True
-2120,Bal‚yara,20,0,,,True
-2121,Kandi,20,0,,,True
-2122,Owode,20,0,,,True
-2124,Ilaro,20,0,,,True
-2125,Lagos,20,0,,,True
-2126,Aiyetoro,20,0,,,True
-2128,Messaad,20,0,,,True
-2132,Dosso,20,0,,,True
-2134,Nikki,20,0,,,True
-2136,Aiyete,20,0,,,True
-2137,Bordj Menaiel,20,0,,,True
-2139,Abeokuta,20,0,,,True
-2140,Filingu‚,20,0,,,True
-2141,Igbo Ora,20,0,,,True
-2143,Ghardaia,40,0,,,True
-2146,Sidi Aissa,20,0,,,True
-2147,Ilero,20,0,,,True
-2148,Iwere,20,0,,,True
-2150,Malanville,20,0,,,True
-2151,Saki,20,0,,,True
-2153,Abala,20,0,,,True
-2156,Otu,20,0,,,True
-2157,Ogunrun-Ori,20,0,,,True
-2158,Bouira,20,0,,,True
-2159,Gaya,20,0,,,True
-2160,Ago Are,20,0,,,True
-2161,Eruwa Titun,20,0,,,True
-2165,Ikorodu,20,0,,,True
-2170,Tizi Ouzou,20,0,,,True
-2173,Iseyin,20,0,,,True
-2174,Kamba,20,0,,,True
-2175,Sagamu,20,0,,,True
-2177,Bou Saada,20,0,,,True
-2178,Ishara,20,0,,,True
-2180,Lakuwe,160,0,,,True
-2182,Ilishan,20,0,,,True
-2184,Igboho,20,0,,,True
-2189,Ibadan,20,0,,,True
-2190,Kishi,20,0,,,True
-2191,Oyo,20,0,,,True
-2192,Ijebu-Ode,20,0,,,True
-2193,Ago-Iwoye,20,0,,,True
-2196,Kaiama,20,0,,,True
-2200,Epe,20,0,,,True
-2201,Dogondoutchi,20,0,,,True
-2202,Bunza,20,0,,,True
-2203,M'Sila,20,0,,,True
-2204,Ijebu-Igbo,20,0,,,True
-2206,Dakingari,20,0,,,True
-2207,Guerrara,20,0,,,True
-2210,Igbeti,20,0,,,True
-2211,Birnin Kebbi,20,0,,,True
-2212,Iwo,20,0,,,True
-2213,Bordj Bou Arreridjj,20,0,,,True
-2214,Ikire,20,0,,,True
-2215,Bagudo,20,0,,,True
-2216,Ogbomosho,20,0,,,True
-2222,Ejigbo,20,0,,,True
-2223,Awbere,20,0,,,True
-2224,Jega,20,0,,,True
-2225,Gbongan,20,0,,,True
-2230,Bejaia,20,0,,,True
-2231,Ras El Oued,20,0,,,True
-2232,Ede,40,0,,,True
-2236,Erin-osun,20,0,,,True
-2237,Koko,20,0,,,True
-2238,Argungu,20,0,,,True
-2239,New Bussa,20,0,,,True
-2240,Ilorin,20,0,,,True
-2241,Osogbo,20,0,,,True
-2242,Ouled Djellal,20,0,,,True
-2243,Ife,20,0,,,True
-2248,Tambawal,20,0,,,True
+2059,Sirimbana,20,0,FALSE,,
+2060,Aflou,20,0,,,TRUE
+2062,Khemis Miliana,20,0,,,TRUE
+2063,Savalou,20,0,,,TRUE
+2064,Bohicon,80,0,,,TRUE
+2067,Niamey,20,0,,,TRUE
+2068,Ksar Chellala,20,0,,,TRUE
+2070,Whydah,20,0,,,TRUE
+2073,Tindji,20,0,,,TRUE
+2074,Allada,20,0,,,TRUE
+2077,Dassa-Zoum‚,20,0,,,TRUE
+2078,Cotonou,20,0,,,TRUE
+2081,Kollo,20,0,FALSE,,
+2084,Kolea ???????,20,0,,,TRUE
+2085,Say,20,0,,,TRUE
+2088,Medea,20,0,,,TRUE
+2089,Blida,20,0,,,TRUE
+2090,Banikoara,20,0,,,TRUE
+2091,OuŠssŠ,20,0,,,TRUE
+2092,Ksar El Boukhari,20,0,,,TRUE
+2095,Algiers,20,0,,,TRUE
+2096,Boufarik,20,0,,,TRUE
+2097,Laghouat,20,0,,,TRUE
+2098,Berrouaghia,40,0,,,TRUE
+2099,Ain Oussara,20,0,,,TRUE
+2100,Parakou,20,0,,,TRUE
+2101,Porto-Novo,20,0,,,TRUE
+2102,K‚tou,20,0,,,TRUE
+2103,,20,0,,,TRUE
+2105,El Menia,80,0,,,TRUE
+2107,PobŠ,20,0,,,TRUE
+2108,Hassi Bahbah,20,0,,,TRUE
+2109,Bougara,20,0,,,TRUE
+2110,Idiroko,40,0,,,TRUE
+2111,Larbaa,20,0,,,TRUE
+2113,Meftah,20,0,,,TRUE
+2114,Meko,20,0,,,TRUE
+2115,Birni N'Gaour‚,20,0,,,TRUE
+2116,Djelfa,20,0,,,TRUE
+2117,Khemis El Khechna,40,0,,,TRUE
+2118,Badagry,320,0,,,TRUE
+2120,Bal‚yara,20,0,,,TRUE
+2121,Kandi,20,0,,,TRUE
+2122,Owode,20,0,,,TRUE
+2124,Ilaro,20,0,,,TRUE
+2125,Lagos,20,0,,,TRUE
+2126,Aiyetoro,20,0,,,TRUE
+2128,Messaad,20,0,,,TRUE
+2132,Dosso,20,0,,,TRUE
+2134,Nikki,20,0,,,TRUE
+2136,Aiyete,20,0,,,TRUE
+2137,Bordj Menaiel,20,0,,,TRUE
+2139,Abeokuta,20,0,,,TRUE
+2140,Filingu‚,20,0,,,TRUE
+2141,Igbo Ora,20,0,,,TRUE
+2143,Ghardaia,40,0,,,TRUE
+2146,Sidi Aissa,20,0,,,TRUE
+2147,Ilero,20,0,,,TRUE
+2148,Iwere,20,0,,,TRUE
+2150,Malanville,20,0,,,TRUE
+2151,Saki,20,0,,,TRUE
+2153,Abala,20,0,,,TRUE
+2156,Otu,20,0,,,TRUE
+2157,Ogunrun-Ori,20,0,,,TRUE
+2158,Bouira,20,0,,,TRUE
+2159,Gaya,20,0,,,TRUE
+2160,Ago Are,20,0,,,TRUE
+2161,Eruwa Titun,20,0,,,TRUE
+2165,Ikorodu,20,0,,,TRUE
+2170,Tizi Ouzou,20,0,,,TRUE
+2173,Iseyin,20,0,,,TRUE
+2174,Kamba,20,0,,,TRUE
+2175,Sagamu,20,0,,,TRUE
+2177,Bou Saada,20,0,,,TRUE
+2178,Ishara,20,0,,,TRUE
+2180,Lakuwe,160,0,,,TRUE
+2182,Ilishan,20,0,,,TRUE
+2184,Igboho,20,0,,,TRUE
+2189,Ibadan,20,0,,,TRUE
+2190,Kishi,20,0,,,TRUE
+2191,Oyo,20,0,,,TRUE
+2192,Ijebu-Ode,20,0,,,TRUE
+2193,Ago-Iwoye,20,0,,,TRUE
+2196,Kaiama,20,0,,,TRUE
+2200,Epe,20,0,,,TRUE
+2201,Dogondoutchi,20,0,,,TRUE
+2202,Bunza,20,0,,,TRUE
+2203,M'Sila,20,0,,,TRUE
+2204,Ijebu-Igbo,20,0,,,TRUE
+2206,Dakingari,20,0,,,TRUE
+2207,Guerrara,20,0,,,TRUE
+2210,Igbeti,20,0,,,TRUE
+2211,Birnin Kebbi,20,0,,,TRUE
+2212,Iwo,20,0,,,TRUE
+2213,Bordj Bou Arreridjj,20,0,,,TRUE
+2214,Ikire,20,0,,,TRUE
+2215,Bagudo,20,0,,,TRUE
+2216,Ogbomosho,20,0,,,TRUE
+2222,Ejigbo,20,0,,,TRUE
+2223,Awbere,20,0,,,TRUE
+2224,Jega,20,0,,,TRUE
+2225,Gbongan,20,0,,,TRUE
+2230,Bejaia,20,0,,,TRUE
+2231,Ras El Oued,20,0,,,TRUE
+2232,Ede,40,0,,,TRUE
+2236,Erin-osun,20,0,,,TRUE
+2237,Koko,20,0,,,TRUE
+2238,Argungu,20,0,,,TRUE
+2239,New Bussa,20,0,,,TRUE
+2240,Ilorin,20,0,,,TRUE
+2241,Osogbo,20,0,,,TRUE
+2242,Ouled Djellal,20,0,,,TRUE
+2243,Ife,20,0,,,TRUE
+2248,Tambawal,20,0,,,TRUE
 2249,Aiye Coker,20,0,,,
 2250,Wanikin,20,0,,,
-2251,Inisa,20,0,,,True
-2252,Aiyepe Olode,20,0,,,True
-2254,Iragbiji,20,0,,,True
-2255,A‹n Oulmane,20,0,,,True
-2257,Ijagbo Offa,20,0,,,True
-2259,Yelwa,20,0,,,True
-2260,Ilesa,20,0,,,True
-2261,Setif,20,0,,,True
-2262,Eripa,20,0,,,True
-2266,Barika,20,0,,,True
-2267,Lerinin,20,0,,,True
-2270,Okitipupa,20,0,,,True
-2271,Tulqa,20,0,,,True
-2273,Ondo,20,0,,,True
-2274,Ouargla,20,0,,,True
-2278,Ebute Irele,20,0,,,True
-2281,Ile Oluji,20,0,,,True
-2282,Ore,20,0,,,True
-2283,Ila Orangun,40,0,,,True
-2284,Effon Alaiye,20,0,,,True
-2285,Imorun,20,0,,,True
-2286,Mahuta,20,0,,,True
-2287,Salka,20,0,,,True
-2289,Share,20,0,,,True
-2290,Kwara,20,0,,,True
-2291,El Eulma,20,0,,,True
-2293,Jijel,20,0,,,True
-2294,Mokwa,20,0,,,True
-2295,Ikoro,20,0,,,True
-2296,Aramoko-Ekiti,20,0,,,True
-2299,Igbara-Odo,20,0,,,True
-2300,Isarun,20,0,,,True
-2301,Biskra,20,0,,,True
-2302,Gummi,20,0,,,True
-2303,Ijero-Ekiti,20,0,,,True
-2304,Bodinga,20,0,,,True
-2305,Omu Aran,20,0,,,True
-2306,Otun,20,0,,,True
-2307,Ilawe-Ekiti,20,0,,,True
-2308,Oke Atan,20,0,,,True
-2309,Idanre,20,0,,,True
-2311,Sokoto,20,0,,,True
-2312,Akure,20,0,,,True
-2313,Ido Ekiti,20,0,,,True
-2315,Tahoua,20,0,,,True
-2316,Gwadabawa,20,0,,,True
-2318,Birni N'Konni,20,0,,,True
-2319,Ado Ekiti,20,0,,,True
-2320,Zuru,20,0,,,True
-2321,Ikerre,20,0,,,True
-2322,A‹n Touta,20,0,,,True
-2323,Tuga Nama,20,0,,,True
-2324,Rijau,20,0,,,True
-2326,Tadjenanet,20,0,,,True
-2327,Tamanrasset,20,0,,,True
-2328,Dange,20,0,,,True
-2330,Egosi,20,0,,,True
-2332,Wurno,20,0,,,True
-2333,Gulani,20,0,False,,
-2336,Lafiagi,20,0,,,True
-2337,Batna,20,0,,,True
-2338,Tamacine,20,0,,,True
-2339,Mara-Mawa,20,0,,,True
-2340,Kontagora,20,0,,,True
-2341,Ise,20,0,,,True
-2343,Chelghoum Laid,20,0,,,True
-2344,Dirinbaji,20,0,,,True
-2345,Touggourt,20,0,,,True
-2346,Ribah,20,0,,,True
-2347,Koko Town,20,0,,,True
-2348,Emure,20,0,,,True
-2349,Ikole,20,0,,,True
-2350,Mila,20,0,,,True
-2351,Egbe,20,0,,,True
-2352,Dogu‚raoua,20,0,False,,
-2354,Benin City,20,0,,,True
-2355,Owo,20,0,,,True
-2356,Galmi,20,0,False,,
-2357,Goronyo,20,0,,,True
-2360,Sapele,40,0,,,True
-2361,Ogharefe,80,0,,,True
-2363,Warri,20,0,,,True
-2364,Ke‹ta,20,0,,,True
-2365,Tchin-Tabaradene,20,0,,,True
-2366,Nasarawa,20,0,,,True
-2371,Omuo-Obadore,20,0,,,True
-2373,Igbe,20,0,,,True
-2374,Akugba,20,0,,,True
-2375,Pategi,20,0,,,True
-2377,Constantine,20,0,,,True
-2378,Ali Mendjeli,20,0,,,True
-2379,Ain Mlila,20,0,,,True
-2380,Oka-Akoko,20,0,,,True
-2381,Ekeremor,20,0,False,,
-2382,Ovwian,40,0,,,True
-2383,Isanlu Mopo,20,0,,,True
-2385,Ekinrin,20,0,,,True
-2386,Madaoua,20,0,,,True
-2387,Oburigbene,20,0,False,,
-2388,El Khroub,20,0,,,True
-2391,Bena,20,0,,,True
-2393,Amatebo,20,0,,,True
-2396,Bida,20,0,,,True
-2397,Aiyetoro,20,0,,,True
-2398,Ughelli,20,0,,,True
-2399,Mafara,20,0,,,True
-2400,Skikda,20,0,,,True
-2403,Ain Fakroun,20,0,,,True
-2404,Kabba,20,0,,,True
-2407,Ekpoma,80,0,,,True
-2409,Ekogboro,20,0,,,True
-2410,Amassoma,20,0,,,True
+2251,Inisa,20,0,,,TRUE
+2252,Aiyepe Olode,20,0,,,TRUE
+2254,Iragbiji,20,0,,,TRUE
+2255,A‹n Oulmane,20,0,,,TRUE
+2257,Ijagbo Offa,20,0,,,TRUE
+2259,Yelwa,20,0,,,TRUE
+2260,Ilesa,20,0,,,TRUE
+2261,Setif,20,0,,,TRUE
+2262,Eripa,20,0,,,TRUE
+2266,Barika,20,0,,,TRUE
+2267,Lerinin,20,0,,,TRUE
+2270,Okitipupa,20,0,,,TRUE
+2271,Tulqa,20,0,,,TRUE
+2273,Ondo,20,0,,,TRUE
+2274,Ouargla,20,0,,,TRUE
+2278,Ebute Irele,20,0,,,TRUE
+2281,Ile Oluji,20,0,,,TRUE
+2282,Ore,20,0,,,TRUE
+2283,Ila Orangun,40,0,,,TRUE
+2284,Effon Alaiye,20,0,,,TRUE
+2285,Imorun,20,0,,,TRUE
+2286,Mahuta,20,0,,,TRUE
+2287,Salka,20,0,,,TRUE
+2289,Share,20,0,,,TRUE
+2290,Kwara,20,0,,,TRUE
+2291,El Eulma,20,0,,,TRUE
+2293,Jijel,20,0,,,TRUE
+2294,Mokwa,20,0,,,TRUE
+2295,Ikoro,20,0,,,TRUE
+2296,Aramoko-Ekiti,20,0,,,TRUE
+2299,Igbara-Odo,20,0,,,TRUE
+2300,Isarun,20,0,,,TRUE
+2301,Biskra,20,0,,,TRUE
+2302,Gummi,20,0,,,TRUE
+2303,Ijero-Ekiti,20,0,,,TRUE
+2304,Bodinga,20,0,,,TRUE
+2305,Omu Aran,20,0,,,TRUE
+2306,Otun,20,0,,,TRUE
+2307,Ilawe-Ekiti,20,0,,,TRUE
+2308,Oke Atan,20,0,,,TRUE
+2309,Idanre,20,0,,,TRUE
+2311,Sokoto,20,0,,,TRUE
+2312,Akure,20,0,,,TRUE
+2313,Ido Ekiti,20,0,,,TRUE
+2315,Tahoua,20,0,,,TRUE
+2316,Gwadabawa,20,0,,,TRUE
+2318,Birni N'Konni,20,0,,,TRUE
+2319,Ado Ekiti,20,0,,,TRUE
+2320,Zuru,20,0,,,TRUE
+2321,Ikerre,20,0,,,TRUE
+2322,A‹n Touta,20,0,,,TRUE
+2323,Tuga Nama,20,0,,,TRUE
+2324,Rijau,20,0,,,TRUE
+2326,Tadjenanet,20,0,,,TRUE
+2327,Tamanrasset,20,0,,,TRUE
+2328,Dange,20,0,,,TRUE
+2330,Egosi,20,0,,,TRUE
+2332,Wurno,20,0,,,TRUE
+2333,Gulani,20,0,FALSE,,
+2336,Lafiagi,20,0,,,TRUE
+2337,Batna,20,0,,,TRUE
+2338,Tamacine,20,0,,,TRUE
+2339,Mara-Mawa,20,0,,,TRUE
+2340,Kontagora,20,0,,,TRUE
+2341,Ise,20,0,,,TRUE
+2343,Chelghoum Laid,20,0,,,TRUE
+2344,Dirinbaji,20,0,,,TRUE
+2345,Touggourt,20,0,,,TRUE
+2346,Ribah,20,0,,,TRUE
+2347,Koko Town,20,0,,,TRUE
+2348,Emure,20,0,,,TRUE
+2349,Ikole,20,0,,,TRUE
+2350,Mila,20,0,,,TRUE
+2351,Egbe,20,0,,,TRUE
+2352,Dogu‚raoua,20,0,FALSE,,
+2354,Benin City,20,0,,,TRUE
+2355,Owo,20,0,,,TRUE
+2356,Galmi,20,0,FALSE,,
+2357,Goronyo,20,0,,,TRUE
+2360,Sapele,40,0,,,TRUE
+2361,Ogharefe,80,0,,,TRUE
+2363,Warri,20,0,,,TRUE
+2364,Ke‹ta,20,0,,,TRUE
+2365,Tchin-Tabaradene,20,0,,,TRUE
+2366,Nasarawa,20,0,,,TRUE
+2371,Omuo-Obadore,20,0,,,TRUE
+2373,Igbe,20,0,,,TRUE
+2374,Akugba,20,0,,,TRUE
+2375,Pategi,20,0,,,TRUE
+2377,Constantine,20,0,,,TRUE
+2378,Ali Mendjeli,20,0,,,TRUE
+2379,Ain Mlila,20,0,,,TRUE
+2380,Oka-Akoko,20,0,,,TRUE
+2381,Ekeremor,20,0,FALSE,,
+2382,Ovwian,40,0,,,TRUE
+2383,Isanlu Mopo,20,0,,,TRUE
+2385,Ekinrin,20,0,,,TRUE
+2386,Madaoua,20,0,,,TRUE
+2387,Oburigbene,20,0,FALSE,,
+2388,El Khroub,20,0,,,TRUE
+2391,Bena,20,0,,,TRUE
+2393,Amatebo,20,0,,,TRUE
+2396,Bida,20,0,,,TRUE
+2397,Aiyetoro,20,0,,,TRUE
+2398,Ughelli,20,0,,,TRUE
+2399,Mafara,20,0,,,TRUE
+2400,Skikda,20,0,,,TRUE
+2403,Ain Fakroun,20,0,,,TRUE
+2404,Kabba,20,0,,,TRUE
+2407,Ekpoma,80,0,,,TRUE
+2409,Ekogboro,20,0,,,TRUE
+2410,Amassoma,20,0,,,TRUE
 2411,Kod‚m‚o,20,0,,,
-2412,Enwan,20,0,,,True
-2413,El Oued,20,0,,,True
-2414,Okene,20,0,,,True
-2415,Agbor,20,0,,,True
-2416,Obinomba,20,0,,,True
-2419,Irri,20,0,,,True
-2421,Agwa,20,0,,,True
-2424,Magagindoke,20,0,,,True
-2425,Ozoro,40,0,,,True
-2426,Auchi,20,0,,,True
-2427,Oum El Bouaghi,40,0,,,True
-2428,Brass,20,0,,,True
-2430,Yenagoa,20,0,,,True
-2433,Agaie,20,0,,,True
-2434,Khenchela,20,0,,,True
-2435,Uromi,80,0,,,True
-2436,Owerre,40,0,,,True
-2438,Isa,20,0,,,True
-2443,Onitu,20,0,False,,
-2444,Biantubu,20,0,,,True
-2446,Shinkafi,20,0,,,True
-2447,Opaetensm,40,0,,,True
-2450,Minna,20,0,,,True
-2451,Ungwan Shekaro,20,0,,,True
-2453,Guelma,20,0,,,True
-2454,Ain Beida,20,0,,,True
-2455,Kaura-Namoda,20,0,,,True
-2456,Eulma,20,0,,,True
-2457,Ogwashi Uku,40,0,,,True
-2460,Tudun Wada,20,0,,,True
-2462,Gusau,20,0,,,True
-2464,Guidan Roumdji,20,0,False,,
-2465,Sefu,20,0,,,True
-2466,Sedrata,20,0,,,True
-2468,Uduagba,20,0,,,True
-2470,Akabuka,40,0,,,True
-2471,Asaba,20,0,,,True
-2472,Omoko,20,0,,,True
-2473,Omenama,20,0,,,True
-2476,Agenebode,20,0,,,True
-2478,Lokoja,20,0,,,True
+2412,Enwan,20,0,,,TRUE
+2413,El Oued,20,0,,,TRUE
+2414,Okene,20,0,,,TRUE
+2415,Agbor,20,0,,,TRUE
+2416,Obinomba,20,0,,,TRUE
+2419,Irri,20,0,,,TRUE
+2421,Agwa,20,0,,,TRUE
+2424,Magagindoke,20,0,,,TRUE
+2425,Ozoro,40,0,,,TRUE
+2426,Auchi,20,0,,,TRUE
+2427,Oum El Bouaghi,40,0,,,TRUE
+2428,Brass,20,0,,,TRUE
+2430,Yenagoa,20,0,,,TRUE
+2433,Agaie,20,0,,,TRUE
+2434,Khenchela,20,0,,,TRUE
+2435,Uromi,80,0,,,TRUE
+2436,Owerre,40,0,,,TRUE
+2438,Isa,20,0,,,TRUE
+2443,Onitu,20,0,FALSE,,
+2444,Biantubu,20,0,,,TRUE
+2446,Shinkafi,20,0,,,TRUE
+2447,Opaetensm,40,0,,,TRUE
+2450,Minna,20,0,,,TRUE
+2451,Ungwan Shekaro,20,0,,,TRUE
+2453,Guelma,20,0,,,TRUE
+2454,Ain Beida,20,0,,,TRUE
+2455,Kaura-Namoda,20,0,,,TRUE
+2456,Eulma,20,0,,,TRUE
+2457,Ogwashi Uku,40,0,,,TRUE
+2460,Tudun Wada,20,0,,,TRUE
+2462,Gusau,20,0,,,TRUE
+2464,Guidan Roumdji,20,0,FALSE,,
+2465,Sefu,20,0,,,TRUE
+2466,Sedrata,20,0,,,TRUE
+2468,Uduagba,20,0,,,TRUE
+2470,Akabuka,40,0,,,TRUE
+2471,Asaba,20,0,,,TRUE
+2472,Omoko,20,0,,,TRUE
+2473,Omenama,20,0,,,TRUE
+2476,Agenebode,20,0,,,TRUE
+2478,Lokoja,20,0,,,TRUE
 2479,Soku,20,0,,,
-2480,Annaba,20,0,,,True
-2481,Awala,20,0,,,True
-2482,Idah,20,0,,,True
-2483,Okwuzu,20,0,,,True
-2484,Onitsha,20,0,,,True
-2485,S?o Tom‚,80,0,,,True
-2487,I-n-Gall,20,0,False,,
-2488,Kwayamisi,20,0,,,True
-2489,Krakrama,20,0,,,True
-2490,Ojaima,20,0,,,True
-2491,Amaigbo,20,0,,,True
-2492,Elele,20,0,,,True
-2495,Ozu,2560,0,,,True
-2496,Chafe,20,0,,,True
-2497,Cheria,20,0,,,True
-2498,Ibi,40,0,,,True
-2499,Bugama,20,0,,,True
-2500,M'Daourouch,20,0,,,True
-2503,Abaji,20,0,,,True
-2505,Omo,20,0,,,True
-2508,Souk Ahras,20,0,,,True
-2509,Tibiri,20,0,,,True
-2510,Orogwe,20,0,,,True
-2511,Port Harcourt,20,0,,,True
-2512,Maradi,20,0,,,True
-2513,,20,0,,,True
-2515,Owerri,40,0,,,True
-2517,Omema,20,0,,,True
-2520,Gwagwalada,20,0,,,True
-2522,Awka,640,0,,,True
-2525,Doka Ashafa,20,0,,,True
-2526,Gidan Mai Ungwan,20,0,,,True
-2528,Osina,2560,0,,,True
-2530,Okrika,20,0,,,True
+2480,Annaba,20,0,,,TRUE
+2481,Awala,20,0,,,TRUE
+2482,Idah,20,0,,,TRUE
+2483,Okwuzu,20,0,,,TRUE
+2484,Onitsha,20,0,,,TRUE
+2485,S?o Tom‚,80,0,,,TRUE
+2487,I-n-Gall,20,0,FALSE,,
+2488,Kwayamisi,20,0,,,TRUE
+2489,Krakrama,20,0,,,TRUE
+2490,Ojaima,20,0,,,TRUE
+2491,Amaigbo,20,0,,,TRUE
+2492,Elele,20,0,,,TRUE
+2495,Ozu,2560,0,,,TRUE
+2496,Chafe,20,0,,,TRUE
+2497,Cheria,20,0,,,TRUE
+2498,Ibi,40,0,,,TRUE
+2499,Bugama,20,0,,,TRUE
+2500,M'Daourouch,20,0,,,TRUE
+2503,Abaji,20,0,,,TRUE
+2505,Omo,20,0,,,TRUE
+2508,Souk Ahras,20,0,,,TRUE
+2509,Tibiri,20,0,,,TRUE
+2510,Orogwe,20,0,,,TRUE
+2511,Port Harcourt,20,0,,,TRUE
+2512,Maradi,20,0,,,TRUE
+2513,,20,0,,,TRUE
+2515,Owerri,40,0,,,TRUE
+2517,Omema,20,0,,,TRUE
+2520,Gwagwalada,20,0,,,TRUE
+2522,Awka,640,0,,,TRUE
+2525,Doka Ashafa,20,0,,,TRUE
+2526,Gidan Mai Ungwan,20,0,,,TRUE
+2528,Osina,2560,0,,,TRUE
+2530,Okrika,20,0,,,TRUE
 2534,,20,0,,,
-2536,Ata,20,0,,,True
-2537,Oyigbo,40,0,,,True
-2539,Tebessa,20,0,,,True
-2540,Djibia,20,0,,,True
-2541,Maji,20,0,,,True
-2542,Alesa,20,0,,,True
-2544,Abuja,20,0,,,True
-2545,Bir El Ater,20,0,,,True
-2546,Bonny,20,0,,,True
-2547,Batsari,20,0,,,True
-2548,Ayangba,20,0,,,True
-2550,Onne,20,0,,,True
-2551,,20,0,,,True
-2552,Madalla,20,0,,,True
-2553,Kuje,20,0,,,True
-2555,Umu Oye,20,0,False,,
-2557,Oboama Nguru,20,0,,,True
-2558,Lawmu Umunze,20,0,,,True
-2561,Funtua,20,0,,,True
-2562,Wakama,20,0,False,,
-2565,Abuja,20,0,,,True
-2566,Bodo,20,0,,,True
-2568,Owerri Nta,20,0,,,True
-2569,Mogho,20,0,,,True
-2570,Kaduna,20,0,,,True
-2571,Ikolo,20,0,,,True
-2573,Rubuchi,20,0,False,,
-2574,Aba,20,0,,,True
-2576,Bwari,20,0,,,True
-2577,Umu Lawlaw,20,0,,,True
-2578,Kura,20,0,,,True
-2579,Ozala,20,0,,,
-2580,Tchadoua,20,0,,,True
-2581,Okwuohia,160,0,,,True
-2582,Kauran Yankwani,20,0,,,True
-2583,Nsukka,20,0,,,True
-2587,Umuellem,20,0,,,True
-2588,Bori,20,0,,,True
+2536,Ata,20,0,,,TRUE
+2537,Oyigbo,40,0,,,TRUE
+2539,Tebessa,20,0,,,TRUE
+2540,Djibia,20,0,,,TRUE
+2541,Maji,20,0,,,TRUE
+2542,Alesa,20,0,,,TRUE
+2544,Abuja,20,0,,,TRUE
+2545,Bir El Ater,20,0,,,TRUE
+2546,Bonny,20,0,,,TRUE
+2547,Batsari,20,0,,,TRUE
+2548,Ayangba,20,0,,,TRUE
+2550,Onne,20,0,,,TRUE
+2551,,20,0,,,TRUE
+2552,Madalla,20,0,,,TRUE
+2553,Kuje,20,0,,,TRUE
+2555,Umu Oye,20,0,FALSE,,
+2557,Oboama Nguru,20,0,,,TRUE
+2558,Lawmu Umunze,20,0,,,TRUE
+2561,Funtua,20,0,,,TRUE
+2562,Wakama,20,0,FALSE,,
+2565,Abuja,20,0,,,TRUE
+2566,Bodo,20,0,,,TRUE
+2568,Owerri Nta,20,0,,,TRUE
+2569,Mogho,20,0,,,TRUE
+2570,Kaduna,20,0,,,TRUE
+2571,Ikolo,20,0,,,TRUE
+2573,Rubuchi,20,0,FALSE,,
+2574,Aba,20,0,,,TRUE
+2576,Bwari,20,0,,,TRUE
+2577,Umu Lawlaw,20,0,,,TRUE
+2578,Kura,20,0,,,TRUE
+2579,Ozala,20,0,FALSE,,
+2580,Tchadoua,20,0,,,TRUE
+2581,Okwuohia,160,0,,,TRUE
+2582,Kauran Yankwani,20,0,,,TRUE
+2583,Nsukka,20,0,,,TRUE
+2587,Umuellem,20,0,,,TRUE
+2588,Bori,20,0,,,TRUE
 2589,Egbomu,20,0,,,
-2590,Ungwan Maidawa,20,0,,,True
-2591,Obukpa,20,0,,,True
-2592,Shema,20,0,,,True
-2593,Enugu,20,0,,,True
-2595,Umu Oko,20,0,,,True
-2596,Ngo,20,0,False,,
-2597,Enugu-Ezike,20,0,,,True
-2598,Avodim,640,0,,,True
-2599,Umu Ezegu,20,0,,,True
-2600,Ovoko,80,0,,,True
-2601,Umuahia,80,0,,,True
-2602,Katsina,20,0,,,True
-2603,Awgu,20,0,,,True
-2604,Itaja,40,0,,,True
-2606,Umundi,20,0,,,True
-2607,Mgboo,20,0,,,True
-2608,Kpeyi,20,0,False,,
-2609,Ado,20,0,,,True
-2610,Agbani,20,0,,,True
-2611,Nenwe,20,0,,,True
-2613,Malumfashi,20,0,,,True
+2590,Ungwan Maidawa,20,0,,,TRUE
+2591,Obukpa,20,0,,,TRUE
+2592,Shema,20,0,,,TRUE
+2593,Enugu,20,0,,,TRUE
+2595,Umu Oko,20,0,,,TRUE
+2596,Ngo,20,0,FALSE,,
+2597,Enugu-Ezike,20,0,,,TRUE
+2598,Avodim,640,0,,,TRUE
+2599,Umu Ezegu,20,0,,,TRUE
+2600,Ovoko,80,0,,,TRUE
+2601,Umuahia,80,0,,,TRUE
+2602,Katsina,20,0,,,TRUE
+2603,Awgu,20,0,,,TRUE
+2604,Itaja,40,0,,,TRUE
+2606,Umundi,20,0,,,TRUE
+2607,Mgboo,20,0,,,TRUE
+2608,Kpeyi,20,0,FALSE,,
+2609,Ado,20,0,,,TRUE
+2610,Agbani,20,0,,,TRUE
+2611,Nenwe,20,0,,,TRUE
+2613,Malumfashi,20,0,,,TRUE
 2614,Nwaigwe,20,0,,,
-2615,Opobo,20,0,,,True
-2616,Ishiagu,20,0,,,True
-2617,Amaba,20,0,,,True
-2618,Mayahi,20,0,,,True
-2619,Umuokorola,20,0,,,True
-2620,Ikot Akpanata,20,0,,,True
-2622,Nkek,20,0,,,True
-2623,Samaru,20,0,,,True
-2624,Ankpa,20,0,,,True
-2625,Zaria,20,0,,,True
-2626,Otukpa,40,0,,,True
-2627,Obuohia,20,0,,,True
-2628,El Kef,20,0,,,True
-2629,Kuwatau,20,0,,,True
-2632,Akote,20,0,,,True
-2633,Agui‚,20,0,,,True
-2634,Jendouba,20,0,,,True
+2615,Opobo,20,0,,,TRUE
+2616,Ishiagu,20,0,,,TRUE
+2617,Amaba,20,0,,,TRUE
+2618,Mayahi,20,0,,,TRUE
+2619,Umuokorola,20,0,,,TRUE
+2620,Ikot Akpanata,20,0,,,TRUE
+2622,Nkek,20,0,,,TRUE
+2623,Samaru,20,0,,,TRUE
+2624,Ankpa,20,0,,,TRUE
+2625,Zaria,20,0,,,TRUE
+2626,Otukpa,40,0,,,TRUE
+2627,Obuohia,20,0,,,TRUE
+2628,El Kef,20,0,,,TRUE
+2629,Kuwatau,20,0,,,TRUE
+2632,Akote,20,0,,,TRUE
+2633,Agui‚,20,0,,,TRUE
+2634,Jendouba,20,0,,,TRUE
 2635,,20,0,,,
-2636,Tamaha,20,0,,,True
+2636,Tamaha,20,0,,,TRUE
 2638,Ikporom,20,0,,,
-2639,Ikot Ekpene,20,0,,,True
-2640,Doka,20,0,,,True
-2642,Abiriba,20,0,,,True
-2643,Esana,20,0,,,True
-2644,Tukurwa,20,0,,,True
-2645,Eha Amufu,20,0,,,True
-2646,Uburu,20,0,,,True
-2647,Ikot Obio Ekpong,20,0,,,True
-2648,Kasserine,20,0,,,True
-2649,Agadez,40,0,,,True
-2650,Ugbokolo,20,0,,,True
+2639,Ikot Ekpene,20,0,,,TRUE
+2640,Doka,20,0,,,TRUE
+2642,Abiriba,20,0,,,TRUE
+2643,Esana,20,0,,,TRUE
+2644,Tukurwa,20,0,,,TRUE
+2645,Eha Amufu,20,0,,,TRUE
+2646,Uburu,20,0,,,TRUE
+2647,Ikot Obio Ekpong,20,0,,,TRUE
+2648,Kasserine,20,0,,,TRUE
+2649,Agadez,40,0,,,TRUE
+2650,Ugbokolo,20,0,,,TRUE
 2651,Onuankwo,20,0,,,
-2652,Ediene,20,0,,,True
-2654,Qafsa,40,0,,,True
-2655,Gazaoua,20,0,,,True
-2657,Ungwan Tamowa,20,0,,,True
-2658,Mashi,20,0,,,True
-2659,Elu,20,0,,,True
-2660,Keffi,20,0,,,True
-2661,Ekeje,20,0,,,True
-2662,Ogwuma,20,0,,,True
-2663,Ukap Itak,20,0,,,True
-2664,Ikot Obioko,20,0,,,
-2665,Okom,20,0,,,True
-2666,Gwarzo,20,0,,,True
-2667,Ibiaku Ikot Ukpong,20,0,False,,
-2668,Tessaoua,20,0,,,True
-2669,Ikot Ide,20,0,,,True
-2671,Tsanyawa,20,0,,,True
-2672,Getso,20,0,,,True
-2673,Amakofia,20,0,,,True
-2674,Uyo,20,0,,,True
+2652,Ediene,20,0,,,TRUE
+2654,Qafsa,40,0,,,TRUE
+2655,Gazaoua,20,0,,,TRUE
+2657,Ungwan Tamowa,20,0,,,TRUE
+2658,Mashi,20,0,,,TRUE
+2659,Elu,20,0,,,TRUE
+2660,Keffi,20,0,,,TRUE
+2661,Ekeje,20,0,,,TRUE
+2662,Ogwuma,20,0,,,TRUE
+2663,Ukap Itak,20,0,,,TRUE
+2664,Ikot Obioko,20,0,FALSE,,
+2665,Okom,20,0,,,TRUE
+2666,Gwarzo,20,0,,,TRUE
+2667,Ibiaku Ikot Ukpong,20,0,FALSE,,
+2668,Tessaoua,20,0,,,TRUE
+2669,Ikot Ide,20,0,,,TRUE
+2671,Tsanyawa,20,0,,,TRUE
+2672,Getso,20,0,,,TRUE
+2673,Amakofia,20,0,,,TRUE
+2674,Uyo,20,0,,,TRUE
 2675,Ikot Esen Oku,20,0,,,
-2676,Kadafa,20,0,,,True
-2677,Ozizza,20,0,,,True
-2678,Eket,20,0,,,True
-2679,Koi,20,0,,,True
-2680,Mbikpong Atai,20,0,,,True
-2681,Soba,20,0,,,True
-2683,Nsukara Offot,20,0,,,True
-2685,Mkpanak,20,0,,,True
-2686,B‚ja,20,0,,,True
+2676,Kadafa,20,0,,,TRUE
+2677,Ozizza,20,0,,,TRUE
+2678,Eket,20,0,,,TRUE
+2679,Koi,20,0,,,TRUE
+2680,Mbikpong Atai,20,0,,,TRUE
+2681,Soba,20,0,,,TRUE
+2683,Nsukara Offot,20,0,,,TRUE
+2685,Mkpanak,20,0,,,TRUE
+2686,B‚ja,20,0,,,TRUE
 2687,Ikot Ebiyan,20,0,,,
-2688,Utunkon,20,0,,,True
-2689,Idembia,20,0,,,True
+2688,Utunkon,20,0,,,TRUE
+2689,Idembia,20,0,,,TRUE
 2690,Odoro Atasong,20,0,,,
-2691,Bagwai,20,0,,,True
-2692,Buraimawa,20,0,,,True
-2694,Sbeitla,20,0,,,True
-2696,Ugep,20,0,,,True
-2697,Unguwan Larawa,20,0,False,,
-2698,Abakaliki,20,0,,,True
-2699,Otukpo,20,0,,,True
-2700,Maturrumi,20,0,,,True
-2701,Bichi,20,0,,,True
-2702,Obufi,20,0,,,True
-2703,Zango,20,0,,,True
-2704,Ungwan Sarki,20,0,,,True
+2691,Bagwai,20,0,,,TRUE
+2692,Buraimawa,20,0,,,TRUE
+2694,Sbeitla,20,0,,,TRUE
+2696,Ugep,20,0,,,TRUE
+2697,Unguwan Larawa,20,0,FALSE,,
+2698,Abakaliki,20,0,,,TRUE
+2699,Otukpo,20,0,,,TRUE
+2700,Maturrumi,20,0,,,TRUE
+2701,Bichi,20,0,,,TRUE
+2702,Obufi,20,0,,,TRUE
+2703,Zango,20,0,,,TRUE
+2704,Ungwan Sarki,20,0,,,TRUE
 2705,Achara Ndiagu Omegio,20,0,,,
-2707,Tarzoho,20,0,,,True
-2708,Daura,20,0,,,True
+2707,Tarzoho,20,0,,,TRUE
+2708,Daura,20,0,,,TRUE
 2709,Ebighi Edu,20,0,,,
-2711,Oron,20,0,,,True
-2712,Kafanchan,20,0,,,True
-2714,Abuna,20,0,,,True
+2711,Oron,20,0,,,TRUE
+2712,Kafanchan,20,0,,,TRUE
+2714,Abuna,20,0,,,TRUE
 2715,Mkpumeakwaokoro,20,0,,,
-2717,Kano,20,0,,,True
-2718,kazaure,20,0,,,True
-2719,Tudun Wada,20,0,,,True
-2720,Anchau,20,0,,,True
-2721,Doma,20,0,,,True
-2722,Calabar,20,0,,,True
-2723,Kura,20,0,,,True
-2724,Kagoro,20,0,,,True
-2726,Adum East,20,0,,,True
-2728,MatamŠye,20,0,,,True
-2729,Akwanga,20,0,,,True
-2731,Zango,20,0,,,True
-2732,Sidi Bouzid,20,0,,,True
-2735,Dambarta,20,0,,,True
-2736,Oju,20,0,,,True
-2737,Kpam,20,0,,,True
-2739,Lafia,20,0,,,True
-2740,Makurdi,20,0,,,True
-2741,Rano,20,0,,,True
-2742,Dawaki Kudu,20,0,,,True
-2743,Nassarawan Eggon,20,0,,,True
-2745,Manzil Bourguiba,20,0,,,True
-2746,Ungwan Bahagu,20,0,False,,
-2747,Bizerte,20,0,,,True
-2751,Jaja,20,0,,,True
-2752,Samunakar,20,0,,,True
-2754,Uva,20,0,False,,
-2755,Regueb,20,0,,,True
-2756,Bassa,20,0,,,True
-2758,Ikom,20,0,,,True
-2759,Tanout,20,0,,,True
-2760,Garko,20,0,,,True
-2761,El Hamma,20,0,,,True
-2762,Malabo,20,0,,,True
-2763,Wudil,20,0,,,True
-2764,Okuku Lepuole,20,0,,,True
-2765,Jos,20,0,,,True
-2766,Keana,20,0,,,True
-2767,Tunis,20,0,,,True
-2768,Magaria,20,0,,,True
-2769,Nshebori,20,0,,,True
-2772,Port-Gentil,320,0,,,True
-2775,Zinder,20,0,,,True
-2777,Barakin Gangare,20,0,,,True
-2778,Yarogye,20,0,False,,
-2780,Sumaila,20,0,,,True
-2781,Sidi Amor Bou Hajla,20,0,,,True
-2783,Kairouan,20,0,,,True
-2785,Gaya,20,0,,,True
-2787,Bokkos,20,0,,,True
-2789,Gboko,20,0,,,True
-2790,Gabes,80,0,,,True
-2792,Hammam-Lif,40,0,,,True
-2793,Takai,20,0,,,True
-2795,Vande Ikya,20,0,,,True
-2796,Namu,20,0,,,True
-2797,Ringim,20,0,,,True
-2800,Mongu Arna,20,0,,,True
-2803,Tsangaya,20,0,,,True
-2804,Mbacub,20,0,False,,
-2805,Obudu,20,0,,,True
-2808,Limb‚,20,0,,,True
-2810,Arafu,20,0,,,True
-2811,Adikpo,20,0,,,True
-2813,Dutse,20,0,,,True
-2814,Katsina Ala,20,0,,,True
-2815,Hammamet,160,0,,,True
-2816,Sousse,40,0,,,True
-2817,Gumel,20,0,,,True
-2819,Mamfe,20,0,,,True
-2820,M'Saken,20,0,,,True
-2821,Maigatari,20,0,,,True
-2822,Ugba,20,0,,,True
-2823,Tiko,20,0,,,True
-2824,Gwolong,20,0,,,True
-2825,Point Denis,20,0,False,,
-2828,Tataouine,40,0,,,True
-2829,Birnin Kudu,20,0,,,True
-2831,Medenine,20,0,,,True
-2832,Muyuka,20,0,,,True
-2834,Libreville,160,0,,,True
-2835,Kumba,20,0,,,True
-2836,Bununu Dass,20,0,,,True
-2837,Sfax,40,0,,,True
-2838,Ningi,20,0,,,True
-2839,Shendam,20,0,,,True
-2840,Kiyawa,20,0,,,True
-2841,Tafawa-Balewa,20,0,,,True
-2842,Al Munastir,40,0,,,True
+2717,Kano,20,0,,,TRUE
+2718,kazaure,20,0,,,TRUE
+2719,Tudun Wada,20,0,,,TRUE
+2720,Anchau,20,0,,,TRUE
+2721,Doma,20,0,,,TRUE
+2722,Calabar,20,0,,,TRUE
+2723,Kura,20,0,,,TRUE
+2724,Kagoro,20,0,,,TRUE
+2726,Adum East,20,0,,,TRUE
+2728,MatamŠye,20,0,,,TRUE
+2729,Akwanga,20,0,,,TRUE
+2731,Zango,20,0,,,TRUE
+2732,Sidi Bouzid,20,0,,,TRUE
+2735,Dambarta,20,0,,,TRUE
+2736,Oju,20,0,,,TRUE
+2737,Kpam,20,0,,,TRUE
+2739,Lafia,20,0,,,TRUE
+2740,Makurdi,20,0,,,TRUE
+2741,Rano,20,0,,,TRUE
+2742,Dawaki Kudu,20,0,,,TRUE
+2743,Nassarawan Eggon,20,0,,,TRUE
+2745,Manzil Bourguiba,20,0,,,TRUE
+2746,Ungwan Bahagu,20,0,FALSE,,
+2747,Bizerte,20,0,,,TRUE
+2751,Jaja,20,0,,,TRUE
+2752,Samunakar,20,0,,,TRUE
+2754,Uva,20,0,FALSE,,
+2755,Regueb,20,0,,,TRUE
+2756,Bassa,20,0,,,TRUE
+2758,Ikom,20,0,,,TRUE
+2759,Tanout,20,0,,,TRUE
+2760,Garko,20,0,,,TRUE
+2761,El Hamma,20,0,,,TRUE
+2762,Malabo,20,0,,,TRUE
+2763,Wudil,20,0,,,TRUE
+2764,Okuku Lepuole,20,0,,,TRUE
+2765,Jos,20,0,,,TRUE
+2766,Keana,20,0,,,TRUE
+2767,Tunis,20,0,,,TRUE
+2768,Magaria,20,0,,,TRUE
+2769,Nshebori,20,0,,,TRUE
+2772,Port-Gentil,320,0,,,TRUE
+2775,Zinder,20,0,,,TRUE
+2777,Barakin Gangare,20,0,,,TRUE
+2778,Yarogye,20,0,FALSE,,
+2780,Sumaila,20,0,,,TRUE
+2781,Sidi Amor Bou Hajla,20,0,,,TRUE
+2783,Kairouan,20,0,,,TRUE
+2785,Gaya,20,0,,,TRUE
+2787,Bokkos,20,0,,,TRUE
+2789,Gboko,20,0,,,TRUE
+2790,Gabes,80,0,,,TRUE
+2792,Hammam-Lif,40,0,,,TRUE
+2793,Takai,20,0,,,TRUE
+2795,Vande Ikya,20,0,,,TRUE
+2796,Namu,20,0,,,TRUE
+2797,Ringim,20,0,,,TRUE
+2800,Mongu Arna,20,0,,,TRUE
+2803,Tsangaya,20,0,,,TRUE
+2804,Mbacub,20,0,FALSE,,
+2805,Obudu,20,0,,,TRUE
+2808,Limb‚,20,0,,,TRUE
+2810,Arafu,20,0,,,TRUE
+2811,Adikpo,20,0,,,TRUE
+2813,Dutse,20,0,,,TRUE
+2814,Katsina Ala,20,0,,,TRUE
+2815,Hammamet,160,0,,,TRUE
+2816,Sousse,40,0,,,TRUE
+2817,Gumel,20,0,,,TRUE
+2819,Mamfe,20,0,,,TRUE
+2820,M'Saken,20,0,,,TRUE
+2821,Maigatari,20,0,,,TRUE
+2822,Ugba,20,0,,,TRUE
+2823,Tiko,20,0,,,TRUE
+2824,Gwolong,20,0,,,TRUE
+2825,Point Denis,20,0,FALSE,,
+2828,Tataouine,40,0,,,TRUE
+2829,Birnin Kudu,20,0,,,TRUE
+2831,Medenine,20,0,,,TRUE
+2832,Muyuka,20,0,,,TRUE
+2834,Libreville,160,0,,,TRUE
+2835,Kumba,20,0,,,TRUE
+2836,Bununu Dass,20,0,,,TRUE
+2837,Sfax,40,0,,,TRUE
+2838,Ningi,20,0,,,TRUE
+2839,Shendam,20,0,,,TRUE
+2840,Kiyawa,20,0,,,TRUE
+2841,Tafawa-Balewa,20,0,,,TRUE
+2842,Al Munastir,40,0,,,TRUE
 2843,Dimiskir,20,0,,,
-2844,Jahun,20,0,,,True
-2846,Samammiya,20,0,,,True
-2847,Zaki Biam,20,0,,,True
-2848,Ksar Hellal,20,0,,,True
-2850,Douala,20,0,,,True
-2853,Bauchi,20,0,,,True
-2855,Langtang,20,0,,,True
-2856,Wukari,20,0,,,True
-2857,Mahdia,40,0,,,True
-2858,Anguwan Ari,20,0,False,,
-2859,Malummaduri,20,0,,,True
-2861,Bata,20,0,,,True
-2864,Jemma?are,20,0,,,True
-2866,Hadejia,20,0,,,True
-2867,Dengi,20,0,,,True
-2869,Wase,20,0,,,True
-2870,Bela,20,0,,,True
-2871,Kribi,20,0,,,True
-2872,Shira,20,0,,,True
-2873,Nkongsamba,40,0,,,True
-2874,Takum,20,0,,,True
-2876,Donga,20,0,,,True
-2877,Dschang,80,0,,,True
-2878,Ben Gardane,40,0,,,True
-2879,Wum,20,0,,,True
-2880,Azare,20,0,,,True
-2882,Giade,20,0,,,True
-2883,Bamenda,40,0,,,True
-2884,Ed‚a,20,0,,,True
-2890,Soro,20,0,,,True
-2891,Katagum,20,0,False,,
-2893,Masuri,20,0,,,True
-2894,Mbouda,40,0,,,True
-2896,Nguru,20,0,,,True
-2898,Katsiro,20,0,,,True
+2844,Jahun,20,0,,,TRUE
+2846,Samammiya,20,0,,,TRUE
+2847,Zaki Biam,20,0,,,TRUE
+2848,Ksar Hellal,20,0,,,TRUE
+2850,Douala,20,0,,,TRUE
+2853,Bauchi,20,0,,,TRUE
+2855,Langtang,20,0,,,TRUE
+2856,Wukari,20,0,,,TRUE
+2857,Mahdia,40,0,,,TRUE
+2858,Anguwan Ari,20,0,FALSE,,
+2859,Malummaduri,20,0,,,TRUE
+2861,Bata,20,0,,,TRUE
+2864,Jemma?are,20,0,,,TRUE
+2866,Hadejia,20,0,,,TRUE
+2867,Dengi,20,0,,,TRUE
+2869,Wase,20,0,,,TRUE
+2870,Bela,20,0,,,TRUE
+2871,Kribi,20,0,,,TRUE
+2872,Shira,20,0,,,TRUE
+2873,Nkongsamba,40,0,,,TRUE
+2874,Takum,20,0,,,TRUE
+2876,Donga,20,0,,,TRUE
+2877,Dschang,80,0,,,TRUE
+2878,Ben Gardane,40,0,,,TRUE
+2879,Wum,20,0,,,TRUE
+2880,Azare,20,0,,,TRUE
+2882,Giade,20,0,,,TRUE
+2883,Bamenda,40,0,,,TRUE
+2884,Ed‚a,20,0,,,TRUE
+2890,Soro,20,0,,,TRUE
+2891,Katagum,20,0,FALSE,,
+2893,Masuri,20,0,,,TRUE
+2894,Mbouda,40,0,,,TRUE
+2896,Nguru,20,0,,,TRUE
+2898,Katsiro,20,0,,,TRUE
 2899,Sarkin Kudu,20,0,,,
-2900,Misau,20,0,,,True
-2901,Bafoussam,40,0,,,True
-2903,Gamawa,20,0,,,True
-2904,Ndop,20,0,,,True
-2906,Dundewa,20,0,,,True
-2913,Damban,20,0,False,,
-2915,Foumbot,20,0,,,True
-2917,Jakusko,20,0,,,True
-2918,Kumbo,20,0,,,True
-2919,Dukku,20,0,,,True
-2920,Nkambe,20,0,,,True
-2922,Mutum Biyu,20,0,,,True
-2928,Foumban,40,0,,,True
-2929,Gashua,20,0,,,True
-2930,Bojude,20,0,,,True
-2931,Potiskum,20,0,,,True
-2932,Gombe,20,0,,,True
-2934,Makak,20,0,,,True
-2938,Biliri,20,0,,,True
-2940,Ebolowa,20,0,,,True
+2900,Misau,20,0,,,TRUE
+2901,Bafoussam,40,0,,,TRUE
+2903,Gamawa,20,0,,,TRUE
+2904,Ndop,20,0,,,TRUE
+2906,Dundewa,20,0,,,TRUE
+2913,Damban,20,0,FALSE,,
+2915,Foumbot,20,0,,,TRUE
+2917,Jakusko,20,0,,,TRUE
+2918,Kumbo,20,0,,,TRUE
+2919,Dukku,20,0,,,TRUE
+2920,Nkambe,20,0,,,TRUE
+2922,Mutum Biyu,20,0,,,TRUE
+2928,Foumban,40,0,,,TRUE
+2929,Gashua,20,0,,,TRUE
+2930,Bojude,20,0,,,TRUE
+2931,Potiskum,20,0,,,TRUE
+2932,Gombe,20,0,,,TRUE
+2934,Makak,20,0,,,TRUE
+2938,Biliri,20,0,,,TRUE
+2940,Ebolowa,20,0,,,TRUE
 2941,,20,0,,,
-2943,Fika,20,0,,,True
-2944,Damagum,20,0,,,True
-2945,Kaltungo,20,0,,,True
-2946,Bafia,40,0,,,True
-2947,Gembu,20,0,,,True
-2948,Jalingo,20,0,,,True
-2949,Surman,80,0,,,True
-2950,Dolkoi,20,0,,,True
-2953,Bajoga,20,0,,,True
-2954,Al Zawiyah,80,0,,,True
-2955,,20,0,,,True
-2956,Bukari,20,0,,,True
-2957,Awak,20,0,,,True
-2958,Deba Kowa,20,0,,,True
-2961,Yaounde,20,0,,,True
-2962,Ngelzarma,20,0,,,True
-2963,Mbalmayo,40,0,,,True
-2967,Tombua,80,0,,,True
-2969,Talasse,20,0,,,True
-2970,Oyem,80,0,,,True
-2971,Tripoli,80,0,,,True
-2972,Biriri,20,0,,,True
-2975,Zinna,20,0,,,True
-2977,Geidam,20,0,,,True
-2978,Banyo,20,0,,,True
-2981,Damaturu,20,0,,,True
-2982,Pointe-Noire,80,0,,,True
-2983,Guyuk,20,0,,,True
-2984,Buni Yadi,20,0,,,True
-2985,Namibe,20,0,,,True
-2986,Mongo Kamba,640,0,,,True
-2987,Shellem,20,0,,,True
-2990,Numan,20,0,,,True
-2993,Maya Belwa,20,0,,,True
-2994,Sangasumi,20,0,,,True
-2995,Sangm‚lima,80,0,,,True
-2997,Biu,20,0,,,True
-2999,Jada,20,0,,,True
-3002,Cabinda,20,0,,,True
+2943,Fika,20,0,,,TRUE
+2944,Damagum,20,0,,,TRUE
+2945,Kaltungo,20,0,,,TRUE
+2946,Bafia,40,0,,,TRUE
+2947,Gembu,20,0,,,TRUE
+2948,Jalingo,20,0,,,TRUE
+2949,Surman,80,0,,,TRUE
+2950,Dolkoi,20,0,,,TRUE
+2953,Bajoga,20,0,,,TRUE
+2954,Al Zawiyah,80,0,,,TRUE
+2955,,20,0,,,TRUE
+2956,Bukari,20,0,,,TRUE
+2957,Awak,20,0,,,TRUE
+2958,Deba Kowa,20,0,,,TRUE
+2961,Yaounde,20,0,,,TRUE
+2962,Ngelzarma,20,0,,,TRUE
+2963,Mbalmayo,40,0,,,TRUE
+2967,Tombua,80,0,,,TRUE
+2969,Talasse,20,0,,,TRUE
+2970,Oyem,80,0,,,TRUE
+2971,Tripoli,80,0,,,TRUE
+2972,Biriri,20,0,,,TRUE
+2975,Zinna,20,0,,,TRUE
+2977,Geidam,20,0,,,TRUE
+2978,Banyo,20,0,,,TRUE
+2981,Damaturu,20,0,,,TRUE
+2982,Pointe-Noire,80,0,,,TRUE
+2983,Guyuk,20,0,,,TRUE
+2984,Buni Yadi,20,0,,,TRUE
+2985,Namibe,20,0,,,TRUE
+2986,Mongo Kamba,640,0,,,TRUE
+2987,Shellem,20,0,,,TRUE
+2990,Numan,20,0,,,TRUE
+2993,Maya Belwa,20,0,,,TRUE
+2994,Sangasumi,20,0,,,TRUE
+2995,Sangm‚lima,80,0,,,TRUE
+2997,Biu,20,0,,,TRUE
+2999,Jada,20,0,,,TRUE
+3002,Cabinda,20,0,,,TRUE
 3005,Mayo Hako,20,0,,,
-3007,Dumne,20,0,,,True
-3008,Jimeta,20,0,,,True
-3009,Damask,20,0,False,,
-3010,Moanda,80,0,,,True
-3011,Soyo,20,0,,,True
-3013,Benisheikh,20,0,,,True
-3018,Yola,20,0,,,True
-3020,Diffa,20,0,,,True
-3022,Dakri,20,0,False,,
-3023,Girei,20,0,,,True
-3024,Song,20,0,,,True
-3025,Tibati,20,0,,,True
-3028,Gubio,20,0,,,True
-3029,Damboa,20,0,,,True
-3030,Gombi,20,0,,,True
-3033,Goniri,20,0,,,True
-3035,Djoum,20,0,,,True
-3037,Chibok,20,0,,,True
-3039,Khoms,20,0,,,True
-3041,N'Guigmi,20,0,,,True
-3042,Qabilat alturki,20,0,,,True
-3044,Maiduguri,20,0,,,True
-3046,Tshela,20,0,,,True
+3007,Dumne,20,0,,,TRUE
+3008,Jimeta,20,0,,,TRUE
+3009,Damask,20,0,FALSE,,
+3010,Moanda,80,0,,,TRUE
+3011,Soyo,20,0,,,TRUE
+3013,Benisheikh,20,0,,,TRUE
+3018,Yola,20,0,,,TRUE
+3020,Diffa,20,0,,,TRUE
+3022,Dakri,20,0,FALSE,,
+3023,Girei,20,0,,,TRUE
+3024,Song,20,0,,,TRUE
+3025,Tibati,20,0,,,TRUE
+3028,Gubio,20,0,,,TRUE
+3029,Damboa,20,0,,,TRUE
+3030,Gombi,20,0,,,TRUE
+3033,Goniri,20,0,,,TRUE
+3035,Djoum,20,0,,,TRUE
+3037,Chibok,20,0,,,TRUE
+3039,Khoms,20,0,,,TRUE
+3041,N'Guigmi,20,0,,,TRUE
+3042,Qabilat alturki,20,0,,,TRUE
+3044,Maiduguri,20,0,,,TRUE
+3046,Tshela,20,0,,,TRUE
 3048,Tchorogui,20,0,,,
-3050,Luanda,20,0,,,True
-3052,Lemba Village,20,0,,,True
-3053,Boma,20,0,,,True
-3055,Gajiram,20,0,,,True
-3058,Zliten,80,0,,,True
-3059,Uba,20,0,,,True
-3061,Mubi,20,0,,,True
-3062,Djalingo,20,0,,,True
-3064,Benguela,20,0,,,True
-3065,Lubango,20,0,,,True
-3067,Ngaoundal,20,0,,,True
-3068,Moanda,80,0,,,True
-3070,Michika,20,0,,,True
-3071,Garoua,20,0,,,True
-3072,Nkayi,20,0,,,True
-3073,Kinzao,20,0,,,True
-3075,Duda,20,0,False,,
-3076,Dirbishi,20,0,,,
-3078,Gulak,20,0,,,True
-3079,Panguila,20,0,False,,
-3081,Sibiti,20,0,,,True
-3082,Lobito,40,0,,,True
-3086,Pitoa,20,0,,,True
-3087,Chibia,20,0,,,True
-3088,Monguno,20,0,,,True
-3089,Matadi,40,0,,,True
-3090,Sabha,40,0,,,True
-3094,Madagali,20,0,,,True
-3095,Misrata,20,0,,,True
-3097,Ngaound‚r‚,20,0,,,True
-3098,Jaudiri,20,0,,,True
-3099,Gwoza,20,0,,,True
-3100,Caxito,20,0,,,True
-3101,Baga,20,0,,,True
-3103,Porto Amboim,40,0,,,True
-3105,Ngoshe,20,0,,,True
-3106,Bertoua,20,0,,,True
-3108,Mokolo,20,0,,,True
-3109,Sumbe,20,0,,,True
-3111,Dikwa,20,0,,,True
-3112,Koza,20,0,,,True
-3113,Chibemba,20,0,,,
-3116,Guider,20,0,,,True
-3117,Walvis Bay,20,0,,,True
-3119,Karewa,20,0,,,True
-3125,Bocoio,20,0,,,True
-3127,Mora,20,0,,,True
-3128,Ngala,20,0,,,True
-3129,Banki,20,0,,,True
-3131,Gamboru,20,0,,,True
-3133,Cubal,20,0,,,True
-3136,???? ???? Baga-Sola,20,0,,,True
-3137,Dargala,20,0,,,True
-3138,Tchollir‚,20,0,,,True
-3139,Rey Bouba,20,0,,,True
-3140,Rig-Rig,20,0,False,,
-3141,Maroua,20,0,,,True
-3142,Lere,20,0,False,,
-3143,Vila Nova do Seles,20,0,,,True
-3144,M'banza Congo,20,0,,,True
-3145,Gabela,20,0,,,True
-3147,Meiganga,20,0,,,True
-3148,Quipungo,20,0,,,True
-3149,Kaele,20,0,,,True
-3151,Guemu,20,0,False,,
-3152,Batouri,20,0,,,True
-3157,Kimpese,20,0,,,True
-3158,Ganda,20,0,,,True
-3160,Caluquembe,20,0,False,,
-3163,Bol,20,0,,,True
-3169,Garoua-Boula‹,20,0,,,True
-3171,Balombo,20,0,,,True
-3172,Guidiguis,20,0,,,True
-3173,Xangongo,20,0,,,True
-3175,Chicomba,20,0,False,,
-3176,Kwilu-Ngongo,20,0,,,True
-3177,Guirvidig,20,0,,,True
-3178,Matala,20,0,,,True
-3180,Moulvoudaye,20,0,,,True
-3183,Maga,20,0,,,True
-3184,Calulo,20,0,,,True
-3186,N'Djamena,20,0,,,True
-3187,Pala,20,0,,,True
-3188,N'dalatando,20,0,,,True
-3189,Caconda,20,0,,,True
-3192,Mbanza-Ngungu,20,0,,,True
-3197,Waku Kungo,20,0,,,True
-3198,U¡ge,20,0,,,True
-3199,?????? Fianga,20,0,,,True
-3200,Longonjo,20,0,,,True
-3201,Sirte,80,0,,,True
-3202,Kisantu,20,0,,,True
-3203,Mao,20,0,,,True
-3204,Yokadouma,20,0,,,True
-3207,Yagoua,20,0,,,True
-3209,Kinshasa,20,0,,,True
-3210,Negage,40,0,,,True
-3211,Brazzaville,80,0,,,True
-3212,Bongor,20,0,,,True
-3213,Touboro,20,0,,,True
-3214,Ondjiva,20,0,,,True
-3215,Nao,20,0,,,
-3217,Calilongue,20,0,,,True
-3220,Gu‚lendeng,20,0,,,True
-3221,,20,0,,,True
-3222,Kibomango,640,0,,,True
-3224,,20,0,False,,
-3225,Oshikango,20,0,,,True
-3226,M‚chim‚r‚,20,0,False,,
-3227,Huambo,20,0,,,True
-3228,Massakory,20,0,,,True
-3229,Bouar,40,0,,,True
-3231,Bailundo,20,0,,,True
-3232,??????? Dourbali,20,0,,,True
-3233,???? Kelo,40,0,,,True
-3234,Jamba,20,0,,,True
-3237,Blassari,20,0,,,True
-3238,,20,0,,,True
-3239,Carnot,20,0,,,True
-3241,Owando,40,0,,,True
-3245,Moundou,20,0,,,True
-3247,Katchiungo,20,0,,,True
-3249,,20,0,,,True
-3250,Nola,20,0,,,True
-3251,Ou‚sso,20,0,,,True
-3254,Chinguar,20,0,,,True
-3257,La‹,20,0,,,True
-3258,Malanje,20,0,,,True
-3260,Windhoek,20,0,,,True
+3050,Luanda,20,0,,,TRUE
+3052,Lemba Village,20,0,,,TRUE
+3053,Boma,20,0,,,TRUE
+3055,Gajiram,20,0,,,TRUE
+3058,Zliten,80,0,,,TRUE
+3059,Uba,20,0,,,TRUE
+3061,Mubi,20,0,,,TRUE
+3062,Djalingo,20,0,,,TRUE
+3064,Benguela,20,0,,,TRUE
+3065,Lubango,20,0,,,TRUE
+3067,Ngaoundal,20,0,,,TRUE
+3068,Moanda,80,0,,,TRUE
+3070,Michika,20,0,,,TRUE
+3071,Garoua,20,0,,,TRUE
+3072,Nkayi,20,0,,,TRUE
+3073,Kinzao,20,0,,,TRUE
+3075,Duda,20,0,FALSE,,
+3076,Dirbishi,20,0,FALSE,,
+3078,Gulak,20,0,,,TRUE
+3079,Panguila,20,0,FALSE,,
+3081,Sibiti,20,0,,,TRUE
+3082,Lobito,40,0,,,TRUE
+3086,Pitoa,20,0,,,TRUE
+3087,Chibia,20,0,,,TRUE
+3088,Monguno,20,0,,,TRUE
+3089,Matadi,40,0,,,TRUE
+3090,Sabha,40,0,,,TRUE
+3094,Madagali,20,0,,,TRUE
+3095,Misrata,20,0,,,TRUE
+3097,Ngaound‚r‚,20,0,,,TRUE
+3098,Jaudiri,20,0,,,TRUE
+3099,Gwoza,20,0,,,TRUE
+3100,Caxito,20,0,,,TRUE
+3101,Baga,20,0,,,TRUE
+3103,Porto Amboim,40,0,,,TRUE
+3105,Ngoshe,20,0,,,TRUE
+3106,Bertoua,20,0,,,TRUE
+3108,Mokolo,20,0,,,TRUE
+3109,Sumbe,20,0,,,TRUE
+3111,Dikwa,20,0,,,TRUE
+3112,Koza,20,0,,,TRUE
+3113,Chibemba,20,0,FALSE,,
+3116,Guider,20,0,,,TRUE
+3117,Walvis Bay,20,0,,,TRUE
+3119,Karewa,20,0,,,TRUE
+3125,Bocoio,20,0,,,TRUE
+3127,Mora,20,0,,,TRUE
+3128,Ngala,20,0,,,TRUE
+3129,Banki,20,0,,,TRUE
+3131,Gamboru,20,0,,,TRUE
+3133,Cubal,20,0,,,TRUE
+3136,???? ???? Baga-Sola,20,0,,,TRUE
+3137,Dargala,20,0,,,TRUE
+3138,Tchollir‚,20,0,,,TRUE
+3139,Rey Bouba,20,0,,,TRUE
+3140,Rig-Rig,20,0,FALSE,,
+3141,Maroua,20,0,,,TRUE
+3142,Lere,20,0,FALSE,,
+3143,Vila Nova do Seles,20,0,,,TRUE
+3144,M'banza Congo,20,0,,,TRUE
+3145,Gabela,20,0,,,TRUE
+3147,Meiganga,20,0,,,TRUE
+3148,Quipungo,20,0,,,TRUE
+3149,Kaele,20,0,,,TRUE
+3151,Guemu,20,0,FALSE,,
+3152,Batouri,20,0,,,TRUE
+3157,Kimpese,20,0,,,TRUE
+3158,Ganda,20,0,,,TRUE
+3160,Caluquembe,20,0,FALSE,,
+3163,Bol,20,0,,,TRUE
+3169,Garoua-Boula‹,20,0,,,TRUE
+3171,Balombo,20,0,,,TRUE
+3172,Guidiguis,20,0,,,TRUE
+3173,Xangongo,20,0,,,TRUE
+3175,Chicomba,20,0,FALSE,,
+3176,Kwilu-Ngongo,20,0,,,TRUE
+3177,Guirvidig,20,0,,,TRUE
+3178,Matala,20,0,,,TRUE
+3180,Moulvoudaye,20,0,,,TRUE
+3183,Maga,20,0,,,TRUE
+3184,Calulo,20,0,,,TRUE
+3186,N'Djamena,20,0,,,TRUE
+3187,Pala,20,0,,,TRUE
+3188,N'dalatando,20,0,,,TRUE
+3189,Caconda,20,0,,,TRUE
+3192,Mbanza-Ngungu,20,0,,,TRUE
+3197,Waku Kungo,20,0,,,TRUE
+3198,U¡ge,20,0,,,TRUE
+3199,?????? Fianga,20,0,,,TRUE
+3200,Longonjo,20,0,,,TRUE
+3201,Sirte,80,0,,,TRUE
+3202,Kisantu,20,0,,,TRUE
+3203,Mao,20,0,,,TRUE
+3204,Yokadouma,20,0,,,TRUE
+3207,Yagoua,20,0,,,TRUE
+3209,Kinshasa,20,0,,,TRUE
+3210,Negage,40,0,,,TRUE
+3211,Brazzaville,80,0,,,TRUE
+3212,Bongor,20,0,,,TRUE
+3213,Touboro,20,0,,,TRUE
+3214,Ondjiva,20,0,,,TRUE
+3215,Nao,20,0,FALSE,,
+3217,Calilongue,20,0,,,TRUE
+3220,Gu‚lendeng,20,0,,,TRUE
+3221,,20,0,,,TRUE
+3222,Kibomango,640,0,,,TRUE
+3224,,20,0,FALSE,,
+3225,Oshikango,20,0,,,TRUE
+3226,M‚chim‚r‚,20,0,FALSE,,
+3227,Huambo,20,0,,,TRUE
+3228,Massakory,20,0,,,TRUE
+3229,Bouar,40,0,,,TRUE
+3231,Bailundo,20,0,,,TRUE
+3232,??????? Dourbali,20,0,,,TRUE
+3233,???? Kelo,40,0,,,TRUE
+3234,Jamba,20,0,,,TRUE
+3237,Blassari,20,0,,,TRUE
+3238,,20,0,,,TRUE
+3239,Carnot,20,0,,,TRUE
+3241,Owando,40,0,,,TRUE
+3245,Moundou,20,0,,,TRUE
+3247,Katchiungo,20,0,,,TRUE
+3249,,20,0,,,TRUE
+3250,Nola,20,0,,,TRUE
+3251,Ou‚sso,20,0,,,TRUE
+3254,Chinguar,20,0,,,TRUE
+3257,La‹,20,0,,,TRUE
+3258,Malanje,20,0,,,TRUE
+3260,Windhoek,20,0,,,TRUE
 3262,Bourkouri,20,0,,,
-3264,,20,0,,,True
-3268,Cape Town,20,0,,,True
-3273,Chitembo,20,0,,,True
-3275,Andulo,20,0,,,True
-3276,Atlantis,20,0,,,True
-3277,,20,0,,,True
-3278,Gore,20,0,,,True
-3282,Kuito,40,0,,,True
-3283,Bayandet,20,0,False,,
-3284,Doba,20,0,,,True
-3285,Kasongo-Lunda,20,0,,,True
-3286,Somerset West,40,0,,,True
-3290,Stellenbosch,20,0,,,True
-3291,Bokoro,20,0,,,True
-3302,Paarl,20,0,,,True
-3305,Kenge,40,0,,,True
-3306,Kokanti,20,0,False,,
-3307,Catabola,20,0,,,True
-3308,??????? Bedjomo,20,0,False,,
-3315,Camacupa,20,0,,,True
-3317,Yao,20,0,,,True
-3318,Menongue,20,0,,,True
-3319,Bandundu,20,0,,,True
-3320,Worcester,20,0,,,True
-3322,Koumra,20,0,,,True
-3330,??????? Mo‹ssala,20,0,,,True
-3336,Cafunfo,20,0,,,True
-3341,?????? Bitkine,20,0,,,True
-3345,Ati,20,0,,,True
-3347,Dongou,20,0,,,True
-3348,Impfondo,20,0,,,True
-3349,Benghazi,20,0,,,True
-3352,Sarh,20,0,,,True
-3353,Mbandaka,20,0,,,True
-3358,Ajdabiya,20,0,,,True
-3360,Danamadji,20,0,,,True
-3361,Mongo,20,0,,,True
-3363,Bangui,20,0,,,True
-3364,B‚tou,20,0,False,,
-3365,Faya-Largeau,20,0,,,True
-3366,Badokwa,40,0,,,True
-3368,Moyenne Sido,20,0,,,True
-3370,Marj,20,0,,,True
-3371,Kikwit,20,0,,,True
-3372,????? Kyab‚,20,0,,,True
-3374,Kahemba,20,0,,,True
-3379,Makanza,20,0,,,True
-3388,Mangalm‚,20,0,False,,
-3390,Umm Hajar,20,0,False,,
-3395,Bayda,20,0,,,True
-3397,Idiofa,80,0,,,True
-3398,Upington,40,0,,,True
-3399,Luena,40,0,,,True
-3400,Mossel Bay,20,0,,,True
-3403,Gemena,20,0,,,True
-3406,Basankusu,20,0,,,True
-3407,Oudtshoorn,20,0,,,True
-3410,George,20,0,,,True
-3412,Am Timan,20,0,,,True
-3415,Saurimo,20,0,,,True
-3418,Karawa,40,0,,,True
-3419,Derna,80,0,,,True
-3422,Ab‚ch‚,20,0,,,True
-3424,Binga,20,0,,,True
-3428,Biltine,20,0,,,True
-3430,Ilebo,20,0,,,True
-3432,Lucapa,20,0,,,True
-3433,Bambari,40,0,,,True
-3434,Tshikapa,20,0,,,True
-3435,Dundo,40,0,,,True
-3440,Businga,20,0,,,True
-3441,Boende,20,0,,,True
-3443,Gbadolite,40,0,,,True
-3446,Goz Be‹da,20,0,False,,
-3452,Kakumba,20,0,,,True
-3454,Lwebo,20,0,,,True
-3456,Lisala,20,0,,,True
-3457,Mweka,40,0,,,True
-3459,Tobruk,40,0,,,True
-3463,Guereda,20,0,False,,
-3470,Iriba,20,0,,,True
-3471,???? Adr‚,20,0,,,True
-3472,Kakenge,20,0,,,True
-3473,Bria,20,0,,,True
-3474,Luau,20,0,,,True
-3475,Geneina,20,0,,,True
+3264,,20,0,,,TRUE
+3268,Cape Town,20,0,,,TRUE
+3273,Chitembo,20,0,,,TRUE
+3275,Andulo,20,0,,,TRUE
+3276,Atlantis,20,0,,,TRUE
+3277,,20,0,,,TRUE
+3278,Gore,20,0,,,TRUE
+3282,Kuito,40,0,,,TRUE
+3283,Bayandet,20,0,FALSE,,
+3284,Doba,20,0,,,TRUE
+3285,Kasongo-Lunda,20,0,,,TRUE
+3286,Somerset West,40,0,,,TRUE
+3290,Stellenbosch,20,0,,,TRUE
+3291,Bokoro,20,0,,,TRUE
+3302,Paarl,20,0,,,TRUE
+3305,Kenge,40,0,,,TRUE
+3306,Kokanti,20,0,FALSE,,
+3307,Catabola,20,0,,,TRUE
+3308,??????? Bedjomo,20,0,FALSE,,
+3315,Camacupa,20,0,,,TRUE
+3317,Yao,20,0,,,TRUE
+3318,Menongue,20,0,,,TRUE
+3319,Bandundu,20,0,,,TRUE
+3320,Worcester,20,0,,,TRUE
+3322,Koumra,20,0,,,TRUE
+3330,??????? Mo‹ssala,20,0,,,TRUE
+3336,Cafunfo,20,0,,,TRUE
+3341,?????? Bitkine,20,0,,,TRUE
+3345,Ati,20,0,,,TRUE
+3347,Dongou,20,0,,,TRUE
+3348,Impfondo,20,0,,,TRUE
+3349,Benghazi,20,0,,,TRUE
+3352,Sarh,20,0,,,TRUE
+3353,Mbandaka,20,0,,,TRUE
+3358,Ajdabiya,20,0,,,TRUE
+3360,Danamadji,20,0,,,TRUE
+3361,Mongo,20,0,,,TRUE
+3363,Bangui,20,0,,,TRUE
+3364,B‚tou,20,0,FALSE,,
+3365,Faya-Largeau,20,0,,,TRUE
+3366,Badokwa,40,0,,,TRUE
+3368,Moyenne Sido,20,0,,,TRUE
+3370,Marj,20,0,,,TRUE
+3371,Kikwit,20,0,,,TRUE
+3372,????? Kyab‚,20,0,,,TRUE
+3374,Kahemba,20,0,,,TRUE
+3379,Makanza,20,0,,,TRUE
+3388,Mangalm‚,20,0,FALSE,,
+3390,Umm Hajar,20,0,FALSE,,
+3395,Bayda,20,0,,,TRUE
+3397,Idiofa,80,0,,,TRUE
+3398,Upington,40,0,,,TRUE
+3399,Luena,40,0,,,TRUE
+3400,Mossel Bay,20,0,,,TRUE
+3403,Gemena,20,0,,,TRUE
+3406,Basankusu,20,0,,,TRUE
+3407,Oudtshoorn,20,0,,,TRUE
+3410,George,20,0,,,TRUE
+3412,Am Timan,20,0,,,TRUE
+3415,Saurimo,20,0,,,TRUE
+3418,Karawa,40,0,,,TRUE
+3419,Derna,80,0,,,TRUE
+3422,Ab‚ch‚,20,0,,,TRUE
+3424,Binga,20,0,,,TRUE
+3428,Biltine,20,0,,,TRUE
+3430,Ilebo,20,0,,,TRUE
+3432,Lucapa,20,0,,,TRUE
+3433,Bambari,40,0,,,TRUE
+3434,Tshikapa,20,0,,,TRUE
+3435,Dundo,40,0,,,TRUE
+3440,Businga,20,0,,,TRUE
+3441,Boende,20,0,,,TRUE
+3443,Gbadolite,40,0,,,TRUE
+3446,Goz Be‹da,20,0,FALSE,,
+3452,Kakumba,20,0,,,TRUE
+3454,Lwebo,20,0,,,TRUE
+3456,Lisala,20,0,,,TRUE
+3457,Mweka,40,0,,,TRUE
+3459,Tobruk,40,0,,,TRUE
+3463,Guereda,20,0,FALSE,,
+3470,Iriba,20,0,,,TRUE
+3471,???? Adr‚,20,0,,,TRUE
+3472,Kakenge,20,0,,,TRUE
+3473,Bria,20,0,,,TRUE
+3474,Luau,20,0,,,TRUE
+3475,Geneina,20,0,,,TRUE
 3476,,20,0,,,
-3478,,20,0,False,,
-3479,Dilolo,20,0,,,True
-3480,Bena-Leka,20,0,,,True
-3483,Demba,20,0,,,True
-3484,For Baranga,20,0,,,True
-3485,Luiza,20,0,,,True
-3486,Kananga,20,0,,,True
-3487,Tina,20,0,False,,
-3489,Yakoma,40,0,,,True
-3491,Bumba,20,0,,,True
-3493,Karyari,20,0,False,,
-3494,Murnei,20,0,,,True
-3495,Maun,160,0,,,True
-3496,Cazombo,20,0,,,True
-3497,KwaNobuhle 1,20,0,,,True
-3499,Mongu,320,0,,,True
-3500,Uitenhage,20,0,,,True
-3504,Sandoa,40,0,,,True
-3505,Port Elizabeth,20,0,,,True
-3507,Um Dukhan,20,0,False,,
-3508,Tambue-Mwenza,20,0,False,,
-3509,Zambezi,40,0,,,True
-3510,Tshimbulu,20,0,,,True
-3511,Kimberley,20,0,,,True
-3513,Lukulu,160,0,,,True
-3514,,20,0,,,True
-3515,Wells Estate,20,0,,,True
-3519,Saraf `Umrah,20,0,,,True
-3520,Tshiamala,20,0,False,,
-3521,,20,0,False,,
+3478,,20,0,FALSE,,
+3479,Dilolo,20,0,,,TRUE
+3480,Bena-Leka,20,0,,,TRUE
+3483,Demba,20,0,,,TRUE
+3484,For Baranga,20,0,,,TRUE
+3485,Luiza,20,0,,,TRUE
+3486,Kananga,20,0,,,TRUE
+3487,Tina,20,0,FALSE,,
+3489,Yakoma,40,0,,,TRUE
+3491,Bumba,20,0,,,TRUE
+3493,Karyari,20,0,FALSE,,
+3494,Murnei,20,0,,,TRUE
+3495,Maun,160,0,,,TRUE
+3496,Cazombo,20,0,,,TRUE
+3497,KwaNobuhle 1,20,0,,,TRUE
+3499,Mongu,320,0,,,TRUE
+3500,Uitenhage,20,0,,,TRUE
+3504,Sandoa,40,0,,,TRUE
+3505,Port Elizabeth,20,0,,,TRUE
+3507,Um Dukhan,20,0,FALSE,,
+3508,Tambue-Mwenza,20,0,FALSE,,
+3509,Zambezi,40,0,,,TRUE
+3510,Tshimbulu,20,0,,,TRUE
+3511,Kimberley,20,0,,,TRUE
+3513,Lukulu,160,0,,,TRUE
+3514,,20,0,,,TRUE
+3515,Wells Estate,20,0,,,TRUE
+3519,Saraf `Umrah,20,0,,,TRUE
+3520,Tshiamala,20,0,FALSE,,
+3521,,20,0,FALSE,,
 3522,,20,0,,,
-3523,Gnalida,20,0,False,,
-3525,Zalingei,40,0,,,True
-3529,Kabeya-Kamuanga,20,0,False,,
-3530,Kasaji,20,0,,,True
-3531,Kahinda,40,0,,,True
-3538,Mwene-Ditu,40,0,,,True
-3541,Mbuji-Mayi,20,0,,,True
-3543,Bena Tshishimbi,20,0,,,True
-3544,Lukalaba,20,0,,,True
-3545,Basoko,20,0,,,True
-3547,Bondo,20,0,,,True
-3548,Kebkabiya,20,0,,,True
+3523,Gnalida,20,0,FALSE,,
+3525,Zalingei,40,0,,,TRUE
+3529,Kabeya-Kamuanga,20,0,FALSE,,
+3530,Kasaji,20,0,,,TRUE
+3531,Kahinda,40,0,,,TRUE
+3538,Mwene-Ditu,40,0,,,TRUE
+3541,Mbuji-Mayi,20,0,,,TRUE
+3543,Bena Tshishimbi,20,0,,,TRUE
+3544,Lukalaba,20,0,,,TRUE
+3545,Basoko,20,0,,,TRUE
+3547,Bondo,20,0,,,TRUE
+3548,Kebkabiya,20,0,,,TRUE
 3551,,20,0,,,
-3552,Makhanda (Grahamstown),20,0,,,True
-3555,Aketi,20,0,,,True
-3556,,20,0,,,True
-3558,Kanye,20,0,,,True
-3560,Ngandajika,40,0,,,True
-3561,Kas,20,0,,,True
-3563,Mafikeng,20,0,,,True
-3566,Ed Al Fursan,20,0,,,True
-3568,Kanyama,20,0,,,True
-3571,Bloemfontein,20,0,,,True
-3573,Mwinilunga,160,0,,,True
-3574,Lobatse,20,0,,,True
-3577,Opala,20,0,False,,
-3578,Tulus,20,0,,,True
-3579,Komani (Queenstown),20,0,,,True
-3580,,20,0,False,,
-3582,Kaoma,320,0,,,True
-3583,Um Danga,20,0,False,,
-3584,Mmopane,20,0,,,True
-3586,Kabinda,20,0,,,True
-3587,Gaborone,20,0,,,True
+3552,Makhanda (Grahamstown),20,0,,,TRUE
+3555,Aketi,20,0,,,TRUE
+3556,,20,0,,,TRUE
+3558,Kanye,20,0,,,TRUE
+3560,Ngandajika,40,0,,,TRUE
+3561,Kas,20,0,,,TRUE
+3563,Mafikeng,20,0,,,TRUE
+3566,Ed Al Fursan,20,0,,,TRUE
+3568,Kanyama,20,0,,,TRUE
+3571,Bloemfontein,20,0,,,TRUE
+3573,Mwinilunga,160,0,,,TRUE
+3574,Lobatse,20,0,,,TRUE
+3577,Opala,20,0,FALSE,,
+3578,Tulus,20,0,,,TRUE
+3579,Komani (Queenstown),20,0,,,TRUE
+3580,,20,0,FALSE,,
+3582,Kaoma,320,0,,,TRUE
+3583,Um Danga,20,0,FALSE,,
+3584,Mmopane,20,0,,,TRUE
+3586,Kabinda,20,0,,,TRUE
+3587,Gaborone,20,0,,,TRUE
 3590,,20,0,,,
 3593,Jidad,20,0,,,
-3595,Botshabelo Rural,20,0,,,True
-3596,Nyala,20,0,,,True
-3597,Botshabelo,20,0,,,True
-3601,Marsa Matruh?,20,0,,,True
-3602,Buta,20,0,,,True
-3605,Jouberton,20,0,,,True
-3607,Uitkomsdal,20,0,,,True
-3608,Kutlwanong,20,0,,,True
-3610,Kamina,20,0,,,True
-3611,Bronville,40,0,,,True
-3612,Lilian Ngoyi Village,20,0,,,True
-3614,Buram,20,0,,,True
-3615,Al-Fashir,20,0,,,True
-3617,East London,20,0,,,True
-3621,Mellit,20,0,,,True
-3622,Livingstone,160,0,,,True
-3624,Kolwezi,40,0,,,True
-3625,Kisangani,20,0,,,True
-3627,Potchefstroom,20,0,,,True
-3629,Shearia,20,0,False,,
-3630,Kroonstad,20,0,,,True
-3631,Maseru,20,0,,,True
-3632,Banalia,20,0,,,True
-3633,Umm Siado??,20,0,False,,
-3634,,20,0,False,,
-3636,Ubundu,20,0,,,True
-3637,Itezhi-Tezhi,20,0,,,True
-3638,Kabongo,20,0,,,True
-3640,Kabondo-Dianda,20,0,,,True
-3641,Kabongo,20,0,,,True
-3642,Raja,80,0,,,True
-3644,Rustenburg,20,0,,,True
-3645,Khutsong,20,0,,,True
-3648,,20,0,False,,
-3649,Paardekraal,20,0,False,,
-3650,Luena,40,0,,,True
-3652,Lubao,20,0,,,True
-3653,Kalomo,20,0,,,True
-3658,Ad Da'ein,20,0,,,True
-3659,Palapye,20,0,,,True
-3660,Ango,20,0,,,True
-3662,Kitenge,20,0,,,True
-3663,Kindu,20,0,,,True
-3664,Abu Matarig,20,0,False,,
-3665,Stesa AH,40,0,,,True
+3595,Botshabelo Rural,20,0,,,TRUE
+3596,Nyala,20,0,,,TRUE
+3597,Botshabelo,20,0,,,TRUE
+3601,Marsa Matruh?,20,0,,,TRUE
+3602,Buta,20,0,,,TRUE
+3605,Jouberton,20,0,,,TRUE
+3607,Uitkomsdal,20,0,,,TRUE
+3608,Kutlwanong,20,0,,,TRUE
+3610,Kamina,20,0,,,TRUE
+3611,Bronville,40,0,,,TRUE
+3612,Lilian Ngoyi Village,20,0,,,TRUE
+3614,Buram,20,0,,,TRUE
+3615,Al-Fashir,20,0,,,TRUE
+3617,East London,20,0,,,TRUE
+3621,Mellit,20,0,,,TRUE
+3622,Livingstone,160,0,,,TRUE
+3624,Kolwezi,40,0,,,TRUE
+3625,Kisangani,20,0,,,TRUE
+3627,Potchefstroom,20,0,,,TRUE
+3629,Shearia,20,0,FALSE,,
+3630,Kroonstad,20,0,,,TRUE
+3631,Maseru,20,0,,,TRUE
+3632,Banalia,20,0,,,TRUE
+3633,Umm Siado??,20,0,FALSE,,
+3634,,20,0,FALSE,,
+3636,Ubundu,20,0,,,TRUE
+3637,Itezhi-Tezhi,20,0,,,TRUE
+3638,Kabongo,20,0,,,TRUE
+3640,Kabondo-Dianda,20,0,,,TRUE
+3641,Kabongo,20,0,,,TRUE
+3642,Raja,80,0,,,TRUE
+3644,Rustenburg,20,0,,,TRUE
+3645,Khutsong,20,0,,,TRUE
+3648,,20,0,FALSE,,
+3649,Paardekraal,20,0,FALSE,,
+3650,Luena,40,0,,,TRUE
+3652,Lubao,20,0,,,TRUE
+3653,Kalomo,20,0,,,TRUE
+3658,Ad Da'ein,20,0,,,TRUE
+3659,Palapye,20,0,,,TRUE
+3660,Ango,20,0,,,TRUE
+3662,Kitenge,20,0,,,TRUE
+3663,Kindu,20,0,,,TRUE
+3664,Abu Matarig,20,0,FALSE,,
+3665,Stesa AH,40,0,,,TRUE
 3666,,20,0,,,
-3667,Vanderbijlpark,20,0,,,True
-3668,Modderspruit,20,0,,,True
-3669,Sasolburg,20,0,,,True
-3671,Azaadville,20,0,,,True
-3672,Evaton,20,0,,,True
-3673,Johannesburg,20,0,,,True
-3676,Solwezi,80,0,,,True
-3677,Lenasia South,20,0,,,True
-3678,Lenasia,20,0,,,True
-3679,Fungurume,20,0,,,True
-3681,Wheielers farm settlement,20,0,,,True
-3683,Kakanda,20,0,,,True
+3667,Vanderbijlpark,20,0,,,TRUE
+3668,Modderspruit,20,0,,,TRUE
+3669,Sasolburg,20,0,,,TRUE
+3671,Azaadville,20,0,,,TRUE
+3672,Evaton,20,0,,,TRUE
+3673,Johannesburg,20,0,,,TRUE
+3676,Solwezi,80,0,,,TRUE
+3677,Lenasia South,20,0,,,TRUE
+3678,Lenasia,20,0,,,TRUE
+3679,Fungurume,20,0,,,TRUE
+3681,Wheielers farm settlement,20,0,,,TRUE
+3683,Kakanda,20,0,,,TRUE
 3685,,20,0,,,
-3689,Ga-Rankuwa,20,0,,,True
-3690,Bethlehem,20,0,,,True
-3691,,20,0,False,,
-3692,Umm Kadadah,20,0,False,,
-3693,Diepsloot,20,0,,,True
-3695,Kikondja,20,0,,,True
-3696,Choma,40,0,,,True
-3697,Klipgat,20,0,,,True
-3698,Pretoria,20,0,,,True
-3699,Kambove,20,0,,,True
-3700,Midrand,20,0,,,True
-3703,Samba,20,0,,,True
-3704,Mnandi A.H.,20,0,,,True
-3705,,20,0,False,,
-3706,Francistown,20,0,,,True
-3707,Centurion,20,0,,,True
-3709,Likasi,20,0,,,True
+3689,Ga-Rankuwa,20,0,,,TRUE
+3690,Bethlehem,20,0,,,TRUE
+3691,,20,0,FALSE,,
+3692,Umm Kadadah,20,0,FALSE,,
+3693,Diepsloot,20,0,,,TRUE
+3695,Kikondja,20,0,,,TRUE
+3696,Choma,40,0,,,TRUE
+3697,Klipgat,20,0,,,TRUE
+3698,Pretoria,20,0,,,TRUE
+3699,Kambove,20,0,,,TRUE
+3700,Midrand,20,0,,,TRUE
+3703,Samba,20,0,,,TRUE
+3704,Mnandi A.H.,20,0,,,TRUE
+3705,,20,0,FALSE,,
+3706,Francistown,20,0,,,TRUE
+3707,Centurion,20,0,,,TRUE
+3709,Likasi,20,0,,,TRUE
 3710,,20,0,,,
-3711,Punia,20,0,,,True
-3713,,20,0,False,,
-3714,,20,0,,,True
-3716,Lwambo,20,0,,,True
-3717,Mumbwa,160,0,,,True
-3718,Tsakane,20,0,,,True
-3719,De Rust Caravan Park,20,0,,,True
-3721,Daveyton,20,0,,,True
-3722,Phuthaditjhaba,20,0,,,True
-3724,Lubutu,20,0,False,,
-3726,Kasongo,20,0,,,True
-3727,Malemba Nkulu,20,0,,,True
-3728,Kingombe,20,0,,,True
-3730,Adiela,20,0,False,,
-3732,Mukanga,20,0,False,,
+3711,Punia,20,0,,,TRUE
+3713,,20,0,FALSE,,
+3714,,20,0,,,TRUE
+3716,Lwambo,20,0,,,TRUE
+3717,Mumbwa,160,0,,,TRUE
+3718,Tsakane,20,0,,,TRUE
+3719,De Rust Caravan Park,20,0,,,TRUE
+3721,Daveyton,20,0,,,TRUE
+3722,Phuthaditjhaba,20,0,,,TRUE
+3724,Lubutu,20,0,FALSE,,
+3726,Kasongo,20,0,,,TRUE
+3727,Malemba Nkulu,20,0,,,TRUE
+3728,Kingombe,20,0,,,TRUE
+3730,Adiela,20,0,FALSE,,
+3732,Mukanga,20,0,FALSE,,
 3733,Gwaai,20,0,,,
-3736,Monze,160,0,,,True
-3740,Kabalo,20,0,,,True
-3741,Ankoro,20,0,,,True
-3742,Mulongo,20,0,,,True
-3745,Mukubu,20,0,,,True
-3746,Kipushi,20,0,,,True
+3736,Monze,160,0,,,TRUE
+3740,Kabalo,20,0,,,TRUE
+3741,Ankoro,20,0,,,TRUE
+3742,Mulongo,20,0,,,TRUE
+3745,Mukubu,20,0,,,TRUE
+3746,Kipushi,20,0,,,TRUE
 3747,,20,0,,,
-3748,Kongolo,20,0,,,True
-3749,Mwadingusha,20,0,,,True
-3750,Ghubaysh,20,0,,,True
-3751,Alexandria,20,0,,,True
-3752,Kyolo,20,0,,,True
-3753,KwaMhlanga,20,0,,,True
-3756,Lubumbashi,20,0,,,True
-3758,Wamaza,20,0,,,True
-3759,Mazabuka,320,0,,,True
-3760,Ermil Post,20,0,False,,
-3761,eMbalenhle,20,0,,,True
-3764,Standerton,20,0,,,True
-3765,Aweil,20,0,,,True
-3766,Mpose,20,0,,,True
-3767,Manono,20,0,,,True
-3768,Vosman,20,0,,,True
-3771,,20,0,,,True
-3773,Shabunda,20,0,,,True
-3774,Emalahleni,20,0,,,True
-3776,Mokopane,20,0,,,True
-3777,Bulawayo,80,0,,,True
-3778,Tambura,20,0,False,,
-3779,Ezo,20,0,False,,
-3780,Kasumbalesa,20,0,,,True
-3782,Hamrat El Sheikh,20,0,False,,
-3783,Umm Badr,20,0,False,,
-3784,Malualkon,20,0,False,,
-3785,Chililabombwe,320,0,,,True
-3786,Chingola,320,0,,,True
-3787,Muglad,20,0,,,True
-3789,Idku,20,0,,,True
-3790,Babanusah,20,0,,,True
-3792,Kafue,160,0,,,True
-3793,Abu Huminus,20,0,,,True
-3794,Izbat Bahnasi,20,0,False,,
-3796,Hawsh Isa,20,0,,,True
-3798,Lusaka,20,0,,,True
-3799,Middelburg,20,0,,,True
-3800,Rosetta,20,0,,,True
-3801,Ezakheni,20,0,,,True
-3803,Isiro,20,0,,,True
-3804,Damanhur,20,0,,,True
-3806,Mutubis,20,0,,,True
-3807,Fuwah,20,0,,,True
+3748,Kongolo,20,0,,,TRUE
+3749,Mwadingusha,20,0,,,TRUE
+3750,Ghubaysh,20,0,,,TRUE
+3751,Alexandria,20,0,,,TRUE
+3752,Kyolo,20,0,,,TRUE
+3753,KwaMhlanga,20,0,,,TRUE
+3756,Lubumbashi,20,0,,,TRUE
+3758,Wamaza,20,0,,,TRUE
+3759,Mazabuka,320,0,,,TRUE
+3760,Ermil Post,20,0,FALSE,,
+3761,eMbalenhle,20,0,,,TRUE
+3764,Standerton,20,0,,,TRUE
+3765,Aweil,20,0,,,TRUE
+3766,Mpose,20,0,,,TRUE
+3767,Manono,20,0,,,TRUE
+3768,Vosman,20,0,,,TRUE
+3771,,20,0,,,TRUE
+3773,Shabunda,20,0,,,TRUE
+3774,Emalahleni,20,0,,,TRUE
+3776,Mokopane,20,0,,,TRUE
+3777,Bulawayo,80,0,,,TRUE
+3778,Tambura,20,0,FALSE,,
+3779,Ezo,20,0,FALSE,,
+3780,Kasumbalesa,20,0,,,TRUE
+3782,Hamrat El Sheikh,20,0,FALSE,,
+3783,Umm Badr,20,0,FALSE,,
+3784,Malualkon,20,0,FALSE,,
+3785,Chililabombwe,320,0,,,TRUE
+3786,Chingola,320,0,,,TRUE
+3787,Muglad,20,0,,,TRUE
+3789,Idku,20,0,,,TRUE
+3790,Babanusah,20,0,,,TRUE
+3792,Kafue,160,0,,,TRUE
+3793,Abu Huminus,20,0,,,TRUE
+3794,Izbat Bahnasi,20,0,FALSE,,
+3796,Hawsh Isa,20,0,,,TRUE
+3798,Lusaka,20,0,,,TRUE
+3799,Middelburg,20,0,,,TRUE
+3800,Rosetta,20,0,,,TRUE
+3801,Ezakheni,20,0,,,TRUE
+3803,Isiro,20,0,,,TRUE
+3804,Damanhur,20,0,,,TRUE
+3806,Mutubis,20,0,,,TRUE
+3807,Fuwah,20,0,,,TRUE
 3810,Akon,20,0,,,
-3811,Kitwe,80,0,,,True
-3812,Edendale,20,0,,,True
-3813,Delingat,20,0,,,True
-3814,Polokwane,20,0,,,True
-3815,Kuajok,20,0,False,,
-3816,Al Zayyatin al Qibliyah,20,0,,,True
-3817,Desouk,20,0,,,True
-3818,Mufulira,320,0,,,True
-3819,Wau,80,0,,,True
-3820,Sadat City,20,0,,,True
-3821,Osizweni,40,0,,,True
-3822,Kabwe,320,0,,,True
-3823,Pietermaritzburg,20,0,,,True
-3824,Mubi,20,0,False,,
-3827,Itay el-Barud,20,0,,,True
-3828,Shubra Khit,20,0,,,True
-3830,Ezbet Ahmad al Ballasi,20,0,,,True
-3831,Nyunzu,20,0,,,True
-3832,Nkayi,20,0,False,,
-3834,Al Balakus,20,0,,,True
-3836,Luanshya,640,0,,,True
-3838,Ermelo,20,0,,,True
-3840,Kafr Al-Zaiyat,20,0,,,True
-3841,Qaryat Salah al Din,20,0,,,True
-3842,En Nahud,20,0,,,True
-3844,Geziret Nikla,20,0,,,True
-3845,Al Kafr al Bahri,20,0,,,True
-3846,Mpumalanga,20,0,,,True
-3847,Walikale,20,0,False,,
-3848,Kafr Dinshawai,20,0,,,True
-3849,Kahk al Qibliya,20,0,,,True
-3850,Kafr Al-Sheikh,20,0,,,True
-3851,,20,0,False,,
-3852,Elila,20,0,False,,
-3854,Kilwa,20,0,,,True
-3855,Mankweng,20,0,,,True
-3856,Birma,20,0,,,True
-3857,Qotur,20,0,,,True
-3858,Shamma,20,0,,,True
-3859,Ndola,160,0,,,True
-3860,Kapiri Mposhi,80,0,,,True
-3861,Tala,20,0,,,True
-3862,Faiyum,20,0,,,True
-3863,Kamituga,20,0,,,True
-3864,Nembudziya,20,0,False,,
-3867,Manuf,20,0,,,True
-3868,Durban,20,0,,,True
-3869,Tanta,20,0,,,True
-3870,Al-Gharaq,20,0,,,True
-3871,Nzara,20,0,,,True
-3872,Shunufa,20,0,,,True
-3873,Turalei,20,0,False,,
+3811,Kitwe,80,0,,,TRUE
+3812,Edendale,20,0,,,TRUE
+3813,Delingat,20,0,,,TRUE
+3814,Polokwane,20,0,,,TRUE
+3815,Kuajok,20,0,FALSE,,
+3816,Al Zayyatin al Qibliyah,20,0,,,TRUE
+3817,Desouk,20,0,,,TRUE
+3818,Mufulira,320,0,,,TRUE
+3819,Wau,80,0,,,TRUE
+3820,Sadat City,20,0,,,TRUE
+3821,Osizweni,40,0,,,TRUE
+3822,Kabwe,320,0,,,TRUE
+3823,Pietermaritzburg,20,0,,,TRUE
+3824,Mubi,20,0,FALSE,,
+3827,Itay el-Barud,20,0,,,TRUE
+3828,Shubra Khit,20,0,,,TRUE
+3830,Ezbet Ahmad al Ballasi,20,0,,,TRUE
+3831,Nyunzu,20,0,,,TRUE
+3832,Nkayi,20,0,FALSE,,
+3834,Al Balakus,20,0,,,TRUE
+3836,Luanshya,640,0,,,TRUE
+3838,Ermelo,20,0,,,TRUE
+3840,Kafr Al-Zaiyat,20,0,,,TRUE
+3841,Qaryat Salah al Din,20,0,,,TRUE
+3842,En Nahud,20,0,,,TRUE
+3844,Geziret Nikla,20,0,,,TRUE
+3845,Al Kafr al Bahri,20,0,,,TRUE
+3846,Mpumalanga,20,0,,,TRUE
+3847,Walikale,20,0,FALSE,,
+3848,Kafr Dinshawai,20,0,,,TRUE
+3849,Kahk al Qibliya,20,0,,,TRUE
+3850,Kafr Al-Sheikh,20,0,,,TRUE
+3851,,20,0,FALSE,,
+3852,Elila,20,0,FALSE,,
+3854,Kilwa,20,0,,,TRUE
+3855,Mankweng,20,0,,,TRUE
+3856,Birma,20,0,,,TRUE
+3857,Qotur,20,0,,,TRUE
+3858,Shamma,20,0,,,TRUE
+3859,Ndola,160,0,,,TRUE
+3860,Kapiri Mposhi,80,0,,,TRUE
+3861,Tala,20,0,,,TRUE
+3862,Faiyum,20,0,,,TRUE
+3863,Kamituga,20,0,,,TRUE
+3864,Nembudziya,20,0,FALSE,,
+3867,Manuf,20,0,,,TRUE
+3868,Durban,20,0,,,TRUE
+3869,Tanta,20,0,,,TRUE
+3870,Al-Gharaq,20,0,,,TRUE
+3871,Nzara,20,0,,,TRUE
+3872,Shunufa,20,0,,,TRUE
+3873,Turalei,20,0,FALSE,,
 3874,,20,0,,,
-3875,Mit Musa,20,0,,,True
-3876,Tutun,20,0,,,True
-3877,Shibin Al-Kom,20,0,,,True
-3878,Ashmoun,20,0,,,True
-3880,Mehallet Roh,20,0,,,True
-3881,6th of October,20,0,False,,
-3882,Shimm al Basal al Bahari,20,0,,,True
-3883,Daquf,20,0,,,True
-3884,Manqa??n,20,0,,,True
-3885,Atsa,20,0,,,True
-3886,Sunbat,20,0,,,True
-3887,Garawan,20,0,,,True
-3888,Sandafa al Far,20,0,,,True
-3889,El Mahalla El Kubra,20,0,,,True
-3891,Kafr al Hajj Daud,20,0,,,True
-3892,Bani Munayn,20,0,,,True
-3893,Shushah,20,0,,,True
-3894,Yambio,20,0,,,True
-3895,Al-Santa,20,0,,,True
-3896,Sinnuris,20,0,,,True
-3897,Naj Abd Allah Abd al Jawwad,20,0,,,True
-3898,Mahdiyah,20,0,,,True
-3899,Mutabi,20,0,,,True
-3900,Kasenga,20,0,,,True
-3901,Kafr Awn,20,0,,,True
-3902,Cairo,20,0,,,True
-3903,T?wah Ban? Ibr?h?m,20,0,,,True
-3904,Kafr Sarawa,20,0,,,True
-3905,Samalut,20,0,,,True
-3906,Dirin,20,0,,,True
-3907,Shubra Millis,20,0,,,True
-3908,Quwaysina,20,0,,,True
-3909,Al Ikhsas,20,0,,,True
-3910,Damshir,20,0,,,True
-3911,Al Manshiyah al Qibliyah,20,0,,,True
-3912,Abu Sir Bana,20,0,,,True
-3913,Banha,20,0,,,True
-3914,Nazlet Abu Haseiba,20,0,,,True
-3915,Al-Minya,20,0,,,True
-3916,Kafr al Bashbishah,20,0,,,True
-3917,Tukh,20,0,,,True
-3918,Maghagheh,20,0,,,True
-3919,Kafr al Arab,20,0,,,True
-3920,Mit Ghamr,20,0,,,True
-3921,Aghour Al-Kubra,20,0,,,True
-3922,Beni Mazar,20,0,,,True
-3923,Aga,20,0,,,True
-3924,Nazlat Dahrut,20,0,,,True
-3925,Ihnasya al Madinah,20,0,,,True
-3926,Bilqas,20,0,,,True
-3927,Mansoura,20,0,,,True
-3928,Fashn,20,0,,,True
-3929,Nazlet Husein Ali,20,0,,,True
-3930,Nazlet al Saadna,20,0,,,True
-3931,Warrap,20,0,False,,
-3933,Kafr al Sharaqwah,20,0,,,True
-3934,Hour,20,0,,,True
-3935,Awlad Sarhan,20,0,,,True
-3936,Al Inab al Saghirah,20,0,,,True
-3937,Minshat al Maghaliqah,20,0,,,True
-3938,Nchelenge,640,0,,,True
-3939,Atmeeda,20,0,,,True
-3940,Tongaat,20,0,,,True
-3942,Dundet,20,0,,,True
-3943,Nazlet al Sibaat,20,0,,,True
-3944,Biba,20,0,,,True
-3945,Dungu,20,0,,,True
-3947,Kafr al Dayr,20,0,,,True
-3948,Abu Qurqas,20,0,,,True
-3949,Naj al Shaykh Hasan Abu Sabir,20,0,,,True
-3950,Kardida,20,0,,,True
-3951,Ghayyadah al Gharbiyah,20,0,,,True
-3952,Sawdiri,20,0,,,True
-3953,Mansa,80,0,,,True
-3954,Zayyan,20,0,,,True
-3956,Kafr al Hajj Shirbini,20,0,,,True
-3957,Beni Suef,20,0,,,True
-3958,Aby?h?,20,0,,,True
-3959,Gimmeizet Bilgai,20,0,,,True
-3960,Minya Al-Qamh,20,0,,,True
-3961,Kafr al Dabbusi,20,0,,,True
-3962,Safur,20,0,,,True
+3875,Mit Musa,20,0,,,TRUE
+3876,Tutun,20,0,,,TRUE
+3877,Shibin Al-Kom,20,0,,,TRUE
+3878,Ashmoun,20,0,,,TRUE
+3880,Mehallet Roh,20,0,,,TRUE
+3881,6th of October,20,0,FALSE,,
+3882,Shimm al Basal al Bahari,20,0,,,TRUE
+3883,Daquf,20,0,,,TRUE
+3884,Manqa??n,20,0,,,TRUE
+3885,Atsa,20,0,,,TRUE
+3886,Sunbat,20,0,,,TRUE
+3887,Garawan,20,0,,,TRUE
+3888,Sandafa al Far,20,0,,,TRUE
+3889,El Mahalla El Kubra,20,0,,,TRUE
+3891,Kafr al Hajj Daud,20,0,,,TRUE
+3892,Bani Munayn,20,0,,,TRUE
+3893,Shushah,20,0,,,TRUE
+3894,Yambio,20,0,,,TRUE
+3895,Al-Santa,20,0,,,TRUE
+3896,Sinnuris,20,0,,,TRUE
+3897,Naj Abd Allah Abd al Jawwad,20,0,,,TRUE
+3898,Mahdiyah,20,0,,,TRUE
+3899,Mutabi,20,0,,,TRUE
+3900,Kasenga,20,0,,,TRUE
+3901,Kafr Awn,20,0,,,TRUE
+3902,Cairo,20,0,,,TRUE
+3903,T?wah Ban? Ibr?h?m,20,0,,,TRUE
+3904,Kafr Sarawa,20,0,,,TRUE
+3905,Samalut,20,0,,,TRUE
+3906,Dirin,20,0,,,TRUE
+3907,Shubra Millis,20,0,,,TRUE
+3908,Quwaysina,20,0,,,TRUE
+3909,Al Ikhsas,20,0,,,TRUE
+3910,Damshir,20,0,,,TRUE
+3911,Al Manshiyah al Qibliyah,20,0,,,TRUE
+3912,Abu Sir Bana,20,0,,,TRUE
+3913,Banha,20,0,,,TRUE
+3914,Nazlet Abu Haseiba,20,0,,,TRUE
+3915,Al-Minya,20,0,,,TRUE
+3916,Kafr al Bashbishah,20,0,,,TRUE
+3917,Tukh,20,0,,,TRUE
+3918,Maghagheh,20,0,,,TRUE
+3919,Kafr al Arab,20,0,,,TRUE
+3920,Mit Ghamr,20,0,,,TRUE
+3921,Aghour Al-Kubra,20,0,,,TRUE
+3922,Beni Mazar,20,0,,,TRUE
+3923,Aga,20,0,,,TRUE
+3924,Nazlat Dahrut,20,0,,,TRUE
+3925,Ihnasya al Madinah,20,0,,,TRUE
+3926,Bilqas,20,0,,,TRUE
+3927,Mansoura,20,0,,,TRUE
+3928,Fashn,20,0,,,TRUE
+3929,Nazlet Husein Ali,20,0,,,TRUE
+3930,Nazlet al Saadna,20,0,,,TRUE
+3931,Warrap,20,0,FALSE,,
+3933,Kafr al Sharaqwah,20,0,,,TRUE
+3934,Hour,20,0,,,TRUE
+3935,Awlad Sarhan,20,0,,,TRUE
+3936,Al Inab al Saghirah,20,0,,,TRUE
+3937,Minshat al Maghaliqah,20,0,,,TRUE
+3938,Nchelenge,640,0,,,TRUE
+3939,Atmeeda,20,0,,,TRUE
+3940,Tongaat,20,0,,,TRUE
+3942,Dundet,20,0,,,TRUE
+3943,Nazlet al Sibaat,20,0,,,TRUE
+3944,Biba,20,0,,,TRUE
+3945,Dungu,20,0,,,TRUE
+3947,Kafr al Dayr,20,0,,,TRUE
+3948,Abu Qurqas,20,0,,,TRUE
+3949,Naj al Shaykh Hasan Abu Sabir,20,0,,,TRUE
+3950,Kardida,20,0,,,TRUE
+3951,Ghayyadah al Gharbiyah,20,0,,,TRUE
+3952,Sawdiri,20,0,,,TRUE
+3953,Mansa,80,0,,,TRUE
+3954,Zayyan,20,0,,,TRUE
+3956,Kafr al Hajj Shirbini,20,0,,,TRUE
+3957,Beni Suef,20,0,,,TRUE
+3958,Aby?h?,20,0,,,TRUE
+3959,Gimmeizet Bilgai,20,0,,,TRUE
+3960,Minya Al-Qamh,20,0,,,TRUE
+3961,Kafr al Dabbusi,20,0,,,TRUE
+3962,Safur,20,0,,,TRUE
 3963,Karhuliza II,20,0,,,
-3964,Kafr al Shurafa al Qibli,20,0,,,True
-3965,Mallawi,20,0,,,True
-3966,Dairut,20,0,,,True
-3967,El Senbellawein City,20,0,,,True
-3968,Al-Zaqaziq?,20,0,,,True
-3969,Qaland?l,20,0,,,True
-3970,Markaz Deir Mawas,20,0,,,True
-3971,Diyarb al Suq,20,0,,,True
-3972,Al Ayyat,20,0,,,True
-3973,Bush,20,0,,,True
-3974,Minyat Sultan,20,0,,,True
-3975,Al-Wasitah,20,0,,,True
-3976,Misisi,20,0,False,,
-3977,Izbat Abu Sir,20,0,,,True
-3978,Nazlet al Barsha,20,0,,,True
-3979,Walungu,20,0,,,True
-3980,Kafr Ismail,20,0,,,True
-3981,Al Saff,20,0,,,True
-3982,Gweru,40,0,,,True
-3983,Al-Qobabat,20,0,,,True
-3984,Nazlet Rimeih,20,0,,,True
-3985,Pinga,20,0,,,True
-3986,Izbat al Hawwashah,20,0,,,True
-3987,Pweto,20,0,,,True
-3988,Stanger,20,0,,,True
-3989,El Showeifat District,20,0,False,,
+3964,Kafr al Shurafa al Qibli,20,0,,,TRUE
+3965,Mallawi,20,0,,,TRUE
+3966,Dairut,20,0,,,TRUE
+3967,El Senbellawein City,20,0,,,TRUE
+3968,Al-Zaqaziq?,20,0,,,TRUE
+3969,Qaland?l,20,0,,,TRUE
+3970,Markaz Deir Mawas,20,0,,,TRUE
+3971,Diyarb al Suq,20,0,,,TRUE
+3972,Al Ayyat,20,0,,,TRUE
+3973,Bush,20,0,,,TRUE
+3974,Minyat Sultan,20,0,,,TRUE
+3975,Al-Wasitah,20,0,,,TRUE
+3976,Misisi,20,0,FALSE,,
+3977,Izbat Abu Sir,20,0,,,TRUE
+3978,Nazlet al Barsha,20,0,,,TRUE
+3979,Walungu,20,0,,,TRUE
+3980,Kafr Ismail,20,0,,,TRUE
+3981,Al Saff,20,0,,,TRUE
+3982,Gweru,40,0,,,TRUE
+3983,Al-Qobabat,20,0,,,TRUE
+3984,Nazlet Rimeih,20,0,,,TRUE
+3985,Pinga,20,0,,,TRUE
+3986,Izbat al Hawwashah,20,0,,,TRUE
+3987,Pweto,20,0,,,TRUE
+3988,Stanger,20,0,,,TRUE
+3989,El Showeifat District,20,0,FALSE,,
 3990,Vanguard Mine,20,0,,,
-3991,Al Daraksa,20,0,,,True
-3992,Al Halawat,20,0,,,True
-3993,Al Bustan,20,0,,,True
-3994,Beni Adi,20,0,,,True
-3995,An Nazlah,20,0,,,True
-3996,Bilbeis,20,0,,,True
-3997,Al Lagowa,20,0,,,True
-3998,Mazrub,20,0,,,True
-3999,Mululu,20,0,,,True
-4000,Damietta,20,0,,,True
-4001,Kwekwe,40,0,,,True
-4003,Kafr Haggag,20,0,,,True
-4004,Abu Kabir?,20,0,,,True
-4005,Abu Zabad,20,0,,,True
-4006,Katana centre,20,0,False,,
-4007,Bukavu,20,0,,,True
-4008,Nazlet al Khalayfa,20,0,,,True
-4010,Mbizo,160,0,,,True
-4011,Kandekere,20,0,False,,
-4012,A? ?aw?b?yah,20,0,,,True
-4013,Rubaya,20,0,False,,
-4014,Bishasha,20,0,False,,
-4015,Numbi,20,0,False,,
-4016,Zacharia,20,0,False,,
-4017,Mkushi,160,0,,,True
-4018,Qism Auwal Faqus,20,0,,,True
-4021,Chakari,20,0,False,,
-4022,Mayom,20,0,False,,
-4023,Kadoma,40,0,,,True
-4025,Kawm Abu Shil,20,0,,,True
-4026,Al Gharabwa,20,0,,,True
-4027,Asyut,20,0,,,True
-4029,Al-Manzala,20,0,,,True
-4030,Kafr al Rabaya,20,0,,,True
-4032,9th,20,0,False,,
-4033,Kamanyola,20,0,,,True
-4034,Tall al Zahirah,20,0,,,True
+3991,Al Daraksa,20,0,,,TRUE
+3992,Al Halawat,20,0,,,TRUE
+3993,Al Bustan,20,0,,,TRUE
+3994,Beni Adi,20,0,,,TRUE
+3995,An Nazlah,20,0,,,TRUE
+3996,Bilbeis,20,0,,,TRUE
+3997,Al Lagowa,20,0,,,TRUE
+3998,Mazrub,20,0,,,TRUE
+3999,Mululu,20,0,,,TRUE
+4000,Damietta,20,0,,,TRUE
+4001,Kwekwe,40,0,,,TRUE
+4003,Kafr Haggag,20,0,,,TRUE
+4004,Abu Kabir?,20,0,,,TRUE
+4005,Abu Zabad,20,0,,,TRUE
+4006,Katana centre,20,0,FALSE,,
+4007,Bukavu,20,0,,,TRUE
+4008,Nazlet al Khalayfa,20,0,,,TRUE
+4010,Mbizo,160,0,,,TRUE
+4011,Kandekere,20,0,FALSE,,
+4012,A? ?aw?b?yah,20,0,,,TRUE
+4013,Rubaya,20,0,FALSE,,
+4014,Bishasha,20,0,FALSE,,
+4015,Numbi,20,0,FALSE,,
+4016,Zacharia,20,0,FALSE,,
+4017,Mkushi,160,0,,,TRUE
+4018,Qism Auwal Faqus,20,0,,,TRUE
+4021,Chakari,20,0,FALSE,,
+4022,Mayom,20,0,FALSE,,
+4023,Kadoma,40,0,,,TRUE
+4025,Kawm Abu Shil,20,0,,,TRUE
+4026,Al Gharabwa,20,0,,,TRUE
+4027,Asyut,20,0,,,TRUE
+4029,Al-Manzala,20,0,,,TRUE
+4030,Kafr al Rabaya,20,0,,,TRUE
+4032,9th,20,0,FALSE,,
+4033,Kamanyola,20,0,,,TRUE
+4034,Tall al Zahirah,20,0,,,TRUE
 4035,,20,0,,,
-4036,,20,0,False,,
-4038,Butondo,20,0,,,True
-4039,Mambasa,20,0,,,True
-4040,Baraka,20,0,,,True
-4041,Al Nazla,20,0,,,True
-4042,Sake,20,0,,,True
-4043,Rugombo,20,0,,,True
-4044,Mugina,20,0,False,,
-4045,Kalemie,20,0,,,True
-4046,Kafr al Hawi,20,0,,,True
-4047,Uvira,20,0,,,True
-4048,Dayr Abu Maqrufah,20,0,,,True
-4049,Abu Tig,20,0,,,True
-4051,???????,40,0,,,True
-4052,Goma,20,0,,,True
-4053,Buganda,40,0,,,True
-4054,Nazlet Sheikh Shihata,20,0,,,True
-4055,Kirumba,20,0,,,True
-4056,Kanyabayonga,20,0,,,True
-4057,Murwi,20,0,False,,
-4058,Nazlet al Mughrebi,20,0,,,True
-4059,Kitumbiro,20,0,False,,
-4060,Samfya,160,0,,,True
-4061,Chegutu,160,0,,,True
-4063,Gatumba,160,0,,,True
-4064,Matsapha,20,0,,,True
-4066,Nazlet Imran Khamis,20,0,,,True
-4067,eHlau-Hlau,160,0,,,True
-4069,Dilling,20,0,,,True
-4070,Salubindza,20,0,,,True
-4071,eGobhoza,80,0,,,True
-4073,Al Badari,20,0,,,True
-4074,Port Said,20,0,,,True
-4075,Tima,20,0,,,True
-4076,,20,0,False,,
-4077,Butembo,20,0,,,True
-4078,Bujumbura,20,0,,,True
-4079,Kipese,20,0,,,True
-4080,Manzini,20,0,,,True
-4081,Al Ismailiya,20,0,,,True
-4082,Buyenzi,20,0,False,,
-4084,Chinhoyi,40,0,,,True
-4086,Fazarah bil Qaryah,20,0,,,True
-4087,Nyundo,160,0,,,True
-4088,Tahma,20,0,,,True
+4036,,20,0,FALSE,,
+4038,Butondo,20,0,,,TRUE
+4039,Mambasa,20,0,,,TRUE
+4040,Baraka,20,0,,,TRUE
+4041,Al Nazla,20,0,,,TRUE
+4042,Sake,20,0,,,TRUE
+4043,Rugombo,20,0,,,TRUE
+4044,Mugina,20,0,FALSE,,
+4045,Kalemie,20,0,,,TRUE
+4046,Kafr al Hawi,20,0,,,TRUE
+4047,Uvira,20,0,,,TRUE
+4048,Dayr Abu Maqrufah,20,0,,,TRUE
+4049,Abu Tig,20,0,,,TRUE
+4051,???????,40,0,,,TRUE
+4052,Goma,20,0,,,TRUE
+4053,Buganda,40,0,,,TRUE
+4054,Nazlet Sheikh Shihata,20,0,,,TRUE
+4055,Kirumba,20,0,,,TRUE
+4056,Kanyabayonga,20,0,,,TRUE
+4057,Murwi,20,0,FALSE,,
+4058,Nazlet al Mughrebi,20,0,,,TRUE
+4059,Kitumbiro,20,0,FALSE,,
+4060,Samfya,160,0,,,TRUE
+4061,Chegutu,160,0,,,TRUE
+4063,Gatumba,160,0,,,TRUE
+4064,Matsapha,20,0,,,TRUE
+4066,Nazlet Imran Khamis,20,0,,,TRUE
+4067,eHlau-Hlau,160,0,,,TRUE
+4069,Dilling,20,0,,,TRUE
+4070,Salubindza,20,0,,,TRUE
+4071,eGobhoza,80,0,,,TRUE
+4073,Al Badari,20,0,,,TRUE
+4074,Port Said,20,0,,,TRUE
+4075,Tima,20,0,,,TRUE
+4076,,20,0,FALSE,,
+4077,Butembo,20,0,,,TRUE
+4078,Bujumbura,20,0,,,TRUE
+4079,Kipese,20,0,,,TRUE
+4080,Manzini,20,0,,,TRUE
+4081,Al Ismailiya,20,0,,,TRUE
+4082,Buyenzi,20,0,FALSE,,
+4084,Chinhoyi,40,0,,,TRUE
+4086,Fazarah bil Qaryah,20,0,,,TRUE
+4087,Nyundo,160,0,,,TRUE
+4088,Tahma,20,0,,,TRUE
 4089,King Mine,20,0,,,
-4090,Kaduqli,20,0,,,True
-4091,Bubanza,20,0,,,True
-4092,Sikhalasenkosi,20,0,,,True
-4095,Bwera,20,0,False,,
-4096,Rumonge,20,0,,,True
-4098,Dongola,40,0,,,True
-4099,Beni,20,0,,,True
-4100,Butusande,20,0,,,True
-4101,Musigati,20,0,False,,
-4102,Nyabiraba,20,0,False,,
-4104,Sohag,20,0,,,True
-4105,Isare,20,0,False,,
-4108,Fayed,20,0,,,True
-4109,Maragha,20,0,,,True
-4112,Nida,20,0,,,True
-4113,Oicha,40,0,,,True
+4090,Kaduqli,20,0,,,TRUE
+4091,Bubanza,20,0,,,TRUE
+4092,Sikhalasenkosi,20,0,,,TRUE
+4095,Bwera,20,0,FALSE,,
+4096,Rumonge,20,0,,,TRUE
+4098,Dongola,40,0,,,TRUE
+4099,Beni,20,0,,,TRUE
+4100,Butusande,20,0,,,TRUE
+4101,Musigati,20,0,FALSE,,
+4102,Nyabiraba,20,0,FALSE,,
+4104,Sohag,20,0,,,TRUE
+4105,Isare,20,0,FALSE,,
+4108,Fayed,20,0,,,TRUE
+4109,Maragha,20,0,,,TRUE
+4112,Nida,20,0,,,TRUE
+4113,Oicha,40,0,,,TRUE
 4114,Lundi,20,0,,,
-4116,Kalimva,20,0,,,True
-4117,Rumbek,20,0,,,True
-4118,Nyanza Lac,40,0,,,True
-4119,Bentiu,20,0,False,,
-4120,Kilima Hewa,160,0,,,True
-4121,Nyamilima,20,0,,,True
-4123,Bururi,20,0,False,,
-4124,Muramvya,20,0,False,,
-4125,Ndalama,40,0,,,True
-4126,Kayanza,20,0,,,True
-4127,Makosa,20,0,False,,
-4128,Musanze,80,0,,,True
-4129,Bukeye,20,0,False,,
-4130,Ishasha,20,0,,,True
-4131,Luwingu,80,0,,,True
-4133,Girga,20,0,,,True
+4116,Kalimva,20,0,,,TRUE
+4117,Rumbek,20,0,,,TRUE
+4118,Nyanza Lac,40,0,,,TRUE
+4119,Bentiu,20,0,FALSE,,
+4120,Kilima Hewa,160,0,,,TRUE
+4121,Nyamilima,20,0,,,TRUE
+4123,Bururi,20,0,FALSE,,
+4124,Muramvya,20,0,FALSE,,
+4125,Ndalama,40,0,,,TRUE
+4126,Kayanza,20,0,,,TRUE
+4127,Makosa,20,0,FALSE,,
+4128,Musanze,80,0,,,TRUE
+4129,Bukeye,20,0,FALSE,,
+4130,Ishasha,20,0,,,TRUE
+4131,Luwingu,80,0,,,TRUE
+4133,Girga,20,0,,,TRUE
 4134,,20,0,,,
-4135,Masvingo,160,0,,,True
+4135,Masvingo,160,0,,,TRUE
 4137,Lulimbi,20,0,,,
-4138,Mwaro,20,0,False,,
-4140,Al-Ubayyid,20,0,,,True
-4141,Suez,20,0,,,True
-4143,Huye,320,0,,,True
-4144,Serenje,80,0,,,True
-4145,Norton,80,0,,,True
-4146,Muhanga,640,0,,,True
-4147,Makamba,20,0,,,True
-4149,Muhammad al Askari,20,0,False,,
+4138,Mwaro,20,0,FALSE,,
+4140,Al-Ubayyid,20,0,,,TRUE
+4141,Suez,20,0,,,TRUE
+4143,Huye,320,0,,,TRUE
+4144,Serenje,80,0,,,TRUE
+4145,Norton,80,0,,,TRUE
+4146,Muhanga,640,0,,,TRUE
+4147,Makamba,20,0,,,TRUE
+4149,Muhammad al Askari,20,0,FALSE,,
 4150,,20,0,,,
-4151,Ruhango,80,0,,,True
-4152,Ngozi,20,0,,,True
+4151,Ruhango,80,0,,,TRUE
+4152,Ngozi,20,0,,,TRUE
 4153,Ntabandwa,20,0,,,
-4154,Barah,20,0,,,True
-4155,Naas,20,0,,,True
-4156,Al Sahil Bahari,20,0,,,True
-4157,Aulad Ileiu,20,0,,,True
-4158,Chivhu,40,0,,,True
-4159,Balyana,20,0,,,True
-4160,Gashikanwa,20,0,False,,
+4154,Barah,20,0,,,TRUE
+4155,Naas,20,0,,,TRUE
+4156,Al Sahil Bahari,20,0,,,TRUE
+4157,Aulad Ileiu,20,0,,,TRUE
+4158,Chivhu,40,0,,,TRUE
+4159,Balyana,20,0,,,TRUE
+4160,Gashikanwa,20,0,FALSE,,
 4161,Buraza,20,0,,,
-4163,Gitega,40,0,,,True
-4165,Kayogoro,20,0,False,,
-4166,Rier Market,20,0,,,
-4167,Leer,20,0,False,,
-4168,Rutana,40,0,,,True
-4169,Mutoyi,20,0,False,,
-4171,Harare,40,0,,,True
-4172,Kigali,40,0,,,True
-4173,Ntega,20,0,False,,
+4163,Gitega,40,0,,,TRUE
+4165,Kayogoro,20,0,FALSE,,
+4166,Rier Market,20,0,FALSE,,
+4167,Leer,20,0,FALSE,,
+4168,Rutana,40,0,,,TRUE
+4169,Mutoyi,20,0,FALSE,,
+4171,Harare,40,0,,,TRUE
+4172,Kigali,40,0,,,TRUE
+4173,Ntega,20,0,FALSE,,
 4174,Nyabibuye,20,0,,,
-4176,Naj Kawm Majanin,20,0,,,True
-4177,Mongbwalu,20,0,,,True
-4178,Mvurwi,20,0,,,True
-4179,,20,0,,,
-4180,Musenyi,20,0,False,,
-4183,Bugenyuzi,20,0,False,,
-4184,Murubona,80,0,,,True
-4185,Kasese,160,0,,,True
-4186,Kirundo,20,0,,,True
-4187,Vumbi,20,0,False,,
-4188,Muyange-Gasoho,20,0,False,,
-4189,Chitungwiza,40,0,,,True
-4190,Nag Hammadi,20,0,,,True
-4191,Triangle,20,0,,,True
-4193,Al Rahad,20,0,,,True
+4176,Naj Kawm Majanin,20,0,,,TRUE
+4177,Mongbwalu,20,0,,,TRUE
+4178,Mvurwi,20,0,,,TRUE
+4179,,20,0,FALSE,,
+4180,Musenyi,20,0,FALSE,,
+4183,Bugenyuzi,20,0,FALSE,,
+4184,Murubona,80,0,,,TRUE
+4185,Kasese,160,0,,,TRUE
+4186,Kirundo,20,0,,,TRUE
+4187,Vumbi,20,0,FALSE,,
+4188,Muyange-Gasoho,20,0,FALSE,,
+4189,Chitungwiza,40,0,,,TRUE
+4190,Nag Hammadi,20,0,,,TRUE
+4191,Triangle,20,0,,,TRUE
+4193,Al Rahad,20,0,,,TRUE
 4194,Marembo,20,0,,,
-4196,Kabuga,40,0,,,True
-4197,Eliya,20,0,False,,
-4198,Jerera,20,0,False,,
-4199,Al Salamiyah al Hait,20,0,,,True
-4200,Bunia,20,0,,,True
-4201,Ruyigi,20,0,False,,
-4203,Fort Portal,80,0,,,True
-4205,Chizhanje,320,0,,,True
-4206,Glenclova,20,0,,,
-4208,Ruwa,20,0,False,,
-4209,Abu Manna Gharb,20,0,,,True
-4210,Iga Barriere,20,0,,,True
-4211,Butihinda,20,0,False,,
-4212,Muyinga,20,0,,,True
-4215,Dishna,40,0,,,True
-4217,,20,0,,,True
-4218,Yirol,20,0,False,,
-4219,Makere,20,0,False,,
-4220,Maputo,20,0,,,True
-4221,Kabogo,20,0,False,,
-4222,Bindura,20,0,,,True
-4224,Giteranyi,20,0,False,,
-4225,Armant Al-Waburat,20,0,,,True
-4226,Gisuru,20,0,False,,
+4196,Kabuga,40,0,,,TRUE
+4197,Eliya,20,0,FALSE,,
+4198,Jerera,20,0,FALSE,,
+4199,Al Salamiyah al Hait,20,0,,,TRUE
+4200,Bunia,20,0,,,TRUE
+4201,Ruyigi,20,0,FALSE,,
+4203,Fort Portal,80,0,,,TRUE
+4205,Chizhanje,320,0,,,TRUE
+4206,Glenclova,20,0,FALSE,,
+4208,Ruwa,20,0,FALSE,,
+4209,Abu Manna Gharb,20,0,,,TRUE
+4210,Iga Barriere,20,0,,,TRUE
+4211,Butihinda,20,0,FALSE,,
+4212,Muyinga,20,0,,,TRUE
+4215,Dishna,40,0,,,TRUE
+4217,,20,0,,,TRUE
+4218,Yirol,20,0,FALSE,,
+4219,Makere,20,0,FALSE,,
+4220,Maputo,20,0,,,TRUE
+4221,Kabogo,20,0,FALSE,,
+4222,Bindura,20,0,,,TRUE
+4224,Giteranyi,20,0,FALSE,,
+4225,Armant Al-Waburat,20,0,,,TRUE
+4226,Gisuru,20,0,FALSE,,
 4227,,20,0,,,
-4228,Gatoke,20,0,False,,
-4230,Hod al Salmiya al Qibli al Gharbi,20,0,,,True
-4233,Tod,20,0,,,True
-4235,Cankuzo,20,0,False,,
-4236,Marondera,640,0,,,True
-4238,Naj al Madamud,20,0,,,True
-4239,Isna,20,0,,,True
-4241,Qena,20,0,,,True
-4242,Ezbet Abu Habashi,20,0,,,True
-4243,Luxor,20,0,,,True
+4228,Gatoke,20,0,FALSE,,
+4230,Hod al Salmiya al Qibli al Gharbi,20,0,,,TRUE
+4233,Tod,20,0,,,TRUE
+4235,Cankuzo,20,0,FALSE,,
+4236,Marondera,640,0,,,TRUE
+4238,Naj al Madamud,20,0,,,TRUE
+4239,Isna,20,0,,,TRUE
+4241,Qena,20,0,,,TRUE
+4242,Ezbet Abu Habashi,20,0,,,TRUE
+4243,Luxor,20,0,,,TRUE
 4244,,20,0,,,
-4245,Yei,20,0,,,True
-4247,Al Saaida,20,0,,,True
-4248,Mbarara,160,0,,,True
-4250,Qus,20,0,,,True
-4251,Al Arish,40,0,,,True
-4252,Ariwara,20,0,False,,
-4253,Umm Ruwaba,20,0,,,True
-4254,,320,0,,,True
-4256,Ingbokolo,20,0,False,,
+4245,Yei,20,0,,,TRUE
+4247,Al Saaida,20,0,,,TRUE
+4248,Mbarara,160,0,,,TRUE
+4250,Qus,20,0,,,TRUE
+4251,Al Arish,40,0,,,TRUE
+4252,Ariwara,20,0,FALSE,,
+4253,Umm Ruwaba,20,0,,,TRUE
+4254,,320,0,,,TRUE
+4256,Ingbokolo,20,0,FALSE,,
 4258,,20,0,,,
-4261,Jupujuro-sii,20,0,False,,
-4262,Aru,20,0,,,True
-4263,Abu Jibeha,20,0,,,True
-4264,Kaya,20,0,,,
-4266,Murewa,80,0,,,True
-4267,Al ?Abb?siyya,20,0,,,True
-4268,Arua,20,0,,,True
-4269,Kasama,80,0,,,True
-4270,Mpulungu,20,0,,,True
-4271,New Fangak,20,0,False,,
-4272,Koboko,20,0,,,True
-4273,Pacwa,20,0,False,,
-4274,Mucumbura,40,0,,,True
-4275,Checheche,20,0,,,True
-4276,Sangano,20,0,,,True
-4277,Mpanda,160,0,,,True
-4278,Mahagi,20,0,False,,
-4279,Nguruka,80,0,,,True
-4282,,80,0,,,True
-4283,Faris,20,0,,,True
-4284,,20,0,False,,
-4286,Ezbet al Sibil Qiblli,20,0,,,True
-4287,Aswan,40,0,,,True
+4261,Jupujuro-sii,20,0,FALSE,,
+4262,Aru,20,0,,,TRUE
+4263,Abu Jibeha,20,0,,,TRUE
+4264,Kaya,20,0,FALSE,,
+4266,Murewa,80,0,,,TRUE
+4267,Al ?Abb?siyya,20,0,,,TRUE
+4268,Arua,20,0,,,TRUE
+4269,Kasama,80,0,,,TRUE
+4270,Mpulungu,20,0,,,TRUE
+4271,New Fangak,20,0,FALSE,,
+4272,Koboko,20,0,,,TRUE
+4273,Pacwa,20,0,FALSE,,
+4274,Mucumbura,40,0,,,TRUE
+4275,Checheche,20,0,,,TRUE
+4276,Sangano,20,0,,,TRUE
+4277,Mpanda,160,0,,,TRUE
+4278,Mahagi,20,0,FALSE,,
+4279,Nguruka,80,0,,,TRUE
+4282,,80,0,,,TRUE
+4283,Faris,20,0,,,TRUE
+4284,,20,0,FALSE,,
+4286,Ezbet al Sibil Qiblli,20,0,,,TRUE
+4287,Aswan,40,0,,,TRUE
 4289,,20,0,,,
-4290,Mbala,20,0,,,True
+4290,Mbala,20,0,,,TRUE
 4291,,20,0,,,
-4293,Sinda,80,0,,,True
-4297,Yumbe,20,0,False,,
+4293,Sinda,80,0,,,TRUE
+4297,Yumbe,20,0,FALSE,,
 4299,,20,0,,,
-4300,Poktap,20,0,False,,
+4300,Poktap,20,0,FALSE,,
 4301,Mabior,20,0,,,
-4305,Hoima,40,0,,,True
-4308,Tandalti,20,0,,,True
-4311,Malakal,160,0,,,True
-4313,Mubende,80,0,,,True
-4316,Sumbawanga,160,0,,,True
-4318,Hurghada,20,0,False,,
-4319,,20,0,,,True
-4320,Bor,20,0,False,,
-4322,Juba,40,0,,,True
-4323,Katete,160,0,,,True
-4324,,160,0,,,True
-4329,Mutare,80,0,,,True
+4305,Hoima,40,0,,,TRUE
+4308,Tandalti,20,0,,,TRUE
+4311,Malakal,160,0,,,TRUE
+4313,Mubende,80,0,,,TRUE
+4316,Sumbawanga,160,0,,,TRUE
+4318,Hurghada,20,0,FALSE,,
+4319,,20,0,,,TRUE
+4320,Bor,20,0,FALSE,,
+4322,Juba,40,0,,,TRUE
+4323,Katete,160,0,,,TRUE
+4324,,160,0,,,TRUE
+4329,Mutare,80,0,,,TRUE
 4333,,20,0,,,
-4335,Khartoum,20,0,,,True
-4338,Chibuto,640,0,,,True
-4341,Ghaliya,20,0,False,,
+4335,Khartoum,20,0,,,TRUE
+4338,Chibuto,640,0,,,TRUE
+4341,Ghaliya,20,0,FALSE,,
 4342,,20,0,,,
-4343,,20,0,,,True
-4345,Xai-Xai,320,0,,,True
-4347,Terekeka,20,0,False,,
-4350,Ed Dueim,20,0,,,True
+4343,,20,0,,,TRUE
+4345,Xai-Xai,320,0,,,TRUE
+4347,Terekeka,20,0,FALSE,,
+4350,Ed Dueim,20,0,,,TRUE
 4352,Yuai,20,0,,,
-4355,Masaka,80,0,,,True
-4356,Chinsali,80,0,,,True
-4363,Jebel Aulia,20,0,,,True
-4364,Bukoba,160,0,,,True
-4366,,20,0,,,True
-4367,Chadiza,20,0,,,True
+4355,Masaka,80,0,,,TRUE
+4356,Chinsali,80,0,,,TRUE
+4363,Jebel Aulia,20,0,,,TRUE
+4364,Bukoba,160,0,,,TRUE
+4366,,20,0,,,TRUE
+4367,Chadiza,20,0,,,TRUE
 4368,Pieri,20,0,,,
-4369,Lankien,20,0,False,,
-4370,Kizibu,20,0,False,,
-4371,Katoro,40,0,,,True
-4373,,20,0,,,True
-4374,Station 10,20,0,False,,
+4369,Lankien,20,0,FALSE,,
+4370,Kizibu,20,0,FALSE,,
+4371,Katoro,40,0,,,TRUE
+4373,,20,0,,,TRUE
+4374,Station 10,20,0,FALSE,,
 4376,Lavorongor,20,0,,,
-4378,Messica,40,0,,,True
-4380,Baqayr al Quddami,20,0,,,True
-4382,Nimule,20,0,,,True
-4383,Mityana,20,0,False,,
+4378,Messica,40,0,,,TRUE
+4380,Baqayr al Quddami,20,0,,,TRUE
+4382,Nimule,20,0,,,TRUE
+4383,Mityana,20,0,FALSE,,
 4384,Walgak,20,0,,,
-4385,Giad Industrial Complex,20,0,,,True
-4386,Chipata,160,0,,,True
-4389,Kosti,20,0,,,True
-4390,Sussundenga,20,0,,,True
-4392,Catandica,20,0,,,True
-4394,Rabak,20,0,,,True
-4396,Geita,40,0,,,True
-4397,Katikati,20,0,False,,
-4402,Gulu,20,0,,,True
-4403,Mchinji,640,0,,,True
-4404,Chimoio,40,0,,,True
-4405,,20,0,,,True
-4406,Isoka,80,0,,,True
+4385,Giad Industrial Complex,20,0,,,TRUE
+4386,Chipata,160,0,,,TRUE
+4389,Kosti,20,0,,,TRUE
+4390,Sussundenga,20,0,,,TRUE
+4392,Catandica,20,0,,,TRUE
+4394,Rabak,20,0,,,TRUE
+4396,Geita,40,0,,,TRUE
+4397,Katikati,20,0,FALSE,,
+4402,Gulu,20,0,,,TRUE
+4403,Mchinji,640,0,,,TRUE
+4404,Chimoio,40,0,,,TRUE
+4405,,20,0,,,TRUE
+4406,Isoka,80,0,,,TRUE
 4409,,20,0,,,
-4412,Al Managil,20,0,,,True
-4415,Renk,20,0,,,True
-4418,,20,0,,,True
+4412,Al Managil,20,0,,,TRUE
+4415,Renk,20,0,,,TRUE
+4418,,20,0,,,TRUE
 4419,,20,0,,,
-4421,Wad Rawah,20,0,,,True
+4421,Wad Rawah,20,0,,,TRUE
 4422,,20,0,,,
-4427,Kampala,20,0,,,True
-4428,Entebbe,320,0,,,True
-4430,Al Kamilin,20,0,,,True
-4431,Shendi,20,0,,,True
-4432,Tunduma,80,0,,,True
-4433,Missale,20,0,False,,
+4427,Kampala,20,0,,,TRUE
+4428,Entebbe,320,0,,,TRUE
+4430,Al Kamilin,20,0,,,TRUE
+4431,Shendi,20,0,,,TRUE
+4432,Tunduma,80,0,,,TRUE
+4433,Missale,20,0,FALSE,,
 4434,Ulang,20,0,,,
-4435,Torit,20,0,,,True
-4436,Al Hilaliyah,20,0,,,True
-4437,Aboud,20,0,,,True
-4438,Matugga,20,0,,,True
-4439,Kahama,160,0,,,True
-4441,Al Uk,20,0,,,True
-4443,,20,0,,,True
-4444,Al Hasahisa,20,0,,,True
-4445,Bukala,160,0,,,True
-4446,Muxungue,20,0,False,,
-4447,,20,0,,,True
-4449,,20,0,False,,
-4451,Rufaah,20,0,,,True
-4452,Vwawa,640,0,,,True
-4453,Lundazi,40,0,,,True
-4455,Tabora,160,0,,,True
-4457,Tete,40,0,,,True
-4458,Inchope,20,0,False,,
-4461,Kayanja,20,0,False,,
+4435,Torit,20,0,,,TRUE
+4436,Al Hilaliyah,20,0,,,TRUE
+4437,Aboud,20,0,,,TRUE
+4438,Matugga,20,0,,,TRUE
+4439,Kahama,160,0,,,TRUE
+4441,Al Uk,20,0,,,TRUE
+4443,,20,0,,,TRUE
+4444,Al Hasahisa,20,0,,,TRUE
+4445,Bukala,160,0,,,TRUE
+4446,Muxungue,20,0,FALSE,,
+4447,,20,0,,,TRUE
+4449,,20,0,FALSE,,
+4451,Rufaah,20,0,,,TRUE
+4452,Vwawa,640,0,,,TRUE
+4453,Lundazi,40,0,,,TRUE
+4455,Tabora,160,0,,,TRUE
+4457,Tete,40,0,,,TRUE
+4458,Inchope,20,0,FALSE,,
+4461,Kayanja,20,0,FALSE,,
 4462,,20,0,,,
-4464,Wad Madan?,20,0,,,True
+4464,Wad Madan?,20,0,,,TRUE
 4465,Naseer,20,0,,,
-4469,Lira,40,0,,,True
-4470,Mwanza,80,0,,,True
-4471,Lugazi,40,0,,,True
-4472,Moatize,320,0,,,True
-4475,Furancungo,20,0,,,True
-4477,Alshukaba Alwihda,20,0,,,True
-4478,Wad el Haddad,20,0,,,True
-4479,ad-Damer,20,0,,,True
-4480,Gorongosa,40,0,,,True
-4481,Atbara,80,0,,,True
-4483,Pibor,20,0,False,,
-4484,Nhamatanda,20,0,,,True
-4485,Sennar,20,0,,,True
-4487,Inharrime,20,0,False,,
-4488,Ikotos,20,0,False,,
-4489,Nansio,640,0,,,True
-4490,Likuni,160,0,,,True
-4491,,20,0,,,True
-4492,Iwambi,160,0,,,True
-4495,Lilongwe,160,0,,,True
-4496,Nzega,320,0,,,True
+4469,Lira,40,0,,,TRUE
+4470,Mwanza,80,0,,,TRUE
+4471,Lugazi,40,0,,,TRUE
+4472,Moatize,320,0,,,TRUE
+4475,Furancungo,20,0,,,TRUE
+4477,Alshukaba Alwihda,20,0,,,TRUE
+4478,Wad el Haddad,20,0,,,TRUE
+4479,ad-Damer,20,0,,,TRUE
+4480,Gorongosa,40,0,,,TRUE
+4481,Atbara,80,0,,,TRUE
+4483,Pibor,20,0,FALSE,,
+4484,Nhamatanda,20,0,,,TRUE
+4485,Sennar,20,0,,,TRUE
+4487,Inharrime,20,0,FALSE,,
+4488,Ikotos,20,0,FALSE,,
+4489,Nansio,640,0,,,TRUE
+4490,Likuni,160,0,,,TRUE
+4491,,20,0,,,TRUE
+4492,Iwambi,160,0,,,TRUE
+4495,Lilongwe,160,0,,,TRUE
+4496,Nzega,320,0,,,TRUE
 4497,,20,0,,,
-4498,Mbeya,160,0,,,True
+4498,Mbeya,160,0,,,TRUE
 4499,,20,0,,,
-4500,Jinja,20,0,,,True
-4503,Nalango,20,0,False,,
-4505,El Suki,20,0,,,True
-4507,Shinyanga,160,0,,,True
-4509,Singa,20,0,,,True
-4510,,20,0,False,,
-4512,Maxixe,80,0,,,True
-4513,Al Fao,20,0,,,True
-4514,Iganga,40,0,,,True
-4515,Dondo,20,0,,,True
-4516,Inhambane,160,0,,,True
-4518,Al Quwaysi,20,0,,,True
-4519,Kapoeta,20,0,False,,
+4500,Jinja,20,0,,,TRUE
+4503,Nalango,20,0,FALSE,,
+4505,El Suki,20,0,,,TRUE
+4507,Shinyanga,160,0,,,TRUE
+4509,Singa,20,0,,,TRUE
+4510,,20,0,FALSE,,
+4512,Maxixe,80,0,,,TRUE
+4513,Al Fao,20,0,,,TRUE
+4514,Iganga,40,0,,,TRUE
+4515,Dondo,20,0,,,TRUE
+4516,Inhambane,160,0,,,TRUE
+4518,Al Quwaysi,20,0,,,TRUE
+4519,Kapoeta,20,0,FALSE,,
 4520,,20,0,,,
-4521,Beira,40,0,,,True
-4522,Massinga,160,0,,,True
-4523,Manga,20,0,,,True
-4525,Kyela,160,0,,,True
-4526,Mzuzu,40,0,,,True
-4527,Opuyo,160,0,,,True
-4528,Busesa,20,0,,,True
-4529,Ulongu‚,80,0,,,True
-4530,Z¢bue,20,0,,,True
+4521,Beira,40,0,,,TRUE
+4522,Massinga,160,0,,,TRUE
+4523,Manga,20,0,,,TRUE
+4525,Kyela,160,0,,,TRUE
+4526,Mzuzu,40,0,,,TRUE
+4527,Opuyo,160,0,,,TRUE
+4528,Busesa,20,0,,,TRUE
+4529,Ulongu‚,80,0,,,TRUE
+4530,Z¢bue,20,0,,,TRUE
 4532,,20,0,,,
-4533,Vilankulo,1280,0,,,True
-4535,,20,0,False,,
-4537,Musoma,160,0,,,True
-4538,Igunga,20,0,,,True
+4533,Vilankulo,1280,0,,,TRUE
+4535,,20,0,FALSE,,
+4537,Musoma,160,0,,,TRUE
+4538,Igunga,20,0,,,TRUE
 4541,,20,0,,,
-4543,Bunda,320,0,,,True
-4544,Ad-Damazin,20,0,,,True
-4546,Al Kurumuk,20,0,False,,
-4547,Er Roseires,20,0,,,True
-4549,?? ????,20,0,,,True
-4553,El Hawata,20,0,,,True
-4555,,20,0,False,,
-4556,Itang,20,0,False,,
-4557,Busia,160,0,,,True
-4558,Blantyre,160,0,,,True
-4559,Mbale,80,0,,,True
-4560,Tongo,20,0,False,,
-4561,Amagoro B Central,20,0,,,True
-4562,Limbe,320,0,,,True
-4565,Mukanga Center,80,0,,,True
-4567,Inhangoma,20,0,False,,
-4568,Asosa,20,0,False,,
-4569,Beigi,20,0,,,True
-4572,Caia,20,0,False,,
-4573,Metangula,40,0,,,True
-4574,Ts'Erba,20,0,,,True
+4543,Bunda,320,0,,,TRUE
+4544,Ad-Damazin,20,0,,,TRUE
+4546,Al Kurumuk,20,0,FALSE,,
+4547,Er Roseires,20,0,,,TRUE
+4549,?? ????,20,0,,,TRUE
+4553,El Hawata,20,0,,,TRUE
+4555,,20,0,FALSE,,
+4556,Itang,20,0,FALSE,,
+4557,Busia,160,0,,,TRUE
+4558,Blantyre,160,0,,,TRUE
+4559,Mbale,80,0,,,TRUE
+4560,Tongo,20,0,FALSE,,
+4561,Amagoro B Central,20,0,,,TRUE
+4562,Limbe,320,0,,,TRUE
+4565,Mukanga Center,80,0,,,TRUE
+4567,Inhangoma,20,0,FALSE,,
+4568,Asosa,20,0,FALSE,,
+4569,Beigi,20,0,,,TRUE
+4572,Caia,20,0,FALSE,,
+4573,Metangula,40,0,,,TRUE
+4574,Ts'Erba,20,0,,,TRUE
 4575,Bududa (Maduka),20,0,,,
-4576,K'Idame Gebeya,20,0,False,,
-4577,Gambela,160,0,,,True
-4578,Tarime,80,0,,,True
+4576,K'Idame Gebeya,20,0,FALSE,,
+4577,Gambela,160,0,,,TRUE
+4578,Tarime,80,0,,,TRUE
 4581,,20,0,,,
-4582,Bambasi,80,0,,,True
-4585,Migori,160,0,,,True
-4586,Isebania,160,0,,,True
-4589,Zomba,20,0,,,True
-4590,Dambidollo,40,0,,,True
-4591,Bungoma,320,0,,,True
-4592,Mangochi,1280,0,,,True
-4593,Makambako,640,0,,,True
-4594,Morrumbala,20,0,False,,
-4597,Mopeia,20,0,,,True
-4598,,40,0,,,True
-4601,Lichinga,80,0,,,True
-4602,Singida,320,0,,,True
-4603,Al-Qadarif,20,0,,,True
-4604,Kimilili,160,0,,,True
-4606,Kakamega,160,0,,,True
-4607,Kisii,40,0,,,True
-4608,Kisumu,80,0,,,True
-4609,Kakuma,20,0,False,,
-4610,Mendi,20,0,,,True
-4611,Kakie,20,0,False,,
-4612,New Halfa,20,0,,,True
-4613,Marromeu,20,0,,,True
-4617,,20,0,False,,
-4618,Milange,20,0,,,True
-4619,Geba,20,0,False,,
-4620,Kiminini,20,0,,,True
-4621,Alem Teferi,20,0,False,,
-4622,Mandimba,40,0,,,True
-4623,Kitale,160,0,,,True
-4626,Jarso Tower,20,0,False,,
-4628,Kile,20,0,False,,
-4629,Insaca (Mecanhelas),20,0,,,True
-4631,Aira,20,0,,,True
-4632,Sibanga,20,0,False,,
-4633,Khashm El Girba,20,0,,,True
-4634,Entre Lagos,40,0,,,True
-4635,Meti Chafi / Tilk u Meti,20,0,,,True
-4637,Doka,20,0,,,True
-4638,,20,0,,,True
-4639,Nedjo,20,0,,,True
-4640,Gulisso,20,0,False,,
-4643,Eldoret,320,0,,,True
-4645,Hayya,20,0,False,,
-4646,Tepi,20,0,,,True
-4647,Songea,80,0,,,True
-4648,,160,0,,,True
-4649,Duba,20,0,False,,
-4650,Manasebo,20,0,False,,
-4651,Qurayshah,20,0,False,,
-4652,,320,0,,,True
-4654,Bila,20,0,,,True
-4655,Gore,20,0,,,True
+4582,Bambasi,80,0,,,TRUE
+4585,Migori,160,0,,,TRUE
+4586,Isebania,160,0,,,TRUE
+4589,Zomba,20,0,,,TRUE
+4590,Dambidollo,40,0,,,TRUE
+4591,Bungoma,320,0,,,TRUE
+4592,Mangochi,1280,0,,,TRUE
+4593,Makambako,640,0,,,TRUE
+4594,Morrumbala,20,0,FALSE,,
+4597,Mopeia,20,0,,,TRUE
+4598,,40,0,,,TRUE
+4601,Lichinga,80,0,,,TRUE
+4602,Singida,320,0,,,TRUE
+4603,Al-Qadarif,20,0,,,TRUE
+4604,Kimilili,160,0,,,TRUE
+4606,Kakamega,160,0,,,TRUE
+4607,Kisii,40,0,,,TRUE
+4608,Kisumu,80,0,,,TRUE
+4609,Kakuma,20,0,FALSE,,
+4610,Mendi,20,0,,,TRUE
+4611,Kakie,20,0,FALSE,,
+4612,New Halfa,20,0,,,TRUE
+4613,Marromeu,20,0,,,TRUE
+4617,,20,0,FALSE,,
+4618,Milange,20,0,,,TRUE
+4619,Geba,20,0,FALSE,,
+4620,Kiminini,20,0,,,TRUE
+4621,Alem Teferi,20,0,FALSE,,
+4622,Mandimba,40,0,,,TRUE
+4623,Kitale,160,0,,,TRUE
+4626,Jarso Tower,20,0,FALSE,,
+4628,Kile,20,0,FALSE,,
+4629,Insaca (Mecanhelas),20,0,,,TRUE
+4631,Aira,20,0,,,TRUE
+4632,Sibanga,20,0,FALSE,,
+4633,Khashm El Girba,20,0,,,TRUE
+4634,Entre Lagos,40,0,,,TRUE
+4635,Meti Chafi / Tilk u Meti,20,0,,,TRUE
+4637,Doka,20,0,,,TRUE
+4638,,20,0,,,TRUE
+4639,Nedjo,20,0,,,TRUE
+4640,Gulisso,20,0,FALSE,,
+4643,Eldoret,320,0,,,TRUE
+4645,Hayya,20,0,FALSE,,
+4646,Tepi,20,0,,,TRUE
+4647,Songea,80,0,,,TRUE
+4648,,160,0,,,TRUE
+4649,Duba,20,0,FALSE,,
+4650,Manasebo,20,0,FALSE,,
+4651,Qurayshah,20,0,FALSE,,
+4652,,320,0,,,TRUE
+4654,Bila,20,0,,,TRUE
+4655,Gore,20,0,,,TRUE
 4656,,20,0,,,
-4657,Metu,40,0,,,True
-4659,Gengi,20,0,False,,
+4657,Metu,40,0,,,TRUE
+4659,Gengi,20,0,FALSE,,
 4660,,20,0,,,
-4662,???? ???????? ???????,20,0,False,,
-4663,Inango,20,0,False,,
-4665,Ndiuka,640,0,,,True
-4667,Uallaga,20,0,False,,
-4669,Kassala,20,0,,,True
-4670,Ghimbi,80,0,,,True
-4671,Guyi,20,0,,,True
+4662,???? ???????? ???????,20,0,FALSE,,
+4663,Inango,20,0,FALSE,,
+4665,Ndiuka,640,0,,,TRUE
+4667,Uallaga,20,0,FALSE,,
+4669,Kassala,20,0,,,TRUE
+4670,Ghimbi,80,0,,,TRUE
+4671,Guyi,20,0,,,TRUE
 4673,Guie,20,0,,,
-4675,Daka,20,0,False,,
-4677,,20,0,False,,
-4678,Metema ???,20,0,False,,
-4679,Dodoma,160,0,,,True
-4680,Sink?t,20,0,False,,
-4681,Shewa Ghimira,20,0,False,,
-4682,Chena,20,0,False,,
-4683,Karatu,40,0,,,True
+4675,Daka,20,0,FALSE,,
+4677,,20,0,FALSE,,
+4678,Metema ???,20,0,FALSE,,
+4679,Dodoma,160,0,,,TRUE
+4680,Sink?t,20,0,FALSE,,
+4681,Shewa Ghimira,20,0,FALSE,,
+4682,Chena,20,0,FALSE,,
+4683,Karatu,40,0,,,TRUE
 4684,Jemu,20,0,,,
 4687,,20,0,,,
-4688,Babati,80,0,,,True
+4688,Babati,80,0,,,TRUE
 4689,,20,0,,,
-4690,,20,0,,,True
+4690,,20,0,,,TRUE
 4691,,20,0,,,
-4692,,20,0,False,,
-4693,Molo,320,0,,,True
-4694,Berciuma,20,0,False,,
-4695,Nicoadala,20,0,False,,
+4692,,20,0,FALSE,,
+4693,Molo,320,0,,,TRUE
+4694,Berciuma,20,0,FALSE,,
+4695,Nicoadala,20,0,FALSE,,
 4697,,20,0,,,
-4698,Quelimane,20,0,,,True
-4699,Cuamba,320,0,,,True
-4702,Port Sudan,20,0,,,True
-4704,Etatara,20,0,False,,
-4705,Shehibi,20,0,False,,
-4706,Teseney,20,0,,,True
-4707,Narok,160,0,,,True
-4708,K'Umbabe,20,0,False,,
-4709,May Cader,20,0,False,,
-4710,Sigmo,20,0,False,,
+4698,Quelimane,20,0,,,TRUE
+4699,Cuamba,320,0,,,TRUE
+4702,Port Sudan,20,0,,,TRUE
+4704,Etatara,20,0,FALSE,,
+4705,Shehibi,20,0,FALSE,,
+4706,Teseney,20,0,,,TRUE
+4707,Narok,160,0,,,TRUE
+4708,K'Umbabe,20,0,FALSE,,
+4709,May Cader,20,0,FALSE,,
+4710,Sigmo,20,0,FALSE,,
 4713,,20,0,,,
 4714,,20,0,,,
 4715,,20,0,,,
-4716,Namacurra,20,0,,,True
-4717,Golij,20,0,False,,
-4718,Arjo,20,0,False,,
-4719,,20,0,False,,
-4720,Omorate,20,0,False,,
-4721,Namarr¢i,20,0,False,,
-4722,Mocuba,80,0,,,True
-4723,Welensu,20,0,False,,
-4724,Ch'Iri,20,0,False,,
-4725,,20,0,False,,
-4726,Jawi,20,0,False,,
-4727,Shira,20,0,False,,
-4728,Sawakin,20,0,False,,
-4729,Nakuru,160,0,,,True
-4731,Chagni,20,0,,,True
-4732,Bedele,20,0,,,True
-4733,Free Area,640,0,,,True
-4735,Gurue,20,0,,,True
-4737,Gechi,20,0,False,,
+4716,Namacurra,20,0,,,TRUE
+4717,Golij,20,0,FALSE,,
+4718,Arjo,20,0,FALSE,,
+4719,,20,0,FALSE,,
+4720,Omorate,20,0,FALSE,,
+4721,Namarr¢i,20,0,FALSE,,
+4722,Mocuba,80,0,,,TRUE
+4723,Welensu,20,0,FALSE,,
+4724,Ch'Iri,20,0,FALSE,,
+4725,,20,0,FALSE,,
+4726,Jawi,20,0,FALSE,,
+4727,Shira,20,0,FALSE,,
+4728,Sawakin,20,0,FALSE,,
+4729,Nakuru,160,0,,,TRUE
+4731,Chagni,20,0,,,TRUE
+4732,Bedele,20,0,,,TRUE
+4733,Free Area,640,0,,,TRUE
+4735,Gurue,20,0,,,TRUE
+4737,Gechi,20,0,FALSE,,
 4738,,20,0,,,
-4740,Getema,20,0,False,,
-4741,Lieca,20,0,,,True
-4742,Nekemte,40,0,,,True
-4743,Dembi,20,0,False,,
-4745,Errego (Ile),20,0,False,,
-4746,Gida Ayana,40,0,,,True
-4751,Gutin,20,0,False,,
-4752,Shebe,20,0,False,,
-4753,,20,0,False,,
+4740,Getema,20,0,FALSE,,
+4741,Lieca,20,0,,,TRUE
+4742,Nekemte,40,0,,,TRUE
+4743,Dembi,20,0,FALSE,,
+4745,Errego (Ile),20,0,FALSE,,
+4746,Gida Ayana,40,0,,,TRUE
+4751,Gutin,20,0,FALSE,,
+4752,Shebe,20,0,FALSE,,
+4753,,20,0,FALSE,,
 4754,Schadda,20,0,,,
-4755,,20,0,False,,
+4755,,20,0,FALSE,,
 4757,,20,0,,,
-4758,Nyahururu,160,0,,,True
-4759,Agaro,40,0,,,True
-4760,Yanfa,20,0,False,,
-4763,Shahura (Alefa),20,0,,,True
-4764,Kaka,20,0,False,,
-4765,Dangla,20,0,,,True
-4766,Bitilta Zebraro,20,0,False,,
-4767,Turmi,20,0,False,,
-4768,Naivasha,320,0,,,True
-4769,Achefer,20,0,False,,
-4770,Jinka,20,0,,,True
-4771,Ifakara,80,0,,,True
-4772,Maganja,20,0,False,,
-4773,Addis Kidan,20,0,,,True
-4774,Gembe,20,0,,,True
-4776,Liben Medhane `Alem Bete Kristiyan,20,0,,,True
-4777,Katab,20,0,,,True
-4778,,20,0,False,,
-4780,Durbete,20,0,,,True
-4781,Amaya,20,0,False,,
-4782,Aykel,20,0,False,,
-4783,Enjebara,20,0,,,True
-4784,Yebu,20,0,False,,
-4785,Seka,20,0,False,,
-4787,Delgi,20,0,False,,
-4789,Kunzila,20,0,False,,
-4790,Shendie Gebreal,20,0,,,True
-4792,Haro,20,0,False,,
-4794,Sire,40,0,,,True
+4758,Nyahururu,160,0,,,TRUE
+4759,Agaro,40,0,,,TRUE
+4760,Yanfa,20,0,FALSE,,
+4763,Shahura (Alefa),20,0,,,TRUE
+4764,Kaka,20,0,FALSE,,
+4765,Dangla,20,0,,,TRUE
+4766,Bitilta Zebraro,20,0,FALSE,,
+4767,Turmi,20,0,FALSE,,
+4768,Naivasha,320,0,,,TRUE
+4769,Achefer,20,0,FALSE,,
+4770,Jinka,20,0,,,TRUE
+4771,Ifakara,80,0,,,TRUE
+4772,Maganja,20,0,FALSE,,
+4773,Addis Kidan,20,0,,,TRUE
+4774,Gembe,20,0,,,TRUE
+4776,Liben Medhane `Alem Bete Kristiyan,20,0,,,TRUE
+4777,Katab,20,0,,,TRUE
+4778,,20,0,FALSE,,
+4780,Durbete,20,0,,,TRUE
+4781,Amaya,20,0,FALSE,,
+4782,Aykel,20,0,FALSE,,
+4783,Enjebara,20,0,,,TRUE
+4784,Yebu,20,0,FALSE,,
+4785,Seka,20,0,FALSE,,
+4787,Delgi,20,0,FALSE,,
+4789,Kunzila,20,0,FALSE,,
+4790,Shendie Gebreal,20,0,,,TRUE
+4792,Haro,20,0,FALSE,,
+4794,Sire,40,0,,,TRUE
 4795,Nauela,20,0,,,
-4797,Cima,20,0,False,,
-4798,Tulu Wayo,20,0,False,,
-4799,Gube Guto,20,0,False,,
-4800,Arusha,40,0,,,True
-4801,Jimma,20,0,,,True
-4802,Malema,80,0,,,True
-4804,Kuch,40,0,,,True
-4805,Mulevala,20,0,False,,
-4806,Ngong,320,0,,,True
-4807,Burie,20,0,,,True
-4808,Nairobi,20,0,,,True
-4809,Bila,20,0,False,,
-4810,Bulk'I Sudan Intiriyer Misiyon,20,0,False,,
-4811,Chwahit,20,0,,,True
-4813,Merawi,20,0,,,True
-4814,,20,0,False,,
-4815,Jimma,20,0,False,,
-4816,Limmu,20,0,,,True
-4817,Ongata Rongai,320,0,,,True
-4818,Mugema,20,0,False,,
-4819,Ndenderu,80,0,,,True
-4820,Alibo,20,0,False,,
-4821,Ruaka,40,0,,,True
-4822,Gairo,40,0,,,True
-4824,,20,0,False,,
-4826,Sekela,20,0,False,,
-4827,Chere,20,0,False,,
-4829,Adi Tuoldemedhin,20,0,False,,
-4830,Bako,20,0,,,True
-4831,serbo,20,0,False,,
-4832,Barentu,20,0,False,,
-4833,Shambu,80,0,,,True
-4834,Dembea,20,0,False,,
-4835,Gish Abay,20,0,False,,
-4836,,20,0,False,,
-4837,Kiambu,160,0,,,True
-4838,Hareto,20,0,,,True
-4839,Alto Mol¢cue,40,0,,,True
-4842,Aszimew,20,0,False,,
-4843,Esara (Balle),20,0,,,
-4845,Tocha,20,0,False,,
-4846,Leke Bota,20,0,False,,
-4847,Gonder,20,0,,,True
-4848,Marrupa,160,0,,,True
-4849,Bahir Dar,20,0,,,True
+4797,Cima,20,0,FALSE,,
+4798,Tulu Wayo,20,0,FALSE,,
+4799,Gube Guto,20,0,FALSE,,
+4800,Arusha,40,0,,,TRUE
+4801,Jimma,20,0,,,TRUE
+4802,Malema,80,0,,,TRUE
+4804,Kuch,40,0,,,TRUE
+4805,Mulevala,20,0,FALSE,,
+4806,Ngong,320,0,,,TRUE
+4807,Burie,20,0,,,TRUE
+4808,Nairobi,20,0,,,TRUE
+4809,Bila,20,0,FALSE,,
+4810,Bulk'I Sudan Intiriyer Misiyon,20,0,FALSE,,
+4811,Chwahit,20,0,,,TRUE
+4813,Merawi,20,0,,,TRUE
+4814,,20,0,FALSE,,
+4815,Jimma,20,0,FALSE,,
+4816,Limmu,20,0,,,TRUE
+4817,Ongata Rongai,320,0,,,TRUE
+4818,Mugema,20,0,FALSE,,
+4819,Ndenderu,80,0,,,TRUE
+4820,Alibo,20,0,FALSE,,
+4821,Ruaka,40,0,,,TRUE
+4822,Gairo,40,0,,,TRUE
+4824,,20,0,FALSE,,
+4826,Sekela,20,0,FALSE,,
+4827,Chere,20,0,FALSE,,
+4829,Adi Tuoldemedhin,20,0,FALSE,,
+4830,Bako,20,0,,,TRUE
+4831,serbo,20,0,FALSE,,
+4832,Barentu,20,0,FALSE,,
+4833,Shambu,80,0,,,TRUE
+4834,Dembea,20,0,FALSE,,
+4835,Gish Abay,20,0,FALSE,,
+4836,,20,0,FALSE,,
+4837,Kiambu,160,0,,,TRUE
+4838,Hareto,20,0,,,TRUE
+4839,Alto Mol¢cue,40,0,,,TRUE
+4842,Aszimew,20,0,FALSE,,
+4843,Esara (Balle),20,0,FALSE,,
+4845,Tocha,20,0,FALSE,,
+4846,Leke Bota,20,0,FALSE,,
+4847,Gonder,20,0,,,TRUE
+4848,Marrupa,160,0,,,TRUE
+4849,Bahir Dar,20,0,,,TRUE
 4850,Layma,20,0,,,
 4851,Woito,20,0,,,
-4853,Mirerani,40,0,,,True
-4854,Nyeri,320,0,,,True
-4855,Ruiru,1280,0,,,True
-4856,Kitengela,40,0,,,True
+4853,Mirerani,40,0,,,TRUE
+4854,Nyeri,320,0,,,TRUE
+4855,Ruiru,1280,0,,,TRUE
+4856,Kitengela,40,0,,,TRUE
 4858,,20,0,,,
-4859,Wad,20,0,False,,
-4860,Jiga,20,0,,,True
-4861,Medale,20,0,False,,
-4862,Tarcha,20,0,False,,
-4863,Gebeze Mariam,20,0,False,,
-4864,Seyo,20,0,False,,
-4866,Asendabo,20,0,,,True
-4867,,20,0,False,,
-4868,Maksegnit,20,0,False,,
-4869,Semoy,20,0,False,,
-4870,Etana,20,0,False,,
-4871,Digna,20,0,False,,
-4872,Adet,20,0,,,True
-4873,Ejaji,20,0,False,,
-4875,Omonada,20,0,,,True
-4876,Thika,320,0,,,True
-4879,Pebane,320,0,,,True
-4880,Hamusit,20,0,False,,
+4859,Wad,20,0,FALSE,,
+4860,Jiga,20,0,,,TRUE
+4861,Medale,20,0,FALSE,,
+4862,Tarcha,20,0,FALSE,,
+4863,Gebeze Mariam,20,0,FALSE,,
+4864,Seyo,20,0,FALSE,,
+4866,Asendabo,20,0,,,TRUE
+4867,,20,0,FALSE,,
+4868,Maksegnit,20,0,FALSE,,
+4869,Semoy,20,0,FALSE,,
+4870,Etana,20,0,FALSE,,
+4871,Digna,20,0,FALSE,,
+4872,Adet,20,0,,,TRUE
+4873,Ejaji,20,0,FALSE,,
+4875,Omonada,20,0,,,TRUE
+4876,Thika,320,0,,,TRUE
+4879,Pebane,320,0,,,TRUE
+4880,Hamusit,20,0,FALSE,,
 4881,,20,0,,,
-4882,Gasachare,20,0,False,,
-4883,Tis Abay,20,0,False,,
-4885,Washira,20,0,False,,
-4886,Botor,20,0,False,,
-4887,Anbesame,20,0,False,,
-4888,Deneba,20,0,False,,
+4882,Gasachare,20,0,FALSE,,
+4883,Tis Abay,20,0,FALSE,,
+4885,Washira,20,0,FALSE,,
+4886,Botor,20,0,FALSE,,
+4887,Anbesame,20,0,FALSE,,
+4888,Deneba,20,0,FALSE,,
 4889,Belta,20,0,,,
-4890,Nefnafe,20,0,,,True
-4891,Teh Gabr,20,0,,,True
-4892,Kombolcha,20,0,,,True
-4893,Gedo,20,0,,,True
-4894,,20,0,False,,
-4895,Wereta,20,0,,,True
-4896,Feres Bet,20,0,False,,
-4897,Amanuel,20,0,,,True
-4898,Garasse,20,0,False,,
-4900,Rio Arno,20,0,False,,
-4901,Shenen,20,0,,,True
-4902,Balemi,20,0,False,,
+4890,Nefnafe,20,0,,,TRUE
+4891,Teh Gabr,20,0,,,TRUE
+4892,Kombolcha,20,0,,,TRUE
+4893,Gedo,20,0,,,TRUE
+4894,,20,0,FALSE,,
+4895,Wereta,20,0,,,TRUE
+4896,Feres Bet,20,0,FALSE,,
+4897,Amanuel,20,0,,,TRUE
+4898,Garasse,20,0,FALSE,,
+4900,Rio Arno,20,0,FALSE,,
+4901,Shenen,20,0,,,TRUE
+4902,Balemi,20,0,FALSE,,
 4903,Seissie,20,0,,,
-4904,Gidole,20,0,,,True
-4905,Iapala,80,0,,,True
-4906,Zarema,20,0,False,,
-4908,Adis Zemen,20,0,,,True
-4909,Machakos,320,0,,,True
-4912,Giundu,20,0,False,,
-4913,Moshi,640,0,,,True
-4914,Debark,20,0,,,True
-4915,North Gondar,20,0,False,,
+4904,Gidole,20,0,,,TRUE
+4905,Iapala,80,0,,,TRUE
+4906,Zarema,20,0,FALSE,,
+4908,Adis Zemen,20,0,,,TRUE
+4909,Machakos,320,0,,,TRUE
+4912,Giundu,20,0,FALSE,,
+4913,Moshi,640,0,,,TRUE
+4914,Debark,20,0,,,TRUE
+4915,North Gondar,20,0,FALSE,,
 4916,Fasha Bota,20,0,,,
-4918,Selam Ber,20,0,False,,
-4920,Digo Tsion,20,0,False,,
-4922,Debre Markos,20,0,,,True
-4923,Konso,20,0,,,True
-4924,,20,0,False,,
-4925,Bale,20,0,,,True
-4926,Gemu,20,0,False,,
-4928,Senan Rob Gebeya,20,0,False,,
-4929,Muiane,20,0,,,True
-4930,Yejube,20,0,False,,
-4931,Enchini,20,0,,,True
-4933,Gesuba,20,0,,,True
-4934,Boloso Sore,20,0,,,True
-4935,Darechera,20,0,False,,
-4936,Arba Minch,160,0,,,True
-4938,Gimbichu,20,0,,,True
-4939,Gil‚,20,0,,,True
-4940,Adi Da`Iro,20,0,False,,
-4941,Mota,20,0,,,True
-4942,Chencha,20,0,,,True
-4943,Embu,160,0,,,True
-4945,Tokud Emni,20,0,False,,
-4946,,20,0,False,,
-4947,Ualeita,20,0,False,,
-4948,Eso,20,0,False,,
-4949,,20,0,False,,
-4950,Yegodena Mikael,20,0,False,,
-4951,,20,0,False,,
-4953,Gouder,20,0,,,True
-4954,Hadero,40,0,,,True
-4955,Gununew,20,0,,,True
-4956,Morogoro,40,0,,,True
-4958,??????/Inda Aba Guna,20,0,False,,
-4959,Boreda,20,0,False,,
-4960,Mekanebirhan,20,0,False,,
-4961,Debre Tabor,20,0,,,True
-4962,Ginido,20,0,,,True
-4963,Dereba Bota,20,0,,,True
-4964,Kachise,20,0,,,True
-4965,K'Ose,20,0,False,,
-4966,Morsito,20,0,False,,
-4967,Ribaue,160,0,,,True
-4969,West Belesa,20,0,False,,
-4970,Ebbenat,20,0,False,,
-4971,Welkite,160,0,,,True
-4972,Areka,20,0,,,True
-4973,Moneia,20,0,False,,
-4974,Keren,80,0,,,True
-4976,Shire,20,0,,,True
-4977,Ambo,20,0,,,True
-4978,Lumame,20,0,False,,
+4918,Selam Ber,20,0,FALSE,,
+4920,Digo Tsion,20,0,FALSE,,
+4922,Debre Markos,20,0,,,TRUE
+4923,Konso,20,0,,,TRUE
+4924,,20,0,FALSE,,
+4925,Bale,20,0,,,TRUE
+4926,Gemu,20,0,FALSE,,
+4928,Senan Rob Gebeya,20,0,FALSE,,
+4929,Muiane,20,0,,,TRUE
+4930,Yejube,20,0,FALSE,,
+4931,Enchini,20,0,,,TRUE
+4933,Gesuba,20,0,,,TRUE
+4934,Boloso Sore,20,0,,,TRUE
+4935,Darechera,20,0,FALSE,,
+4936,Arba Minch,160,0,,,TRUE
+4938,Gimbichu,20,0,,,TRUE
+4939,Gil‚,20,0,,,TRUE
+4940,Adi Da`Iro,20,0,FALSE,,
+4941,Mota,20,0,,,TRUE
+4942,Chencha,20,0,,,TRUE
+4943,Embu,160,0,,,TRUE
+4945,Tokud Emni,20,0,FALSE,,
+4946,,20,0,FALSE,,
+4947,Ualeita,20,0,FALSE,,
+4948,Eso,20,0,FALSE,,
+4949,,20,0,FALSE,,
+4950,Yegodena Mikael,20,0,FALSE,,
+4951,,20,0,FALSE,,
+4953,Gouder,20,0,,,TRUE
+4954,Hadero,40,0,,,TRUE
+4955,Gununew,20,0,,,TRUE
+4956,Morogoro,40,0,,,TRUE
+4958,??????/Inda Aba Guna,20,0,FALSE,,
+4959,Boreda,20,0,FALSE,,
+4960,Mekanebirhan,20,0,FALSE,,
+4961,Debre Tabor,20,0,,,TRUE
+4962,Ginido,20,0,,,TRUE
+4963,Dereba Bota,20,0,,,TRUE
+4964,Kachise,20,0,,,TRUE
+4965,K'Ose,20,0,FALSE,,
+4966,Morsito,20,0,FALSE,,
+4967,Ribaue,160,0,,,TRUE
+4969,West Belesa,20,0,FALSE,,
+4970,Ebbenat,20,0,FALSE,,
+4971,Welkite,160,0,,,TRUE
+4972,Areka,20,0,,,TRUE
+4973,Moneia,20,0,FALSE,,
+4974,Keren,80,0,,,TRUE
+4976,Shire,20,0,,,TRUE
+4977,Ambo,20,0,,,TRUE
+4978,Lumame,20,0,FALSE,,
 4979,Shamba Bota,20,0,,,
-4981,Mekane Yesus,20,0,,,True
-4982,Sodo,40,0,,,True
-4983,Kuyi,20,0,False,,
-4984,Konteb,20,0,False,,
-4985,Doyogena,20,0,False,,
-4986,Shinshicho,20,0,,,True
-4987,Adisicia,20,0,False,,
-4988,Gunchire,20,0,False,,
-4989,Tebla,20,0,,,True
-4991,Indegany,20,0,False,,
-4994,Mi`Irab Abaya,20,0,,,True
-4995,Meru,160,0,,,True
-4996,Feres Midir,20,0,False,,
-4997,Hossana,40,0,,,True
-4998,Gende Woin,20,0,,,True
-5000,Chitu,20,0,False,,
-5001,Angacha,20,0,False,,
-5002,Bodoacio,20,0,False,,
-5003,Boditi,20,0,,,True
-5005,Gurage,20,0,False,,
-5006,Emdibir,20,0,,,True
-5007,Waliso,20,0,,,True
-5008,Durame,80,0,,,True
-5011,Kimir Dingay,20,0,False,,
-5012,,20,1,,,
-5013,Mariam Debre Cuorie,20,0,False,,
-5014,Debre Work,20,0,,,True
-5015,Gojo Town,20,0,,,True
-5016,Agena,20,0,False,,
-5017,Fonk'O,20,0,False,,
-5018,Denboya,20,0,,,True
-5019,Welayita,40,0,,,True
-5020,Gut'O,20,0,,,True
-5021,Dejen,20,0,,,True
-5022,Shone,20,0,,,True
-5023,Derba,20,0,False,,
+4981,Mekane Yesus,20,0,,,TRUE
+4982,Sodo,40,0,,,TRUE
+4983,Kuyi,20,0,FALSE,,
+4984,Konteb,20,0,FALSE,,
+4985,Doyogena,20,0,FALSE,,
+4986,Shinshicho,20,0,,,TRUE
+4987,Adisicia,20,0,FALSE,,
+4988,Gunchire,20,0,FALSE,,
+4989,Tebla,20,0,,,TRUE
+4991,Indegany,20,0,FALSE,,
+4994,Mi`Irab Abaya,20,0,,,TRUE
+4995,Meru,160,0,,,TRUE
+4996,Feres Midir,20,0,FALSE,,
+4997,Hossana,40,0,,,TRUE
+4998,Gende Woin,20,0,,,TRUE
+5000,Chitu,20,0,FALSE,,
+5001,Angacha,20,0,FALSE,,
+5002,Bodoacio,20,0,FALSE,,
+5003,Boditi,20,0,,,TRUE
+5005,Gurage,20,0,FALSE,,
+5006,Emdibir,20,0,,,TRUE
+5007,Waliso,20,0,,,TRUE
+5008,Durame,80,0,,,TRUE
+5011,Kimir Dingay,20,0,FALSE,,
+5012,,20,0,,,
+5013,Mariam Debre Cuorie,20,0,FALSE,,
+5014,Debre Work,20,0,,,TRUE
+5015,Gojo Town,20,0,,,TRUE
+5016,Agena,20,0,FALSE,,
+5017,Fonk'O,20,0,FALSE,,
+5018,Denboya,20,0,,,TRUE
+5019,Welayita,40,0,,,TRUE
+5020,Gut'O,20,0,,,TRUE
+5021,Dejen,20,0,,,TRUE
+5022,Shone,20,0,,,TRUE
+5023,Derba,20,0,FALSE,,
 5024,,20,0,,,
-5025,Dilela,20,0,,,True
-5026,Bechena,20,0,,,True
-5027,Murrupula,20,0,False,,
-5029,Dil Yibza,20,0,False,,
-5030,Gezaber,20,1,False,,
-5031,Mertule Mariam,20,0,,,True
-5033,Ginsi,20,0,,,True
-5034,Arekite,20,1,False,,
-5037,Uykro,20,0,,,True
-5038,Busa,20,0,,,True
-5039,Gohatsion,20,0,,,True
-5041,Weyira Shet',20,0,,,True
-5042,Alaba Kulito,20,0,,,True
+5025,Dilela,20,0,,,TRUE
+5026,Bechena,20,0,,,TRUE
+5027,Murrupula,20,0,FALSE,,
+5029,Dil Yibza,20,0,FALSE,,
+5030,Gezaber,20,0,FALSE,,
+5031,Mertule Mariam,20,0,,,TRUE
+5033,Ginsi,20,0,,,TRUE
+5034,Arekite,20,0,FALSE,,
+5037,Uykro,20,0,,,TRUE
+5038,Busa,20,0,,,TRUE
+5039,Gohatsion,20,0,,,TRUE
+5041,Weyira Shet',20,0,,,TRUE
+5042,Alaba Kulito,20,0,,,TRUE
 5043,Kola Shet',20,0,,,
-5044,Shoni,20,1,False,,
-5045,Tulu Bolo,20,0,,,True
-5046,Sherer,20,1,False,,
-5047,Sheno,20,1,False,,
-5048,Fantapi Irsha,20,0,False,,
-5050,Nefas Meewcha,20,0,False,,
-5051,Gorabee,20,0,False,,
+5044,Shoni,20,0,FALSE,,
+5045,Tulu Bolo,20,0,,,TRUE
+5046,Sherer,20,0,FALSE,,
+5047,Sheno,20,0,FALSE,,
+5048,Fantapi Irsha,20,0,FALSE,,
+5050,Nefas Meewcha,20,0,FALSE,,
+5051,Gorabee,20,0,FALSE,,
 5052,Pebane,20,0,,,
-5053,Kokir,20,0,False,,
-5054,,20,0,,,True
-5056,Mendefera,20,0,,,True
-5057,Tulu Milki,20,0,False,,
-5059,Axum,160,0,,,True
-5060,Aleltu,20,0,False,,
-5061,,20,0,False,,
-5063,Debarwa,20,0,False,,
-5064,Yabelo,20,0,,,True
-5065,Asmara,20,0,,,True
-5067,Dalocha,20,0,,,True
-5068,Ch'Eleletu,20,0,False,,
-5069,Adi Guadad,20,0,False,,
-5070,Rama,20,0,False,,
-5071,Tore,20,0,False,,
-5074,Adi Quala,20,0,,,True
-5076,Anda,20,0,False,,
-5077,Gebre gurach,20,0,,,True
-5078,InchIni,40,0,,,True
-5079,Yirga Cheffe,20,0,,,True
-5080,Lul£ti,20,0,False,,
-5081,Shelo Bota,20,0,False,,
-5083,Addis Alem,20,0,,,True
-5084,Banitu,20,0,False,,
-5085,Kibet,20,0,,,True
-5086,,20,0,False,,
-5087,Mecub£ri,20,0,,,True
-5088,Shamena,20,0,False,,
-5089,Wenago,20,0,,,True
-5090,?? ?? / Bule Hora,20,0,,,True
+5053,Kokir,20,0,FALSE,,
+5054,,20,0,,,TRUE
+5056,Mendefera,20,0,,,TRUE
+5057,Tulu Milki,20,0,FALSE,,
+5059,Axum,160,0,,,TRUE
+5060,Aleltu,20,0,FALSE,,
+5061,,20,0,FALSE,,
+5063,Debarwa,20,0,FALSE,,
+5064,Yabelo,20,0,,,TRUE
+5065,Asmara,20,0,,,TRUE
+5067,Dalocha,20,0,,,TRUE
+5068,Ch'Eleletu,20,0,FALSE,,
+5069,Adi Guadad,20,0,FALSE,,
+5070,Rama,20,0,FALSE,,
+5071,Tore,20,0,FALSE,,
+5074,Adi Quala,20,0,,,TRUE
+5076,Anda,20,0,FALSE,,
+5077,Gebre gurach,20,0,,,TRUE
+5078,InchIni,40,0,,,TRUE
+5079,Yirga Cheffe,20,0,,,TRUE
+5080,Lul£ti,20,0,FALSE,,
+5081,Shelo Bota,20,0,FALSE,,
+5083,Addis Alem,20,0,,,TRUE
+5084,Banitu,20,0,FALSE,,
+5085,Kibet,20,0,,,TRUE
+5086,,20,0,FALSE,,
+5087,Mecub£ri,20,0,,,TRUE
+5088,Shamena,20,0,FALSE,,
+5089,Wenago,20,0,,,TRUE
+5090,?? ?? / Bule Hora,20,0,,,TRUE
 5091,The State Of Tigray,20,0,,,
-5092,Gedeb,20,0,,,True
-5095,Butajira,20,0,,,True
-5096,Dilla,40,0,,,True
-5097,Namuno,160,0,,,True
-5098,Amdework,20,0,,,True
-5100,Adwa,20,0,,,True
-5101,Ejere,20,0,,,True
-5102,Agge,20,0,,,True
-5103,???? / Finchawa,20,0,False,,
-5104,Chucko,20,0,False,,
-5105,Holeta,20,0,,,True
-5106,Moma,20,0,,,True
-5108,T'Ora,20,0,,,True
-5109,Irba,20,0,False,,
-5110,Dila Bota,20,0,False,,
-5112,?????? Dekemhare,20,0,,,True
-5113,,20,0,False,,
-5114,Yirgalem,20,0,,,True
-5115,Calipo,20,0,False,,
-5116,Chalaua,20,0,False,,
-5118,Filakit Gereger,20,0,,,True
-5119,Enseno,20,0,,,True
-5120,Teferi Kela,20,0,False,,
-5121,Densa,20,0,False,,
-5122,Aletawendo,20,0,,,True
-5123,Bule,20,0,False,,
-5124,Morocho,20,0,,,True
-5125,Degem Hambiso,20,0,,,True
-5126,Hawassa,40,0,,,True
-5127,Qericha,20,0,False,,
-5128,Fint'Al Feres,20,0,False,,
-5129,Bui,20,0,,,True
-5130,Koshe,20,0,,,True
-5132,Gundo Meskel,20,0,,,True
-5133,Fital,20,0,False,,
-5134,Addis Ababa,20,0,,,True
-5135,Melkane Selam,20,0,,,True
-5137,Malek Sanca,20,0,False,,
-5138,Lemen,40,0,,,True
-5139,Woncho,20,0,False,,
-5140,Edaga Aby,20,0,False,,
-5141,Yechillay,20,0,False,,
-5142,Wogdi,20,0,,,True
-5143,Montepuez,320,0,,,True
-5144,Agre Salam,20,0,,,True
-5145,Nampula,20,0,,,True
-5146,Shashamane,20,0,,,True
-5147,,20,0,False,,
-5148,Inticho,20,0,,,True
+5092,Gedeb,20,0,,,TRUE
+5095,Butajira,20,0,,,TRUE
+5096,Dilla,40,0,,,TRUE
+5097,Namuno,160,0,,,TRUE
+5098,Amdework,20,0,,,TRUE
+5100,Adwa,20,0,,,TRUE
+5101,Ejere,20,0,,,TRUE
+5102,Agge,20,0,,,TRUE
+5103,???? / Finchawa,20,0,FALSE,,
+5104,Chucko,20,0,FALSE,,
+5105,Holeta,20,0,,,TRUE
+5106,Moma,20,0,,,TRUE
+5108,T'Ora,20,0,,,TRUE
+5109,Irba,20,0,FALSE,,
+5110,Dila Bota,20,0,FALSE,,
+5112,?????? Dekemhare,20,0,,,TRUE
+5113,,20,0,FALSE,,
+5114,Yirgalem,20,0,,,TRUE
+5115,Calipo,20,0,FALSE,,
+5116,Chalaua,20,0,FALSE,,
+5118,Filakit Gereger,20,0,,,TRUE
+5119,Enseno,20,0,,,TRUE
+5120,Teferi Kela,20,0,FALSE,,
+5121,Densa,20,0,FALSE,,
+5122,Aletawendo,20,0,,,TRUE
+5123,Bule,20,0,FALSE,,
+5124,Morocho,20,0,,,TRUE
+5125,Degem Hambiso,20,0,,,TRUE
+5126,Hawassa,40,0,,,TRUE
+5127,Qericha,20,0,FALSE,,
+5128,Fint'Al Feres,20,0,FALSE,,
+5129,Bui,20,0,,,TRUE
+5130,Koshe,20,0,,,TRUE
+5132,Gundo Meskel,20,0,,,TRUE
+5133,Fital,20,0,FALSE,,
+5134,Addis Ababa,20,0,,,TRUE
+5135,Melkane Selam,20,0,,,TRUE
+5137,Malek Sanca,20,0,FALSE,,
+5138,Lemen,40,0,,,TRUE
+5139,Woncho,20,0,FALSE,,
+5140,Edaga Aby,20,0,FALSE,,
+5141,Yechillay,20,0,FALSE,,
+5142,Wogdi,20,0,,,TRUE
+5143,Montepuez,320,0,,,TRUE
+5144,Agre Salam,20,0,,,TRUE
+5145,Nampula,20,0,,,TRUE
+5146,Shashamane,20,0,,,TRUE
+5147,,20,0,FALSE,,
+5148,Inticho,20,0,,,TRUE
 5149,Gorche,20,0,,,
-5150,Basha,20,0,False,,
-5151,Nametil,20,0,,,True
-5153,Kon,20,0,,,True
-5154,Ashenat,20,0,False,,
-5155,Bulbula,20,0,,,True
-5156,Kala,20,0,False,,
-5157,Sululta,20,0,False,,
-5158,Bursa,20,0,False,,
-5160,Asketama Village,20,0,,,True
-5161,Solomo,20,0,False,,
-5162,Arsi Negelle,20,0,,,True
-5163,Bore,20,0,,,True
-5164,Hagere Selam,20,0,False,,
-5165,Ziway,40,0,,,True
-5166,Debre Libanos,20,0,,,
-5167,Debre Tsige,20,0,,,True
-5168,Lalibela,20,0,,,True
-5169,Massawa,20,0,False,,
-5171,Muketuri,20,0,,,True
-5172,Adi Keyh,20,0,False,,
-5173,Arbe Gona,20,0,False,,
-5174,Bona Qabelanka,20,0,False,,
-5176,Samre,20,0,False,,
-5177,Meki,20,0,,,True
-5178,,20,0,False,,
-5179,Kelela,20,0,,,True
-5180,Kefole,20,0,,,True
-5181,Masha,20,0,,,True
-5182,Fatsi,20,0,False,,
-5183,Dukem,160,0,,,True
-5184,Senafe,20,0,,,True
-5185,Alem Ketema,20,0,,,True
-5186,Kokosa Bota,20,0,False,,
-5187,Estayish,20,0,False,,
-5189,Bishoftu,40,0,,,True
-5193,Bonsa Bota,20,0,,,True
-5194,Birbo Shet',20,0,,,True
-5195,Adigrat,20,0,,,True
-5196,Alemtena,20,0,,,True
-5197,Hawzien,20,0,False,,
-5198,Meranya,20,0,,,True
-5199,Picha Ya Ndege,40,0,,,True
-5200,Wegel Tena,20,0,,,True
-5204,Chelena,20,0,False,,
-5206,K'Ore / Qoree,20,0,,,True
-5207,Akesta,20,0,,,True
-5208,Feres Bet,20,0,,,True
-5209,Aube,20,0,False,,
-5210,Mek'el?,320,0,,,True
-5211,Adi Mugia,20,0,,,True
-5212,Jifa,20,0,,,True
-5213,Qoqa,40,0,,,True
-5214,Bericha Korebta,20,0,False,,
-5215,Kersa,20,0,,,True
-5216,Enwari,20,0,,,True
-5217,Shakiso,20,0,,,True
-5218,Safiya,20,0,,,True
-5219,Mejo,20,0,False,,
-5220,Muecate,20,0,False,,
-5221,Enda Mariam Sion,20,0,,,True
-5222,Dar es Salaam,20,0,,,True
-5223,Chefedonsa,20,0,,,True
-5225,Deneba,20,0,,,True
-5226,Aleltu,20,0,,,True
-5227,Mojo,80,0,,,True
-5228,Kibre Mengist,20,0,,,True
-5230,Quiha,20,0,,,True
-5231,Derek' Amba,20,0,,,True
-5232,Degolo,20,0,,,True
-5233,Adi Gudom,20,0,,,True
-5234,,160,0,,,True
-5235,Wukro,80,0,,,True
-5236,Asella,80,0,,,True
-5237,Maychew,20,0,,,True
-5238,Korem,20,0,,,True
-5239,Sagure,20,0,,,True
-5240,,20,0,False,,
-5241,DAR ES SALAAM,160,0,,,True
-5242,,20,0,False,,
-5244,Shano,20,0,,,True
-5245,Ch'Engi Shet',20,0,,,True
-5246,Adama,40,0,,,True
-5248,Alamata,20,0,,,True
-5249,Tanga,80,0,,,True
-5251,Itiya,20,0,,,True
-5252,Dodolla,20,0,,,True
-5254,Asassa,20,0,,,True
-5255,Moyale,160,0,,,True
-5256,Ekda Gaber,20,0,,,True
-5257,Haro,40,0,,,True
-5258,Passo Saefti,20,0,,,True
-5260,Bekoji,20,0,,,True
-5261,Dera,80,0,,,True
-5262,Zanzibar City,40,0,,,True
-5263,Weldiya,40,0,,,True
-5264,T'Edo Ber,20,0,,,True
-5265,Kobo,20,0,,,True
-5266,Kuta Ber,20,0,False,,
-5267,Huruta,20,0,,,True
-5268,Uccialli,20,0,False,,
-5269,Chiure-Sede,160,0,,,True
-5270,Arerti,20,0,,,True
+5150,Basha,20,0,FALSE,,
+5151,Nametil,20,0,,,TRUE
+5153,Kon,20,0,,,TRUE
+5154,Ashenat,20,0,FALSE,,
+5155,Bulbula,20,0,,,TRUE
+5156,Kala,20,0,FALSE,,
+5157,Sululta,20,0,FALSE,,
+5158,Bursa,20,0,FALSE,,
+5160,Asketama Village,20,0,,,TRUE
+5161,Solomo,20,0,FALSE,,
+5162,Arsi Negelle,20,0,,,TRUE
+5163,Bore,20,0,,,TRUE
+5164,Hagere Selam,20,0,FALSE,,
+5165,Ziway,40,0,,,TRUE
+5166,Debre Libanos,20,0,FALSE,,
+5167,Debre Tsige,20,0,,,TRUE
+5168,Lalibela,20,0,,,TRUE
+5169,Massawa,20,0,FALSE,,
+5171,Muketuri,20,0,,,TRUE
+5172,Adi Keyh,20,0,FALSE,,
+5173,Arbe Gona,20,0,FALSE,,
+5174,Bona Qabelanka,20,0,FALSE,,
+5176,Samre,20,0,FALSE,,
+5177,Meki,20,0,,,TRUE
+5178,,20,0,FALSE,,
+5179,Kelela,20,0,,,TRUE
+5180,Kefole,20,0,,,TRUE
+5181,Masha,20,0,,,TRUE
+5182,Fatsi,20,0,FALSE,,
+5183,Dukem,160,0,,,TRUE
+5184,Senafe,20,0,,,TRUE
+5185,Alem Ketema,20,0,,,TRUE
+5186,Kokosa Bota,20,0,FALSE,,
+5187,Estayish,20,0,FALSE,,
+5189,Bishoftu,40,0,,,TRUE
+5193,Bonsa Bota,20,0,,,TRUE
+5194,Birbo Shet',20,0,,,TRUE
+5195,Adigrat,20,0,,,TRUE
+5196,Alemtena,20,0,,,TRUE
+5197,Hawzien,20,0,FALSE,,
+5198,Meranya,20,0,,,TRUE
+5199,Picha Ya Ndege,40,0,,,TRUE
+5200,Wegel Tena,20,0,,,TRUE
+5204,Chelena,20,0,FALSE,,
+5206,K'Ore / Qoree,20,0,,,TRUE
+5207,Akesta,20,0,,,TRUE
+5208,Feres Bet,20,0,,,TRUE
+5209,Aube,20,0,FALSE,,
+5210,Mek'el?,320,0,,,TRUE
+5211,Adi Mugia,20,0,,,TRUE
+5212,Jifa,20,0,,,TRUE
+5213,Qoqa,40,0,,,TRUE
+5214,Bericha Korebta,20,0,FALSE,,
+5215,Kersa,20,0,,,TRUE
+5216,Enwari,20,0,,,TRUE
+5217,Shakiso,20,0,,,TRUE
+5218,Safiya,20,0,,,TRUE
+5219,Mejo,20,0,FALSE,,
+5220,Muecate,20,0,FALSE,,
+5221,Enda Mariam Sion,20,0,,,TRUE
+5222,Dar es Salaam,20,0,,,TRUE
+5223,Chefedonsa,20,0,,,TRUE
+5225,Deneba,20,0,,,TRUE
+5226,Aleltu,20,0,,,TRUE
+5227,Mojo,80,0,,,TRUE
+5228,Kibre Mengist,20,0,,,TRUE
+5230,Quiha,20,0,,,TRUE
+5231,Derek' Amba,20,0,,,TRUE
+5232,Degolo,20,0,,,TRUE
+5233,Adi Gudom,20,0,,,TRUE
+5234,,160,0,,,TRUE
+5235,Wukro,80,0,,,TRUE
+5236,Asella,80,0,,,TRUE
+5237,Maychew,20,0,,,TRUE
+5238,Korem,20,0,,,TRUE
+5239,Sagure,20,0,,,TRUE
+5240,,20,0,FALSE,,
+5241,DAR ES SALAAM,160,0,,,TRUE
+5242,,20,0,FALSE,,
+5244,Shano,20,0,,,TRUE
+5245,Ch'Engi Shet',20,0,,,TRUE
+5246,Adama,40,0,,,TRUE
+5248,Alamata,20,0,,,TRUE
+5249,Tanga,80,0,,,TRUE
+5251,Itiya,20,0,,,TRUE
+5252,Dodolla,20,0,,,TRUE
+5254,Asassa,20,0,,,TRUE
+5255,Moyale,160,0,,,TRUE
+5256,Ekda Gaber,20,0,,,TRUE
+5257,Haro,40,0,,,TRUE
+5258,Passo Saefti,20,0,,,TRUE
+5260,Bekoji,20,0,,,TRUE
+5261,Dera,80,0,,,TRUE
+5262,Zanzibar City,40,0,,,TRUE
+5263,Weldiya,40,0,,,TRUE
+5264,T'Edo Ber,20,0,,,TRUE
+5265,Kobo,20,0,,,TRUE
+5266,Kuta Ber,20,0,FALSE,,
+5267,Huruta,20,0,,,TRUE
+5268,Uccialli,20,0,FALSE,,
+5269,Chiure-Sede,160,0,,,TRUE
+5270,Arerti,20,0,,,TRUE
 5272,Passo Di Senafe,20,0,,,
-5273,Nacaroa,20,0,False,,
-5274,Namialo,160,0,,,True
-5275,Aadi Noia,20,0,False,,
-5276,Mersa,20,0,,,True
-5277,Dessie,20,0,,,True
-5278,Welenchete,20,0,,,True
-5279,Debre Birhan,40,0,,,True
-5280,Netia,20,0,,,True
-5281,Konkoma,20,0,False,,
-5282,Rabel,20,0,False,,
-5283,Siltana,20,0,,,True
-5284,Hyke,20,0,,,True
-5285,Degaga,20,0,False,,
-5286,Adaba,20,0,,,True
-5288,Sire,20,0,,,True
-5289,Kombolcha,20,0,,,True
-5290,Mehal Meda,20,0,,,True
-5291,Salla Dingai,20,0,False,,
-5292,Gobesa,20,0,,,True
-5293,Zeramel,20,0,,,True
-5294,Uaddara,20,0,False,,
-5295,,20,0,False,,
-5296,Mistima,20,0,False,,
-5297,Ticho,20,0,,,True
+5273,Nacaroa,20,0,FALSE,,
+5274,Namialo,160,0,,,TRUE
+5275,Aadi Noia,20,0,FALSE,,
+5276,Mersa,20,0,,,TRUE
+5277,Dessie,20,0,,,TRUE
+5278,Welenchete,20,0,,,TRUE
+5279,Debre Birhan,40,0,,,TRUE
+5280,Netia,20,0,,,TRUE
+5281,Konkoma,20,0,FALSE,,
+5282,Rabel,20,0,FALSE,,
+5283,Siltana,20,0,,,TRUE
+5284,Hyke,20,0,,,TRUE
+5285,Degaga,20,0,FALSE,,
+5286,Adaba,20,0,,,TRUE
+5288,Sire,20,0,,,TRUE
+5289,Kombolcha,20,0,,,TRUE
+5290,Mehal Meda,20,0,,,TRUE
+5291,Salla Dingai,20,0,FALSE,,
+5292,Gobesa,20,0,,,TRUE
+5293,Zeramel,20,0,,,TRUE
+5294,Uaddara,20,0,FALSE,,
+5295,,20,0,FALSE,,
+5296,Mistima,20,0,FALSE,,
+5297,Ticho,20,0,,,TRUE
 5299,,20,0,,,
-5300,Deksis,20,0,,,True
-5301,Harbu,20,0,False,,
-5303,,20,0,False,,
-5304,Debre Sina,20,0,,,True
-5306,Robe,20,0,,,True
-5307,Arboye,20,0,False,,
-5308,Ch'Erch'Er,20,0,False,,
-5310,Kemse,40,0,,,True
-5311,Ch'Iri,20,0,False,,
-5315,Kula,20,0,False,,
-5316,Monapo,20,0,,,True
-5318,Negele,20,0,,,True
-5321,Bole,20,0,,,True
-5323,Ukunda,80,0,,,True
-5324,Erestino,20,0,False,,
-5327,Chaffa Robit,20,0,False,,
-5328,Shoa Robit,40,0,,,True
-5329,Mombasa,20,0,,,True
-5333,Bati,20,0,False,,
-5334,Ataye,20,0,False,,
-5335,Habe,20,0,False,,
-5336,Abomsa,40,0,,,True
-5340,Sambatee,20,0,False,,
-5342,Gersa Halila,20,0,False,,
-5343,Agarfa,20,0,,,True
-5346,Garissa,20,0,,,True
-5347,Sinkille,20,0,,,True
-5350,Mtwapa,40,0,,,True
-5351,Adele,20,0,,,True
-5353,Meslo,20,0,,,True
+5300,Deksis,20,0,,,TRUE
+5301,Harbu,20,0,FALSE,,
+5303,,20,0,FALSE,,
+5304,Debre Sina,20,0,,,TRUE
+5306,Robe,20,0,,,TRUE
+5307,Arboye,20,0,FALSE,,
+5308,Ch'Erch'Er,20,0,FALSE,,
+5310,Kemse,40,0,,,TRUE
+5311,Ch'Iri,20,0,FALSE,,
+5315,Kula,20,0,FALSE,,
+5316,Monapo,20,0,,,TRUE
+5318,Negele,20,0,,,TRUE
+5321,Bole,20,0,,,TRUE
+5323,Ukunda,80,0,,,TRUE
+5324,Erestino,20,0,FALSE,,
+5327,Chaffa Robit,20,0,FALSE,,
+5328,Shoa Robit,40,0,,,TRUE
+5329,Mombasa,20,0,,,TRUE
+5333,Bati,20,0,FALSE,,
+5334,Ataye,20,0,FALSE,,
+5335,Habe,20,0,FALSE,,
+5336,Abomsa,40,0,,,TRUE
+5340,Sambatee,20,0,FALSE,,
+5342,Gersa Halila,20,0,FALSE,,
+5343,Agarfa,20,0,,,TRUE
+5346,Garissa,20,0,,,TRUE
+5347,Sinkille,20,0,,,TRUE
+5350,Mtwapa,40,0,,,TRUE
+5351,Adele,20,0,,,TRUE
+5353,Meslo,20,0,,,TRUE
 5356,Dewe,20,0,,,
-5357,Teferi Birhan,20,0,False,,
-5360,Mtwara,160,0,,,True
+5357,Teferi Birhan,20,0,FALSE,,
+5360,Mtwara,160,0,,,TRUE
 5363,,20,0,,,
-5364,Bale,20,0,,,True
-5366,Goba,160,0,,,True
-5367,Kilifi,40,0,,,True
-5369,Robe,20,0,,,True
+5364,Bale,20,0,,,TRUE
+5366,Goba,160,0,,,TRUE
+5367,Kilifi,40,0,,,TRUE
+5369,Robe,20,0,,,TRUE
 5370,Weregu Medhane `Alem Bete Kristiyan,20,0,,,
-5373,Moc¡mboa da Praia,320,0,,,True
-5374,,40,0,,,True
-5376,Nacala,80,0,,,True
-5384,Seru,20,0,False,,
-5385,Gasera,20,0,False,,
-5388,Berbere,20,0,,,True
-5390,Wajir,20,0,,,True
-5391,Mechara,20,0,,,True
-5392,Micheta,20,0,False,,
-5394,Malindi,80,0,,,True
-5400,Meliyu,20,0,False,,
-5404,Gelemso,20,0,,,True
-5405,Komona,20,0,False,,
-5407,Lower Miele,20,0,False,,
-5409,Jara,20,0,False,,
-5410,Goro,20,0,False,,
-5412,Dadaab,20,0,False,,
-5415,Asebot,20,0,,,True
-5416,Boke Tiko,20,0,False,,
-5417,Hagadera Refugee Camp,20,0,False,,
-5418,Geseta,20,0,False,,
-5419,,20,0,False,,
-5423,Mieso,40,0,,,True
-5424,Logiya,20,0,False,,
-5426,Bosana,20,0,,,True
-5429,Ginir,20,0,,,True
-5430,Chiro,20,0,,,True
-5431,Filtu,20,0,False,,
-5433,Kuni,20,0,False,,
-5435,,20,0,False,,
-5444,Doba,20,0,,,True
-5445,Hirna,20,0,,,True
-5446,Bork'A Shet',20,0,False,,
-5451,Mesela,20,0,False,,
-5452,El Wak,20,0,,,True
-5453,Asaita,20,0,False,,
-5456,Boreda,20,0,False,,
-5463,Karamile,20,0,False,,
-5464,Gondela Terara,20,0,False,,
-5465,Hare Wacha,20,0,False,,
-5467,Jaja,20,0,False,,
-5469,Deder,20,0,,,True
-5472,Kobo,40,0,,,True
-5476,Chelenko,20,0,False,,
-5478,Burka,20,0,False,,
-5480,Dhamaso,20,0,False,,
-5481,Bedeno,20,0,False,,
-5484,Kulubi,20,0,False,,
+5373,Moc¡mboa da Praia,320,0,,,TRUE
+5374,,40,0,,,TRUE
+5376,Nacala,80,0,,,TRUE
+5384,Seru,20,0,FALSE,,
+5385,Gasera,20,0,FALSE,,
+5388,Berbere,20,0,,,TRUE
+5390,Wajir,20,0,,,TRUE
+5391,Mechara,20,0,,,TRUE
+5392,Micheta,20,0,FALSE,,
+5394,Malindi,80,0,,,TRUE
+5400,Meliyu,20,0,FALSE,,
+5404,Gelemso,20,0,,,TRUE
+5405,Komona,20,0,FALSE,,
+5407,Lower Miele,20,0,FALSE,,
+5409,Jara,20,0,FALSE,,
+5410,Goro,20,0,FALSE,,
+5412,Dadaab,20,0,FALSE,,
+5415,Asebot,20,0,,,TRUE
+5416,Boke Tiko,20,0,FALSE,,
+5417,Hagadera Refugee Camp,20,0,FALSE,,
+5418,Geseta,20,0,FALSE,,
+5419,,20,0,FALSE,,
+5423,Mieso,40,0,,,TRUE
+5424,Logiya,20,0,FALSE,,
+5426,Bosana,20,0,,,TRUE
+5429,Ginir,20,0,,,TRUE
+5430,Chiro,20,0,,,TRUE
+5431,Filtu,20,0,FALSE,,
+5433,Kuni,20,0,FALSE,,
+5435,,20,0,FALSE,,
+5444,Doba,20,0,,,TRUE
+5445,Hirna,20,0,,,TRUE
+5446,Bork'A Shet',20,0,FALSE,,
+5451,Mesela,20,0,FALSE,,
+5452,El Wak,20,0,,,TRUE
+5453,Asaita,20,0,FALSE,,
+5456,Boreda,20,0,FALSE,,
+5463,Karamile,20,0,FALSE,,
+5464,Gondela Terara,20,0,FALSE,,
+5465,Hare Wacha,20,0,FALSE,,
+5467,Jaja,20,0,FALSE,,
+5469,Deder,20,0,,,TRUE
+5472,Kobo,40,0,,,TRUE
+5476,Chelenko,20,0,FALSE,,
+5478,Burka,20,0,FALSE,,
+5480,Dhamaso,20,0,FALSE,,
+5481,Bedeno,20,0,FALSE,,
+5484,Kulubi,20,0,FALSE,,
 5485,Farda,20,0,,,
-5491,Toliara,1280,0,,,True
-5492,Bulo,20,0,,,True
-5494,Torbi,20,0,False,,
-5497,Shinile,20,0,,,True
-5498,Dire Dawa,20,0,,,True
-5500,Girawa,20,0,False,,
-5502,Arocha,20,0,False,,
-5504,Huse,20,0,False,,
+5491,Toliara,1280,0,,,TRUE
+5492,Bulo,20,0,,,TRUE
+5494,Torbi,20,0,FALSE,,
+5497,Shinile,20,0,,,TRUE
+5498,Dire Dawa,20,0,,,TRUE
+5500,Girawa,20,0,FALSE,,
+5502,Arocha,20,0,FALSE,,
+5504,Huse,20,0,FALSE,,
 5510,Sancal,20,0,,,
-5511,Didimtu,40,0,,,True
-5514,Harar,80,0,,,True
+5511,Didimtu,40,0,,,TRUE
+5514,Harar,80,0,,,TRUE
 5517,Adla,20,0,,,
-5518,Finangiuba,40,0,,,True
-5519,Melka Chireti,20,0,False,,
-5520,Mandera,40,0,,,True
+5518,Finangiuba,40,0,,,TRUE
+5519,Melka Chireti,20,0,FALSE,,
+5520,Mandera,40,0,,,TRUE
 5521,Ije Lola Shet',20,0,,,
-5529,,20,0,False,,
-5534,Dolo,20,0,,,True
-5535,Babille,20,0,,,True
-5536,East Imi,20,0,False,,
-5537,Fik',20,0,False,,
-5539,Gursum Timhirt Bet,20,0,,,True
+5529,,20,0,FALSE,,
+5534,Dolo,20,0,,,TRUE
+5535,Babille,20,0,,,TRUE
+5536,East Imi,20,0,FALSE,,
+5537,Fik',20,0,FALSE,,
+5539,Gursum Timhirt Bet,20,0,,,TRUE
 5541,,20,0,,,
-5549,Ali Sabieh,20,0,,,True
-5551,Godcusbo,20,0,False,,
-5555,,20,0,,,True
-5556,Tadjoura,20,0,False,,
-5564,Jijiga,20,0,,,True
+5549,Ali Sabieh,20,0,,,TRUE
+5551,Godcusbo,20,0,FALSE,,
+5555,,20,0,,,TRUE
+5556,Tadjoura,20,0,FALSE,,
+5564,Jijiga,20,0,,,TRUE
 5566,,20,0,,,
-5572,Kismayo,40,0,,,True
-5578,Djibouti,20,0,,,True
+5572,Kismayo,40,0,,,TRUE
+5578,Djibouti,20,0,,,TRUE
 5583,Isha-Gudban,20,0,,,
-5588,Moroni,160,0,,,True
-5594,Tsihombe,20,0,,,True
+5588,Moroni,160,0,,,TRUE
+5594,Tsihombe,20,0,,,TRUE
 5595,,20,0,,,
-5596,Borama,20,0,,,True
-5603,,20,0,False,,
-5604,Uffurow,20,0,False,,
-5613,Togechane,20,0,False,,
-5614,Diinsoor,20,0,False,,
-5622,Hartishek,20,0,,,True
-5632,Fomboni,20,0,,,True
+5596,Borama,20,0,,,TRUE
+5603,,20,0,FALSE,,
+5604,Uffurow,20,0,FALSE,,
+5613,Togechane,20,0,FALSE,,
+5614,Diinsoor,20,0,FALSE,,
+5622,Hartishek,20,0,,,TRUE
+5632,Fomboni,20,0,,,TRUE
 5636,Allay Baday,20,0,,,
-5643,Dasgahbur,20,0,False,,
-5648,Ambovombe,20,0,,,True
+5643,Dasgahbur,20,0,FALSE,,
+5648,Ambovombe,20,0,,,TRUE
 5655,,20,0,,,
-5661,Gode,20,0,,,True
-5662,Walakhere,20,0,False,,
+5661,Gode,20,0,,,TRUE
+5662,Walakhere,20,0,FALSE,,
 5679,,20,0,,,
-5680,Baidoa,20,0,,,True
-5685,Hargeisa,20,0,,,True
-5696,Hudur,20,0,,,True
-5699,Awareh,20,0,False,,
-5709,Barawa,80,0,,,True
-5710,Buurhakaba,20,0,,,True
+5680,Baidoa,20,0,,,TRUE
+5685,Hargeisa,20,0,,,TRUE
+5696,Hudur,20,0,,,TRUE
+5699,Awareh,20,0,FALSE,,
+5709,Barawa,80,0,,,TRUE
+5710,Buurhakaba,20,0,,,TRUE
 5713,Kellafo,20,0,,,
-5714,Kebri Dehar,20,0,False,,
-5718,,20,0,False,,
-5727,Tayeeglow,20,0,False,,
-5729,Mamoudzou,640,0,,,True
-5730,Qoryooley,80,0,,,True
-5732,Berbera,80,0,,,True
+5714,Kebri Dehar,20,0,FALSE,,
+5718,,20,0,FALSE,,
+5727,Tayeeglow,20,0,FALSE,,
+5729,Mamoudzou,640,0,,,TRUE
+5730,Qoryooley,80,0,,,TRUE
+5732,Berbera,80,0,,,TRUE
 5739,Ceel-Caddow,20,0,,,
-5742,Merca,80,0,,,True
-5745,Dara Salaam,20,0,,,True
-5750,Xawo Tako,20,0,,,True
-5755,Soaindrana,20,0,False,,
-5758,Ferfer,20,0,False,,
-5761,Beledweyne,80,0,,,True
-5762,Burao,20,0,,,True
-5763,Mahajanga,80,0,,,True
-5765,Mogadishu,20,0,,,True
+5742,Merca,80,0,,,TRUE
+5745,Dara Salaam,20,0,,,TRUE
+5750,Xawo Tako,20,0,,,TRUE
+5755,Soaindrana,20,0,FALSE,,
+5758,Ferfer,20,0,FALSE,,
+5761,Beledweyne,80,0,,,TRUE
+5762,Burao,20,0,,,TRUE
+5763,Mahajanga,80,0,,,TRUE
+5765,Mogadishu,20,0,,,TRUE
 5766,,20,0,,,
-5767,Antsirabe,640,0,,,True
+5767,Antsirabe,640,0,,,TRUE
 5768,Ikongo,20,0,,,
 5769,Miadana,20,0,,,
 5770,,20,0,,,
 5771,Ambatofotsy,20,0,,,
-5773,Sambaina,20,0,,,True
-5776,Farafangana,80,0,,,True
-5777,Mahadaay,20,0,False,,
+5773,Sambaina,20,0,,,TRUE
+5776,Farafangana,80,0,,,TRUE
+5777,Mahadaay,20,0,FALSE,,
 5779,Duduble,20,0,,,
 5780,Maqdas,20,0,,,
-5783,Antanifotsy,20,0,False,,
-5791,Manakara,80,0,,,True
-5792,Antananarivo,20,0,,,True
-5793,Ambatolampy Tsimahafotsy,20,0,,,True
+5783,Antanifotsy,20,0,FALSE,,
+5791,Manakara,80,0,,,TRUE
+5792,Antananarivo,20,0,,,TRUE
+5793,Ambatolampy Tsimahafotsy,20,0,,,TRUE
 5796,Ambohidrabiby,20,0,,,
-5799,Cabudwaaq,20,0,False,,
-5809,Dhuusamareeb ???????,20,0,False,,
+5799,Cabudwaaq,20,0,FALSE,,
+5809,Dhuusamareeb ???????,20,0,FALSE,,
 5812,,20,0,,,
-5825,Galdogob,20,0,False,,
-5827,Erigavo,20,0,,,True
-5832,Bursaalax,20,0,False,,
-5833,Las Anod,40,0,,,True
-5837,Galkayo,20,0,,,True
+5825,Galdogob,20,0,FALSE,,
+5827,Erigavo,20,0,,,TRUE
+5832,Bursaalax,20,0,FALSE,,
+5833,Las Anod,40,0,,,TRUE
+5837,Galkayo,20,0,,,TRUE
 5839,Sheak Cali,20,0,,,
-5843,Andoany,160,0,,,True
+5843,Andoany,160,0,,,TRUE
 5848,,20,0,,,
-5849,Badhan,20,0,False,,
+5849,Badhan,20,0,FALSE,,
 5850,,20,0,,,
 5852,Antetezambaro,20,0,,,
-5861,Garoowe,40,0,,,True
-5871,Bosaso,20,0,,,True
-5873,Maroantsetra,80,0,,,True
-5875,Qardho City,20,0,False,,
-5930,Le Port,320,0,,,True
-5933,Le Tampon,20,0,,,True
-5934,Saint-Denis,320,0,,,True
-5938,Saint-Andr‚,20,0,,,True
-5960,Port Louis,160,0,,,True
+5861,Garoowe,40,0,,,TRUE
+5871,Bosaso,20,0,,,TRUE
+5873,Maroantsetra,80,0,,,TRUE
+5875,Qardho City,20,0,FALSE,,
+5930,Le Port,320,0,,,TRUE
+5933,Le Tampon,20,0,,,TRUE
+5934,Saint-Denis,320,0,,,TRUE
+5938,Saint-Andr‚,20,0,,,TRUE
+5960,Port Louis,160,0,,,TRUE
