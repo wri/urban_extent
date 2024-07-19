@@ -55,7 +55,7 @@ def get_urban_extents(IDS, CITIES_LIST, cities_track):
 
 ###### Remove images
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.stringContains('system:index', '13133')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.stringContains('system:index', '12497')).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980').filter(ee.Filter.stringContains('system:index', '3764')).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_2010').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
 
@@ -72,7 +72,7 @@ def get_urban_extents(IDS, CITIES_LIST, cities_track):
 
 
 
-####### Scale factor check
+###### Scale factor check
 def post_check_task_scale(TASKS, cities_track):
     for i in range(len(TASKS) - 1, -1, -1):
         cID = int(TASKS[i].status()['description'].split('-')[-2])

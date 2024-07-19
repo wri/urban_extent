@@ -15,6 +15,7 @@ with open('key.txt') as f:
 api_key = f[0]
 GOOGLE_MAPS_API_KEY = api_key
 
+
 def geocode_address(city_list, api_key):
     for idx, city_row in city_list.iterrows():
         if idx % 200 == 0:
@@ -41,6 +42,7 @@ def geocode_address(city_list, api_key):
     # return LON, LAT, FULL_NAME
     return city_list
 
+
 df = pd.read_csv('data/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2.csv', encoding='latin1', low_memory=False)
 df = df.dropna(how='all')
 city_list = df[['ID_HDC_G0', 'UC_NM_MN', 'CTR_MN_NM']]
@@ -48,7 +50,7 @@ city_list = geocode_address(city_list, api_key)
 city_list.to_csv('data/city_data_google.csv')
 
 
-####### Convert manual check results to checked dataset
+###### Convert manual check results to checked dataset
 df = pd.read_csv('data/city_data_to_check_wz.csv', encoding='latin1', low_memory=False)
 
 df.loc[df['SELECT'].notna() & (df['SELECT'] != '') & (df['SELECT'] != 'ToDo'), 'USE_COM'] = 'FALSE'
@@ -76,23 +78,22 @@ df.loc[df['SELECT'] == 'Inspected', 'geometry'] = [
 gdf = gpd.GeoDataFrame(df, geometry='geometry')
 gdf.drop(columns=['SELECT', 'Inspected_LON', 'Inspected_LAT', 'Inspected_names'], axis=1, inplace=True)
 gdf = gdf.dropna(subset=['geometry'])
-gdf.to_csv('data/city_data_checked.csv',index=False)
+gdf.to_csv('data/city_data_checked.csv', index=False)
 
 gdf = gdf.loc[df['GRGN_L1'] == 'Africa', :]
-gdf.to_csv('data/city_data_checked_africa.csv',index=False)
+gdf.to_csv('data/city_data_checked_africa.csv', index=False)
 
 
-
-########## Check ToDo cities
+###### Check ToDo cities
 df = pd.read_csv('data/city_data_to_check_wz.csv', encoding='latin1', low_memory=False)
 for cID in df['ID_HDC_G0']:
-    if cID % 100==0:
+    if cID % 100 == 0:
         print(cID)
     non_na_pixels = geelayers.BU_CONNECTED.reduceRegion(
-                        reducer=ee.Reducer.count(),
-                        geometry=ee.Feature(ee.FeatureCollection(geelayers.CITY_DATA_POLY).filter(ee.Filter.eq('ID_HDC_G0',cID)).first()).geometry(),
-                        scale=100,
-                        maxPixels=1e9
-                    ).get('builtup')
-    df.loc[df['ID_HDC_G0']==cID, 'COULD_DO'] = bool(ee.Number(non_na_pixels).gt(0).getInfo())
-df.to_csv('data/city_data_checked_wz_todo.csv',index=False)
+        reducer=ee.Reducer.count(),
+        geometry=ee.Feature(ee.FeatureCollection(geelayers.CITY_DATA_POLY).filter(ee.Filter.eq('ID_HDC_G0', cID)).first()).geometry(),
+        scale=100,
+        maxPixels=1e9
+    ).get('builtup')
+    df.loc[df['ID_HDC_G0'] == cID, 'COULD_DO'] = bool(ee.Number(non_na_pixels).gt(0).getInfo())
+df.to_csv('data/city_data_checked_wz_todo.csv', index=False)
