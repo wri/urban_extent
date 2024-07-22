@@ -15,3 +15,28 @@
 7. Run `gee/create_city_unions_v2.py` to merge the overlapped city polygons.
 8. `gee/urban-extent.ipynb` is used for interactive visualization.
 9. Tracking sheets and city centroid points are stored in the `data` folder.
+
+## Assets on Google Earth Engine
+1. Assets for African cities:
+    - Cities centroid points asset ID: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/city_data_checked_africa`
+    - Raster asset IDs: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_yyyy`
+    - Vector asset IDs: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_yyyy`
+    - Merged vector asset IDs: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/urbanextents_unions_yyyy`
+        ###### * `yyyy` select from 1980/1990/2000/2005/2010/2015/2020
+
+2. Global assets [Work in Progress]
+
+## Metadata for features and images
+- **UC_NM_MN_ORIGINAL**: Original city name from source.
+- **UC_NM_MN [city_name]**: I tried to fill in the N/As and correct the non-English characters when go through the cities. The city name in this column is a bit more clean than the original.
+- **ID_HDC_G0 [city_ids]**: Unique City ID from source. Could be used as a key to merge tables.
+- **P15**: Population 2015 from source.
+- **B15**: Built-up area 2015 from source.
+- **study_center_lat**: Selected city centroid point coordinate - latitude.
+- **study_center_lon**: Selected city centroid point coordinate - longitude.
+- **bu_city_center_lat**: Non NA start point coordinate - latitude.
+- **bu_city_center_lon**:  Non NA start point coordinate - longitude.
+- **study_area_scale_factor**: Scale factor - 20/40/80/160/320/640/1280/2560/5120/10240
+- **GRGN_L1 [region1]**: Continent from source.
+- **GRGN_L2 [region2]**: More detailed region info from source. Used for B15-P15 regression. 
+    ###### * Merged city polygon feature collection used a different column name system labeled in [], it also has less city metadata information than other assets.

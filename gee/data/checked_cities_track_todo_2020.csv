@@ -208,7 +208,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 207,Orizaba,20,0,,,TRUE
 208,Ciudad Victoria,20,0,,,TRUE
 209,Cadereyta JimÇnez,20,0,,,TRUE
-210,San Luis,20,0,,,
+210,San Luis,20,0,,,TRUE
 211,Teziutl†n,20,0,,,TRUE
 212,General Zuazua,20,0,,,TRUE
 213,Linares,20,0,,,TRUE
@@ -346,7 +346,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 345,San Pedro Sula,20,0,,,TRUE
 346,Villanueva,40,0,,,TRUE
 347,Norman,20,0,,,TRUE
-348,Lethbridge,20,0,,,
+348,Lethbridge,20,0,,,TRUE
 349,Oklahoma City,20,0,,,TRUE
 350,MÇrida,20,0,,,TRUE
 351,Comayagua,20,0,,,TRUE
@@ -414,7 +414,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 413,Springfield,20,0,,,TRUE
 414,Santa Elena,40,0,,,TRUE
 415,Paita,20,0,,,TRUE
-416,Manta,20,0,,,
+416,Manta,40,0,,,TRUE
 417,Omaha,20,0,,,TRUE
 418,Sullana,20,0,,,TRUE
 419,San AndrÇs,20,0,,,TRUE
@@ -2577,7 +2577,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 2576,Bwari,640,0,,,TRUE
 2577,Umu Lawlaw,20,0,,,TRUE
 2578,Kura,20,0,,,TRUE
-2579,Ozala,20,0,,,
+2579,Ozala,20,0,,,TRUE
 2580,Tchadoua,20,0,,,TRUE
 2581,Okwuohia,2560,0,,TRUE,
 2582,Kauran Yankwani,40,0,,,TRUE
@@ -2662,7 +2662,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 2661,Ekeje,20,0,,,TRUE
 2662,Ogwuma,20,0,,,TRUE
 2663,Ukap Itak,20,0,,,TRUE
-2664,Ikot Obioko,20,0,,,
+2664,Ikot Obioko,20,0,,,TRUE
 2665,Okom,20,0,,,TRUE
 2666,Gwarzo,20,0,,,TRUE
 2667,Ibiaku Ikot Ukpong,320,0,,,TRUE
@@ -3074,7 +3074,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 3073,Kinzao,20,0,,,TRUE
 3074,Syracuse,20,0,,,TRUE
 3075,Duda,20,0,,,TRUE
-3076,Dirbishi,20,0,,,
+3076,Dirbishi,20,0,,,TRUE
 3077,Cerignola,20,0,,,TRUE
 3078,Gulak,20,0,,,TRUE
 3079,Panguila,80,0,,,TRUE
@@ -3111,7 +3111,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 3110,Trani,20,0,,,TRUE
 3111,Dikwa,20,0,,,TRUE
 3112,Koza,20,0,,,TRUE
-3113,Chibemba,20,0,,,
+3113,Chibemba,20,0,,,TRUE
 3114,Gy?r,20,0,,,TRUE
 3115,Bisceglie,20,0,,,TRUE
 3116,Guider,20,0,,,TRUE
@@ -3213,7 +3213,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 3212,Bongor,20,0,,,TRUE
 3213,Touboro,40,0,,,TRUE
 3214,Ondjiva,20,0,,,TRUE
-3215,Nao,20,0,,,
+3215,Nao,20,0,,,TRUE
 3216,Warsaw,20,0,,,TRUE
 3217,Calilongue,40,0,,,TRUE
 3218,Lecce,20,0,,,TRUE
@@ -4164,7 +4164,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 4163,Gitega,160,0,,,TRUE
 4164,Ni?de,80,0,,,TRUE
 4165,Kayogoro,80,0,,,TRUE
-4166,Rier Market,20,0,,,
+4166,Rier Market,20,0,,,TRUE
 4167,Leer,20,0,,,TRUE
 4168,Rutana,320,0,,,TRUE
 4169,Mutoyi,80,0,,,TRUE
@@ -4177,7 +4177,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 4176,Naj Kawm Majanin,20,0,,,TRUE
 4177,Mongbwalu,20,0,,,TRUE
 4178,Mvurwi,320,0,,,TRUE
-4179,,20,0,,,
+4179,,20,0,,,TRUE
 4180,Musenyi,20,0,,,TRUE
 4181,Dzerzhinsk,40,0,,,TRUE
 4182,Mersin,80,0,,,TRUE
@@ -4204,7 +4204,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 4203,Fort Portal,640,0,,,TRUE
 4204,Yeysk,20,0,,,TRUE
 4205,Chizhanje,2560,0,,TRUE,
-4206,Glenclova,20,0,,,
+4206,Glenclova,20,0,,,TRUE
 4207,Samsun,160,0,,,TRUE
 4208,Ruwa,2560,0,,,TRUE
 4209,Abu Manna Gharb,20,0,,,TRUE
@@ -4262,7 +4262,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 4261,Jupujuro-sii,20,0,,,TRUE
 4262,Aru,20,0,,,TRUE
 4263,Abu Jibeha,20,0,,,TRUE
-4264,Kaya,20,0,,,
+4264,Kaya,20,0,,,TRUE
 4265,Tokat,20,0,,,TRUE
 4266,Murewa,320,0,,,TRUE
 4267,Al ?Abb?siyya,20,0,,,TRUE
@@ -4841,7 +4841,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 4840,Votkinsk,20,0,,,TRUE
 4841,Silopi,20,0,,,TRUE
 4842,Aszimew,20,0,,,TRUE
-4843,Esara (Balle),20,0,,,
+4843,Esara (Balle),20,0,,,TRUE
 4844,Gyumri,80,0,,,TRUE
 4845,Tocha,40,0,,,TRUE
 4846,Leke Bota,40,0,,,TRUE
@@ -5010,7 +5010,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 5009,Qadiyah,640,0,,,TRUE
 5010,Bahrah,640,0,,,TRUE
 5011,Kimir Dingay,40,0,,,TRUE
-5012,,20,1,,,
+5012,,20,0,,,
 5013,Mariam Debre Cuorie,20,0,,,TRUE
 5014,Debre Work,40,0,,,TRUE
 5015,Gojo Town,20,0,,,TRUE
@@ -5028,11 +5028,11 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 5027,Murrupula,160,0,,,TRUE
 5028,Qaryat Qabr al Abd,40,0,,,TRUE
 5029,Dil Yibza,80,0,,,TRUE
-5030,Gezaber,20,1,,,TRUE
+5030,Gezaber,20,0,,,TRUE
 5031,Mertule Mariam,40,0,,,TRUE
 5032,????????,20,0,,,TRUE
 5033,Ginsi,80,0,,,TRUE
-5034,Arekite,20,1,,,TRUE
+5034,Arekite,20,0,,,TRUE
 5035,HakkÉri,40,0,,,TRUE
 5036,Hamam al Alil,40,0,,,TRUE
 5037,Uykro,20,0,,,TRUE
@@ -5042,10 +5042,10 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 5041,Weyira Shet',80,0,,,TRUE
 5042,Alaba Kulito,20,0,,,TRUE
 5043,Kola Shet',20,0,,,
-5044,Shoni,20,1,,,TRUE
+5044,Shoni,20,0,,,TRUE
 5045,Tulu Bolo,80,0,,,TRUE
 5046,Sherer,80,0,,,TRUE
-5047,Sheno,20,1,,,TRUE
+5047,Sheno,20,0,,,TRUE
 5048,Fantapi Irsha,40,0,,,TRUE
 5049,????,20,0,,,TRUE
 5050,Nefas Meewcha,20,0,,,TRUE
@@ -5164,7 +5164,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 5163,Bore,20,0,,,TRUE
 5164,Hagere Selam,20,0,,,TRUE
 5165,Ziway,640,0,,,TRUE
-5166,Debre Libanos,20,0,,,
+5166,Debre Libanos,20,0,,,TRUE
 5167,Debre Tsige,80,0,,,TRUE
 5168,Lalibela,80,0,,,TRUE
 5169,Massawa,20,0,,,TRUE
@@ -5542,122 +5542,122 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 5541,,20,0,,,
 5542,Songhor,40,0,,,TRUE
 5543,Ad Dahi,20,0,,,TRUE
-5544,Mazra`at `Ali `Ali Sayim,20,0,,,
-5545,Abs,20,0,,,
-5546,Al Qanawis,20,0,,,
+5544,Mazra`at `Ali `Ali Sayim,20,0,,,TRUE
+5545,Abs,20,0,,,TRUE
+5546,Al Qanawis,20,0,,,TRUE
 5547,As Sayyid,20,0,,,
 5548,Dayr Zawiyah,20,0,,,
 5549,Ali Sabieh,80,0,,,TRUE
 5550,Migaiet at Tanem,20,0,,,
 5551,Godcusbo,20,0,,,TRUE
-5552,Talesh,20,0,,,
-5553,Zanjan,20,0,,,
-5554,Suq al Shyukh,20,0,,,
+5552,Talesh,1280,0,,,TRUE
+5553,Zanjan,40,0,,,TRUE
+5554,Suq al Shyukh,20,0,,,TRUE
 5555,,40,0,,,TRUE
 5556,Tadjoura,40,0,,,TRUE
 5557,Al Kharazah,20,0,,,
 5558,Al Mudayyirah,20,0,,,
 5559,Al Madwarah,20,0,,,
-5560,Miass,20,0,,,
+5560,Miass,80,0,,,TRUE
 5561,Al Harq,20,0,,,
-5562,Duhyan,20,0,,,
-5563,Hafar Al-Batin,20,0,,,
+5562,Duhyan,20,0,,,TRUE
+5563,Hafar Al-Batin,80,0,,,TRUE
 5564,Jijiga,40,0,,,TRUE
 5565,As Safaqayn,20,0,,,
 5566,,20,0,,,
-5567,Al Maymunah,20,0,,,
-5568,Suq at Talh,20,0,,,
-5569,Kuhdasht,20,0,,,
-5570,kangavar,20,0,,,
+5567,Al Maymunah,20,0,,,TRUE
+5568,Suq at Talh,20,0,,,TRUE
+5569,Kuhdasht,20,0,,,TRUE
+5570,kangavar,80,0,,,TRUE
 5571,Ash Shaghadirah,20,0,,,
 5572,Kismayo,80,0,,,TRUE
-5573,Sa'dah,20,0,,,
-5574,Al Mahwit,20,0,,,
-5575,Gheydar,20,0,,,
+5573,Sa'dah,20,0,,,TRUE
+5574,Al Mahwit,20,0,,,TRUE
+5575,Gheydar,80,0,,,TRUE
 5576,Barabir,20,0,,,
-5577,Al Jarrahi,20,0,,,
+5577,Al Jarrahi,20,0,,,TRUE
 5578,Djibouti,160,0,,,TRUE
-5579,Asadabad,20,0,,,
-5580,Amarah,20,0,,,
-5581,Hajja,20,0,,,
-5582,Sayabah,20,0,,,
+5579,Asadabad,80,0,,,TRUE
+5580,Amarah,20,0,,,TRUE
+5581,Hajja,20,0,,,TRUE
+5582,Sayabah,20,0,,,TRUE
 5583,Isha-Gudban,20,0,,,
-5584,Magnitogorsk,20,0,,,
+5584,Magnitogorsk,20,0,,,TRUE
 5585,Al Murabba,20,0,,,
 5586,Janbat ash Sharif,20,0,,,
-5587,Nurabad,20,0,,,
+5587,Nurabad,40,0,,,TRUE
 5588,Moroni,640,0,,,TRUE
-5589,Kamensk-Uralsky,20,0,,,
-5590,Al Majar al Kabir,20,0,,,
+5589,Kamensk-Uralsky,20,0,,,TRUE
+5590,Al Majar al Kabir,20,0,,,TRUE
 5591,Shi`b al Ghayl,20,0,,,
-5592,???? ???????,20,0,,,
+5592,???? ???????,80,0,,,TRUE
 5593,Qaryat al Mahalibi,20,0,,,
 5594,Tsihombe,80,0,,,TRUE
 5595,,20,0,,,
 5596,Borama,40,0,,,TRUE
-5597,Bandar-e Anzali,20,0,,,
+5597,Bandar-e Anzali,640,0,,,TRUE
 5598,Al Kananah,20,0,,,
-5599,Fuman,20,0,,,
+5599,Fuman,80,0,,,TRUE
 5600,Mizdid,20,0,,,
 5601,Menacha,20,0,,,
-5602,Qalat Saleh,20,0,,,
+5602,Qalat Saleh,20,0,,,TRUE
 5603,,20,0,,,TRUE
 5604,Uffurow,40,0,,,TRUE
-5605,Hamedan,20,0,,,
-5606,Najran,20,0,,,
-5607,Khamir,20,0,,,
+5605,Hamedan,20,0,,,TRUE
+5606,Najran,320,0,,,TRUE
+5607,Khamir,20,0,,,TRUE
 5608,`Ozlat Masawar,20,0,,,
-5609,Amran,20,0,,,
+5609,Amran,20,0,,,TRUE
 5610,Wadi Mawthab,20,0,,,
-5611,Rasht,20,0,,,
-5612,Toyserkan,20,0,,,
+5611,Rasht,160,0,,,TRUE
+5612,Toyserkan,160,0,,,TRUE
 5613,Togechane,80,0,,,TRUE
 5614,Diinsoor,80,0,,,TRUE
-5615,Al-Midaina,20,0,,,
+5615,Al-Midaina,160,0,,,TRUE
 5616,An Najd,20,0,,,
 5617,Rahabah,20,0,,,
-5618,Nahavand,20,0,,,
-5619,Wadi Ad Dawasir,20,0,,,
+5618,Nahavand,40,0,,,TRUE
+5619,Wadi Ad Dawasir,320,0,,,TRUE
 5620,Zulaf,20,0,,,
 5621,Az Zahr,20,0,,,
 5622,Hartishek,80,0,,,TRUE
 5623,Bani Sari,20,0,,,
 5624,Al Harid,20,0,,,
-5625,Khorramdarreh,20,0,,,
+5625,Khorramdarreh,80,0,,,TRUE
 5626,Mahall Said,20,0,,,
 5627,Qaryat as Sunub,20,0,,,
-5628,Abhar,20,0,,,
-5629,Al Qurna,20,0,,,
+5628,Abhar,80,0,,,TRUE
+5629,Al Qurna,160,0,,,TRUE
 5630,Khabzan,20,0,,,
 5631,Wadi Shabaz,20,0,,,
 5632,Fomboni,20,0,,,TRUE
-5633,Chelyabinsk,20,0,,,
-5634,Aktobe,20,0,,,
-5635,Sana'a,20,0,,,
+5633,Chelyabinsk,20,0,,,TRUE
+5634,Aktobe,160,0,,,TRUE
+5635,Sana'a,20,0,,,TRUE
 5636,Allay Baday,20,0,,,
-5637,Khorramabad,20,0,,,
+5637,Khorramabad,80,0,,,TRUE
 5638,Nidan,20,0,,,
-5639,Ta'izz,20,0,,,
+5639,Ta'izz,20,0,,,TRUE
 5640,Al Adan,20,0,,,
 5641,Al Misrakh,20,0,,,
 5642,Milkan,20,0,,,
 5643,Dasgahbur,80,0,,,TRUE
 5644,Dawran AlJadeedah,20,0,,,
-5645,Novy Urengoy,20,0,,,
+5645,Novy Urengoy,20,0,,,TRUE
 5646,Ath Thuja`,20,0,,,
-5647,As Samkar,20,0,,,
+5647,As Samkar,1280,0,,,TRUE
 5648,Ambovombe,40,0,,,TRUE
-5649,Zhanaozen,20,0,,,
-5650,Malayer,20,0,,,
-5651,Ibb,20,0,,,
-5652,Jibla,20,0,,,
-5653,Al Qa`idah,20,0,,,
-5654,Al Milhi,20,0,,,
+5649,Zhanaozen,320,0,,,TRUE
+5650,Malayer,40,0,,,TRUE
+5651,Ibb,20,0,,,TRUE
+5652,Jibla,20,0,,,TRUE
+5653,Al Qa`idah,20,0,,,TRUE
+5654,Al Milhi,20,0,,,TRUE
 5655,,20,0,,,
 5656,Al Fassayah,20,0,,,
 5657,Qabi`,20,0,,,
-5658,Lahijan,20,0,,,
-5659,Borujerd,20,0,,,
+5658,Lahijan,320,0,,,TRUE
+5659,Borujerd,80,0,,,TRUE
 5660,Qibal al Ulya,20,0,,,
 5661,Gode,80,0,,,TRUE
 5662,Walakhere,20,0,,,TRUE
@@ -5666,103 +5666,103 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 5665,Risabah,20,0,,,
 5666,Al Akamah,20,0,,,
 5667,Zarajah,20,0,,,
-5668,Basra,20,0,,,
-5669,Andimeshk,20,0,,,
-5670,Shush,20,0,,,
-5671,Dhamar,20,0,,,
+5668,Basra,40,0,,,TRUE
+5669,Andimeshk,160,0,,,TRUE
+5670,Shush,80,0,,,TRUE
+5671,Dhamar,20,0,,,TRUE
 5672,An Najd,20,0,,,
-5673,Az Zubayr,20,0,,,
-5674,Yarim,20,0,,,
-5675,Novotroitsk,20,0,,,
-5676,Takestan,20,0,,,
-5677,Dezful,20,0,,,
+5673,Az Zubayr,80,0,,,TRUE
+5674,Yarim,20,0,,,TRUE
+5675,Novotroitsk,20,0,,,TRUE
+5676,Takestan,320,0,,,TRUE
+5677,Dezful,20,0,,,TRUE
 5678,As Saddah,20,0,,,
 5679,,20,0,,,
 5680,Baidoa,40,0,,,TRUE
-5681,Orsk,20,0,,,
+5681,Orsk,20,0,,,TRUE
 5682,Al Ajbur,20,0,,,
-5683,Susangerd,20,0,,,
-5684,An Nadirah,20,0,,,
+5683,Susangerd,80,0,,,TRUE
+5684,An Nadirah,20,0,,,TRUE
 5685,Hargeisa,20,0,,,TRUE
 5686,Ad Dahl,20,0,,,
-5687,Qazvin,20,0,,,
-5688,??????????????,20,0,,,
+5687,Qazvin,40,0,,,TRUE
+5688,??????????????,20,0,,,TRUE
 5689,Ar Radmah,20,0,,,
-5690,Abu Al-Khaseeb,20,0,,,
-5691,Al Jahra,20,0,,,
-5692,Dorud,20,0,,,
-5693,Jaber Al-Ahmad,20,0,,,
-5694,Alvand,20,0,,,
-5695,Umm Qasr,20,0,,,
+5690,Abu Al-Khaseeb,2560,0,,,TRUE
+5691,Al Jahra,320,0,,,TRUE
+5692,Dorud,80,0,,,TRUE
+5693,Jaber Al-Ahmad,320,0,,,TRUE
+5694,Alvand,80,0,,,TRUE
+5695,Umm Qasr,40,0,,,TRUE
 5696,Hudur,80,0,,,TRUE
-5697,Hammam Damt,20,0,,,
-5698,Riyadh,20,0,,,
+5697,Hammam Damt,20,0,,,TRUE
+5698,Riyadh,20,0,,,TRUE
 5699,Awareh,20,0,,,TRUE
 5700,Marhab,20,0,,,
-5701,Shaib Liban,20,0,,,
-5702,Qa'atabah,20,0,,,
-5703,Khorramshahr,20,0,,,
+5701,Shaib Liban,640,0,,,TRUE
+5702,Qa'atabah,20,0,,,TRUE
+5703,Khorramshahr,160,0,,,TRUE
 5704,Am Shaaibi,20,0,,,
-5705,Kuwait City,20,0,,,
-5706,Ad Dala,20,0,,,
-5707,Rada'a,20,0,,,
-5708,Abadan,20,0,,,
+5705,Kuwait City,40,0,,,TRUE
+5706,Ad Dala,20,0,,,TRUE
+5707,Rada'a,20,0,,,TRUE
+5708,Abadan,160,0,,,TRUE
 5709,Barawa,80,0,,,TRUE
 5710,Buurhakaba,40,0,,,TRUE
-5711,Shoushtar,20,0,,,
-5712,Ahwaz,20,0,,,
+5711,Shoushtar,80,0,,,TRUE
+5712,Ahwaz,40,0,,,TRUE
 5713,Kellafo,20,0,,,
 5714,Kebri Dehar,40,0,,,TRUE
 5715,,20,0,,,
-5716,Arak,20,0,,,
-5717,Ahmadi,20,0,,,
+5716,Arak,40,0,,,TRUE
+5717,Ahmadi,80,0,,,TRUE
 5718,,20,0,,,TRUE
-5719,Al Mansurah,20,0,,,
-5720,Marib,20,0,,,
-5721,Hafoon,20,0,,,
-5722,Shadegan,20,0,,,
-5723,Aden,20,0,,,
-5724,Nazarabad,20,0,,,
-5725,Aligudarz,20,0,,,
-5726,Hashtgerd,20,0,,,
+5719,Al Mansurah,20,0,,,TRUE
+5720,Marib,20,0,,,TRUE
+5721,Hafoon,20,0,,,TRUE
+5722,Shadegan,80,0,,,TRUE
+5723,Aden,20,0,,,TRUE
+5724,Nazarabad,80,0,,,TRUE
+5725,Aligudarz,40,0,,,TRUE
+5726,Hashtgerd,160,0,,,TRUE
 5727,Tayeeglow,80,0,,,TRUE
-5728,Saveh,20,0,,,
+5728,Saveh,40,0,,,TRUE
 5729,Mamoudzou,640,0,,,TRUE
 5730,Qoryooley,80,0,,,TRUE
-5731,Masjed Soleyman,20,0,,,
+5731,Masjed Soleyman,640,0,,,TRUE
 5732,Berbera,320,0,,,TRUE
-5733,Harib,20,0,,,
+5733,Harib,20,0,,,TRUE
 5734,,20,0,,,
-5735,Tyumen,20,0,,,
-5736,Mahdasht,20,0,,,
-5737,Tehran,20,0,,,
-5738,Safadasht,20,0,,,
+5735,Tyumen,20,0,,,TRUE
+5736,Mahdasht,320,0,,,TRUE
+5737,Tehran,20,0,,,TRUE
+5738,Safadasht,640,0,,,TRUE
 5739,Ceel-Caddow,20,0,,,
-5740,Al-Kharj,20,0,,,
-5741,Khomein,20,0,,,
+5740,Al-Kharj,80,0,,,TRUE
+5741,Khomein,80,0,,,TRUE
 5742,Merca,80,0,,,TRUE
-5743,Al Beidha,20,0,,,
-5744,Chalus,20,0,,,
+5743,Al Beidha,20,0,,,TRUE
+5744,Chalus,2560,0,,,TRUE
 5745,Dara Salaam,20,0,,,TRUE
-5746,Bandar-e Emam Khomeini,20,0,,,
-5747,Al Khafji,20,0,,,
-5748,Al Ulya,20,0,,,
-5749,Bandar-e Mahshahr,20,0,,,
+5746,Bandar-e Emam Khomeini,320,0,,,TRUE
+5747,Al Khafji,320,0,,,TRUE
+5748,Al Ulya,20,0,,,TRUE
+5749,Bandar-e Mahshahr,160,0,,,TRUE
 5750,Xawo Tako,40,0,,,TRUE
-5751,Turkmenbashy,20,0,,,
-5752,Shuqrah,20,0,,,
-5753,Shokuhieh Industrial Town,20,0,,,
-5754,Ramhormoz,20,0,,,
+5751,Turkmenbashy,320,0,,,TRUE
+5752,Shuqrah,20,0,,,TRUE
+5753,Shokuhieh Industrial Town,160,0,,,TRUE
+5754,Ramhormoz,80,0,,,TRUE
 5755,Soaindrana,20,0,,,TRUE
-5756,Qom,20,0,,,
-5757,Lawdar,20,0,,,
+5756,Qom,20,0,,,TRUE
+5757,Lawdar,20,0,,,TRUE
 5758,Ferfer,40,0,,,TRUE
-5759,Pardisan,20,0,,,
-5760,Izeh,20,0,,,
+5759,Pardisan,80,0,,,TRUE
+5760,Izeh,20,0,,,TRUE
 5761,Beledweyne,320,0,,,TRUE
 5762,Burao,40,0,,,TRUE
 5763,Mahajanga,640,0,,,TRUE
-5764,Omidieh,20,0,,,
+5764,Omidieh,160,0,,,TRUE
 5765,Mogadishu,40,0,,,TRUE
 5766,,20,0,,,
 5767,Antsirabe,2560,0,,,TRUE
@@ -5770,235 +5770,235 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 5769,Miadana,20,0,,,
 5770,,20,0,,,
 5771,Ambatofotsy,20,0,,,
-5772,Qarchak,20,0,,,
+5772,Qarchak,320,0,,,TRUE
 5773,Sambaina,40,0,,,TRUE
-5774,Pardis,20,0,,,
-5775,Pakdasht,20,0,,,
+5774,Pardis,160,0,,,TRUE
+5775,Pakdasht,80,0,,,TRUE
 5776,Farafangana,160,0,,,TRUE
 5777,Mahadaay,20,0,,,TRUE
-5778,Varamin,20,0,,,
+5778,Varamin,640,0,,,TRUE
 5779,Duduble,20,0,,,
 5780,Maqdas,20,0,,,
-5781,Nesab,20,0,,,
-5782,Norilsk,20,0,,,
+5781,Nesab,20,0,,,TRUE
+5782,Norilsk,20,0,,,TRUE
 5783,Antanifotsy,80,0,,,TRUE
-5784,Sharifabad,20,0,,,
-5785,Amol,20,0,,,
-5786,Kashan,20,0,,,
-5787,Kurgan,20,0,,,
-5788,Sharurah,20,0,,,
-5789,Behbahan,20,0,,,
-5790,Shahr-e Kord,20,0,,,
+5784,Sharifabad,160,0,,,TRUE
+5785,Amol,160,0,,,TRUE
+5786,Kashan,160,0,,,TRUE
+5787,Kurgan,20,0,,,TRUE
+5788,Sharurah,80,0,,,TRUE
+5789,Behbahan,80,0,,,TRUE
+5790,Shahr-e Kord,80,0,,,TRUE
 5791,Manakara,320,0,,,TRUE
 5792,Antananarivo,40,0,,,TRUE
 5793,Ambatolampy Tsimahafotsy,40,0,,,TRUE
-5794,Babol,20,0,,,
-5795,Rudny,20,0,,,
+5794,Babol,1280,0,,,TRUE
+5795,Rudny,320,0,,,TRUE
 5796,Ambohidrabiby,20,0,,,
-5797,Dehdasht,20,0,,,
-5798,Lordegan,20,0,,,
+5797,Dehdasht,40,0,,,TRUE
+5798,Lordegan,80,0,,,TRUE
 5799,Cabudwaaq,320,0,,,TRUE
-5800,Al Jubayl Industrial City,20,0,,,
-5801,Najafabad,20,0,,,
-5802,Qaem Shahr,20,0,,,
-5803,Jubail,20,0,,,
-5804,Kostanay,20,0,,,
-5805,Zarrinshahr,20,0,,,
-5806,Shahin Shahr,20,0,,,
-5807,Balkanabat,20,0,,,
-5808,Fuladshahr,20,0,,,
+5800,Al Jubayl Industrial City,80,0,,,TRUE
+5801,Najafabad,320,0,,,TRUE
+5802,Qaem Shahr,320,0,,,TRUE
+5803,Jubail,160,0,,,TRUE
+5804,Kostanay,640,0,,,TRUE
+5805,Zarrinshahr,160,0,,,TRUE
+5806,Shahin Shahr,160,0,,,TRUE
+5807,Balkanabat,80,0,,,TRUE
+5808,Fuladshahr,160,0,,,TRUE
 5809,Dhuusamareeb ???????,80,0,,,TRUE
-5810,Sari,20,0,,,
-5811,Isfahan,20,0,,,
+5810,Sari,80,0,,,TRUE
+5811,Isfahan,40,0,,,TRUE
 5812,,20,0,,,
-5813,Dogonbadan,20,0,,,
-5814,Bandar Ganaveh,20,0,,,
-5815,Dolatabad,20,0,,,
-5816,Neka,20,0,,,
-5817,Hofuf,20,0,,,
-5818,Azzan,20,0,,,
-5819,Baharestan,20,0,,,
-5820,Dammam,20,0,,,
-5821,Behshahr,20,0,,,
-5822,Bagh-e Zahra,20,0,,,
-5823,Shahreza,20,0,,,
-5824,Bushehr,20,0,,,
+5813,Dogonbadan,320,0,,,TRUE
+5814,Bandar Ganaveh,160,0,,,TRUE
+5815,Dolatabad,80,0,,,TRUE
+5816,Neka,320,0,,,TRUE
+5817,Hofuf,20,0,,,TRUE
+5818,Azzan,20,0,,,TRUE
+5819,Baharestan,80,0,,,TRUE
+5820,Dammam,40,0,,,TRUE
+5821,Behshahr,320,0,,,TRUE
+5822,Bagh-e Zahra,80,0,,,TRUE
+5823,Shahreza,160,0,,,TRUE
+5824,Bushehr,320,0,,,TRUE
 5825,Galdogob,80,0,,,TRUE
-5826,Al Khobar,20,0,,,
+5826,Al Khobar,640,0,,,TRUE
 5827,Erigavo,40,0,,,TRUE
-5828,Ab Pakhsh,20,0,,,
-5829,??????,20,0,,,
-5830,Semnan,20,0,,,
-5831,Yasuj,20,0,,,
+5828,Ab Pakhsh,160,0,,,TRUE
+5829,??????,1280,0,,,TRUE
+5830,Semnan,160,0,,,TRUE
+5831,Yasuj,160,0,,,TRUE
 5832,Bursaalax,160,0,,,TRUE
 5833,Las Anod,160,0,,,TRUE
-5834,Bandar-e Torkaman,20,0,,,
-5835,Nurabad Mamasani,20,0,,,
-5836,Manama,20,0,,,
+5834,Bandar-e Torkaman,160,0,,,TRUE
+5835,Nurabad Mamasani,160,0,,,TRUE
+5836,Manama,20,0,,,TRUE
 5837,Galkayo,160,0,,,TRUE
-5838,Al Qatn,20,0,,,
+5838,Al Qatn,40,0,,,TRUE
 5839,Sheak Cali,20,0,,,
-5840,Gorgan,20,0,,,
-5841,Kazerun,20,0,,,
-5842,Aghghala,20,0,,,
+5840,Gorgan,40,0,,,TRUE
+5841,Kazerun,160,0,,,TRUE
+5842,Aghghala,80,0,,,TRUE
 5843,Andoany,320,0,,,TRUE
-5844,Seiyun,20,0,,,
-5845,Aliabad-e Katul,20,0,,,
-5846,Tarim,20,0,,,
-5847,Abadeh,20,0,,,
+5844,Seiyun,80,0,,,TRUE
+5845,Aliabad-e Katul,160,0,,,TRUE
+5846,Tarim,40,0,,,TRUE
+5847,Abadeh,160,0,,,TRUE
 5848,,20,0,,,
 5849,Badhan,40,0,,,TRUE
 5850,,20,0,,,
-5851,Gonbad-e Qabus,20,0,,,
+5851,Gonbad-e Qabus,40,0,,,TRUE
 5852,Antetezambaro,20,0,,,
-5853,Azadshahr,20,0,,,
-5854,Shiraz,20,0,,,
-5855,Shahrud,20,0,,,
-5856,Al Mutadarririn,20,0,,,
-5857,Serdar,20,0,,,
-5858,Gilan Tappeh,20,0,,,
-5859,Mukalla,20,0,,,
-5860,Ishim,20,0,,,
+5853,Azadshahr,40,0,,,TRUE
+5854,Shiraz,80,0,,,TRUE
+5855,Shahrud,80,0,,,TRUE
+5856,Al Mutadarririn,40,0,,,TRUE
+5857,Serdar,160,0,,,TRUE
+5858,Gilan Tappeh,160,0,,,TRUE
+5859,Mukalla,80,0,,,TRUE
+5860,Ishim,20,0,,,TRUE
 5861,Garoowe,320,0,,,TRUE
-5862,Al Juwaibiyat,20,0,,,
-5863,Kangan Seaport,20,0,,,
-5864,Ras Laffan,20,0,,,
-5865,Doha,20,0,,,
-5866,Al Khor,20,0,,,
-5867,Marvdasht,20,0,,,
-5868,Firuzabad,20,0,,,
-5869,Al Wakrah,20,0,,,
-5870,Shihr,20,0,,,
+5862,Al Juwaibiyat,40,0,,,TRUE
+5863,Kangan Seaport,320,0,,,TRUE
+5864,Ras Laffan,80,0,,,TRUE
+5865,Doha,20,0,,,TRUE
+5866,Al Khor,80,0,,,TRUE
+5867,Marvdasht,40,0,,,TRUE
+5868,Firuzabad,80,0,,,TRUE
+5869,Al Wakrah,160,0,,,TRUE
+5870,Shihr,20,0,,,TRUE
 5871,Bosaso,80,0,,,TRUE
-5872,Nizhnevartovsk,20,0,,,
+5872,Nizhnevartovsk,20,0,,,TRUE
 5873,Maroantsetra,320,0,,,TRUE
-5874,Ardakan,20,0,,,
+5874,Ardakan,320,0,,,TRUE
 5875,Qardho City,80,0,,,TRUE
-5876,Petropavl,20,0,,,
-5877,Konye-Urgench,20,0,,,
-5878,Yazd,20,0,,,
-5879,Khujayli,20,0,,,
-5880,Ashkhaneh,20,0,,,
-5881,Nukus,20,0,,,
-5882,Fasa,20,0,,,
-5883,Jahrom,20,0,,,
-5884,Ayteke Bi,20,0,,,
-5885,Gurbansoltan Eje,20,0,,,
-5886,Bojnurd,20,0,,,
-5887,Dashoguz,20,0,,,
-5888,Esfarayen,20,0,,,
-5889,Garada?a?ak,20,0,,,
-5890,Shirvan,20,0,,,
-5891,Darab,20,0,,,
-5892,Kokshetau,20,0,,,
-5893,Ashgabat,20,0,,,
-5894,Shahr-e Babak,20,0,,,
-5895,Khiva,20,0,,,
-5896,Sabzevar,20,0,,,
-5897,Urgench,20,0,,,
-5898,Beruniy,20,0,,,
-5899,Xonqa,20,0,,,
-5900,Tabas,20,0,,,
-5901,Turtkul,20,0,,,
-5902,Quchan,20,0,,,
-5903,Madinat Zayed,20,0,,,
-5904,Hazorasp,20,0,,,
-5905,Rafsanjan,20,0,,,
-5906,Sirjan,20,0,,,
-5907,Bardaskan,20,0,,,
-5908,Dargaz,20,0,,,
-5909,Abu Dhabi,20,0,,,
-5910,Neyshabur,20,0,,,
-5911,Zarand,20,0,,,
-5912,Chenaran,20,0,,,
-5913,Kashmar,20,0,,,
-5914,Omsk,20,0,,,
-5915,Dubai,20,0,,,
-5916,Rooh Abad,20,0,,,
-5917,Green Community West,20,0,,,
-5918,Mashhad,20,0,,,
-5919,Kerman,20,0,,,
-5920,Torbate Heydariye,20,0,,,
-5921,Bandar Abbas,20,0,,,
-5922,Qeshm,20,0,,,
-5923,Ras Al Khaimah,20,0,,,
-5924,Al Ain,20,0,,,
-5925,Salalah,20,0,,,
-5926,Sudh,20,0,,,
-5927,Qaen,20,0,,,
-5928,Kyzylorda,20,0,,,
-5929,Khor Fakkan,20,0,,,
+5876,Petropavl,160,0,,,TRUE
+5877,Konye-Urgench,640,0,,,TRUE
+5878,Yazd,80,0,,,TRUE
+5879,Khujayli,320,0,,,TRUE
+5880,Ashkhaneh,40,0,,,TRUE
+5881,Nukus,160,0,,,TRUE
+5882,Fasa,320,0,,,TRUE
+5883,Jahrom,160,0,,,TRUE
+5884,Ayteke Bi,320,0,,,TRUE
+5885,Gurbansoltan Eje,640,0,,,TRUE
+5886,Bojnurd,20,0,,,TRUE
+5887,Dashoguz,640,0,,,TRUE
+5888,Esfarayen,80,0,,,TRUE
+5889,Garada?a?ak,320,0,,,TRUE
+5890,Shirvan,40,0,,,TRUE
+5891,Darab,80,0,,,TRUE
+5892,Kokshetau,320,0,,,TRUE
+5893,Ashgabat,80,0,,,TRUE
+5894,Shahr-e Babak,160,0,,,TRUE
+5895,Khiva,320,0,,,TRUE
+5896,Sabzevar,40,0,,,TRUE
+5897,Urgench,160,0,,,TRUE
+5898,Beruniy,640,0,,,TRUE
+5899,Xonqa,320,0,,,TRUE
+5900,Tabas,160,0,,,TRUE
+5901,Turtkul,640,0,,,TRUE
+5902,Quchan,40,0,,,TRUE
+5903,Madinat Zayed,80,0,,,TRUE
+5904,Hazorasp,640,0,,,TRUE
+5905,Rafsanjan,160,0,,,TRUE
+5906,Sirjan,80,0,,,TRUE
+5907,Bardaskan,80,0,,,TRUE
+5908,Dargaz,40,0,,,TRUE
+5909,Abu Dhabi,80,0,,,TRUE
+5910,Neyshabur,40,0,,,TRUE
+5911,Zarand,160,0,,,TRUE
+5912,Chenaran,40,0,,,TRUE
+5913,Kashmar,80,0,,,TRUE
+5914,Omsk,20,0,,,TRUE
+5915,Dubai,20,0,,,TRUE
+5916,Rooh Abad,2560,0,,,TRUE
+5917,Green Community West,2560,0,,,TRUE
+5918,Mashhad,40,0,,,TRUE
+5919,Kerman,80,0,,,TRUE
+5920,Torbate Heydariye,160,0,,,TRUE
+5921,Bandar Abbas,80,0,,,TRUE
+5922,Qeshm,80,0,,,TRUE
+5923,Ras Al Khaimah,160,0,,,TRUE
+5924,Al Ain,20,0,,,TRUE
+5925,Salalah,320,0,,,TRUE
+5926,Sudh,1280,0,,,TRUE
+5927,Qaen,160,0,,,TRUE
+5928,Kyzylorda,160,0,,,TRUE
+5929,Khor Fakkan,40,0,,,TRUE
 5930,Le Port,1280,0,,,TRUE
-5931,Roudan,20,0,,,
-5932,Birjand,20,0,,,
+5931,Roudan,80,0,,,TRUE
+5932,Birjand,80,0,,,TRUE
 5933,Le Tampon,2560,0,,TRUE,
 5934,Saint-Denis,2560,0,,,TRUE
-5935,Jiroft,20,0,,,
-5936,Nur-Sultan,20,0,,,
-5937,Khaf,20,0,,,
+5935,Jiroft,20,0,,,TRUE
+5936,Nur-Sultan,80,0,,,TRUE
+5937,Khaf,80,0,,,TRUE
 5938,Saint-AndrÇ,1280,0,,,TRUE
-5939,Sarakhs,20,0,,,
-5940,Kahnuj,20,0,,,
-5941,Torbat-e Jam,20,0,,,
-5942,Mary,20,0,,,
-5943,Sohar,20,0,,,
-5944,Ibri,20,0,,,
-5945,Bam,20,0,,,
-5946,??????,20,0,,,
-5947,Qaleh Ganj,20,0,,,
-5948,Taybad,20,0,,,
-5949,,20,0,,,
-5950,Shieli,20,0,,,
-5951,Turkmenabat,20,0,,,
-5952,Ghurian,20,0,,,
-5953,,20,0,,,
-5954,Gijduvan,20,0,,,
-5955,Nizwa,20,0,,,
-5956,Bukhara,20,0,,,
-5957,Toraghundi,20,0,,,
-5958,Seeb,20,0,,,
-5959,Herat,20,0,,,
+5939,Sarakhs,80,0,,,TRUE
+5940,Kahnuj,320,0,,,TRUE
+5941,Torbat-e Jam,40,0,,,TRUE
+5942,Mary,640,0,,,TRUE
+5943,Sohar,320,0,,,TRUE
+5944,Ibri,160,0,,,TRUE
+5945,Bam,160,0,,,TRUE
+5946,??????,20,0,,,TRUE
+5947,Qaleh Ganj,40,0,,,TRUE
+5948,Taybad,80,0,,,TRUE
+5949,,20,0,,,TRUE
+5950,Shieli,320,0,,,TRUE
+5951,Turkmenabat,320,0,,,TRUE
+5952,Ghurian,80,0,,,TRUE
+5953,,20,0,,,TRUE
+5954,Gijduvan,2560,0,,,TRUE
+5955,Nizwa,160,0,,,TRUE
+5956,Bukhara,640,0,,,TRUE
+5957,Toraghundi,20,0,,,TRUE
+5958,Seeb,40,0,,,TRUE
+5959,Herat,20,0,,,TRUE
 5960,Port Louis,320,0,,,TRUE
-5961,Navoiy,20,0,,,
-5962,Temirtau,20,0,,,
-5963,Al Ghubra,20,0,,,
-5964,Guzarah,20,0,,,
-5965,Al Amerat,20,0,,,
-5966,Muscat,20,0,,,
-5967,Karaganda,20,0,,,
-5968,Shindand,20,0,,,
-5969,,20,0,,,
-5970,Qala i Naw,20,0,,,
-5971,Zahedan,20,0,,,
-5972,Zabol,20,0,,,
-5973,Farah,20,0,,,
-5974,Turkestan,20,0,,,
+5961,Navoiy,640,0,,,TRUE
+5962,Temirtau,160,0,,,TRUE
+5963,Al Ghubra,160,0,,,TRUE
+5964,Guzarah,40,0,,,TRUE
+5965,Al Amerat,320,0,,,TRUE
+5966,Muscat,1280,0,,,TRUE
+5967,Karaganda,160,0,,,TRUE
+5968,Shindand,20,0,,,TRUE
+5969,,20,0,,,TRUE
+5970,Qala i Naw,40,0,,,TRUE
+5971,Zahedan,20,0,,,TRUE
+5972,Zabol,40,0,,,TRUE
+5973,Farah,80,0,,,TRUE
+5974,Turkestan,160,0,,,TRUE
 5975,,20,0,,,
-5976,Koson,20,0,,,
-5977,Payshanba,20,0,,,
-5978,Zehak,20,0,,,
-5979,Katta-Kurgan,20,0,,,
-5980,Qarshi,20,0,,,
-5981,Zaranj,20,0,,,
-5982,Nik Shahr,20,0,,,
-5983,Iranshahr,20,0,,,
-5984,Pavlodar,20,0,,,
-5985,Khash,20,0,,,
-5986,Balad Bani Bu Ali,20,0,,,
-5987,Sur,20,0,,,
-5988,????????,20,0,,,
+5976,Koson,1280,0,,,TRUE
+5977,Payshanba,640,0,,,TRUE
+5978,Zehak,40,0,,,TRUE
+5979,Katta-Kurgan,640,0,,,TRUE
+5980,Qarshi,160,0,,,TRUE
+5981,Zaranj,160,0,,,TRUE
+5982,Nik Shahr,20,0,,,TRUE
+5983,Iranshahr,80,0,,,TRUE
+5984,Pavlodar,160,0,,,TRUE
+5985,Khash,40,0,,,TRUE
+5986,Balad Bani Bu Ali,640,0,,,TRUE
+5987,Sur,320,0,,,TRUE
+5988,????????,2560,0,,,TRUE
 5989,,20,0,,,
-5990,Koh-i-Sayad,20,0,,,
-5991,Samarkand,20,0,,,
-5992,Maymana,20,0,,,
-5993,Guzar,20,0,,,
-5994,Chabahar,20,0,,,
-5995,Shahrisabz,20,0,,,
-5996,Gallaorol,20,0,,,
+5990,Koh-i-Sayad,20,0,,,TRUE
+5991,Samarkand,640,0,,,TRUE
+5992,Maymana,80,0,,,TRUE
+5993,Guzar,160,0,,,TRUE
+5994,Chabahar,20,0,,,TRUE
+5995,Shahrisabz,160,0,,,TRUE
+5996,Gallaorol,640,0,,,TRUE
 5997,,20,0,,,
-5998,Urgut,20,0,,,
-5999,Sheberghan,20,0,,,
-6000,Jizzax,20,0,,,
+5998,Urgut,640,0,,,TRUE
+5999,Sheberghan,80,0,,,TRUE
+6000,Jizzax,160,0,,,TRUE
 6001,Mehrestan,20,0,,,TRUE
 6002,Jetisay,320,0,,,TRUE
 6003,Shymkent,320,0,,,TRUE
@@ -6015,7 +6015,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 6014,Chirchiq,2560,0,,TRUE,
 6015,,20,0,,,
 6016,Lashkar Gah,40,0,,,TRUE
-6017,Tukzar,20,0,,,
+6017,Tukzar,20,0,,,TRUE
 6018,Garmsir,20,0,,,
 6019,Tomsk,20,0,,,TRUE
 6020,Musa Qal`eh,20,0,,,TRUE
@@ -6042,7 +6042,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 6041,,20,0,,,
 6042,Hotal,20,0,,,
 6043,Ghafurov,1280,0,,,TRUE
-6044,Chib,20,0,,,
+6044,Chib,20,0,,,TRUE
 6045,Dushanbe,160,0,,,TRUE
 6046,Turbat,80,0,,,TRUE
 6047,Dehi,20,0,,,
@@ -6165,7 +6165,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 6164,Hub,160,0,,,TRUE
 6165,Usta Muhammad,20,0,,,TRUE
 6166,Shahdadkot,20,0,,,TRUE
-6167,Mohmand Darah,20,0,,,
+6167,Mohmand Darah,20,0,,,TRUE
 6168,Dera Murad Jamali,20,0,,,TRUE
 6169,Karachi,20,0,,,TRUE
 6170,Zhob,20,0,,,TRUE
@@ -6247,7 +6247,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 6246,Hala,20,0,,,TRUE
 6247,Goth Dabh?n,40,0,,,TRUE
 6248,Torwarsak,80,0,,,TRUE
-6249,Jehangira Dobandi,20,0,,,
+6249,Jehangira Dobandi,640,0,,,TRUE
 6250,Bindi,20,0,,,TRUE
 6251,Hyderabad,20,0,,,TRUE
 6252,Rustam,40,0,,,TRUE
@@ -6352,7 +6352,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 6351,Ahmadpur East,80,0,,,TRUE
 6352,Tacheng/Sawesek,40,0,,,TRUE
 6353,Sargodha,20,0,,,TRUE
-6354,Arja,20,0,,,
+6354,Arja,20,0,,,TRUE
 6355,Kabirwala,80,0,,,TRUE
 6356,Gujar Khan,80,0,,,TRUE
 6357,Jhang,40,0,,,TRUE
@@ -6363,12 +6363,12 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 6362,Bhalwal,80,0,,,TRUE
 6363,Lodhran,80,0,,,TRUE
 6364,Nakhatrana,40,0,,,TRUE
-6365,Auwoora,20,0,,,
+6365,Auwoora,20,0,,,TRUE
 6366,Samote,20,0,,,TRUE
 6367,Rawalakot,160,0,,,TRUE
 6368,Palandri,20,0,,,TRUE
 6369,Mithapur,80,0,,,TRUE
-6370,,20,0,,,
+6370,,20,0,,,TRUE
 6371,Dwarka,160,0,,,TRUE
 6372,Sohawa,80,0,,,TRUE
 6373,Bahawalpur,40,0,,,TRUE
@@ -6999,678 +6999,678 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 6998,Kalwan,20,0,,,
 6999,Ojhar,20,0,,,
 7000,Keriya,20,0,,,
-7001,Chutmalpur,20,0,,,
-7002,Kishangarh,20,0,,,
-7003,Baghpat,20,0,,,
-7004,Rawatbhata,20,0,,,
-7005,Pimpalgaon Basvant,20,0,,,
-7006,Jaora,20,0,,,
-7007,,20,0,,,
-7008,Bhagw?npur,20,0,,,
-7009,Mahad,20,0,,,
-7010,Wujiaqu,20,0,,,
-7011,Ratlam,20,0,,,
-7012,Budhana,20,0,,,
-7013,,20,0,,,
-7014,??,20,0,,,
-7015,Deoband,20,0,,,
-7016,Dehradun,20,0,,,
-7017,Shahada,20,0,,,
-7018,Talegaon,20,0,,,
-7019,Nangalwadi Phata,20,0,,,
-7020,,20,0,,,
-7021,Sinnar,20,0,,,
-7022,Rajgarh,20,0,,,
-7023,Sakri,20,0,,,
-7024,Satana,20,0,,,
-7025,Khed,20,0,,,
-7026,Lalsot,20,0,,,
-7027,Sohna,20,0,,,
-7028,Kota,20,0,,,
-7029,Kukshi,20,0,,,
-7030,Muzaffarnagar,20,0,,,
-7031,Bandikui,20,0,,,
-7032,Sikandra,20,0,,,
-7033,Roorkee,20,0,,,
-7034,Ramgarh,20,0,,,
-7035,Khetia,20,0,,,
-7036,Niphad,20,0,,,
-7037,Ratnagiri,20,0,,,
-7038,Sardarpur,20,0,,,
-7039,,20,0,,,
-7040,Junnar,20,0,,,
-7041,Pune,20,0,,,
-7042,Ferozepur Jhirka,20,0,,,
-7043,Akole,20,0,,,
-7044,Lote,20,0,,,
-7045,örÅmqi,20,0,,,
-7046,,20,0,,,
-7047,Chandvad,20,0,,,
-7048,Sardhana,20,0,,,
-7049,,20,0,,,
-7050,Dondaicha,20,0,,,
-7051,Chiplun,20,0,,,
-7052,Pansemal,20,0,,,
-7053,Lasalgaon,20,0,,,
-7054,Uttarkashi,20,0,,,
-7055,Haridwar,20,0,,,
-7056,Khatauli,20,0,,,
-7057,Lachhmangarh,20,0,,,
-7058,Narayangaon,20,0,,,
-7059,Manchar,20,0,,,
-7060,Lakheri,20,0,,,
-7061,Meerut,20,0,,,
-7062,Sakrai,20,0,,,
-7063,Modinagar,20,0,,,
-7064,Prithla,20,0,,,
-7065,Bamanwas,20,0,,,
-7066,Sawai Madhopur,20,0,,,
-7067,Daurala,20,0,,,
-7068,Gandhwani,20,0,,,
-7069,Barwani,20,0,,,
-7070,Laksar,20,0,,,
-7071,Mandawar,20,0,,,
-7072,Pahari,20,0,,,
-7073,Govindgarh,20,0,,,
-7074,Nagda,20,0,,,
-7075,Sangamner,20,0,,,
-7076,Morana,20,0,,,
-7077,Palwal,20,0,,,
-7078,Suwasra,20,0,,,
-7079,Gangdhar,20,0,,,
-7080,Dadri,20,0,,,
-7081,Rishikesh,20,0,,,
-7082,Punhana,20,0,,,
-7083,Sikari,20,0,,,
-7084,Malegaon,20,0,,,
-7085,Greater Noida,20,0,,,
-7086,Fukang,20,0,,,
-7087,Todabhim,20,0,,,
-7088,Bhawani Mandi,20,0,,,
-7089,Manmad,20,0,,,
-7090,Bhor,20,0,,,
-7091,Devrukh,20,0,,,
-7092,Manawar,20,0,,,
-7093,New Tehri,20,0,,,
-7094,Muthiyani,20,0,,,
-7095,Aurangabad,20,0,,,
-7096,Lanja,20,0,,,
-7097,Suket,20,0,,,
-7098,Anjad,20,0,,,
-7099,Mahwa,20,0,,,
-7100,Nival,20,0,,,
-7101,Miranpur,20,0,,,
-7102,Nagar,20,0,,,
-7103,Gangapur,20,0,,,
-7104,Kherli,20,0,,,
-7105,Shirpur,20,0,,,
-7106,Yeola,20,0,,,
-7107,Shikrapur,20,0,,,
-7108,Hapur,20,0,,,
-7109,Dhule,20,0,,,
-7110,Mawana,20,0,,,
-7111,Hodal,20,0,,,
-7112,Itawa,20,0,,,
-7113,Dhar,20,0,,,
-7114,Saswad,20,0,,,
-7115,Sikandarabad,20,0,,,
-7116,Kaman,20,0,,,
-7117,Pipaliya,20,0,,,
-7118,Kopargaon,20,0,,,
-7119,Mehidpur,20,0,,,
-7120,,20,0,,,
-7121,Shirdi,20,0,,,
-7122,Bijnor,20,0,,,
-7123,Sri Mahaveer Ji,20,0,,,
-7124,Sapotra,20,0,,,
-7125,Tianshan,20,0,,,
-7126,Kiratpur,20,0,,,
-7127,Jewar,20,0,,,
-7128,Nandgaon,20,0,,,
-7129,Loni,20,0,,,
-7130,Ghansali,20,0,,,
-7131,Sendhwa,20,0,,,
-7132,Gulavthi,20,0,,,
-7133,Kosi Kalan,20,0,,,
-7134,Mau,20,0,,,
-7135,Najibabad,20,0,,,
-7136,Nadbai,20,0,,,
-7137,Jhalawar,20,0,,,
-7138,Karegaon,20,0,,,
-7139,Satara,20,0,,,
-7140,Deeg,20,0,,,
-7141,Hindaun,20,0,,,
-7142,Jejuri,20,0,,,
-7143,Jhalrapatan,20,0,,,
-7144,Kali Devi,20,0,,,
-7145,Bulandshahr,20,0,,,
-7146,Chhata,20,0,,,
-7147,Kankavali,20,0,,,
-7148,Singhawali,20,0,,,
-7149,Kudal,20,0,,,
-7150,Karauli,20,0,,,
-7151,Sheopur,20,0,,,
-7152,,20,0,,,
-7153,Shrirampur,20,0,,,
-7154,Yanqi,20,0,,,
-7155,Kotdwar,20,0,,,
-7156,Govardhan,20,0,,,
-7157,Kumher,20,0,,,
-7158,Ujjain,20,0,,,
-7159,Amalner,20,0,,,
-7160,Vaijapur,20,0,,,
-7161,Baran,20,0,,,
-7162,Srinagar,20,0,,,
-7163,Khurja,20,0,,,
-7164,Baroda,20,0,,,
-7165,,20,0,,,
-7166,Chandpur,20,0,,,
-7167,Garhmuktesar,20,0,,,
-7168,Balwadi,20,0,,,
-7169,Agar,20,0,,,
-7170,Nagina,20,0,,,
-7171,Bayana,20,0,,,
-7172,Supe,20,0,,,
-7173,Pauri,20,0,,,
-7174,Nahtaur,20,0,,,
-7175,Rahuri,20,0,,,
-7176,Siyana,20,0,,,
-7177,Pithampur,20,0,,,
-7178,Parola,20,0,,,
-7179,Chalisgaon,20,0,,,
-7180,Dhanaura,20,0,,,
-7181,,20,0,,,
-7182,Uchain,20,0,,,
-7183,Vrindavan,20,0,,,
-7184,Bharatpur,20,0,,,
-7185,Sawantwadi,20,0,,,
-7186,Gajraula,20,0,,,
-7187,Mathura,20,0,,,
-7188,Karad,20,0,,,
-7189,Khair,20,0,,,
-7190,Indore,20,0,,,
-7191,Maheshwar,20,0,,,
-7192,Panaji,20,0,,,
-7193,Chopda,20,0,,,
-7194,Noorpur,20,0,,,
-7195,Shikarpur,20,0,,,
-7196,Mant,20,0,,,
-7197,Ahmadnagar,20,0,,,
-7198,Dhampur,20,0,,,
-7199,,20,0,,,
-7200,Jahangirabad,20,0,,,
-7201,Gabhana,20,0,,,
-7202,Vasco da Gama,20,0,,,
-7203,Phaltan,20,0,,,
-7204,Hasanpur,20,0,,,
-7205,,20,0,,,
-7206,Gonda,20,0,,,
-7207,Gokul,20,0,,,
-7208,Sherkot,20,0,,,
-7209,Daund,20,0,,,
-7210,Pahasu,20,0,,,
-7211,Khargone,20,0,,,
-7212,Bhadgaon,20,0,,,
-7213,Islampur,20,0,,,
-7214,Kodoli,20,0,,,
-7215,Jirapur,20,0,,,
-7216,Kannad,20,0,,,
+7001,Chutmalpur,40,0,,,TRUE
+7002,Kishangarh,40,0,,,TRUE
+7003,Baghpat,40,0,,,TRUE
+7004,Rawatbhata,160,0,,,TRUE
+7005,Pimpalgaon Basvant,40,0,,,TRUE
+7006,Jaora,80,0,,,TRUE
+7007,,20,0,,,TRUE
+7008,Bhagw?npur,80,0,,,TRUE
+7009,Mahad,40,0,,,TRUE
+7010,Wujiaqu,20,0,,,TRUE
+7011,Ratlam,20,0,,,TRUE
+7012,Budhana,20,0,,,TRUE
+7013,,20,0,,,TRUE
+7014,??,20,0,,,TRUE
+7015,Deoband,20,0,,,TRUE
+7016,Dehradun,40,0,,,TRUE
+7017,Shahada,40,0,,,TRUE
+7018,Talegaon,160,0,,,TRUE
+7019,Nangalwadi Phata,20,0,,,TRUE
+7020,,20,0,,,TRUE
+7021,Sinnar,40,0,,,TRUE
+7022,Rajgarh,20,0,,,TRUE
+7023,Sakri,20,0,,,TRUE
+7024,Satana,40,0,,,TRUE
+7025,Khed,80,0,,,TRUE
+7026,Lalsot,20,0,,,TRUE
+7027,Sohna,40,0,,,TRUE
+7028,Kota,20,0,,,TRUE
+7029,Kukshi,20,0,,,TRUE
+7030,Muzaffarnagar,20,0,,,TRUE
+7031,Bandikui,20,0,,,TRUE
+7032,Sikandra,20,0,,,TRUE
+7033,Roorkee,20,0,,,TRUE
+7034,Ramgarh,20,0,,,TRUE
+7035,Khetia,20,0,,,TRUE
+7036,Niphad,20,0,,,TRUE
+7037,Ratnagiri,80,0,,,TRUE
+7038,Sardarpur,40,0,,,TRUE
+7039,,2560,0,,,TRUE
+7040,Junnar,40,0,,,TRUE
+7041,Pune,20,0,,,TRUE
+7042,Ferozepur Jhirka,40,0,,,TRUE
+7043,Akole,20,0,,,TRUE
+7044,Lote,160,0,,,TRUE
+7045,örÅmqi,20,0,,,TRUE
+7046,,20,0,,,TRUE
+7047,Chandvad,40,0,,,TRUE
+7048,Sardhana,20,0,,,TRUE
+7049,,20,0,,,TRUE
+7050,Dondaicha,40,0,,,TRUE
+7051,Chiplun,80,0,,,TRUE
+7052,Pansemal,20,0,,,TRUE
+7053,Lasalgaon,40,0,,,TRUE
+7054,Uttarkashi,80,0,,,TRUE
+7055,Haridwar,80,0,,,TRUE
+7056,Khatauli,20,0,,,TRUE
+7057,Lachhmangarh,20,0,,,TRUE
+7058,Narayangaon,40,0,,,TRUE
+7059,Manchar,80,0,,,TRUE
+7060,Lakheri,80,0,,,TRUE
+7061,Meerut,20,0,,,TRUE
+7062,Sakrai,20,0,,,TRUE
+7063,Modinagar,40,0,,,TRUE
+7064,Prithla,80,0,,,TRUE
+7065,Bamanwas,20,0,,,TRUE
+7066,Sawai Madhopur,20,0,,,TRUE
+7067,Daurala,80,0,,,TRUE
+7068,Gandhwani,20,0,,,TRUE
+7069,Barwani,40,0,,,TRUE
+7070,Laksar,40,0,,,TRUE
+7071,Mandawar,40,0,,,TRUE
+7072,Pahari,20,0,,,TRUE
+7073,Govindgarh,40,0,,,TRUE
+7074,Nagda,20,0,,,TRUE
+7075,Sangamner,40,0,,,TRUE
+7076,Morana,20,0,,,TRUE
+7077,Palwal,40,0,,,TRUE
+7078,Suwasra,20,0,,,TRUE
+7079,Gangdhar,20,0,,,TRUE
+7080,Dadri,2560,0,,,TRUE
+7081,Rishikesh,80,0,,,TRUE
+7082,Punhana,20,0,,,TRUE
+7083,Sikari,20,0,,,TRUE
+7084,Malegaon,20,0,,,TRUE
+7085,Greater Noida,2560,0,,,TRUE
+7086,Fukang,20,0,,,TRUE
+7087,Todabhim,40,0,,,TRUE
+7088,Bhawani Mandi,80,0,,,TRUE
+7089,Manmad,20,0,,,TRUE
+7090,Bhor,20,0,,,TRUE
+7091,Devrukh,20,0,,,TRUE
+7092,Manawar,20,0,,,TRUE
+7093,New Tehri,20,0,,,TRUE
+7094,Muthiyani,80,0,,,TRUE
+7095,Aurangabad,80,0,,,TRUE
+7096,Lanja,20,0,,,TRUE
+7097,Suket,20,0,,,TRUE
+7098,Anjad,160,0,,,TRUE
+7099,Mahwa,40,0,,,TRUE
+7100,Nival,20,0,,,TRUE
+7101,Miranpur,20,0,,,TRUE
+7102,Nagar,20,0,,,TRUE
+7103,Gangapur,20,0,,,TRUE
+7104,Kherli,20,0,,,TRUE
+7105,Shirpur,20,0,,,TRUE
+7106,Yeola,40,0,,,TRUE
+7107,Shikrapur,1280,0,,,TRUE
+7108,Hapur,20,0,,,TRUE
+7109,Dhule,40,0,,,TRUE
+7110,Mawana,20,0,,,TRUE
+7111,Hodal,40,0,,,TRUE
+7112,Itawa,40,0,,,TRUE
+7113,Dhar,160,0,,,TRUE
+7114,Saswad,40,0,,,TRUE
+7115,Sikandarabad,20,0,,,TRUE
+7116,Kaman,20,0,,,TRUE
+7117,Pipaliya,80,0,,,TRUE
+7118,Kopargaon,40,0,,,TRUE
+7119,Mehidpur,20,0,,,TRUE
+7120,,20,0,,,TRUE
+7121,Shirdi,40,0,,,TRUE
+7122,Bijnor,20,0,,,TRUE
+7123,Sri Mahaveer Ji,20,0,,,TRUE
+7124,Sapotra,20,0,,,TRUE
+7125,Tianshan,40,0,,,TRUE
+7126,Kiratpur,20,0,,,TRUE
+7127,Jewar,40,0,,,TRUE
+7128,Nandgaon,20,0,,,TRUE
+7129,Loni,40,0,,,TRUE
+7130,Ghansali,20,0,,,TRUE
+7131,Sendhwa,20,0,,,TRUE
+7132,Gulavthi,20,0,,,TRUE
+7133,Kosi Kalan,20,0,,,TRUE
+7134,Mau,20,0,,,TRUE
+7135,Najibabad,20,0,,,TRUE
+7136,Nadbai,20,0,,,TRUE
+7137,Jhalawar,40,0,,,TRUE
+7138,Karegaon,160,0,,,TRUE
+7139,Satara,80,0,,,TRUE
+7140,Deeg,20,0,,,TRUE
+7141,Hindaun,20,0,,,TRUE
+7142,Jejuri,80,0,,,TRUE
+7143,Jhalrapatan,80,0,,,TRUE
+7144,Kali Devi,20,0,,,TRUE
+7145,Bulandshahr,20,0,,,TRUE
+7146,Chhata,80,0,,,TRUE
+7147,Kankavali,20,0,,,TRUE
+7148,Singhawali,20,0,,,TRUE
+7149,Kudal,80,0,,,TRUE
+7150,Karauli,20,0,,,TRUE
+7151,Sheopur,20,0,,,TRUE
+7152,,80,0,,,TRUE
+7153,Shrirampur,80,0,,,TRUE
+7154,Yanqi,20,0,,,TRUE
+7155,Kotdwar,160,0,,,TRUE
+7156,Govardhan,40,0,,,TRUE
+7157,Kumher,20,0,,,TRUE
+7158,Ujjain,40,0,,,TRUE
+7159,Amalner,20,0,,,TRUE
+7160,Vaijapur,20,0,,,TRUE
+7161,Baran,40,0,,,TRUE
+7162,Srinagar,20,0,,,TRUE
+7163,Khurja,20,0,,,TRUE
+7164,Baroda,20,0,,,TRUE
+7165,,40,0,,,TRUE
+7166,Chandpur,20,0,,,TRUE
+7167,Garhmuktesar,40,0,,,TRUE
+7168,Balwadi,20,0,,,TRUE
+7169,Agar,40,0,,,TRUE
+7170,Nagina,20,0,,,TRUE
+7171,Bayana,20,0,,,TRUE
+7172,Supe,80,0,,,TRUE
+7173,Pauri,20,0,,,TRUE
+7174,Nahtaur,20,0,,,TRUE
+7175,Rahuri,40,0,,,TRUE
+7176,Siyana,20,0,,,TRUE
+7177,Pithampur,40,0,,,TRUE
+7178,Parola,40,0,,,TRUE
+7179,Chalisgaon,20,0,,,TRUE
+7180,Dhanaura,20,0,,,TRUE
+7181,,20,0,,,TRUE
+7182,Uchain,20,0,,,TRUE
+7183,Vrindavan,20,0,,,TRUE
+7184,Bharatpur,40,0,,,TRUE
+7185,Sawantwadi,20,0,,,TRUE
+7186,Gajraula,20,0,,,TRUE
+7187,Mathura,80,0,,,TRUE
+7188,Karad,80,0,,,TRUE
+7189,Khair,20,0,,,TRUE
+7190,Indore,40,0,,,TRUE
+7191,Maheshwar,20,0,,,TRUE
+7192,Panaji,40,0,,,TRUE
+7193,Chopda,20,0,,,TRUE
+7194,Noorpur,20,0,,,TRUE
+7195,Shikarpur,20,0,,,TRUE
+7196,Mant,20,0,,,TRUE
+7197,Ahmadnagar,40,0,,,TRUE
+7198,Dhampur,20,0,,,TRUE
+7199,,320,0,,,TRUE
+7200,Jahangirabad,20,0,,,TRUE
+7201,Gabhana,20,0,,,TRUE
+7202,Vasco da Gama,320,0,,,TRUE
+7203,Phaltan,40,0,,,TRUE
+7204,Hasanpur,20,0,,,TRUE
+7205,,20,0,,,TRUE
+7206,Gonda,20,0,,,TRUE
+7207,Gokul,20,0,,,TRUE
+7208,Sherkot,20,0,,,TRUE
+7209,Daund,80,0,,,TRUE
+7210,Pahasu,20,0,,,TRUE
+7211,Khargone,80,0,,,TRUE
+7212,Bhadgaon,40,0,,,TRUE
+7213,Islampur,40,0,,,TRUE
+7214,Kodoli,40,0,,,TRUE
+7215,Jirapur,20,0,,,TRUE
+7216,Kannad,40,0,,,TRUE
 7217,Bhagwanpur,20,0,,,
-7218,Kolhapur,20,0,,,
-7219,Seohara,20,0,,,
-7220,Dewas,20,0,,,
-7221,Amroha,20,0,,,
-7222,Rupbas,20,0,,,
-7223,Aklera,20,0,,,
-7224,Baramati,20,0,,,
+7218,Kolhapur,20,0,,,TRUE
+7219,Seohara,20,0,,,TRUE
+7220,Dewas,40,0,,,TRUE
+7221,Amroha,20,0,,,TRUE
+7222,Rupbas,20,0,,,TRUE
+7223,Aklera,20,0,,,TRUE
+7224,Baramati,160,0,,,TRUE
 7225,Mudhaltitta,20,0,,,
-7226,Shrigonda,20,0,,,
-7227,Aligarh,20,0,,,
+7226,Shrigonda,20,0,,,TRUE
+7227,Aligarh,20,0,,,TRUE
 7228,,20,0,,,
-7229,Joya,20,0,,,
-7230,Iglas,20,0,,,
-7231,Fatehpur Sikri,20,0,,,
-7232,Baseri,20,0,,,
-7233,Margao,20,0,,,
-7234,Sahaspur,20,0,,,
-7235,Anupshahr,20,0,,,
-7236,Pachora,20,0,,,
-7237,,20,0,,,
-7238,,20,0,,,
-7239,,20,0,,,
-7240,Chhipabarod,20,0,,,
-7241,Shajapur,20,0,,,
-7242,Kanth,20,0,,,
-7243,Dibai,20,0,,,
-7244,,20,0,,,
-7245,Gokul Shirgaon,20,0,,,
-7246,Ponda,20,0,,,
-7247,Sabalgarh,20,0,,,
-7248,Jalgaon,20,0,,,
-7249,Chamoli Gopeshwar,20,0,,,
-7250,Kiraoli,20,0,,,
-7251,Moradabad,20,0,,,
-7252,Runkata,20,0,,,
-7253,Kagal,20,0,,,
-7254,Hathras,20,0,,,
-7255,Bari,20,0,,,
-7256,Bijeypur,20,0,,,
-7257,Ranjangoan,20,0,,,
+7229,Joya,40,0,,,TRUE
+7230,Iglas,20,0,,,TRUE
+7231,Fatehpur Sikri,20,0,,,TRUE
+7232,Baseri,20,0,,,TRUE
+7233,Margao,80,0,,,TRUE
+7234,Sahaspur,20,0,,,TRUE
+7235,Anupshahr,20,0,,,TRUE
+7236,Pachora,40,0,,,TRUE
+7237,,40,0,,,TRUE
+7238,,20,0,,,TRUE
+7239,,20,0,,,TRUE
+7240,Chhipabarod,40,0,,,TRUE
+7241,Shajapur,40,0,,,TRUE
+7242,Kanth,20,0,,,TRUE
+7243,Dibai,20,0,,,TRUE
+7244,,20,0,,,TRUE
+7245,Gokul Shirgaon,160,0,,,TRUE
+7246,Ponda,40,0,,,TRUE
+7247,Sabalgarh,20,0,,,TRUE
+7248,Jalgaon,20,0,,,TRUE
+7249,Chamoli Gopeshwar,20,0,,,TRUE
+7250,Kiraoli,20,0,,,TRUE
+7251,Moradabad,20,0,,,TRUE
+7252,Runkata,2560,0,,,TRUE
+7253,Kagal,40,0,,,TRUE
+7254,Hathras,20,0,,,TRUE
+7255,Bari,20,0,,,TRUE
+7256,Bijeypur,20,0,,,TRUE
+7257,Ranjangoan,80,0,,,TRUE
 7258,,20,0,,,
-7259,Jaspur,20,0,,,
-7260,Chhabra,20,0,,,
-7261,Vita,20,0,,,
-7262,Atrauli,20,0,,,
-7263,Sadabad,20,0,,,
-7264,Agra,20,0,,,
-7265,Sarangpur,20,0,,,
-7266,Aurangabad,20,0,,,
-7267,Sambhal,20,0,,,
-7268,Babrala,20,0,,,
-7269,Jairampur,20,0,,,
-7270,Kheragarh,20,0,,,
-7271,Barwaha,20,0,,,
-7272,Ichalkaranji,20,0,,,
-7273,Nippani,20,0,,,
-7274,Gadahinglaj,20,0,,,
-7275,Thakurdwara,20,0,,,
-7276,Hathras,20,0,,,
-7277,Yawal,20,0,,,
-7278,Chitegaon,20,0,,,
-7279,Ratanpur,20,0,,,
-7280,Kailaras,20,0,,,
-7281,Sanawad,20,0,,,
-7282,,20,0,,,
-7283,Sonkach,20,0,,,
-7284,Bhikangaon,20,0,,,
-7285,Manoharthana,20,0,,,
-7286,Rajgarh,20,0,,,
-7287,Kada,20,0,,,
-7288,Sangli,20,0,,,
-7289,Shevgaon,20,0,,,
-7290,Pathardi,20,0,,,
-7291,Tasgaon,20,0,,,
-7292,Jaysingpur,20,0,,,
-7293,,20,0,,,
-7294,Karjat,20,0,,,
-7295,Karwar,20,0,,,
-7296,Pohari,20,0,,,
-7297,Chharra,20,0,,,
-7298,Dhaulpur,20,0,,,
-7299,Bhusawal,20,0,,,
-7300,,20,0,,,
-7301,Bahjoi,20,0,,,
-7302,Motipura Chauki,20,0,,,
-7303,,20,0,,,
-7304,Sankeshwara,20,0,,,
-7305,R?mnagar,20,0,,,
-7306,Kundarkhi,20,0,,,
-7307,Pachore,20,0,,,
-7308,Ashti,20,0,,,
-7309,Tanda,20,0,,,
-7310,Bilari,20,0,,,
-7311,Jamner,20,0,,,
-7312,dehgaon,20,0,,,
-7313,Sikandra Rao,20,0,,,
-7314,Chikkodi,20,0,,,
-7315,Paithan,20,0,,,
-7316,Joura,20,0,,,
-7317,,20,0,,,
-7318,Jalesar,20,0,,,
-7319,Etmadpur,20,0,,,
-7320,Sillod,20,0,,,
-7321,Indapur,20,0,,,
-7322,Belagavi,20,0,,,
-7323,Chandausi,20,0,,,
-7324,Shamsabad,20,0,,,
-7325,Kumbhraj,20,0,,,
-7326,,20,0,,,
-7327,Suar,20,0,,,
-7328,Islamnagar,20,0,,,
-7329,Biaora,20,0,,,
-7330,Akluj,20,0,,,
-7331,Hukkeri,20,0,,,
-7332,Bajpur,20,0,,,
-7333,Shujalpur,20,0,,,
-7334,,20,0,,,
-7335,,20,0,,,
-7336,Chachaura,20,0,,,
-7337,Morena,20,0,,,
-7338,Raver,20,0,,,
-7339,Khanapur,20,0,,,
-7340,Karmala,20,0,,,
-7341,Rampur,20,0,,,
-7342,Jamkhed,20,0,,,
-7343,Kavathe Mahankal,20,0,,,
-7344,,20,0,,,
-7345,Rajakhera,20,0,,,
-7346,Bhokardan,20,0,,,
-7347,Kusnal,20,0,,,
-7348,Guna,20,0,,,
-7349,Raibag,20,0,,,
-7350,Sahaswan,20,0,,,
-7351,,20,0,,,
-7352,Khandwa,20,0,,,
-7353,Maktainagar,20,0,,,
-7354,Kasganj,20,0,,,
-7355,Firozabad,20,0,,,
-7356,Fatehabad,20,0,,,
-7357,Ashta,20,0,,,
+7259,Jaspur,40,0,,,TRUE
+7260,Chhabra,40,0,,,TRUE
+7261,Vita,80,0,,,TRUE
+7262,Atrauli,20,0,,,TRUE
+7263,Sadabad,20,0,,,TRUE
+7264,Agra,20,0,,,TRUE
+7265,Sarangpur,40,0,,,TRUE
+7266,Aurangabad,20,0,,,TRUE
+7267,Sambhal,20,0,,,TRUE
+7268,Babrala,20,0,,,TRUE
+7269,Jairampur,20,0,,,TRUE
+7270,Kheragarh,20,0,,,TRUE
+7271,Barwaha,40,0,,,TRUE
+7272,Ichalkaranji,20,0,,,TRUE
+7273,Nippani,40,0,,,TRUE
+7274,Gadahinglaj,20,0,,,TRUE
+7275,Thakurdwara,20,0,,,TRUE
+7276,Hathras,20,0,,,TRUE
+7277,Yawal,20,0,,,TRUE
+7278,Chitegaon,80,0,,,TRUE
+7279,Ratanpur,20,0,,,TRUE
+7280,Kailaras,20,0,,,TRUE
+7281,Sanawad,40,0,,,TRUE
+7282,,20,0,,,TRUE
+7283,Sonkach,40,0,,,TRUE
+7284,Bhikangaon,20,0,,,TRUE
+7285,Manoharthana,20,0,,,TRUE
+7286,Rajgarh,40,0,,,TRUE
+7287,Kada,20,0,,,TRUE
+7288,Sangli,40,0,,,TRUE
+7289,Shevgaon,20,0,,,TRUE
+7290,Pathardi,20,0,,,TRUE
+7291,Tasgaon,40,0,,,TRUE
+7292,Jaysingpur,40,0,,,TRUE
+7293,,80,0,,,TRUE
+7294,Karjat,80,0,,,TRUE
+7295,Karwar,80,0,,,TRUE
+7296,Pohari,20,0,,,TRUE
+7297,Chharra,20,0,,,TRUE
+7298,Dhaulpur,40,0,,,TRUE
+7299,Bhusawal,40,0,,,TRUE
+7300,,20,0,,,TRUE
+7301,Bahjoi,20,0,,,TRUE
+7302,Motipura Chauki,80,0,,,TRUE
+7303,,20,0,,,TRUE
+7304,Sankeshwara,20,0,,,TRUE
+7305,R?mnagar,40,0,,,TRUE
+7306,Kundarkhi,20,0,,,TRUE
+7307,Pachore,40,0,,,TRUE
+7308,Ashti,20,0,,,TRUE
+7309,Tanda,20,0,,,TRUE
+7310,Bilari,20,0,,,TRUE
+7311,Jamner,40,0,,,TRUE
+7312,dehgaon,20,0,,,TRUE
+7313,Sikandra Rao,20,0,,,TRUE
+7314,Chikkodi,80,0,,,TRUE
+7315,Paithan,20,0,,,TRUE
+7316,Joura,20,0,,,TRUE
+7317,,20,0,,,TRUE
+7318,Jalesar,20,0,,,TRUE
+7319,Etmadpur,20,0,,,TRUE
+7320,Sillod,20,0,,,TRUE
+7321,Indapur,80,0,,,TRUE
+7322,Belagavi,20,0,,,TRUE
+7323,Chandausi,20,0,,,TRUE
+7324,Shamsabad,20,0,,,TRUE
+7325,Kumbhraj,20,0,,,TRUE
+7326,,20,0,,,TRUE
+7327,Suar,20,0,,,TRUE
+7328,Islamnagar,20,0,,,TRUE
+7329,Biaora,20,0,,,TRUE
+7330,Akluj,40,0,,,TRUE
+7331,Hukkeri,40,0,,,TRUE
+7332,Bajpur,20,0,,,TRUE
+7333,Shujalpur,80,0,,,TRUE
+7334,,20,0,,,TRUE
+7335,,20,0,,,TRUE
+7336,Chachaura,20,0,,,TRUE
+7337,Morena,20,0,,,TRUE
+7338,Raver,20,0,,,TRUE
+7339,Khanapur,40,0,,,TRUE
+7340,Karmala,20,0,,,TRUE
+7341,Rampur,20,0,,,TRUE
+7342,Jamkhed,20,0,,,TRUE
+7343,Kavathe Mahankal,40,0,,,TRUE
+7344,,20,0,,,TRUE
+7345,Rajakhera,20,0,,,TRUE
+7346,Bhokardan,80,0,,,TRUE
+7347,Kusnal,20,0,,,TRUE
+7348,Guna,20,0,,,TRUE
+7349,Raibag,40,0,,,TRUE
+7350,Sahaswan,40,0,,,TRUE
+7351,,20,0,,,TRUE
+7352,Khandwa,20,0,,,TRUE
+7353,Maktainagar,20,0,,,TRUE
+7354,Kasganj,20,0,,,TRUE
+7355,Firozabad,20,0,,,TRUE
+7356,Fatehabad,40,0,,,TRUE
+7357,Ashta,20,0,,,TRUE
 7358,Chankot,20,0,,,
-7359,,20,0,,,
-7360,Surajpur,20,0,,,
-7361,Sahabad,20,0,,,
-7362,Shivpuri,20,0,,,
-7363,,20,0,,,
-7364,Bamaur,20,0,,,
-7365,Burhanpur,20,0,,,
-7366,Kumta,20,0,,,
-7367,Kolaras,20,0,,,
-7368,Qitai,20,0,,,
-7369,Bisauli,20,0,,,
-7370,Soron,20,0,,,
-7371,Ambah,20,0,,,
-7372,Gokak,20,0,,,
-7373,Dandeli,20,0,,,
-7374,Bilaspur,20,0,,,
-7375,,20,0,,,
-7376,Etah,20,0,,,
-7377,Badarwas,20,0,,,
-7378,Honnavar,20,0,,,
-7379,Dabrai,20,0,,,
-7380,Narsinghgarh,20,0,,,
-7381,,20,0,,,
-7382,Pinahat,20,0,,,
-7383,Milak,20,0,,,
-7384,Jalna,20,0,,,
-7385,Sangole,20,0,,,
-7386,Almora,20,0,,,
-7387,Gwalior,20,0,,,
-7388,Maksudangarh,20,0,,,
-7389,Ambad,20,0,,,
-7390,B?geshwar,20,0,,,
-7391,Haldwani,20,0,,,
-7392,Rudrapur,20,0,,,
-7393,Malkapur,20,0,,,
-7394,Aron,20,0,,,
-7395,,20,0,,,
-7396,Narwar,20,0,,,
-7397,Nepanagar,20,0,,,
-7398,Paranda,20,0,,,
-7399,Athani,20,0,,,
-7400,Kurduvadi,20,0,,,
-7401,Pandharpur,20,0,,,
-7402,Bailahongala,20,0,,,
-7403,Wazirganj,20,0,,,
-7404,Porsa,20,0,,,
-7405,Georai,20,0,,,
-7406,Shikohabad,20,0,,,
-7407,,20,0,,,
-7408,Yellapur,20,0,,,
-7409,Bhatkal,20,0,,,
-7410,Ujhani,20,0,,,
-7411,Jasrana,20,0,,,
-7412,Malanpur,20,0,,,
-7413,L?lkua,20,0,,,
-7414,Buldhana,20,0,,,
-7415,Jath,20,0,,,
-7416,Sehore,20,0,,,
-7417,Beed,20,0,,,
-7418,Aonla,20,0,,,
-7419,Leteri,20,0,,,
-7420,Sidhpura,20,0,,,
-7421,Rabakavi Banahatti,20,0,,,
-7422,Ganj Dundwara,20,0,,,
-7423,Bhitarwar,20,0,,,
-7424,Kichha,20,0,,,
-7425,,20,0,,,
-7426,Bah,20,0,,,
-7427,Mammigatti,20,0,,,
-7428,Sirsaganj,20,0,,,
-7429,Baheri,20,0,,,
-7430,Budaun,20,0,,,
-7431,Gormi,20,0,,,
-7432,Gohad,20,0,,,
-7433,Paul Pothen Nagar,20,0,,,
-7434,Chikhli,20,0,,,
-7435,Mangalwedha,20,0,,,
-7436,Bareilly,20,0,,,
-7437,Uppunda,20,0,,,
-7438,,20,0,,,
-7439,Dharwad,20,0,,,
-7440,Ashoknagar,20,0,,,
-7441,Barshi,20,0,,,
-7442,,20,0,,,
-7443,,20,0,,,
-7444,Yadawada,20,0,,,
-7445,Sirsi,20,0,,,
-7446,,20,0,,,
-7447,Nandura,20,0,,,
-7448,Bhamora,20,0,,,
-7449,Jalgaon Jamod,20,0,,,
-7450,Jamakhandi,20,0,,,
-7451,Karera,20,0,,,
-7452,Berasia,20,0,,,
-7453,Saundatti,20,0,,,
-7454,Kalaghatagi,20,0,,,
-7455,Jaithra,20,0,,,
-7456,Kakrala,20,0,,,
-7457,,20,0,,,
-7458,Dabra,20,0,,,
-7459,Bhopal,20,0,,,
-7460,Kundapura,20,0,,,
-7461,Mahgawan,20,0,,,
-7462,Sitarganj,20,0,,,
-7463,Mudhol,20,0,,,
+7359,,20,0,,,TRUE
+7360,Surajpur,20,0,,,TRUE
+7361,Sahabad,20,0,,,TRUE
+7362,Shivpuri,20,0,,,TRUE
+7363,,20,0,,,TRUE
+7364,Bamaur,40,0,,,TRUE
+7365,Burhanpur,20,0,,,TRUE
+7366,Kumta,20,0,,,TRUE
+7367,Kolaras,20,0,,,TRUE
+7368,Qitai,40,0,,,TRUE
+7369,Bisauli,20,0,,,TRUE
+7370,Soron,20,0,,,TRUE
+7371,Ambah,20,0,,,TRUE
+7372,Gokak,20,0,,,TRUE
+7373,Dandeli,40,0,,,TRUE
+7374,Bilaspur,20,0,,,TRUE
+7375,,20,0,,,TRUE
+7376,Etah,20,0,,,TRUE
+7377,Badarwas,20,0,,,TRUE
+7378,Honnavar,40,0,,,TRUE
+7379,Dabrai,40,0,,,TRUE
+7380,Narsinghgarh,20,0,,,TRUE
+7381,,20,0,,,TRUE
+7382,Pinahat,20,0,,,TRUE
+7383,Milak,20,0,,,TRUE
+7384,Jalna,20,0,,,TRUE
+7385,Sangole,20,0,,,TRUE
+7386,Almora,20,0,,,TRUE
+7387,Gwalior,20,0,,,TRUE
+7388,Maksudangarh,20,0,,,TRUE
+7389,Ambad,40,0,,,TRUE
+7390,B?geshwar,80,0,,,TRUE
+7391,Haldwani,80,0,,,TRUE
+7392,Rudrapur,80,0,,,TRUE
+7393,Malkapur,40,0,,,TRUE
+7394,Aron,20,0,,,TRUE
+7395,,20,0,,,TRUE
+7396,Narwar,20,0,,,TRUE
+7397,Nepanagar,20,0,,,TRUE
+7398,Paranda,20,0,,,TRUE
+7399,Athani,20,0,,,TRUE
+7400,Kurduvadi,80,0,,,TRUE
+7401,Pandharpur,20,0,,,TRUE
+7402,Bailahongala,20,0,,,TRUE
+7403,Wazirganj,20,0,,,TRUE
+7404,Porsa,20,0,,,TRUE
+7405,Georai,20,0,,,TRUE
+7406,Shikohabad,20,0,,,TRUE
+7407,,20,0,,,TRUE
+7408,Yellapur,40,0,,,TRUE
+7409,Bhatkal,40,0,,,TRUE
+7410,Ujhani,20,0,,,TRUE
+7411,Jasrana,20,0,,,TRUE
+7412,Malanpur,20,0,,,TRUE
+7413,L?lkua,40,0,,,TRUE
+7414,Buldhana,40,0,,,TRUE
+7415,Jath,20,0,,,TRUE
+7416,Sehore,20,0,,,TRUE
+7417,Beed,20,0,,,TRUE
+7418,Aonla,20,0,,,TRUE
+7419,Leteri,20,0,,,TRUE
+7420,Sidhpura,20,0,,,TRUE
+7421,Rabakavi Banahatti,40,0,,,TRUE
+7422,Ganj Dundwara,20,0,,,TRUE
+7423,Bhitarwar,20,0,,,TRUE
+7424,Kichha,80,0,,,TRUE
+7425,,20,0,,,TRUE
+7426,Bah,20,0,,,TRUE
+7427,Mammigatti,40,0,,,TRUE
+7428,Sirsaganj,20,0,,,TRUE
+7429,Baheri,20,0,,,TRUE
+7430,Budaun,20,0,,,TRUE
+7431,Gormi,20,0,,,TRUE
+7432,Gohad,20,0,,,TRUE
+7433,Paul Pothen Nagar,20,0,,,TRUE
+7434,Chikhli,20,0,,,TRUE
+7435,Mangalwedha,40,0,,,TRUE
+7436,Bareilly,20,0,,,TRUE
+7437,Uppunda,20,0,,,TRUE
+7438,,20,0,,,TRUE
+7439,Dharwad,20,0,,,TRUE
+7440,Ashoknagar,20,0,,,TRUE
+7441,Barshi,40,0,,,TRUE
+7442,,40,0,,,TRUE
+7443,,20,0,,,TRUE
+7444,Yadawada,20,0,,,TRUE
+7445,Sirsi,20,0,,,TRUE
+7446,,20,0,,,TRUE
+7447,Nandura,20,0,,,TRUE
+7448,Bhamora,20,0,,,TRUE
+7449,Jalgaon Jamod,80,0,,,TRUE
+7450,Jamakhandi,80,0,,,TRUE
+7451,Karera,20,0,,,TRUE
+7452,Berasia,20,0,,,TRUE
+7453,Saundatti,20,0,,,TRUE
+7454,Kalaghatagi,20,0,,,TRUE
+7455,Jaithra,20,0,,,TRUE
+7456,Kakrala,20,0,,,TRUE
+7457,,20,0,,,TRUE
+7458,Dabra,20,0,,,TRUE
+7459,Bhopal,20,0,,,TRUE
+7460,Kundapura,160,0,,,TRUE
+7461,Mahgawan,20,0,,,TRUE
+7462,Sitarganj,20,0,,,TRUE
+7463,Mudhol,80,0,,,TRUE
 7464,MalÇ,20,0,,,
-7465,Turpan,20,0,,,
-7466,,20,0,,,
-7467,Sironj,20,0,,,
-7468,Paratas,20,0,,,
-7469,Khamgaon,20,0,,,
-7470,Hebballi,20,0,,,
-7471,Hubballi,20,0,,,
-7472,Sainthal,20,0,,,
-7473,Mainpuri,20,0,,,
-7474,Udupi,20,0,,,
-7475,Harda,20,0,,,
-7476,Nawabganj,20,0,,,
-7477,Karhal,20,0,,,
-7478,Dataganj,20,0,,,
-7479,Aliganj,20,0,,,
-7480,Jaswantnagar,20,0,,,
-7481,Pichor,20,0,,,
-7482,Khaniadhana,20,0,,,
-7483,Bhind,20,0,,,
-7484,Dharni,20,0,,,
-7485,Saifai,20,0,,,
-7486,Faridpur,20,0,,,
-7487,Datia,20,0,,,
-7488,Shegaon,20,0,,,
-7489,Majalgaon,20,0,,,
-7490,Pithoragarh,20,0,,,
-7491,Etawah,20,0,,,
-7492,Indergarh,20,0,,,
-7493,Dharur,20,0,,,
-7494,Hanagal,20,0,,,
-7495,Sagara,20,0,,,
-7496,Mangaluru,20,0,,,
-7497,Pilibhit,20,0,,,
-7498,Bhongaon,20,0,,,
-7499,Mandideep,20,0,,,
-7500,Mantha,20,0,,,
-7501,Khat?ma,20,0,,,
-7502,Chanderi,20,0,,,
-7503,Nargund,20,0,,,
-7504,Shiggaon,20,0,,,
-7505,Soraba,20,0,,,
-7506,Kaimganj,20,0,,,
-7507,Mehkar,20,0,,,
-7508,Osmanabad,20,0,,,
-7509,Solapur,20,0,,,
-7510,Vijayapura,20,0,,,
-7511,Rafiabad Kalan,20,0,,,
-7512,Balapur,20,0,,,
-7513,Amilia Taluka,20,0,,,
-7514,Seondha,20,0,,,
-7515,Fatehganj Purvi,20,0,,,
-7516,Mungaoli,20,0,,,
-7517,Sailu,20,0,,,
-7518,Jhansi,20,0,,,
-7519,,20,0,,,
-7520,Shamshabad,20,0,,,
-7521,Bewar,20,0,,,
-7522,Basoda,20,0,,,
-7523,Vidisha,20,0,,,
-7524,Manjeshwar,20,0,,,
-7525,Miranpur Katra,20,0,,,
-7526,Tuljapur,20,0,,,
-7527,Bisalpur,20,0,,,
-7528,Kurwai,20,0,,,
-7529,,20,0,,,
-7530,Bantwal Cross Road,20,0,,,
-7531,Talbehat,20,0,,,
-7532,Raisen,20,0,,,
-7533,Seoni Malwa,20,0,,,
-7534,Bagalkot,20,0,,,
-7535,Siralkoppa,20,0,,,
-7536,Akot,20,0,,,
-7537,Bhander,20,0,,,
-7538,Bakewar,20,0,,,
-7539,Lahar,20,0,,,
-7540,Tilhar,20,0,,,
-7541,Bharthana,20,0,,,
-7542,Ambajogai,20,0,,,
-7543,Lakshmeshvara,20,0,,,
-7544,Haveri,20,0,,,
-7545,Baragaon,20,0,,,
-7546,Indi,20,0,,,
-7547,Akola,20,0,,,
-7548,Neeleshwaram,20,0,,,
-7549,Jalalabad,20,0,,,
-7550,Bina Etawa,20,0,,,
-7551,Lalitpur,20,0,,,
-7552,Tirthahalli,20,0,,,
-7553,Nigohi,20,0,,,
-7554,Risod,20,0,,,
-7555,Hirekerura,20,0,,,
-7556,Jintur,20,0,,,
-7557,,20,0,,,
-7558,Farrukhabad,20,0,,,
-7559,Hoshangabad,20,0,,,
-7560,Parli,20,0,,,
-7561,Gadag,20,0,,,
-7562,Chhibramau,20,0,,,
-7563,Chirgaon,20,0,,,
-7564,,20,0,,,
-7565,Puranpur,20,0,,,
-7566,Shahjahanpur,20,0,,,
-7567,Allahganj,20,0,,,
-7568,Rampura,20,0,,,
-7569,Saurikh,20,0,,,
-7570,Akkalkot,20,0,,,
-7571,Itarsi,20,0,,,
-7572,Sarai Ajitmal,20,0,,,
-7573,Madhogarh,20,0,,,
-7574,Moth,20,0,,,
-7575,Niwari,20,0,,,
-7576,Pirthipur,20,0,,,
-7577,Puttur,20,0,,,
-7578,Kamalganj,20,0,,,
-7579,Anjangaon,20,0,,,
-7580,,20,0,,,
-7581,Khurai,20,0,,,
-7582,Achhalda,20,0,,,
-7583,Koppa,20,0,,,
-7584,Belthangadi,20,0,,,
-7585,Banda,20,0,,,
-7586,Parbhani,20,0,,,
-7587,Payyanur,20,0,,,
-7588,Latur,20,0,,,
-7589,Konch,20,0,,,
-7590,Bidhuna,20,0,,,
-7591,Ausa,20,0,,,
-7592,Ranebennur,20,0,,,
-7593,,20,0,,,
-7594,,20,0,,,
-7595,Pawayan,20,0,,,
-7596,Daryapur,20,0,,,
-7597,,20,0,,,
-7598,Gangakhed,20,0,,,
-7599,,20,0,,,
-7600,Malthone,20,0,,,
-7601,Shahabad,20,0,,,
-7602,Shivamogga,20,0,,,
-7603,Gursahaiganj,20,0,,,
-7604,,20,0,,,
-7605,Gairatganj,20,0,,,
-7606,Sindagi,20,0,,,
-7607,Manjhra,20,0,,,
-7608,Washim,20,0,,,
-7609,Kannur,20,0,,,
-7610,Bhainsdehi,20,0,,,
-7611,Gajendragad,20,0,,,
-7612,Honnali,20,0,,,
-7613,,20,0,,,
-7614,Dibiyapur,20,0,,,
-7615,Jalaun,20,0,,,
-7616,Rahatgarh,20,0,,,
-7617,Achalpur,20,0,,,
-7618,Mahrauni,20,0,,,
-7619,Murtijapur,20,0,,,
-7620,Muddebihala,20,0,,,
-7621,Begamganj,20,0,,,
-7622,Khular,20,0,,,
-7623,Auraiya,20,0,,,
-7624,Mundaragi,20,0,,,
-7625,Tikamgarh,20,0,,,
-7626,Gursarai,20,0,,,
-7627,Ilkal,20,0,,,
-7628,Sulya,20,0,,,
-7629,Mohmadi,20,0,,,
-7630,Harihara,20,0,,,
-7631,Shahpur,20,0,,,
-7632,Tirwaganj,20,0,,,
-7633,Hingoli,20,0,,,
-7634,Huvina Hadagali,20,0,,,
-7635,Bhadravathi,20,0,,,
-7636,,20,0,,,
-7637,Sandi,20,0,,,
-7638,Bareli,20,0,,,
-7639,Mangrul Pir,20,0,,,
-7640,Umarga,20,0,,,
-7641,Taliparamba,20,0,,,
-7642,Alanda,20,0,,,
-7643,Purna,20,0,,,
-7644,Orai,20,0,,,
-7645,Mau Ranipur,20,0,,,
-7646,jatara,20,0,,,
-7647,Betul,20,0,,,
-7648,Kannauj,20,0,,,
-7649,Madawara,20,0,,,
-7650,Nilanga,20,0,,,
-7651,Soghagpur,20,0,,,
-7652,Rasulabad,20,0,,,
-7653,Sikandra,20,0,,,
-7654,Ahmadpur,20,0,,,
-7655,Davanagere,20,0,,,
-7656,Pihani,20,0,,,
-7657,Karanja,20,0,,,
-7658,Mudigere,20,0,,,
-7659,Palia,20,0,,,
-7660,Jhinjhak,20,0,,,
-7661,Silwani,20,0,,,
-7662,Kushtagi,20,0,,,
-7663,Harapanahalli,20,0,,,
-7664,Chandur Bazar,20,0,,,
-7665,Hardoi,20,0,,,
-7666,Basmat,20,0,,,
-7667,Bilgram,20,0,,,
-7668,Koppala,20,0,,,
-7669,Thalassery,20,0,,,
-7670,Sansarpur,20,0,,,
-7671,Tarikere,20,0,,,
-7672,,20,0,,,
+7465,Turpan,40,0,,,TRUE
+7466,,20,0,,,TRUE
+7467,Sironj,20,0,,,TRUE
+7468,Paratas,80,0,,,TRUE
+7469,Khamgaon,40,0,,,TRUE
+7470,Hebballi,20,0,,,TRUE
+7471,Hubballi,640,0,,,TRUE
+7472,Sainthal,20,0,,,TRUE
+7473,Mainpuri,20,0,,,TRUE
+7474,Udupi,80,0,,,TRUE
+7475,Harda,80,0,,,TRUE
+7476,Nawabganj,20,0,,,TRUE
+7477,Karhal,20,0,,,TRUE
+7478,Dataganj,20,0,,,TRUE
+7479,Aliganj,20,0,,,TRUE
+7480,Jaswantnagar,40,0,,,TRUE
+7481,Pichor,20,0,,,TRUE
+7482,Khaniadhana,20,0,,,TRUE
+7483,Bhind,20,0,,,TRUE
+7484,Dharni,20,0,,,TRUE
+7485,Saifai,20,0,,,TRUE
+7486,Faridpur,20,0,,,TRUE
+7487,Datia,20,0,,,TRUE
+7488,Shegaon,80,0,,,TRUE
+7489,Majalgaon,40,0,,,TRUE
+7490,Pithoragarh,40,0,,,TRUE
+7491,Etawah,20,0,,,TRUE
+7492,Indergarh,20,0,,,TRUE
+7493,Dharur,20,0,,,TRUE
+7494,Hanagal,40,0,,,TRUE
+7495,Sagara,40,0,,,TRUE
+7496,Mangaluru,80,0,,,TRUE
+7497,Pilibhit,20,0,,,TRUE
+7498,Bhongaon,20,0,,,TRUE
+7499,Mandideep,80,0,,,TRUE
+7500,Mantha,20,0,,,TRUE
+7501,Khat?ma,20,0,,,TRUE
+7502,Chanderi,20,0,,,TRUE
+7503,Nargund,40,0,,,TRUE
+7504,Shiggaon,20,0,,,TRUE
+7505,Soraba,20,0,,,TRUE
+7506,Kaimganj,20,0,,,TRUE
+7507,Mehkar,40,0,,,TRUE
+7508,Osmanabad,80,0,,,TRUE
+7509,Solapur,20,0,,,TRUE
+7510,Vijayapura,20,0,,,TRUE
+7511,Rafiabad Kalan,20,0,,,TRUE
+7512,Balapur,40,0,,,TRUE
+7513,Amilia Taluka,20,0,,,TRUE
+7514,Seondha,20,0,,,TRUE
+7515,Fatehganj Purvi,20,0,,,TRUE
+7516,Mungaoli,20,0,,,TRUE
+7517,Sailu,20,0,,,TRUE
+7518,Jhansi,20,0,,,TRUE
+7519,,20,0,,,TRUE
+7520,Shamshabad,20,0,,,TRUE
+7521,Bewar,20,0,,,TRUE
+7522,Basoda,20,0,,,TRUE
+7523,Vidisha,20,0,,,TRUE
+7524,Manjeshwar,320,0,,,TRUE
+7525,Miranpur Katra,20,0,,,TRUE
+7526,Tuljapur,80,0,,,TRUE
+7527,Bisalpur,20,0,,,TRUE
+7528,Kurwai,20,0,,,TRUE
+7529,,20,0,,,TRUE
+7530,Bantwal Cross Road,20,0,,,TRUE
+7531,Talbehat,20,0,,,TRUE
+7532,Raisen,20,0,,,TRUE
+7533,Seoni Malwa,320,0,,,TRUE
+7534,Bagalkot,20,0,,,TRUE
+7535,Siralkoppa,20,0,,,TRUE
+7536,Akot,20,0,,,TRUE
+7537,Bhander,20,0,,,TRUE
+7538,Bakewar,20,0,,,TRUE
+7539,Lahar,20,0,,,TRUE
+7540,Tilhar,20,0,,,TRUE
+7541,Bharthana,20,0,,,TRUE
+7542,Ambajogai,40,0,,,TRUE
+7543,Lakshmeshvara,20,0,,,TRUE
+7544,Haveri,20,0,,,TRUE
+7545,Baragaon,40,0,,,TRUE
+7546,Indi,20,0,,,TRUE
+7547,Akola,20,0,,,TRUE
+7548,Neeleshwaram,20,0,,,TRUE
+7549,Jalalabad,20,0,,,TRUE
+7550,Bina Etawa,40,0,,,TRUE
+7551,Lalitpur,20,0,,,TRUE
+7552,Tirthahalli,20,0,,,TRUE
+7553,Nigohi,20,0,,,TRUE
+7554,Risod,40,0,,,TRUE
+7555,Hirekerura,40,0,,,TRUE
+7556,Jintur,20,0,,,TRUE
+7557,,20,0,,,TRUE
+7558,Farrukhabad,20,0,,,TRUE
+7559,Hoshangabad,80,0,,,TRUE
+7560,Parli,20,0,,,TRUE
+7561,Gadag,40,0,,,TRUE
+7562,Chhibramau,20,0,,,TRUE
+7563,Chirgaon,20,0,,,TRUE
+7564,,20,0,,,TRUE
+7565,Puranpur,20,0,,,TRUE
+7566,Shahjahanpur,20,0,,,TRUE
+7567,Allahganj,20,0,,,TRUE
+7568,Rampura,20,0,,,TRUE
+7569,Saurikh,40,0,,,TRUE
+7570,Akkalkot,80,0,,,TRUE
+7571,Itarsi,40,0,,,TRUE
+7572,Sarai Ajitmal,80,0,,,TRUE
+7573,Madhogarh,20,0,,,TRUE
+7574,Moth,40,0,,,TRUE
+7575,Niwari,20,0,,,TRUE
+7576,Pirthipur,20,0,,,TRUE
+7577,Puttur,40,0,,,TRUE
+7578,Kamalganj,40,0,,,TRUE
+7579,Anjangaon,40,0,,,TRUE
+7580,,20,0,,,TRUE
+7581,Khurai,20,0,,,TRUE
+7582,Achhalda,40,0,,,TRUE
+7583,Koppa,40,0,,,TRUE
+7584,Belthangadi,80,0,,,TRUE
+7585,Banda,20,0,,,TRUE
+7586,Parbhani,20,0,,,TRUE
+7587,Payyanur,40,0,,,TRUE
+7588,Latur,20,0,,,TRUE
+7589,Konch,20,0,,,TRUE
+7590,Bidhuna,20,0,,,TRUE
+7591,Ausa,40,0,,,TRUE
+7592,Ranebennur,20,0,,,TRUE
+7593,,20,0,,,TRUE
+7594,,20,0,,,TRUE
+7595,Pawayan,20,0,,,TRUE
+7596,Daryapur,40,0,,,TRUE
+7597,,20,0,,,TRUE
+7598,Gangakhed,20,0,,,TRUE
+7599,,20,0,,,TRUE
+7600,Malthone,20,0,,,TRUE
+7601,Shahabad,20,0,,,TRUE
+7602,Shivamogga,20,0,,,TRUE
+7603,Gursahaiganj,20,0,,,TRUE
+7604,,20,1,FALSE,,
+7605,Gairatganj,20,0,,,TRUE
+7606,Sindagi,40,0,,,TRUE
+7607,Manjhra,20,0,,,TRUE
+7608,Washim,40,0,,,TRUE
+7609,Kannur,80,0,,,TRUE
+7610,Bhainsdehi,20,0,,,TRUE
+7611,Gajendragad,20,0,,,TRUE
+7612,Honnali,20,0,,,TRUE
+7613,,20,0,,,TRUE
+7614,Dibiyapur,20,0,,,TRUE
+7615,Jalaun,20,0,,,TRUE
+7616,Rahatgarh,20,0,,,TRUE
+7617,Achalpur,20,0,,,TRUE
+7618,Mahrauni,20,0,,,TRUE
+7619,Murtijapur,40,0,,,TRUE
+7620,Muddebihala,40,0,,,TRUE
+7621,Begamganj,20,0,,,TRUE
+7622,Khular,40,0,,,TRUE
+7623,Auraiya,20,0,,,TRUE
+7624,Mundaragi,20,0,,,TRUE
+7625,Tikamgarh,40,0,,,TRUE
+7626,Gursarai,20,0,,,TRUE
+7627,Ilkal,40,0,,,TRUE
+7628,Sulya,40,0,,,TRUE
+7629,Mohmadi,20,0,,,TRUE
+7630,Harihara,20,0,,,TRUE
+7631,Shahpur,20,0,,,TRUE
+7632,Tirwaganj,20,0,,,TRUE
+7633,Hingoli,40,0,,,TRUE
+7634,Huvina Hadagali,40,0,,,TRUE
+7635,Bhadravathi,20,0,,,TRUE
+7636,,20,0,,,TRUE
+7637,Sandi,20,0,,,TRUE
+7638,Bareli,20,0,,,TRUE
+7639,Mangrul Pir,20,0,,,TRUE
+7640,Umarga,40,0,,,TRUE
+7641,Taliparamba,80,0,,,TRUE
+7642,Alanda,20,0,,,TRUE
+7643,Purna,40,0,,,TRUE
+7644,Orai,40,0,,,TRUE
+7645,Mau Ranipur,20,0,,,TRUE
+7646,jatara,20,0,,,TRUE
+7647,Betul,20,0,,,TRUE
+7648,Kannauj,20,0,,,TRUE
+7649,Madawara,20,0,,,TRUE
+7650,Nilanga,20,0,,,TRUE
+7651,Soghagpur,20,0,,,TRUE
+7652,Rasulabad,20,0,,,TRUE
+7653,Sikandra,20,0,,,TRUE
+7654,Ahmadpur,40,0,,,TRUE
+7655,Davanagere,20,0,,,TRUE
+7656,Pihani,20,0,,,TRUE
+7657,Karanja,20,0,,,TRUE
+7658,Mudigere,80,0,,,TRUE
+7659,Palia,20,0,,,TRUE
+7660,Jhinjhak,20,0,,,TRUE
+7661,Silwani,20,0,,,TRUE
+7662,Kushtagi,20,0,,,TRUE
+7663,Harapanahalli,20,0,,,TRUE
+7664,Chandur Bazar,40,0,,,TRUE
+7665,Hardoi,20,0,,,TRUE
+7666,Basmat,20,0,,,TRUE
+7667,Bilgram,20,0,,,TRUE
+7668,Koppala,20,0,,,TRUE
+7669,Thalassery,20,0,,,TRUE
+7670,Sansarpur,20,0,,,TRUE
+7671,Tarikere,40,0,,,TRUE
+7672,,20,0,,,TRUE
 7673,Sagar,20,0,,,
 7674,Athner,20,0,,,
 7675,,20,0,,,
@@ -7998,337 +7998,337 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 7997,Sihora,20,0,,,
 7998,Rae Bareli,20,0,,,
 7999,Shahnagar,20,0,,,
-8000,Warora,20,0,,,
-8001,Wani,20,0,,,
-8002,Pamidi,20,0,,,
-8003,,20,0,,,
-8004,Ramsanehighat,20,0,,,
-8005,Hyderabad,20,0,,,
-8006,Pala,20,0,,,
-8007,Chengannur,20,0,,,
-8008,Bhinga,20,0,,,
-8009,Dariyabad,20,0,,,
-8010,Nagod,20,0,,,
-8011,Anantapur,20,0,,,
-8012,Yelanduru,20,0,,,
-8013,,20,0,,,
-8014,,20,0,,,
-8015,Kozhinjapara,20,0,,,
-8016,Thodupuzha,20,0,,,
-8017,Colonelganj,20,0,,,
-8018,Khaga,20,0,,,
-8019,Chitrakoot,20,0,,,
-8020,Magadi,20,0,,,
-8021,Channapattana,20,0,,,
-8022,Mettupalayam,20,0,,,
-8023,Coimbatore,20,0,,,
-8024,Chitrakoot Dham,20,0,,,
-8025,Sleemanabad,20,0,,,
-8026,Kollegal,20,0,,,
-8027,Karamadai - ??????,20,0,,,
-8028,Katni,20,0,,,
-8029,Shadnagar,20,0,,,
-8030,Kozhencherry,20,0,,,
-8031,Angarsk,20,0,,,
-8032,Kuhi,20,0,,,
-8033,Umred,20,0,,,
-8034,,20,0,,,
+8000,Warora,160,0,,,TRUE
+8001,Wani,80,0,,,TRUE
+8002,Pamidi,20,0,,,TRUE
+8003,,20,0,,,TRUE
+8004,Ramsanehighat,40,0,,,TRUE
+8005,Hyderabad,20,0,,,TRUE
+8006,Pala,80,0,,,TRUE
+8007,Chengannur,2560,0,,TRUE,
+8008,Bhinga,20,0,,,TRUE
+8009,Dariyabad,20,0,,,TRUE
+8010,Nagod,20,0,,,TRUE
+8011,Anantapur,20,0,,,TRUE
+8012,Yelanduru,20,0,,,TRUE
+8013,,20,0,,,TRUE
+8014,,20,1,FALSE,,
+8015,Kozhinjapara,40,0,,,TRUE
+8016,Thodupuzha,40,0,,,TRUE
+8017,Colonelganj,20,0,,,TRUE
+8018,Khaga,20,0,,,TRUE
+8019,Chitrakoot,20,0,,,TRUE
+8020,Magadi,40,0,,,TRUE
+8021,Channapattana,20,0,,,TRUE
+8022,Mettupalayam,640,0,,,TRUE
+8023,Coimbatore,40,0,,,TRUE
+8024,Chitrakoot Dham,20,0,,,TRUE
+8025,Sleemanabad,20,0,,,TRUE
+8026,Kollegal,20,0,,,TRUE
+8027,Karamadai - ??????,640,0,,,TRUE
+8028,Katni,40,0,,,TRUE
+8029,Shadnagar,40,0,,,TRUE
+8030,Kozhencherry,20,0,,,TRUE
+8031,Angarsk,20,0,,,TRUE
+8032,Kuhi,20,0,,,TRUE
+8033,Umred,40,0,,,TRUE
+8034,,20,0,,,TRUE
 8035,Fursatganj,20,0,,,
-8036,Umaria Pan,20,0,,,
-8037,Barghat,20,0,,,
-8038,Korutla,20,0,,,
-8039,Jadcherla,20,0,,,
-8040,Ikauna,20,0,,,
-8041,Bhadravati,20,0,,,
-8042,Wanaparthy,20,0,,,
-8043,Hindupur,20,0,,,
-8044,Ramanagara,20,0,,,
-8045,Kanjirapalli,20,0,,,
-8046,Varkala,20,0,,,
-8047,Paraspur,20,0,,,
-8048,,20,0,,,
+8036,Umaria Pan,20,0,,,TRUE
+8037,Barghat,20,0,,,TRUE
+8038,Korutla,40,0,,,TRUE
+8039,Jadcherla,160,0,,,TRUE
+8040,Ikauna,20,0,,,TRUE
+8041,Bhadravati,160,0,,,TRUE
+8042,Wanaparthy,40,0,,,TRUE
+8043,Hindupur,40,0,,,TRUE
+8044,Ramanagara,40,0,,,TRUE
+8045,Kanjirapalli,40,0,,,TRUE
+8046,Varkala,160,0,,,TRUE
+8047,Paraspur,20,0,,,TRUE
+8048,,20,0,,,TRUE
 8049,,20,0,,,
-8050,Bengaluru,20,0,,,
-8051,Tulsipur,20,0,,,
-8052,,20,0,,,
-8053,Dhone,20,0,,,
-8054,Rudauli,20,0,,,
-8055,Unchahar,20,0,,,
-8056,Baghhr?ji,20,0,,,
-8057,Ranni,20,0,,,
-8058,Parseni,20,0,,,
-8059,Pathanamthitta,20,0,,,
-8060,Sravasti,20,0,,,
-8061,Maneri,20,0,,,
-8062,Gowribidanur,20,0,,,
-8063,Pollachi,20,0,,,
-8064,,20,0,,,
-8065,Kurnool,20,0,,,
-8066,Kottarakara,20,0,,,
-8067,Satna,20,0,,,
-8068,Dharmavaram,20,0,,,
-8069,Jais,20,0,,,
-8070,Kymore,20,0,,,
-8071,Kallambalam,20,0,,,
-8072,Attingal,20,0,,,
+8050,Bengaluru,20,0,,,TRUE
+8051,Tulsipur,80,0,,,TRUE
+8052,,20,0,,,TRUE
+8053,Dhone,40,0,,,TRUE
+8054,Rudauli,20,0,,,TRUE
+8055,Unchahar,20,0,,,TRUE
+8056,Baghhr?ji,20,0,,,TRUE
+8057,Ranni,40,0,,,TRUE
+8058,Parseni,20,0,,,TRUE
+8059,Pathanamthitta,80,0,,,TRUE
+8060,Sravasti,20,0,,,TRUE
+8061,Maneri,20,0,,,TRUE
+8062,Gowribidanur,20,0,,,TRUE
+8063,Pollachi,40,0,,,TRUE
+8064,,20,0,,,TRUE
+8065,Kurnool,20,0,,,TRUE
+8066,Kottarakara,80,0,,,TRUE
+8067,Satna,20,0,,,TRUE
+8068,Dharmavaram,20,0,,,TRUE
+8069,Jais,20,0,,,TRUE
+8070,Kymore,40,0,,,TRUE
+8071,Kallambalam,1280,0,,,TRUE
+8072,Attingal,160,0,,,TRUE
 8073,Meenapur Phagauli,20,0,,,
-8074,Jagdispur,20,0,,,
-8075,Salon,20,0,,,
-8076,Rajapur,20,0,,,
-8077,Bidadi,20,0,,,
-8078,Gonda,20,0,,,
-8079,Chimur,20,0,,,
-8080,,20,0,,,
-8081,Maihar,20,0,,,
-8082,Doddaballapura,20,0,,,
-8083,Pathanapuram,20,0,,,
-8084,Uchahera,20,0,,,
-8085,Kanakapura,20,0,,,
-8086,Daranagar,20,0,,,
-8087,Bhandara,20,0,,,
-8088,Shamirpet,20,0,,,
-8089,Satyamangalam,20,0,,,
-8090,Jagtial,20,0,,,
-8091,Chandrapur,20,0,,,
-8092,Sirsilla,20,0,,,
-8093,,20,0,,,
-8094,Nagarkurnool,20,0,,,
-8095,Thiruvananthapuram,20,0,,,
-8096,Balrampur,20,0,,,
-8097,Gajwel,20,0,,,
-8098,,20,0,,,
-8099,Punalur,20,0,,,
-8100,Anchal,20,0,,,
-8101,Tadipatri,20,0,,,
-8102,Chanduruvandlapalle,20,0,,,
-8103,,20,0,,,
-8104,Tiruppur,20,0,,,
-8105,Venjaramoodu,20,0,,,
-8106,Manjhanpur,20,0,,,
-8107,Akma,20,0,,,
-8108,Gauriganj,20,0,,,
-8109,Sajjanpur,20,0,,,
-8110,Ghatkesar,20,0,,,
-8111,Khurasa,20,0,,,
-8112,Ballarpur,20,0,,,
-8113,Siddipet,20,0,,,
-8114,Bethamcherla,20,0,,,
-8115,Bagepalli,20,0,,,
-8116,Chikkaballapura,20,0,,,
-8117,Palladam,20,0,,,
-8118,Devanahalli,20,0,,,
-8119,Musarfirkhana,20,0,,,
-8120,Kunda,20,0,,,
-8121,Nandikotkur,20,0,,,
-8122,Jigani,20,0,,,
-8123,Faizabad,20,0,,,
-8124,Udumalaippettai,20,0,,,
-8125,Kattappana,20,0,,,
-8126,Tirora,20,0,,,
-8127,,20,0,,,
-8128,Semariya,20,0,,,
-8129,Kalwakurthy,20,0,,,
-8130,Bharwari,20,0,,,
-8131,Amarpatan,20,0,,,
-8132,Chandia,20,0,,,
-8133,Gobichettipalayam,20,0,,,
-8134,Mau,20,0,,,
-8135,,20,0,,,
-8136,,20,0,,,
-8137,Kovalam,20,0,,,
-8138,Mandla,20,0,,,
-8139,Tulsipur,20,0,,,
-8140,,20,0,,,
-8141,Hindustan Aeronautics Limited Korwa,20,0,,,
-8142,Vijayapura,20,0,,,
-8143,Amethi,20,0,,,
-8144,Lalganj,20,0,,,
-8145,??????,20,0,,,
-8146,,20,0,,,
-8147,,20,0,,,
-8148,Sarai Aquil,20,0,,,
+8074,Jagdispur,20,0,,,TRUE
+8075,Salon,20,0,,,TRUE
+8076,Rajapur,20,0,,,TRUE
+8077,Bidadi,160,0,,,TRUE
+8078,Gonda,20,0,,,TRUE
+8079,Chimur,40,0,,,TRUE
+8080,,40,0,,,TRUE
+8081,Maihar,20,0,,,TRUE
+8082,Doddaballapura,40,0,,,TRUE
+8083,Pathanapuram,40,0,,,TRUE
+8084,Uchahera,20,0,,,TRUE
+8085,Kanakapura,20,0,,,TRUE
+8086,Daranagar,20,0,,,TRUE
+8087,Bhandara,40,0,,,TRUE
+8088,Shamirpet,20,0,,,TRUE
+8089,Satyamangalam,40,0,,,TRUE
+8090,Jagtial,80,0,,,TRUE
+8091,Chandrapur,40,0,,,TRUE
+8092,Sirsilla,40,0,,,TRUE
+8093,,20,0,,,TRUE
+8094,Nagarkurnool,80,0,,,TRUE
+8095,Thiruvananthapuram,40,0,,,TRUE
+8096,Balrampur,20,0,,,TRUE
+8097,Gajwel,40,0,,,TRUE
+8098,,20,0,,,TRUE
+8099,Punalur,80,0,,,TRUE
+8100,Anchal,320,0,,,TRUE
+8101,Tadipatri,80,0,,,TRUE
+8102,Chanduruvandlapalle,40,0,,,TRUE
+8103,,20,0,,,TRUE
+8104,Tiruppur,80,0,,,TRUE
+8105,Venjaramoodu,40,0,,,TRUE
+8106,Manjhanpur,80,0,,,TRUE
+8107,Akma,20,0,,,TRUE
+8108,Gauriganj,20,0,,,TRUE
+8109,Sajjanpur,20,0,,,TRUE
+8110,Ghatkesar,20,0,,,TRUE
+8111,Khurasa,20,0,,,TRUE
+8112,Ballarpur,80,0,,,TRUE
+8113,Siddipet,40,0,,,TRUE
+8114,Bethamcherla,160,0,,,TRUE
+8115,Bagepalli,40,0,,,TRUE
+8116,Chikkaballapura,20,0,,,TRUE
+8117,Palladam,2560,0,,,TRUE
+8118,Devanahalli,80,0,,,TRUE
+8119,Musarfirkhana,20,0,,,TRUE
+8120,Kunda,20,0,,,TRUE
+8121,Nandikotkur,40,0,,,TRUE
+8122,Jigani,2560,0,,,TRUE
+8123,Faizabad,20,0,,,TRUE
+8124,Udumalaippettai,160,0,,,TRUE
+8125,Kattappana,40,0,,,TRUE
+8126,Tirora,20,0,,,TRUE
+8127,,20,0,,,TRUE
+8128,Semariya,20,0,,,TRUE
+8129,Kalwakurthy,40,0,,,TRUE
+8130,Bharwari,20,0,,,TRUE
+8131,Amarpatan,20,0,,,TRUE
+8132,Chandia,20,0,,,TRUE
+8133,Gobichettipalayam,40,0,,,TRUE
+8134,Mau,20,0,,,TRUE
+8135,,20,0,,,TRUE
+8136,,20,0,,,TRUE
+8137,Kovalam,80,0,,,TRUE
+8138,Mandla,40,0,,,TRUE
+8139,Tulsipur,20,0,,,TRUE
+8140,,20,0,,,TRUE
+8141,Hindustan Aeronautics Limited Korwa,20,0,,,TRUE
+8142,Vijayapura,20,0,,,TRUE
+8143,Amethi,20,0,,,TRUE
+8144,Lalganj,20,0,,,TRUE
+8145,??????,40,0,,,TRUE
+8146,,20,0,,,TRUE
+8147,,20,0,,,TRUE
+8148,Sarai Aquil,20,0,,,TRUE
 8149,,20,0,,,
-8150,Khatauli,20,0,,,
-8151,Hoskote,20,0,,,
-8152,Whitefield,20,0,,,
-8153,Hosur,20,0,,,
-8154,Karimnagar,20,0,,,
-8155,Doddahulluru,20,0,,,
-8156,Derwa,20,0,,,
-8157,Balaghat,20,0,,,
-8158,Utraula,20,0,,,
-8159,Cumbum,20,0,,,
-8160,Umaria,20,0,,,
-8161,Shahpura,20,0,,,
-8162,,20,0,,,
-8163,Bhongir,20,0,,,
-8164,Pudukadai,20,0,,,
-8165,Bodinayakkanur,20,0,,,
-8166,Khajurhat,20,0,,,
-8167,"Rewa, Madhya Pradesh",20,0,,,
-8168,Sakoli,20,0,,,
-8169,Mul,20,0,,,
-8170,Manauri,20,0,,,
-8171,Brahmapuri,20,0,,,
-8172,Perundurai,20,0,,,
-8173,Kaliyikkavila,20,0,,,
+8150,Khatauli,20,0,,,TRUE
+8151,Hoskote,80,0,,,TRUE
+8152,Whitefield,2560,0,,,TRUE
+8153,Hosur,80,0,,,TRUE
+8154,Karimnagar,80,0,,,TRUE
+8155,Doddahulluru,40,0,,,TRUE
+8156,Derwa,20,0,,,TRUE
+8157,Balaghat,40,0,,,TRUE
+8158,Utraula,20,0,,,TRUE
+8159,Cumbum,20,0,,,TRUE
+8160,Umaria,20,0,,,TRUE
+8161,Shahpura,20,0,,,TRUE
+8162,,20,0,,,TRUE
+8163,Bhongir,80,0,,,TRUE
+8164,Pudukadai,20,0,,,TRUE
+8165,Bodinayakkanur,40,0,,,TRUE
+8166,Khajurhat,20,0,,,TRUE
+8167,"Rewa, Madhya Pradesh",40,0,,,TRUE
+8168,Sakoli,80,0,,,TRUE
+8169,Mul,40,0,,,TRUE
+8170,Manauri,40,0,,,TRUE
+8171,Brahmapuri,20,0,,,TRUE
+8172,Perundurai,160,0,,,TRUE
+8173,Kaliyikkavila,1280,0,,,TRUE
 8174,,20,0,,,
-8175,Kangeyam,20,0,,,
-8176,Shencottai,20,0,,,
-8177,Irkutsk,20,0,,,
-8178,Kaghaznagar,20,0,,,
-8179,Dharapuram,20,0,,,
-8180,Rani Jot,20,0,,,
-8181,Maluru,20,0,,,
-8182,,20,0,,,
-8183,Sultanpur,20,0,,,
+8175,Kangeyam,80,0,,,TRUE
+8176,Shencottai,40,0,,,TRUE
+8177,Irkutsk,20,0,,,TRUE
+8178,Kaghaznagar,40,0,,,TRUE
+8179,Dharapuram,40,0,,,TRUE
+8180,Rani Jot,20,0,,,TRUE
+8181,Maluru,20,0,,,TRUE
+8182,,20,0,,,TRUE
+8183,Sultanpur,20,0,,,TRUE
 8184,Mocha,20,0,,,
-8185,Gondia,20,0,,,
-8186,Pulivendula,20,0,,,
-8187,Kadiri,20,0,,,
-8188,Erode,20,0,,,
-8189,Kuzhittura,20,0,,,
-8190,,20,0,,,
-8191,Nandyal,20,0,,,
-8192,,20,0,,,
-8193,Atmakur,20,0,,,
-8194,Kodaikanal,20,0,,,
-8195,Theni,20,0,,,
-8196,Jammalamadugu,20,0,,,
-8197,Chintamani,20,0,,,
-8198,Palani,20,0,,,
-8199,Tenkasi,20,0,,,
-8200,Pachperwa,20,0,,,
-8201,Prayagraj,20,0,,,
-8202,Mancherial,20,0,,,
-8203,Kadayanallur,20,0,,,
-8204,Colachel,20,0,,,
-8205,,20,0,,,
-8206,Bellampalli,20,0,,,
-8207,,20,0,,,
-8208,Pratapgarh,20,0,,,
-8209,Mettur,20,0,,,
-8210,,20,0,,,
-8211,Peddapalli,20,0,,,
-8212,Periyakulam,20,0,,,
-8213,Puliyangudi,20,0,,,
-8214,Mau Aimma,20,0,,,
-8215,Phaphamau,20,0,,,
-8216,,20,0,,,
-8217,Manpur,20,0,,,
-8218,Allagadda,20,0,,,
-8219,Padmanabhapuram,20,0,,,
-8220,Ramagundam,20,0,,,
-8221,Jangaon,20,0,,,
-8222,Pennagaram,20,0,,,
-8223,,20,0,,,
-8224,Vikramasingapuram,20,0,,,
-8225,Babhnan,20,0,,,
-8226,Iradatganj,20,0,,,
-8227,Edappadi,20,0,,,
-8228,Itwa,20,0,,,
-8229,,20,0,,,
-8230,Kolar,20,0,,,
-8231,Domariaganj,20,0,,,
-8232,Barhni,20,0,,,
+8185,Gondia,40,0,,,TRUE
+8186,Pulivendula,80,0,,,TRUE
+8187,Kadiri,40,0,,,TRUE
+8188,Erode,40,0,,,TRUE
+8189,Kuzhittura,160,0,,,TRUE
+8190,,20,0,,,TRUE
+8191,Nandyal,40,0,,,TRUE
+8192,,20,0,,,TRUE
+8193,Atmakur,40,0,,,TRUE
+8194,Kodaikanal,40,0,,,TRUE
+8195,Theni,80,0,,,TRUE
+8196,Jammalamadugu,40,0,,,TRUE
+8197,Chintamani,20,0,,,TRUE
+8198,Palani,80,0,,,TRUE
+8199,Tenkasi,160,0,,,TRUE
+8200,Pachperwa,20,0,,,TRUE
+8201,Prayagraj,20,0,,,TRUE
+8202,Mancherial,320,0,,,TRUE
+8203,Kadayanallur,20,0,,,TRUE
+8204,Colachel,40,0,,,TRUE
+8205,,20,0,,,TRUE
+8206,Bellampalli,80,0,,,TRUE
+8207,,20,0,,,TRUE
+8208,Pratapgarh,20,0,,,TRUE
+8209,Mettur,160,0,,,TRUE
+8210,,20,0,,,TRUE
+8211,Peddapalli,80,0,,,TRUE
+8212,Periyakulam,40,0,,,TRUE
+8213,Puliyangudi,40,0,,,TRUE
+8214,Mau Aimma,40,0,,,TRUE
+8215,Phaphamau,160,0,,,TRUE
+8216,,20,1,FALSE,,
+8217,Manpur,20,0,,,TRUE
+8218,Allagadda,40,0,,,TRUE
+8219,Padmanabhapuram,40,0,,,TRUE
+8220,Ramagundam,80,0,,,TRUE
+8221,Jangaon,80,0,,,TRUE
+8222,Pennagaram,40,0,,,TRUE
+8223,,20,0,,,TRUE
+8224,Vikramasingapuram,160,0,,,TRUE
+8225,Babhnan,20,0,,,TRUE
+8226,Iradatganj,20,0,,,TRUE
+8227,Edappadi,40,0,,,TRUE
+8228,Itwa,20,0,,,TRUE
+8229,,20,0,,,TRUE
+8230,Kolar,20,0,,,TRUE
+8231,Domariaganj,20,0,,,TRUE
+8232,Barhni,20,0,,,TRUE
 8233,,20,0,,,
-8234,Samda,20,0,,,
-8235,,20,0,,,
-8236,Rayakottai,20,0,,,
-8237,,20,0,,,
-8238,,20,0,,,
-8239,Baddepalle,20,0,,,
-8240,Diguvamarampalli,20,0,,,
-8241,Tiruchengodu,20,0,,,
-8242,Jakkampatty,20,0,,,
-8243,Jhusi,20,0,,,
-8244,Amgaon,20,0,,,
-8245,Sankari,20,0,,,
-8246,Rajapalaiyam,20,0,,,
-8247,Nagercoil,20,0,,,
-8248,,20,0,,,
-8249,Gadchiroli,20,0,,,
-8250,Lambhua,20,0,,,
-8251,Sankarankovil,20,0,,,
-8252,Rampur,20,0,,,
-8253,Proddatur,20,0,,,
-8254,Byohari,20,0,,,
-8255,Bangarapete,20,0,,,
-8256,Odanchathram,20,0,,,
+8234,Samda,20,0,,,TRUE
+8235,,20,0,,,TRUE
+8236,Rayakottai,20,0,,,TRUE
+8237,,20,0,,,TRUE
+8238,,20,1,TRUE,,
+8239,Baddepalle,20,0,,,TRUE
+8240,Diguvamarampalli,20,0,,,TRUE
+8241,Tiruchengodu,80,0,,,TRUE
+8242,Jakkampatty,40,0,,,TRUE
+8243,Jhusi,20,0,,,TRUE
+8244,Amgaon,20,0,,,TRUE
+8245,Sankari,320,0,,,TRUE
+8246,Rajapalaiyam,40,0,,,TRUE
+8247,Nagercoil,40,0,,,TRUE
+8248,,20,0,,,TRUE
+8249,Gadchiroli,160,0,,,TRUE
+8250,Lambhua,20,0,,,TRUE
+8251,Sankarankovil,40,0,,,TRUE
+8252,Rampur,40,0,,,TRUE
+8253,Proddatur,40,0,,,TRUE
+8254,Byohari,20,0,,,TRUE
+8255,Bangarapete,20,0,,,TRUE
+8256,Odanchathram,20,0,,,TRUE
 8257,,20,0,,,
-8258,Asnahra,20,0,,,
-8259,Palacode,20,0,,,
-8260,Taramangalam,20,0,,,
-8261,Srivilliputtur,20,0,,,
-8262,Patti,20,0,,,
-8263,,20,0,,,
-8264,Ranwaital,20,0,,,
-8265,Dharmapuri,20,0,,,
-8266,Kolar Gold Fields,20,0,,,
-8267,Batlagundu,20,0,,,
-8268,Kadipur,20,0,,,
-8269,Chanda,20,0,,,
-8270,,20,0,,,
-8271,Kalakkad,20,0,,,
-8272,Iltifatganj,20,0,,,
-8273,Phulpur,20,0,,,
-8274,Krishnagiri,20,0,,,
-8275,Omalur,20,0,,,
-8276,Dindori,20,0,,,
-8277,,20,0,,,
-8278,Salem,20,0,,,
-8279,Akbarpur,20,0,,,
-8280,Usilampatti,20,0,,,
-8281,Hami,20,0,,,
-8282,,20,0,,,
-8283,,20,0,,,
-8284,Warangal,20,0,,,
-8285,Nalgonda,20,0,,,
-8286,Mungra Badshahpur,20,0,,,
-8287,Jaisinghnagar,20,0,,,
-8288,Dostpur,20,0,,,
-8289,Anichampalayam,20,0,,,
-8290,Basti,20,0,,,
+8258,Asnahra,20,0,,,TRUE
+8259,Palacode,40,0,,,TRUE
+8260,Taramangalam,40,0,,,TRUE
+8261,Srivilliputtur,40,0,,,TRUE
+8262,Patti,20,0,,,TRUE
+8263,,20,0,,,TRUE
+8264,Ranwaital,20,0,,,TRUE
+8265,Dharmapuri,80,0,,,TRUE
+8266,Kolar Gold Fields,40,0,,,TRUE
+8267,Batlagundu,20,0,,,TRUE
+8268,Kadipur,20,0,,,TRUE
+8269,Chanda,20,0,,,TRUE
+8270,,20,0,,,TRUE
+8271,Kalakkad,20,0,,,TRUE
+8272,Iltifatganj,20,0,,,TRUE
+8273,Phulpur,20,0,,,TRUE
+8274,Krishnagiri,40,0,,,TRUE
+8275,Omalur,80,0,,,TRUE
+8276,Dindori,20,0,,,TRUE
+8277,,20,0,,,TRUE
+8278,Salem,40,0,,,TRUE
+8279,Akbarpur,20,0,,,TRUE
+8280,Usilampatti,20,0,,,TRUE
+8281,Hami,20,0,,,TRUE
+8282,,20,0,,,TRUE
+8283,,20,0,,,TRUE
+8284,Warangal,80,0,,,TRUE
+8285,Nalgonda,80,0,,,TRUE
+8286,Mungra Badshahpur,20,0,,,TRUE
+8287,Jaisinghnagar,20,0,,,TRUE
+8288,Dostpur,20,0,,,TRUE
+8289,Anichampalayam,80,0,,,TRUE
+8290,Basti,20,0,,,TRUE
 8291,Manur Rasta,20,0,,,
-8292,Tirunelveli,20,0,,,
-8293,Mulabagilu,20,0,,,
-8294,Sivakasi,20,0,,,
-8295,Bansi,20,0,,,
-8296,Mydukuru,20,0,,,
-8297,Tanda,20,0,,,
-8298,Madanapalle,20,0,,,
-8299,Vedasandur,20,0,,,
-8300,Chinnalapatti,20,0,,,
-8301,,20,0,,,
-8302,Majholi,20,0,,,
-8303,Kuppam,20,0,,,
-8304,Karur,20,0,,,
-8305,,20,0,,,
-8306,Meja,20,0,,,
-8307,Thalaiyuthu,20,0,,,
-8308,Giddalur,20,0,,,
-8309,Dindigul,20,0,,,
-8310,Handia,20,0,,,
-8311,Mauganj,20,0,,,
-8312,Shahdol,20,0,,,
-8313,Rasipuram,20,0,,,
-8314,Naugarh,20,0,,,
-8315,Badlapur,20,0,,,
-8316,Namakkal,20,0,,,
-8317,Koraon,20,0,,,
-8318,Venkatagirikota,20,0,,,
-8319,Janghai,20,0,,,
-8320,Kovilpatti,20,0,,,
-8321,Punganuru,20,0,,,
-8322,Palaiyam,20,0,,,
-8323,,20,0,,,
-8324,Machhlishahr,20,0,,,
-8325,Sidhi,20,0,,,
-8326,Kadapa,20,0,,,
-8327,Sattur,20,0,,,
-8328,,20,0,,,
-8329,Rayachoti,20,0,,,
-8330,Rishabam,20,0,,,
+8292,Tirunelveli,160,0,,,TRUE
+8293,Mulabagilu,20,0,,,TRUE
+8294,Sivakasi,80,0,,,TRUE
+8295,Bansi,20,0,,,TRUE
+8296,Mydukuru,20,0,,,TRUE
+8297,Tanda,20,0,,,TRUE
+8298,Madanapalle,20,0,,,TRUE
+8299,Vedasandur,20,0,,,TRUE
+8300,Chinnalapatti,40,0,,,TRUE
+8301,,20,0,,,TRUE
+8302,Majholi,40,0,,,TRUE
+8303,Kuppam,40,0,,,TRUE
+8304,Karur,40,0,,,TRUE
+8305,,20,0,,,TRUE
+8306,Meja,20,0,,,TRUE
+8307,Thalaiyuthu,20,0,,,TRUE
+8308,Giddalur,20,0,,,TRUE
+8309,Dindigul,20,0,,,TRUE
+8310,Handia,20,0,,,TRUE
+8311,Mauganj,20,0,,,TRUE
+8312,Shahdol,20,0,,,TRUE
+8313,Rasipuram,320,0,,,TRUE
+8314,Naugarh,20,0,,,TRUE
+8315,Badlapur,20,0,,,TRUE
+8316,Namakkal,80,0,,,TRUE
+8317,Koraon,20,0,,,TRUE
+8318,Venkatagirikota,20,0,,,TRUE
+8319,Janghai,20,0,,,TRUE
+8320,Kovilpatti,40,0,,,TRUE
+8321,Punganuru,20,0,,,TRUE
+8322,Palaiyam,20,0,,,TRUE
+8323,,20,0,,,TRUE
+8324,Machhlishahr,20,0,,,TRUE
+8325,Sidhi,20,0,,,TRUE
+8326,Kadapa,20,0,,,TRUE
+8327,Sattur,80,0,,,TRUE
+8328,,20,0,,,TRUE
+8329,Rayachoti,40,0,,,TRUE
+8330,Rishabam,20,0,,,TRUE
 8331,Tirumangalam,20,0,,,
 8332,Virudhunagar,20,0,,,
 8333,,20,0,,,
@@ -9748,255 +9748,255 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 9747,Kulpi,20,0,,,
 9748,Kakdwip,20,0,,,
 9749,Alamdanga,20,0,,,
-9750,,20,0,,,
+9750,,20,0,,,TRUE
 9751,Saghatta,20,0,,,
-9752,,20,0,,,
+9752,,40,0,,,TRUE
 9753,,20,0,,,
-9754,???????,20,0,,,
-9755,Barkhada,20,0,,,
-9756,Jaynagar Majilpur,20,0,,,
-9757,,20,0,,,
-9758,Singrimari,20,0,,,
-9759,Bogra,20,0,,,
-9760,Habra,20,0,,,
-9761,Sariakandi,20,0,,,
-9762,Hatisala,20,0,,,
-9763,,20,0,,,
+9754,???????,40,0,,,TRUE
+9755,Barkhada,40,0,,,TRUE
+9756,Jaynagar Majilpur,20,0,,,TRUE
+9757,,20,0,,,TRUE
+9758,Singrimari,40,0,,,TRUE
+9759,Bogra,40,0,,,TRUE
+9760,Habra,40,0,,,TRUE
+9761,Sariakandi,20,0,,,TRUE
+9762,Hatisala,20,0,,,TRUE
+9763,,20,0,,,TRUE
 9764,Bahadurabad,20,0,,,
-9765,Sondalia,20,0,,,
-9766,Mankachar,20,0,,,
-9767,Jhaudia,20,0,,,
-9768,Bilasipara,20,0,,,
-9769,Pabna,20,0,,,
-9770,Alampur,20,0,,,
-9771,Hariakunda,20,0,,,
-9772,Bangala,20,0,,,
-9773,Bangaon,20,0,,,
-9774,,20,0,,,
-9775,,20,0,,,
-9776,Gaighata,20,0,,,
-9777,,20,0,,,
-9778,Islampur-????????,20,0,,,
-9779,Chandaikona,20,0,,,
-9780,Sirajganj,20,0,,,
-9781,Kotchadpur,20,0,,,
+9765,Sondalia,20,0,,,TRUE
+9766,Mankachar,80,0,,,TRUE
+9767,Jhaudia,20,0,,,TRUE
+9768,Bilasipara,20,0,,,TRUE
+9769,Pabna,20,0,,,TRUE
+9770,Alampur,20,0,,,TRUE
+9771,Hariakunda,80,0,,,TRUE
+9772,Bangala,20,0,,,TRUE
+9773,Bangaon,20,0,,,TRUE
+9774,,20,0,,,TRUE
+9775,,20,0,,,TRUE
+9776,Gaighata,20,0,,,TRUE
+9777,,40,0,,,TRUE
+9778,Islampur-????????,20,0,,,TRUE
+9779,Chandaikona,20,0,,,TRUE
+9780,Sirajganj,20,0,,,TRUE
+9781,Kotchadpur,20,0,,,TRUE
 9782,,20,0,,,
-9783,Mahmudpur,20,0,,,
-9784,Benapole,20,0,,,
-9785,Lakhipur,20,0,,,
+9783,Mahmudpur,20,0,,,TRUE
+9784,Benapole,40,0,,,TRUE
+9785,Lakhipur,20,0,,,TRUE
 9786,N/A ,20,0,,,
-9787,,20,0,,,
-9788,Bhangura,20,0,,,
-9789,Baduria,20,0,,,
-9790,Canning,20,0,,,
-9791,Chanpur,20,0,,,
+9787,,20,0,,,TRUE
+9788,Bhangura,20,0,,,TRUE
+9789,Baduria,20,0,,,TRUE
+9790,Canning,20,0,,,TRUE
+9791,Chanpur,20,0,,,TRUE
 9792,,20,0,,,
 9793,,20,0,,,
-9794,Gunaritala,20,0,,,
-9795,Salanga,20,0,,,
-9796,Ataikula,20,0,,,
-9797,,20,0,,,
+9794,Gunaritala,40,0,,,TRUE
+9795,Salanga,20,0,,,TRUE
+9796,Ataikula,20,0,,,TRUE
+9797,,20,0,,,TRUE
 9798,Khoksha,20,0,,,
-9799,Basirhat,20,0,,,
-9800,Shailkupa,20,0,,,
-9801,Bongaigaon,20,0,,,
-9802,Jhenaidah,20,0,,,
-9803,Swarupnagar,20,0,,,
+9799,Basirhat,20,0,,,TRUE
+9800,Shailkupa,20,0,,,TRUE
+9801,Bongaigaon,320,0,,,TRUE
+9802,Jhenaidah,20,0,,,TRUE
+9803,Swarupnagar,20,0,,,TRUE
 9804,,20,0,,,
-9805,,20,0,,,
-9806,Shankarpur,20,0,,,
-9807,Sujanagar,20,0,,,
-9808,????????,20,0,,,
-9809,Behula,20,0,,,
+9805,,20,0,,,TRUE
+9806,Shankarpur,40,0,,,TRUE
+9807,Sujanagar,40,0,,,TRUE
+9808,????????,20,0,,,TRUE
+9809,Behula,20,0,,,TRUE
 9810,,20,0,,,
-9811,,20,0,,,
-9812,Garadaha,20,0,,,
+9811,,40,0,,,TRUE
+9812,Garadaha,20,0,,,TRUE
 9813,,20,0,,,
-9814,Hajirbagh,20,0,,,
-9815,?????,20,0,,,
-9816,,20,0,,,
-9817,Jamalpur,20,0,,,
-9818,Tura,20,0,,,
-9819,Sarishabari,20,0,,,
-9820,Jessore,20,0,,,
-9821,,20,0,,,
-9822,Taki,20,0,,,
-9823,Sakhipur,20,0,,,
-9824,,20,0,,,
-9825,Hariharnagar,20,0,,,
-9826,Bera,20,0,,,
-9827,Gosaba,20,0,,,
-9828,Dhanbari,20,0,,,
-9829,Satkhira,20,0,,,
-9830,,20,0,,,
-9831,Kashinathpur,20,0,,,
-9832,Magura,20,0,,,
-9833,??????????,20,0,,,
-9834,Goalpara,20,0,,,
-9835,Bhuapur,20,0,,,
-9836,Manirampur,20,0,,,
+9814,Hajirbagh,20,0,,,TRUE
+9815,?????,20,0,,,TRUE
+9816,,20,0,,,TRUE
+9817,Jamalpur,20,0,,,TRUE
+9818,Tura,40,0,,,TRUE
+9819,Sarishabari,20,0,,,TRUE
+9820,Jessore,20,0,,,TRUE
+9821,,20,0,,,TRUE
+9822,Taki,80,0,,,TRUE
+9823,Sakhipur,20,0,,,TRUE
+9824,,20,0,,,TRUE
+9825,Hariharnagar,20,0,,,TRUE
+9826,Bera,40,0,,,TRUE
+9827,Gosaba,20,0,,,TRUE
+9828,Dhanbari,20,0,,,TRUE
+9829,Satkhira,40,0,,,TRUE
+9830,,20,0,,,TRUE
+9831,Kashinathpur,20,0,,,TRUE
+9832,Magura,20,0,,,TRUE
+9833,??????????,20,0,,,TRUE
+9834,Goalpara,160,0,,,TRUE
+9835,Bhuapur,20,0,,,TRUE
+9836,Manirampur,20,0,,,TRUE
 9837,Golabari,20,0,,,
 9838,Masundia,20,0,,,
-9839,Majidpur,20,0,,,
+9839,Majidpur,20,0,,,TRUE
 9840,,20,0,,,
-9841,Krishnai,20,0,,,
-9842,Nalitabari,20,0,,,
-9843,,20,0,,,
+9841,Krishnai,160,0,,,TRUE
+9842,Nalitabari,20,0,,,TRUE
+9843,,20,0,,,TRUE
 9844,,20,0,,,
-9845,Tangail,20,0,,,
-9846,Rajbari,20,0,,,
+9845,Tangail,20,0,,,TRUE
+9846,Rajbari,20,0,,,TRUE
 9847,Mirkutia,20,0,,,
-9848,Pirojpur,20,0,,,
-9849,Noapara,20,0,,,
-9850,Dhara,20,0,,,
-9851,Narail,20,0,,,
-9852,Muktagacha,20,0,,,
-9853,Haluaghat,20,0,,,
+9848,Pirojpur,20,0,,,TRUE
+9849,Noapara,80,0,,,TRUE
+9850,Dhara,20,0,,,TRUE
+9851,Narail,20,0,,,TRUE
+9852,Muktagacha,20,0,,,TRUE
+9853,Haluaghat,20,0,,,TRUE
 9854,Delduar,20,0,,,
-9855,Barpeta,20,0,,,
+9855,Barpeta,20,0,,,TRUE
 9856,,20,0,,,
-9857,,20,0,,,
-9858,Phultala,20,0,,,
-9859,Paikgacha,20,0,,,
-9860,,20,0,,,
-9861,Williamnagar,20,0,,,
-9862,Phulpur,20,0,,,
-9863,Khulna,20,0,,,
-9864,Phulbaria,20,0,,,
-9865,Faridpur,20,0,,,
-9866,Mymensingh,20,0,,,
-9867,Buraich,20,0,,,
-9868,Manikgonj,20,0,,,
-9869,Tarakanda,20,0,,,
-9870,,20,0,,,
-9871,Trishal,20,0,,,
-9872,Dhaka,20,0,,,
-9873,Sontoli,20,0,,,
-9874,Jaigir,20,0,,,
-9875,Bohori,20,0,,,
+9857,,20,0,,,TRUE
+9858,Phultala,40,0,,,TRUE
+9859,Paikgacha,20,0,,,TRUE
+9860,,20,0,,,TRUE
+9861,Williamnagar,80,0,,,TRUE
+9862,Phulpur,40,0,,,TRUE
+9863,Khulna,40,0,,,TRUE
+9864,Phulbaria,20,0,,,TRUE
+9865,Faridpur,20,0,,,TRUE
+9866,Mymensingh,20,0,,,TRUE
+9867,Buraich,20,0,,,TRUE
+9868,Manikgonj,20,0,,,TRUE
+9869,Tarakanda,20,0,,,TRUE
+9870,,40,0,,,TRUE
+9871,Trishal,20,0,,,TRUE
+9872,Dhaka,20,0,,,TRUE
+9873,Sontoli,20,0,,,TRUE
+9874,Jaigir,20,0,,,TRUE
+9875,Bohori,20,0,,,TRUE
 9876,,20,0,,,
-9877,Gouripur,20,0,,,
-9878,Rampur,20,0,,,
-9879,Susung Durgapur,20,0,,,
-9880,Bhaluka,20,0,,,
+9877,Gouripur,20,0,,,TRUE
+9878,Rampur,20,0,,,TRUE
+9879,Susung Durgapur,20,0,,,TRUE
+9880,Bhaluka,80,0,,,TRUE
 9881,Muksudpur,20,0,,,
-9882,Mongla,20,0,,,
-9883,,20,0,,,
-9884,,20,0,,,
-9885,Gafargaon,20,0,,,
-9886,Gopalganj,20,0,,,
-9887,Barahit,20,0,,,
+9882,Mongla,40,0,,,TRUE
+9883,,20,0,,,TRUE
+9884,,20,0,,,TRUE
+9885,Gafargaon,20,0,,,TRUE
+9886,Gopalganj,40,0,,,TRUE
+9887,Barahit,20,0,,,TRUE
 9888,,20,0,,,
-9889,Nalbari,20,0,,,
-9890,Char Algi,20,0,,,
-9891,Bagerhat,20,0,,,
+9889,Nalbari,80,0,,,TRUE
+9890,Char Algi,20,0,,,TRUE
+9891,Bagerhat,20,0,,,TRUE
 9892,,20,0,,,
-9893,Netrokona,20,0,,,
-9894,Rajoir,20,0,,,
-9895,,20,0,,,
-9896,Chitalmari,20,0,,,
-9897,Kutalipara,20,0,,,
-9898,Kalmakanda,20,0,,,
-9899,Shibchar,20,0,,,
-9900,Hossainpur,20,0,,,
-9901,Pakundia,20,0,,,
-9902,Madaripur,20,0,,,
-9903,Azara,20,0,,,
-9904,????????,20,0,,,
-9905,Kishoreganj,20,0,,,
-9906,Nongstoin,20,0,,,
-9907,Mondoldia,20,0,,,
-9908,Swarupkathi,20,0,,,
+9893,Netrokona,20,0,,,TRUE
+9894,Rajoir,20,0,,,TRUE
+9895,,20,0,,,TRUE
+9896,Chitalmari,20,0,,,TRUE
+9897,Kutalipara,20,0,,,TRUE
+9898,Kalmakanda,20,0,,,TRUE
+9899,Shibchar,20,0,,,TRUE
+9900,Hossainpur,20,0,,,TRUE
+9901,Pakundia,20,0,,,TRUE
+9902,Madaripur,20,0,,,TRUE
+9903,Azara,320,0,,,TRUE
+9904,????????,20,0,,,TRUE
+9905,Kishoreganj,20,0,,,TRUE
+9906,Nongstoin,40,0,,,TRUE
+9907,Mondoldia,20,0,,,TRUE
+9908,Swarupkathi,20,0,,,TRUE
 9909,Singdha,20,0,,,
-9910,Mohanganj,20,0,,,
-9911,Tarail,20,0,,,
-9912,Gournadi,20,0,,,
-9913,Borodol Bug Bari Ultar Para,20,0,,,
-9914,Katiadi,20,0,,,
-9915,Guwahati,20,0,,,
-9916,Shariatpur,20,0,,,
-9917,Dakshin Badal,20,0,,,
-9918,,20,0,,,
-9919,Bhandaria,20,0,,,
-9920,Jamalganj,20,0,,,
-9921,Nikli,20,0,,,
-9922,,20,0,,,
-9923,Jhalokati,20,0,,,
-9924,Brahmanbaria,20,0,,,
-9925,,20,0,,,
-9926,,20,0,,,
-9927,,20,0,,,
-9928,,20,0,,,
-9929,Mangaldoi,20,0,,,
-9930,Gazaria,20,0,,,
-9931,Zhangye,20,0,,,
+9910,Mohanganj,20,0,,,TRUE
+9911,Tarail,20,0,,,TRUE
+9912,Gournadi,20,0,,,TRUE
+9913,Borodol Bug Bari Ultar Para,20,0,,,TRUE
+9914,Katiadi,20,0,,,TRUE
+9915,Guwahati,160,0,,,TRUE
+9916,Shariatpur,20,0,,,TRUE
+9917,Dakshin Badal,20,0,,,TRUE
+9918,,20,0,,,TRUE
+9919,Bhandaria,20,0,,,TRUE
+9920,Jamalganj,20,0,,,TRUE
+9921,Nikli,20,0,,,TRUE
+9922,,20,0,,,TRUE
+9923,Jhalokati,40,0,,,TRUE
+9924,Brahmanbaria,20,0,,,TRUE
+9925,,20,0,,,TRUE
+9926,,20,0,,,TRUE
+9927,,20,0,,,TRUE
+9928,,20,0,,,TRUE
+9929,Mangaldoi,160,0,,,TRUE
+9930,Gazaria,20,0,,,TRUE
+9931,Zhangye,20,0,,,TRUE
 9932,,20,0,,,
-9933,Homna,20,0,,,
-9934,Muladi,20,0,,,
-9935,Barisal,20,0,,,
-9936,,20,0,,,
-9937,Kharupetia,20,0,,,
-9938,Comilla,20,0,,,
-9939,Jorabat,20,0,,,
-9940,Mairang,20,0,,,
-9941,Sunamganj District,20,0,,,
+9933,Homna,20,0,,,TRUE
+9934,Muladi,20,0,,,TRUE
+9935,Barisal,40,0,,,TRUE
+9936,,20,0,,,TRUE
+9937,Kharupetia,20,0,,,TRUE
+9938,Comilla,20,0,,,TRUE
+9939,Jorabat,40,0,,,TRUE
+9940,Mairang,20,0,,,TRUE
+9941,Sunamganj District,20,0,,,TRUE
 9942,,20,0,,,
-9943,,20,0,,,
-9944,Austagram,20,0,,,
-9945,Patuakhali,20,0,,,
-9946,Nabinagar,20,0,,,
+9943,,20,0,,,TRUE
+9944,Austagram,20,0,,,TRUE
+9945,Patuakhali,40,0,,,TRUE
+9946,Nabinagar,20,0,,,TRUE
 9947,Haimchar,20,0,,,
-9948,,20,0,,,
-9949,Shibpur,20,0,,,
-9950,,20,0,,,
-9951,Baniachong,20,0,,,
-9952,Lakhai,20,0,,,
-9953,Nasirnagar,20,0,,,
-9954,,20,0,,,
-9955,Shillong,20,0,,,
-9956,Sumer Village,20,0,,,
-9957,Shahbazpur Town,20,0,,,
-9958,Lakshmipur,20,0,,,
+9948,,20,0,,,TRUE
+9949,Shibpur,20,0,,,TRUE
+9950,,20,0,,,TRUE
+9951,Baniachong,20,0,,,TRUE
+9952,Lakhai,20,0,,,TRUE
+9953,Nasirnagar,40,0,,,TRUE
+9954,,20,0,,,TRUE
+9955,Shillong,20,0,,,TRUE
+9956,Sumer Village,20,0,,,TRUE
+9957,Shahbazpur Town,20,0,,,TRUE
+9958,Lakshmipur,20,0,,,TRUE
 9959,Bede polli,20,0,,,
-9960,Golkhali,20,0,,,
-9961,Bhola,20,0,,,
-9962,Dhing,20,0,,,
-9963,Chhatak Bazaar,20,0,,,
-9964,Dular Bazar,20,0,,,
-9965,Shahiji Bazar,20,0,,,
-9966,Bholaganj,20,0,,,
-9967,,20,0,,,
+9960,Golkhali,20,0,,,TRUE
+9961,Bhola,20,0,,,TRUE
+9962,Dhing,20,0,,,TRUE
+9963,Chhatak Bazaar,20,0,,,TRUE
+9964,Dular Bazar,20,0,,,TRUE
+9965,Shahiji Bazar,20,0,,,TRUE
+9966,Bholaganj,20,0,,,TRUE
+9967,,20,0,,,TRUE
 9968,Payalgacha,20,0,,,
-9969,Habiganj,20,0,,,
-9970,Madhabpur,20,0,,,
-9971,Kasba,20,0,,,
+9969,Habiganj,40,0,,,TRUE
+9970,Madhabpur,20,0,,,TRUE
+9971,Kasba,20,0,,,TRUE
 9972,Shashaia,20,0,,,
-9973,Meher,20,0,,,
-9974,,20,0,,,
-9975,Agartala,20,0,,,
-9976,Marigaon,20,0,,,
-9977,Shaistaganj,20,0,,,
-9978,???????,20,0,,,
-9979,???????? - Biswanath,20,0,,,
-9980,,20,0,,,
+9973,Meher,20,0,,,TRUE
+9974,,20,0,,,TRUE
+9975,Agartala,40,0,,,TRUE
+9976,Marigaon,160,0,,,TRUE
+9977,Shaistaganj,20,0,,,TRUE
+9978,???????,20,0,,,TRUE
+9979,???????? - Biswanath,20,0,,,TRUE
+9980,,20,0,,,TRUE
 9981,,20,0,,,
-9982,Sylhet,20,0,,,
-9983,Sadipur,20,0,,,
-9984,,20,0,,,
-9985,Lalmohan,20,0,,,
-9986,Bisalgarh,20,0,,,
-9987,Noakhali,20,0,,,
+9982,Sylhet,20,0,,,TRUE
+9983,Sadipur,20,0,,,TRUE
+9984,,20,0,,,TRUE
+9985,Lalmohan,20,0,,,TRUE
+9986,Bisalgarh,80,0,,,TRUE
+9987,Noakhali,20,0,,,TRUE
 9988,,20,0,,,
-9989,Tezpur,20,0,,,
-9990,,20,0,,,
-9991,Moulvibazar,20,0,,,
-9992,Nagaon,20,0,,,
+9989,Tezpur,160,0,,,TRUE
+9990,,20,0,,,TRUE
+9991,Moulvibazar,20,0,,,TRUE
+9992,Nagaon,160,0,,,TRUE
 9993,,20,0,,,
-9994,Charfasson,20,0,,,
+9994,Charfasson,20,0,,,TRUE
 9995,,20,0,,,
-9996,Jowai,20,0,,,
-9997,Sreemangal,20,0,,,
-9998,,20,0,,,
+9996,Jowai,80,0,,,TRUE
+9997,Sreemangal,20,0,,,TRUE
+9998,,20,0,,,TRUE
 9999,,20,0,,,
 10000,Daganbhuiyan,20,0,,,TRUE
 10001,Samaguri,20,0,,,TRUE
@@ -10022,14 +10022,14 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10021,Zakiganj,20,0,,,TRUE
 10022,Hojai,40,0,,,TRUE
 10023,,20,0,,,TRUE
-10024,,20,0,,,
+10024,,20,0,,,TRUE
 10025,Dharmanagar,80,0,,,TRUE
 10026,???????????,20,0,,,TRUE
 10027,Pathar Kandi,20,0,,,TRUE
 10028,Lanka,80,0,,,TRUE
 10029,,20,0,,,TRUE
 10030,BRAC Poultry Farm,20,0,,,TRUE
-10031,????????,20,0,,,
+10031,????????,20,0,,,TRUE
 10032,Sabroom,20,0,,,TRUE
 10033,Badarpur,20,0,,,TRUE
 10034,Ramkrishna Nagar,20,0,,,TRUE
@@ -10049,9 +10049,9 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10048,,20,0,,,TRUE
 10049,Kolasib,80,0,,,TRUE
 10050,Lakhipur,20,0,,,TRUE
-10051,,20,0,,,
+10051,,20,0,,,TRUE
 10052,,20,0,,,TRUE
-10053,,20,0,,,
+10053,,20,0,,,TRUE
 10054,Jiribam,20,0,,,TRUE
 10055,??????????,20,0,,,TRUE
 10056,Golaghat,40,0,,,TRUE
@@ -10063,8 +10063,8 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10062,Jorhat,320,0,,,TRUE
 10063,Aizawl,20,0,,,TRUE
 10064,Keochia,20,0,,,TRUE
-10065,,20,0,,,
-10066,,20,0,,,
+10065,,20,0,,,TRUE
+10066,,20,0,,,TRUE
 10067,,20,0,,,
 10068,Titabor,160,0,,,TRUE
 10069,Chakaria,20,0,,,TRUE
@@ -10339,7 +10339,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10338,Jintang,20,0,,,TRUE
 10339,Dayao,20,0,,,TRUE
 10340,Banda Aceh,80,0,,,TRUE
-10341,,20,0,,,
+10341,,40,0,,,TRUE
 10342,Baoji,80,0,,,TRUE
 10343,Luodai anient town,2560,0,,TRUE,
 10344,Shawan,20,0,,,TRUE
@@ -10581,7 +10581,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10580,Beibei,20,0,,,TRUE
 10581,Chenjiaqiao,80,0,,,TRUE
 10582,Wanyuan,20,0,,,TRUE
-10583,Laifeng,20,0,,,
+10583,Laifeng,40,0,,,TRUE
 10584,Huailai,160,0,,,TRUE
 10585,Huozhou,20,0,,,TRUE
 10586,Hejiang,20,0,,,TRUE
@@ -10715,7 +10715,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10714,Tang,160,0,,,TRUE
 10715,Bangkok,20,0,,,TRUE
 10716,Nanchuan,20,0,,,TRUE
-10717,M??ng ChÖ,20,0,,,
+10717,M??ng ChÖ,20,0,,,TRUE
 10718,Shijiazhuang,40,0,,,TRUE
 10719,Huairou,2560,0,,,TRUE
 10720,Surat Thani,80,0,,,TRUE
@@ -10730,7 +10730,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10729,Wanzhou,20,0,,,TRUE
 10730,Baiquan,20,0,,,TRUE
 10731,Mancheng,640,0,,,TRUE
-10732,Fengdu,20,0,,,
+10732,Fengdu,20,0,,,TRUE
 10733,Xingyi,20,0,,,TRUE
 10734,Phra Nakhon Si Ayutthaya,2560,0,,,TRUE
 10735,Renhuai,20,0,,,TRUE
@@ -10872,7 +10872,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10871,Longyao,160,0,,,TRUE
 10872,???,20,0,,,TRUE
 10873,Kisaran,40,0,,,TRUE
-10874,Baidi,20,0,,,
+10874,Baidi,20,0,,,TRUE
 10875,Kaiyang,20,0,,,TRUE
 10876,Panyabungan,20,0,,,TRUE
 10877,Ban Map Ta Phut,1280,0,,,TRUE
@@ -10949,7 +10949,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 10948,Jizhou,40,0,,,TRUE
 10949,Xianfeng,20,0,,,TRUE
 10950,Funing,20,0,,,TRUE
-10951,Mäo V?c,20,0,,,
+10951,Mäo V?c,20,0,,,TRUE
 10952,Songkhla,160,0,,,TRUE
 10953,Wuzhi,40,0,,,TRUE
 10954,Qianxi,40,0,,,TRUE
@@ -11042,9 +11042,9 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 11041,Yuanyang,20,0,,,TRUE
 11042,Xiushan,40,0,,,TRUE
 11043,Sampov Lun,20,0,,,TRUE
-11044,Khum Barang Thleak,20,0,,,
+11044,Khum Barang Thleak,20,0,,,TRUE
 11045,Solok,80,0,,,TRUE
-11046,,20,0,,,
+11046,,20,0,,,TRUE
 11047,Xunxian,20,0,,,TRUE
 11048,Lushan,20,0,,,TRUE
 11049,Dengzhou,20,0,,,TRUE
@@ -11149,1456 +11149,1456 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 11148,Yanggu,20,0,,,TRUE
 11149,Dumai,20,0,,,TRUE
 11150,Jishou,40,0,,,TRUE
-11151,Chiping,20,0,,,
-11152,Xinhuang,20,0,,,
-11153,Shanhaiguan,20,0,,,
-11154,Rawang,20,0,,,
-11155,Yucheng,20,0,,,
-11156,Dongming,20,0,,,
-11157,Tiandong County,20,0,,,
-11158,Nong'an,20,0,,,
-11159,Linyi,20,0,,,
-11160,??i Ngh?a,20,0,,,
-11161,Jinzhou,20,0,,,
-11162,Linying,20,0,,,
-11163,Wuyang,20,0,,,
-11164,Yicheng,20,0,,,
-11165,Battambang,20,0,,,
-11166,Tongxu,20,0,,,
-11167,Yanling,20,0,,,
-11168,L?u Gi†o,20,0,,,
-11169,Taluk Kuantan,20,0,,,
-11170,Fuyu,20,0,,,
-11171,B?c Ninh,20,0,,,
-11172,Wugang,20,0,,,
-11173,Th? XuÉn,20,0,,,
-11174,Taiqian,20,0,,,
-11175,Lankao,20,0,,,
-11176,Zhangjiajie,20,0,,,
-11177,Ph£ Minh,20,0,,,
-11178,Perawang,20,0,,,
-11179,Huludao,20,0,,,
-11180,Kho†i ChÉu,20,0,,,
-11181,Juancheng,20,0,,,
-11182,Su-ngai Kolok,20,0,,,
-11183,???,20,0,,,
-11184,Shanghe,20,0,,,
-11185,Dong'e,20,0,,,
-11186,B?c Giang,20,0,,,
-11187,Suizhong,20,0,,,
-11188,Nancha,20,0,,,
-11189,Acheng,20,0,,,
-11190,Xingcheng,20,0,,,
-11191,??ng V?n,20,0,,,
-11192,???,20,0,,,
-11193,Qixian,20,0,,,
-11194,Yidu,20,0,,,
-11195,Ph? L?,20,0,,,
-11196,Zaoyang,20,0,,,
-11197,Dangyang,20,0,,,
-11198,Linghai,20,0,,,
-11199,Luohe,20,0,,,
-11200,Mayang,20,0,,,
-11201,Do Luong,20,0,,,
-11202,Fugou,20,0,,,
-11203,Huji,20,0,,,
-11204,Heze,20,0,,,
-11205,Dehui,20,0,,,
-11206,Biyang,20,0,,,
-11207,H?ng Yàn,20,0,,,
-11208,Thakhek,20,0,,,
-11209,Zhicheng,20,0,,,
-11210,Bin,20,0,,,
-11211,Longzhou,20,0,,,
-11212,H?i D??ng,20,0,,,
-11213,Heishan,20,0,,,
-11214,J?nchÇngji?ng,20,0,,,
-11215,Thanh H¢a,20,0,,,
-11216,Seremban,20,0,,,
-11217,Pangkalan Kerinci,20,0,,,
-11218,??i Ngì,20,0,,,
-11219,???,20,0,,,
-11220,Kota Bharu,20,0,,,
-11221,Ninh Bçnh,20,0,,,
-11222,Zhijiang,20,0,,,
-11223,Jinan,20,0,,,
-11224,B£t S?n,20,0,,,
-11225,Jiyang,20,0,,,
-11226,,20,0,,,
-11227,Daxin,20,0,,,
-11228,Xiping,20,0,,,
-11229,Jingmen,20,0,,,
-11230,Zhijiang,20,0,,,
-11231,Yuanling,20,0,,,
-11232,L?ng S?n,20,0,,,
-11233,???,20,0,,,
-11234,Nga S?n,20,0,,,
-11235,Ch?,20,0,,,
-11236,Nam ??nh,20,0,,,
-11237,,20,0,,,
-11238,???,20,0,,,
-11239,Di?n ChÉu,20,0,,,
-11240,???,20,0,,,
-11241,Minquan,20,0,,,
-11242,Cili,20,0,,,
-11243,Chenxi,20,0,,,
-11244,Lishu,20,0,,,
-11245,Savannakhet,20,0,,,
-11246,Huaihua,20,0,,,
-11247,Pingguo,20,0,,,
-11248,Changchun,20,0,,,
-11249,????,20,0,,,
-11250,Phat Diem,20,0,,,
-11251,Muara Bungo,20,0,,,
-11252,Bengkalis,20,0,,,
-11253,Arga Makmur,20,0,,,
-11254,Xinmin,20,0,,,
-11255,Suiping,20,0,,,
-11256,XuÉn Tr??ng,20,0,,,
-11257,Siem Reap,20,0,,,
-11258,Unit 1,20,0,,,
-11259,Sui,20,0,,,
-11260,Songzi,20,0,,,
-11261,C†t ThÖnh,20,0,,,
-11262,Ningming,20,0,,,
-11263,Minh TÉn,20,0,,,
-11264,?ìng H?ng,20,0,,,
-11265,Th†i Bçnh,20,0,,,
-11266,Melaka City,20,0,,,
-11267,Shimen,20,0,,,
-11268,Bengkulu,20,0,,,
-11269,???,20,0,,,
-11270,Dongping,20,0,,,
-11271,Tongbai,20,0,,,
-11272,Hongjiang,20,0,,,
-11273,Yushu,20,0,,,
-11274,???,20,0,,,
-11275,Haiphong,20,0,,,
-11276,Vinh,20,0,,,
-11277,Gongzhuling,20,0,,,
-11278,Siping,20,0,,,
-11279,Hegang,20,0,,,
-11280,Taikang,20,0,,,
-11281,Fanjiatun,20,0,,,
-11282,Caoxian,20,0,,,
-11283,Zhongxiang,20,0,,,
-11284,Shangcai,20,0,,,
-11285,Zhumadian,20,0,,,
-11286,Shuantaizi,20,0,,,
-11287,Binzhou,20,0,,,
-11288,Juye,20,0,,,
-11289,Dahua,20,0,,,
-11290,Bangko,20,0,,,
-11291,Diaobingshan,20,0,,,
-11292,Anyang,20,0,,,
-11293,Uìng B°,20,0,,,
-11294,Zhoukou,20,0,,,
-11295,Panjin,20,0,,,
-11296,Ningling,20,0,,,
-11297,Wenshang,20,0,,,
-11298,Jiutai,20,0,,,
-11299,Changtu,20,0,,,
-11300,Jingzhou,20,0,,,
-11301,Xiazhou,20,0,,,
-11302,Jingzhou,20,0,,,
-11303,Mashan,20,0,,,
-11304,Curup,20,0,,,
-11305,Sihanoukville,20,0,,,
-11306,Birobidzhan,20,0,,,
-11307,Zhangqiu,20,0,,,
-11308,???,20,0,,,
-11309,Lixian,20,0,,,
-11310,Xupu,20,0,,,
-11311,Huaiyang,20,0,,,
-11312,???,20,0,,,
-11313,Zouping,20,0,,,
-11314,Hechi,20,0,,,
-11315,Linli,20,0,,,
+11151,Chiping,40,0,,,TRUE
+11152,Xinhuang,20,0,,,TRUE
+11153,Shanhaiguan,640,0,,,TRUE
+11154,Rawang,160,0,,,TRUE
+11155,Yucheng,80,0,,,TRUE
+11156,Dongming,80,0,,,TRUE
+11157,Tiandong County,20,0,,,TRUE
+11158,Nong'an,20,0,,,TRUE
+11159,Linyi,80,0,,,TRUE
+11160,??i Ngh?a,80,0,,,TRUE
+11161,Jinzhou,20,0,,,TRUE
+11162,Linying,40,0,,,TRUE
+11163,Wuyang,20,0,,,TRUE
+11164,Yicheng,20,0,,,TRUE
+11165,Battambang,80,0,,,TRUE
+11166,Tongxu,40,0,,,TRUE
+11167,Yanling,40,0,,,TRUE
+11168,L?u Gi†o,40,0,,,TRUE
+11169,Taluk Kuantan,20,0,,,TRUE
+11170,Fuyu,40,0,,,TRUE
+11171,B?c Ninh,1280,0,,,TRUE
+11172,Wugang,40,0,,,TRUE
+11173,Th? XuÉn,80,0,,,TRUE
+11174,Taiqian,40,0,,,TRUE
+11175,Lankao,80,0,,,TRUE
+11176,Zhangjiajie,20,0,,,TRUE
+11177,Ph£ Minh,80,0,,,TRUE
+11178,Perawang,40,0,,,TRUE
+11179,Huludao,40,0,,,TRUE
+11180,Kho†i ChÉu,20,0,,,TRUE
+11181,Juancheng,40,0,,,TRUE
+11182,Su-ngai Kolok,40,0,,,TRUE
+11183,???,80,0,,,TRUE
+11184,Shanghe,40,0,,,TRUE
+11185,Dong'e,40,0,,,TRUE
+11186,B?c Giang,80,0,,,TRUE
+11187,Suizhong,40,0,,,TRUE
+11188,Nancha,20,0,,,TRUE
+11189,Acheng,20,0,,,TRUE
+11190,Xingcheng,320,0,,,TRUE
+11191,??ng V?n,20,0,,,TRUE
+11192,???,40,0,,,TRUE
+11193,Qixian,20,0,,,TRUE
+11194,Yidu,20,0,,,TRUE
+11195,Ph? L?,80,0,,,TRUE
+11196,Zaoyang,20,0,,,TRUE
+11197,Dangyang,40,0,,,TRUE
+11198,Linghai,640,0,,,TRUE
+11199,Luohe,20,0,,,TRUE
+11200,Mayang,20,0,,,TRUE
+11201,Do Luong,40,0,,,TRUE
+11202,Fugou,40,0,,,TRUE
+11203,Huji,40,0,,,TRUE
+11204,Heze,40,0,,,TRUE
+11205,Dehui,20,0,,,TRUE
+11206,Biyang,20,0,,,TRUE
+11207,H?ng Yàn,80,0,,,TRUE
+11208,Thakhek,40,0,,,TRUE
+11209,Zhicheng,40,0,,,TRUE
+11210,Bin,40,0,,,TRUE
+11211,Longzhou,20,0,,,TRUE
+11212,H?i D??ng,2560,0,,,TRUE
+11213,Heishan,20,0,,,TRUE
+11214,J?nchÇngji?ng,20,0,,,TRUE
+11215,Thanh H¢a,160,0,,,TRUE
+11216,Seremban,20,0,,,TRUE
+11217,Pangkalan Kerinci,40,0,,,TRUE
+11218,??i Ngì,80,0,,,TRUE
+11219,???,40,0,,,TRUE
+11220,Kota Bharu,80,0,,,TRUE
+11221,Ninh Bçnh,160,0,,,TRUE
+11222,Zhijiang,20,0,,,TRUE
+11223,Jinan,20,0,,,TRUE
+11224,B£t S?n,80,0,,,TRUE
+11225,Jiyang,40,0,,,TRUE
+11226,,320,0,,,TRUE
+11227,Daxin,20,0,,,TRUE
+11228,Xiping,20,0,,,TRUE
+11229,Jingmen,40,0,,,TRUE
+11230,Zhijiang,20,0,,,TRUE
+11231,Yuanling,20,0,,,TRUE
+11232,L?ng S?n,20,0,,,TRUE
+11233,???,40,0,,,TRUE
+11234,Nga S?n,40,0,,,TRUE
+11235,Ch?,20,0,,,TRUE
+11236,Nam ??nh,40,0,,,TRUE
+11237,,1280,0,,,TRUE
+11238,???,20,0,,,TRUE
+11239,Di?n ChÉu,80,0,,,TRUE
+11240,???,160,0,,,TRUE
+11241,Minquan,40,0,,,TRUE
+11242,Cili,20,0,,,TRUE
+11243,Chenxi,20,0,,,TRUE
+11244,Lishu,40,0,,,TRUE
+11245,Savannakhet,160,0,,,TRUE
+11246,Huaihua,20,0,,,TRUE
+11247,Pingguo,80,0,,,TRUE
+11248,Changchun,20,0,,,TRUE
+11249,????,20,0,,,TRUE
+11250,Phat Diem,160,0,,,TRUE
+11251,Muara Bungo,20,0,,,TRUE
+11252,Bengkalis,80,0,,,TRUE
+11253,Arga Makmur,20,0,,,TRUE
+11254,Xinmin,20,0,,,TRUE
+11255,Suiping,40,0,,,TRUE
+11256,XuÉn Tr??ng,320,0,,,TRUE
+11257,Siem Reap,40,0,,,TRUE
+11258,Unit 1,20,0,,,TRUE
+11259,Sui,80,0,,,TRUE
+11260,Songzi,20,0,,,TRUE
+11261,C†t ThÖnh,1280,0,,,TRUE
+11262,Ningming,20,0,,,TRUE
+11263,Minh TÉn,320,0,,,TRUE
+11264,?ìng H?ng,1280,0,,,TRUE
+11265,Th†i Bçnh,80,0,,,TRUE
+11266,Melaka City,80,0,,,TRUE
+11267,Shimen,80,0,,,TRUE
+11268,Bengkulu,40,0,,,TRUE
+11269,???,20,0,,,TRUE
+11270,Dongping,40,0,,,TRUE
+11271,Tongbai,20,0,,,TRUE
+11272,Hongjiang,20,0,,,TRUE
+11273,Yushu,20,0,,,TRUE
+11274,???,20,0,,,TRUE
+11275,Haiphong,80,0,,,TRUE
+11276,Vinh,80,0,,,TRUE
+11277,Gongzhuling,20,0,,,TRUE
+11278,Siping,20,0,,,TRUE
+11279,Hegang,20,0,,,TRUE
+11280,Taikang,20,0,,,TRUE
+11281,Fanjiatun,20,0,,,TRUE
+11282,Caoxian,80,0,,,TRUE
+11283,Zhongxiang,40,0,,,TRUE
+11284,Shangcai,20,0,,,TRUE
+11285,Zhumadian,20,0,,,TRUE
+11286,Shuantaizi,160,0,,,TRUE
+11287,Binzhou,40,0,,,TRUE
+11288,Juye,40,0,,,TRUE
+11289,Dahua,20,0,,,TRUE
+11290,Bangko,40,0,,,TRUE
+11291,Diaobingshan,20,0,,,TRUE
+11292,Anyang,40,0,,,TRUE
+11293,Uìng B°,160,0,,,TRUE
+11294,Zhoukou,20,0,,,TRUE
+11295,Panjin,40,0,,,TRUE
+11296,Ningling,20,0,,,TRUE
+11297,Wenshang,20,0,,,TRUE
+11298,Jiutai,20,0,,,TRUE
+11299,Changtu,20,0,,,TRUE
+11300,Jingzhou,20,0,,,TRUE
+11301,Xiazhou,20,0,,,TRUE
+11302,Jingzhou,20,0,,,TRUE
+11303,Mashan,20,0,,,TRUE
+11304,Curup,80,0,,,TRUE
+11305,Sihanoukville,40,0,,,TRUE
+11306,Birobidzhan,20,0,,,TRUE
+11307,Zhangqiu,40,0,,,TRUE
+11308,???,80,0,,,TRUE
+11309,Lixian,40,0,,,TRUE
+11310,Xupu,20,0,,,TRUE
+11311,Huaiyang,20,0,,,TRUE
+11312,???,40,0,,,TRUE
+11313,Zouping,1280,0,,,TRUE
+11314,Hechi,20,0,,,TRUE
+11315,Linli,20,0,,,TRUE
 11316,,20,0,,,
-11317,Tai'an,20,0,,,
-11318,Liaozhong,20,0,,,
-11319,Runan,20,0,,,
-11320,Suizhou,20,0,,,
-11321,Muar,20,0,,,
-11322,Zhenxiabo,20,0,,,
-11323,HÖ T?nh,20,0,,,
-11324,Ubon Ratchathani,20,0,,,
-11325,Kaiyuan,20,0,,,
-11326,Wuchang,20,0,,,
-11327,Ha Long,20,0,,,
-11328,???,20,0,,,
-11329,Shangqiu,20,0,,,
-11330,Zhecheng,20,0,,,
-11331,Gong'an,20,0,,,
-11332,???,20,0,,,
-11333,Boxing,20,0,,,
-11334,Shenyang,20,0,,,
-11335,???,20,0,,,
-11336,???,20,0,,,
-11337,Xinchengzi,20,0,,,
-11338,Tonghe,20,0,,,
-11339,Minggang,20,0,,,
-11340,Tieling,20,0,,,
-11341,Jining,20,0,,,
-11342,Sarolangun,20,0,,,
-11343,Jinxiang,20,0,,,
-11344,Taoyuan,20,0,,,
-11345,Fusui,20,0,,,
-11346,???,20,0,,,
-11347,Shanxian,20,0,,,
-11348,Xiangcheng,20,0,,,
-11349,Changde,20,0,,,
-11350,Selatpanjang,20,0,,,
-11351,Manna,20,0,,,
-11352,Anhua,20,0,,,
-11353,Huantai,20,0,,,
-11354,Zibo,20,0,,,
-11355,Rongshui,20,0,,,
-11356,Lubuklinggau,20,0,,,
-11357,C?m Ph?,20,0,,,
-11358,Yitong,20,0,,,
-11359,???,20,0,,,
-11360,Dancheng,20,0,,,
-11361,Wuming,20,0,,,
-11362,Yucheng,20,0,,,
-11363,???,20,0,,,
-11364,Pingyu,20,0,,,
-11365,Shenbei,20,0,,,
-11366,Rongan,20,0,,,
-11367,Kuala Terengganu,20,0,,,
-11368,Jiamusi,20,0,,,
-11369,Shanhe,20,0,,,
-11370,Zhengyang,20,0,,,
-11371,Deshan,20,0,,,
-11372,Qufu,20,0,,,
-11373,Xinyang,20,0,,,
-11374,Fangzheng,20,0,,,
-11375,Shangzhi,20,0,,,
-11376,Shuangyang,20,0,,,
-11377,Shenqiu,20,0,,,
-11378,Xifeng,20,0,,,
-11379,Guangrao,20,0,,,
-11380,Fuhe,20,0,,,
-11381,Yingkou,20,0,,,
-11382,Nanning,20,0,,,
-11383,Batu Pahat,20,0,,,
-11384,Laiwu,20,0,,,
-11385,Luyi,20,0,,,
-11386,Dongkou,20,0,,,
-11387,Shulan,20,0,,,
-11388,???,20,0,,,
-11389,Zoucheng,20,0,,,
-11390,????,20,0,,,
-11391,Qianjiang,20,0,,,
-11392,Anxiang,20,0,,,
-11393,Tang'ao,20,0,,,
-11394,Tianmen,20,0,,,
-11395,Shishou,20,0,,,
-11396,Xihe,20,0,,,
-11397,Liaoyuan,20,0,,,
-11398,Fushun,20,0,,,
-11399,Guangshui,20,0,,,
-11400,???,20,0,,,
-11401,Anshan,20,0,,,
-11402,Sishui,20,0,,,
-11403,???,20,0,,,
-11404,???,20,0,,,
-11405,Gaosha,20,0,,,
-11406,Pagar Alam,20,0,,,
-11407,Lijiazui,20,0,,,
-11408,Hanshou,20,0,,,
-11409,Shijiang,20,0,,,
-11410,Dengta,20,0,,,
-11411,Liaoyang,20,0,,,
-11412,Langdong Coach,20,0,,,
-11413,Haicheng,20,0,,,
-11414,Yangxi,20,0,,,
-11415,Jilin,20,0,,,
-11416,???,20,0,,,
-11417,Bozhou,20,0,,,
-11418,Anlu,20,0,,,
-11419,Wugang,20,0,,,
-11420,Kuantan,20,0,,,
-11421,Dashiqiao,20,0,,,
-11422,???,20,0,,,
-11423,Tembilahan,20,0,,,
-11424,Komsomolsk-on-Amur,20,0,,,
-11425,Xiayi,20,0,,,
-11426,Wushengguan,20,0,,,
-11427,Nanxian,20,0,,,
-11428,Xinhua,20,0,,,
-11429,Kampong Chhnang,20,0,,,
-11430,Bayuquan,20,0,,,
-11431,Dangshan,20,0,,,
-11432,Dungun,20,0,,,
-11433,Gaoping,20,0,,,
-11434,Binyang,20,0,,,
-11435,???,20,0,,,
-11436,Muara Bulian,20,0,,,
-11437,Jieshou,20,0,,,
-11438,Liuzhou,20,0,,,
-11439,Fengxian,20,0,,,
-11440,Xincai,20,0,,,
-11441,Mong Cai,20,0,,,
-11442,Chukai,20,0,,,
-11443,Loushan,20,0,,,
-11444,Gaizhou,20,0,,,
-11445,Qingzhou,20,0,,,
-11446,Xintai,20,0,,,
-11447,Yingcheng,20,0,,,
-11448,Huarong,20,0,,,
-11449,Linquan,20,0,,,
-11450,???,20,0,,,
-11451,Longhui,20,0,,,
-11452,Kluang,20,0,,,
-11453,Dawu,20,0,,,
-11454,Maocaojie,20,0,,,
-11455,Buxi,20,0,,,
-11456,Shouguang,20,0,,,
-11457,Xi,20,0,,,
-11458,Yunmeng,20,0,,,
-11459,????,20,0,,,
-11460,???,20,0,,,
-11461,Jiangjiazui,20,0,,,
-11462,Tanjung Balai Karimun,20,0,,,
-11463,Yongji,20,0,,,
-11464,Xiaochang,20,0,,,
-11465,HoÖn L?o,20,0,,,
-11466,Lahat,20,0,,,
-11467,Tengzhou,20,0,,,
-11468,Caowei,20,0,,,
-11469,Laibin,20,0,,,
-11470,Yiyuan,20,0,,,
-11471,Luorong,20,0,,,
-11472,Kuala Tungkal,20,0,,,
-11473,Linqu,20,0,,,
-11474,Taojiang,20,0,,,
-11475,Gongchangling,20,0,,,
-11476,Peixian,20,0,,,
-11477,Xiantao,20,0,,,
-11478,Phnom Penh,20,0,,,
-11479,???,20,0,,,
-11480,Pakse,20,0,,,
-11481,Weihe,20,0,,,
-11482,Taihe,20,0,,,
-11483,Yuanjiang,20,0,,,
-11484,Xinning,20,0,,,
-11485,Luzhai,20,0,,,
-11486,Fangcheng,20,0,,,
-11487,????,20,0,,,
+11317,Tai'an,40,0,,,TRUE
+11318,Liaozhong,20,0,,,TRUE
+11319,Runan,20,0,,,TRUE
+11320,Suizhou,80,0,,,TRUE
+11321,Muar,160,0,,,TRUE
+11322,Zhenxiabo,20,0,,,TRUE
+11323,HÖ T?nh,160,0,,,TRUE
+11324,Ubon Ratchathani,160,0,,,TRUE
+11325,Kaiyuan,20,0,,,TRUE
+11326,Wuchang,20,0,,,TRUE
+11327,Ha Long,80,0,,,TRUE
+11328,???,20,0,,,TRUE
+11329,Shangqiu,80,0,,,TRUE
+11330,Zhecheng,20,0,,,TRUE
+11331,Gong'an,20,0,,,TRUE
+11332,???,80,0,,,TRUE
+11333,Boxing,80,0,,,TRUE
+11334,Shenyang,20,0,,,TRUE
+11335,???,640,0,,,TRUE
+11336,???,640,0,,,TRUE
+11337,Xinchengzi,20,0,,,TRUE
+11338,Tonghe,20,0,,,TRUE
+11339,Minggang,20,0,,,TRUE
+11340,Tieling,40,0,,,TRUE
+11341,Jining,20,0,,,TRUE
+11342,Sarolangun,40,0,,,TRUE
+11343,Jinxiang,640,0,,,TRUE
+11344,Taoyuan,20,0,,,TRUE
+11345,Fusui,40,0,,,TRUE
+11346,???,20,0,,,TRUE
+11347,Shanxian,20,0,,,TRUE
+11348,Xiangcheng,20,0,,,TRUE
+11349,Changde,20,0,,,TRUE
+11350,Selatpanjang,20,0,,,TRUE
+11351,Manna,40,0,,,TRUE
+11352,Anhua,20,0,,,TRUE
+11353,Huantai,1280,0,,,TRUE
+11354,Zibo,80,0,,,TRUE
+11355,Rongshui,20,0,,,TRUE
+11356,Lubuklinggau,80,0,,,TRUE
+11357,C?m Ph?,160,0,,,TRUE
+11358,Yitong,20,0,,,TRUE
+11359,???,40,0,,,TRUE
+11360,Dancheng,20,0,,,TRUE
+11361,Wuming,80,0,,,TRUE
+11362,Yucheng,640,0,,,TRUE
+11363,???,160,0,,,TRUE
+11364,Pingyu,40,0,,,TRUE
+11365,Shenbei,2560,0,,,TRUE
+11366,Rongan,20,0,,,TRUE
+11367,Kuala Terengganu,320,0,,,TRUE
+11368,Jiamusi,20,0,,,TRUE
+11369,Shanhe,20,0,,,TRUE
+11370,Zhengyang,20,0,,,TRUE
+11371,Deshan,320,0,,,TRUE
+11372,Qufu,40,0,,,TRUE
+11373,Xinyang,40,0,,,TRUE
+11374,Fangzheng,20,0,,,TRUE
+11375,Shangzhi,20,0,,,TRUE
+11376,Shuangyang,20,0,,,TRUE
+11377,Shenqiu,40,0,,,TRUE
+11378,Xifeng,40,0,,,TRUE
+11379,Guangrao,320,0,,,TRUE
+11380,Fuhe,20,0,,,TRUE
+11381,Yingkou,20,0,,,TRUE
+11382,Nanning,20,0,,,TRUE
+11383,Batu Pahat,160,0,,,TRUE
+11384,Laiwu,80,0,,,TRUE
+11385,Luyi,40,0,,,TRUE
+11386,Dongkou,20,0,,,TRUE
+11387,Shulan,20,0,,,TRUE
+11388,???,640,0,,,TRUE
+11389,Zoucheng,20,0,,,TRUE
+11390,????,40,0,,,TRUE
+11391,Qianjiang,40,0,,,TRUE
+11392,Anxiang,20,0,,,TRUE
+11393,Tang'ao,2560,0,,,TRUE
+11394,Tianmen,40,0,,,TRUE
+11395,Shishou,40,0,,,TRUE
+11396,Xihe,80,0,,,TRUE
+11397,Liaoyuan,40,0,,,TRUE
+11398,Fushun,320,0,,,TRUE
+11399,Guangshui,20,0,,,TRUE
+11400,???,640,0,,,TRUE
+11401,Anshan,40,0,,,TRUE
+11402,Sishui,80,0,,,TRUE
+11403,???,160,0,,,TRUE
+11404,???,160,0,,,TRUE
+11405,Gaosha,20,0,,,TRUE
+11406,Pagar Alam,40,0,,,TRUE
+11407,Lijiazui,20,0,,,TRUE
+11408,Hanshou,20,0,,,TRUE
+11409,Shijiang,20,0,,,TRUE
+11410,Dengta,20,0,,,TRUE
+11411,Liaoyang,160,0,,,TRUE
+11412,Langdong Coach,1280,0,,,TRUE
+11413,Haicheng,20,0,,,TRUE
+11414,Yangxi,40,0,,,TRUE
+11415,Jilin,20,0,,,TRUE
+11416,???,640,0,,,TRUE
+11417,Bozhou,20,0,,,TRUE
+11418,Anlu,20,0,,,TRUE
+11419,Wugang,20,0,,,TRUE
+11420,Kuantan,80,0,,,TRUE
+11421,Dashiqiao,40,0,,,TRUE
+11422,???,20,0,,,TRUE
+11423,Tembilahan,20,0,,,TRUE
+11424,Komsomolsk-on-Amur,20,0,,,TRUE
+11425,Xiayi,40,0,,,TRUE
+11426,Wushengguan,20,0,,,TRUE
+11427,Nanxian,20,0,,,TRUE
+11428,Xinhua,20,0,,,TRUE
+11429,Kampong Chhnang,160,0,,,TRUE
+11430,Bayuquan,80,0,,,TRUE
+11431,Dangshan,80,0,,,TRUE
+11432,Dungun,80,0,,,TRUE
+11433,Gaoping,20,0,,,TRUE
+11434,Binyang,20,0,,,TRUE
+11435,???,320,0,,,TRUE
+11436,Muara Bulian,40,0,,,TRUE
+11437,Jieshou,160,0,,,TRUE
+11438,Liuzhou,20,0,,,TRUE
+11439,Fengxian,160,0,,,TRUE
+11440,Xincai,40,0,,,TRUE
+11441,Mong Cai,40,0,,,TRUE
+11442,Chukai,80,0,,,TRUE
+11443,Loushan,20,0,,,TRUE
+11444,Gaizhou,20,0,,,TRUE
+11445,Qingzhou,80,0,,,TRUE
+11446,Xintai,80,0,,,TRUE
+11447,Yingcheng,20,0,,,TRUE
+11448,Huarong,20,0,,,TRUE
+11449,Linquan,80,0,,,TRUE
+11450,???,20,0,,,TRUE
+11451,Longhui,20,0,,,TRUE
+11452,Kluang,80,0,,,TRUE
+11453,Dawu,20,0,,,TRUE
+11454,Maocaojie,20,0,,,TRUE
+11455,Buxi,20,0,,,TRUE
+11456,Shouguang,640,0,,,TRUE
+11457,Xi,20,0,,,TRUE
+11458,Yunmeng,20,0,,,TRUE
+11459,????,160,0,,,TRUE
+11460,???,20,0,,,TRUE
+11461,Jiangjiazui,20,0,,,TRUE
+11462,Tanjung Balai Karimun,20,0,,,TRUE
+11463,Yongji,40,0,,,TRUE
+11464,Xiaochang,20,0,,,TRUE
+11465,HoÖn L?o,20,0,,,TRUE
+11466,Lahat,20,0,,,TRUE
+11467,Tengzhou,20,0,,,TRUE
+11468,Caowei,20,0,,,TRUE
+11469,Laibin,20,0,,,TRUE
+11470,Yiyuan,40,0,,,TRUE
+11471,Luorong,80,0,,,TRUE
+11472,Kuala Tungkal,20,0,,,TRUE
+11473,Linqu,40,0,,,TRUE
+11474,Taojiang,20,0,,,TRUE
+11475,Gongchangling,40,0,,,TRUE
+11476,Peixian,160,0,,,TRUE
+11477,Xiantao,20,0,,,TRUE
+11478,Phnom Penh,40,0,,,TRUE
+11479,???,80,0,,,TRUE
+11480,Pakse,320,0,,,TRUE
+11481,Weihe,20,0,,,TRUE
+11482,Taihe,40,0,,,TRUE
+11483,Yuanjiang,20,0,,,TRUE
+11484,Xinning,20,0,,,TRUE
+11485,Luzhai,20,0,,,TRUE
+11486,Fangcheng,80,0,,,TRUE
+11487,????,20,0,,,TRUE
 11488,,20,0,,,
-11489,Jambi,20,0,,,
-11490,???,20,0,,,
-11491,Lianyuan,20,0,,,
-11492,Guilin,20,0,,,
-11493,Benxi,20,0,,,
-11494,Xiaogan,20,0,,,
-11495,Litang,20,0,,,
-11496,Kulai,20,0,,,
-11497,Fenshui,20,0,,,
-11498,Singapore,20,0,,,
-11499,Iskandar Puteri,20,0,,,
-11500,???,20,0,,,
-11501,???,20,0,,,
-11502,Xinshao,20,0,,,
-11503,Yiyang,20,0,,,
-11504,Shaoyang,20,0,,,
-11505,Shaoyang,20,0,,,
-11506,???,20,0,,,
-11507,Jixian,20,0,,,
-11508,Yongcheng,20,0,,,
-11509,Muara Enim,20,0,,,
-11510,Dongfeng,20,0,,,
-11511,Tanjung Enim,20,0,,,
-11512,Qiaotou,20,0,,,
-11513,Qinzhou,20,0,,,
-11514,Fujin,20,0,,,
-11515,Hanchuan,20,0,,,
-11516,Wafangdian,20,0,,,
-11517,Shuangyashan,20,0,,,
-11518,Chenjiafang,20,0,,,
-11519,Weifang,20,0,,,
-11520,Zaozhuang,20,0,,,
-11521,Huangchuan,20,0,,,
-11522,Guangshan,20,0,,,
-11523,Huishangang,20,0,,,
-11524,???,20,0,,,
-11525,Yangshi,20,0,,,
-11526,Huanan,20,0,,,
-11527,Qingyuan,20,0,,,
-11528,Xinhe,20,0,,,
-11529,Xing'an,20,0,,,
-11530,Panshi,20,0,,,
-11531,Louxing,20,0,,,
-11532,Guoyang,20,0,,,
-11533,Liwa,20,0,,,
-11534,Dengfeng,20,0,,,
-11535,Fuyang,20,0,,,
-11536,Huaibin,20,0,,,
-11537,Yueyang,20,0,,,
-11538,Wufengpu,20,0,,,
-11539,Benxi Manchu Autonomous County,20,0,,,
-11540,Dalian,20,0,,,
-11541,Wuming,20,0,,,
-11542,Pulandian,20,0,,,
-11543,Shaodong,20,0,,,
-11544,???,20,0,,,
-11545,Funan,20,0,,,
-11546,Wuxuan,20,0,,,
-11547,Batam City,20,0,,,
-11548,Honghu,20,0,,,
-11549,Wuhan,20,0,,,
-11550,Meihekou,20,0,,,
-11551,Huaibei,20,0,,,
-11552,Xiaoxian,20,0,,,
-11553,Changyi,20,0,,,
-11554,???,20,0,,,
-11555,Hengxian,20,0,,,
-11556,???,20,0,,,
-11557,Xin,20,0,,,
-11558,Hong'an,20,0,,,
-11559,Chaudok City,20,0,,,
-11560,Mandurah,20,0,,,
-11561,Xuzhou,20,0,,,
-11562,Feixian,20,0,,,
-11563,Yueyang,20,0,,,
-11564,Quanzhou,20,0,,,
-11565,Baturaja,20,0,,,
-11566,Jiaohe,20,0,,,
-11567,Sangyuan Wangjia,20,0,,,
-11568,Huangpi,20,0,,,
-11569,???,20,0,,,
-11570,Baoshan,20,0,,,
-11571,Ningxiang,20,0,,,
-11572,Kampong Cham,20,0,,,
-11573,Sìng ??c,20,0,,,
-11574,Lixin,20,0,,,
-11575,Guigang,20,0,,,
-11576,C†i ?ìi VÖm,20,0,,,
-11577,Anqiu,20,0,,,
-11578,Baiyun,20,0,,,
-11579,TÉn ChÉu,20,0,,,
-11580,M? ??c,20,0,,,
-11581,Huinan,20,0,,,
-11582,Xiangyin,20,0,,,
-11583,R?ch Gi†,20,0,,,
-11584,Lingshan,20,0,,,
-11585,Prabumulih,20,0,,,
-11586,Laizhou,20,0,,,
-11587,Lipu,20,0,,,
-11588,Hong Ngu,20,0,,,
-11589,????,20,0,,,
-11590,???,20,0,,,
-11591,Xiuyan,20,0,,,
-11592,???,20,0,,,
-11593,Miluo,20,0,,,
-11594,Shuangfeng,20,0,,,
-11595,Yongzhou,20,0,,,
-11596,Jiawang,20,0,,,
-11597,Jiayu,20,0,,,
-11598,N£i S?p,20,0,,,
-11599,Linyi,20,0,,,
-11600,Wangcheng,20,0,,,
-11601,An Chau,20,0,,,
-11602,Longkou,20,0,,,
-11603,Dong Ha,20,0,,,
-11604,C†i N??c,20,0,,,
-11605,Liuhe,20,0,,,
-11606,Xinshi,20,0,,,
-11607,An Long,20,0,,,
-11608,Gushi,20,0,,,
-11609,Rockingham,20,0,,,
-11610,Mengcheng,20,0,,,
-11611,Penglai,20,0,,,
-11612,Ca Mau,20,0,,,
-11613,Jiangxia,20,0,,,
-11614,Xiangxiang,20,0,,,
-11615,Boli,20,0,,,
-11616,Shangcheng,20,0,,,
-11617,Bancheng,20,0,,,
-11618,Yangluo,20,0,,,
-11619,Guanyang,20,0,,,
-11620,Beihai,20,0,,,
-11621,Huadian,20,0,,,
-11622,Chibi,20,0,,,
-11623,Qiyang,20,0,,,
-11624,Long Xuyen,20,0,,,
-11625,Gi?ng Ri?ng,20,0,,,
-11626,Changsha,20,0,,,
-11627,Lingling,20,0,,,
-11628,Khabarovsk,20,0,,,
+11489,Jambi,20,0,,,TRUE
+11490,???,40,0,,,TRUE
+11491,Lianyuan,40,0,,,TRUE
+11492,Guilin,20,0,,,TRUE
+11493,Benxi,20,0,,,TRUE
+11494,Xiaogan,20,0,,,TRUE
+11495,Litang,40,0,,,TRUE
+11496,Kulai,80,0,,,TRUE
+11497,Fenshui,20,0,,,TRUE
+11498,Singapore,20,0,,,TRUE
+11499,Iskandar Puteri,40,0,,,TRUE
+11500,???,2560,0,,,TRUE
+11501,???,80,0,,,TRUE
+11502,Xinshao,160,0,,,TRUE
+11503,Yiyang,20,0,,,TRUE
+11504,Shaoyang,20,0,,,TRUE
+11505,Shaoyang,40,0,,,TRUE
+11506,???,20,0,,,TRUE
+11507,Jixian,20,0,,,TRUE
+11508,Yongcheng,40,0,,,TRUE
+11509,Muara Enim,20,0,,,TRUE
+11510,Dongfeng,40,0,,,TRUE
+11511,Tanjung Enim,40,0,,,TRUE
+11512,Qiaotou,80,0,,,TRUE
+11513,Qinzhou,20,0,,,TRUE
+11514,Fujin,40,0,,,TRUE
+11515,Hanchuan,80,0,,,TRUE
+11516,Wafangdian,20,0,,,TRUE
+11517,Shuangyashan,40,0,,,TRUE
+11518,Chenjiafang,20,0,,,TRUE
+11519,Weifang,80,0,,,TRUE
+11520,Zaozhuang,40,0,,,TRUE
+11521,Huangchuan,40,0,,,TRUE
+11522,Guangshan,20,0,,,TRUE
+11523,Huishangang,20,0,,,TRUE
+11524,???,40,0,,,TRUE
+11525,Yangshi,40,0,,,TRUE
+11526,Huanan,40,0,,,TRUE
+11527,Qingyuan,20,0,,,TRUE
+11528,Xinhe,320,0,,,TRUE
+11529,Xing'an,20,0,,,TRUE
+11530,Panshi,20,0,,,TRUE
+11531,Louxing,20,0,,,TRUE
+11532,Guoyang,20,0,,,TRUE
+11533,Liwa,40,0,,,TRUE
+11534,Dengfeng,80,0,,,TRUE
+11535,Fuyang,80,0,,,TRUE
+11536,Huaibin,20,0,,,TRUE
+11537,Yueyang,20,0,,,TRUE
+11538,Wufengpu,20,0,,,TRUE
+11539,Benxi Manchu Autonomous County,20,0,,,TRUE
+11540,Dalian,20,0,,,TRUE
+11541,Wuming,20,0,,,TRUE
+11542,Pulandian,80,0,,,TRUE
+11543,Shaodong,20,0,,,TRUE
+11544,???,20,0,,,TRUE
+11545,Funan,20,0,,,TRUE
+11546,Wuxuan,40,0,,,TRUE
+11547,Batam City,20,0,,,TRUE
+11548,Honghu,40,0,,,TRUE
+11549,Wuhan,20,0,,,TRUE
+11550,Meihekou,20,0,,,TRUE
+11551,Huaibei,20,0,,,TRUE
+11552,Xiaoxian,80,0,,,TRUE
+11553,Changyi,160,0,,,TRUE
+11554,???,20,0,,,TRUE
+11555,Hengxian,40,0,,,TRUE
+11556,???,640,0,,,TRUE
+11557,Xin,20,0,,,TRUE
+11558,Hong'an,20,0,,,TRUE
+11559,Chaudok City,640,0,,,TRUE
+11560,Mandurah,20,0,,,TRUE
+11561,Xuzhou,40,0,,,TRUE
+11562,Feixian,20,0,,,TRUE
+11563,Yueyang,20,0,,,TRUE
+11564,Quanzhou,20,0,,,TRUE
+11565,Baturaja,160,0,,,TRUE
+11566,Jiaohe,20,0,,,TRUE
+11567,Sangyuan Wangjia,40,0,,,TRUE
+11568,Huangpi,20,0,,,TRUE
+11569,???,80,0,,,TRUE
+11570,Baoshan,20,0,,,TRUE
+11571,Ningxiang,20,0,,,TRUE
+11572,Kampong Cham,160,0,,,TRUE
+11573,Sìng ??c,40,0,,,TRUE
+11574,Lixin,20,0,,,TRUE
+11575,Guigang,40,0,,,TRUE
+11576,C†i ?ìi VÖm,20,0,,,TRUE
+11577,Anqiu,2560,0,,,TRUE
+11578,Baiyun,80,0,,,TRUE
+11579,TÉn ChÉu,160,0,,,TRUE
+11580,M? ??c,640,0,,,TRUE
+11581,Huinan,20,0,,,TRUE
+11582,Xiangyin,20,0,,,TRUE
+11583,R?ch Gi†,320,0,,,TRUE
+11584,Lingshan,20,0,,,TRUE
+11585,Prabumulih,40,0,,,TRUE
+11586,Laizhou,20,0,,,TRUE
+11587,Lipu,80,0,,,TRUE
+11588,Hong Ngu,20,0,,,TRUE
+11589,????,1280,0,,,TRUE
+11590,???,20,0,,,TRUE
+11591,Xiuyan,40,0,,,TRUE
+11592,???,40,0,,,TRUE
+11593,Miluo,160,0,,,TRUE
+11594,Shuangfeng,40,0,,,TRUE
+11595,Yongzhou,20,0,,,TRUE
+11596,Jiawang,80,0,,,TRUE
+11597,Jiayu,40,0,,,TRUE
+11598,N£i S?p,320,0,,,TRUE
+11599,Linyi,80,0,,,TRUE
+11600,Wangcheng,40,0,,,TRUE
+11601,An Chau,1280,0,,,TRUE
+11602,Longkou,80,0,,,TRUE
+11603,Dong Ha,40,0,,,TRUE
+11604,C†i N??c,40,0,,,TRUE
+11605,Liuhe,20,0,,,TRUE
+11606,Xinshi,80,0,,,TRUE
+11607,An Long,20,0,,,TRUE
+11608,Gushi,40,0,,,TRUE
+11609,Rockingham,20,0,,,TRUE
+11610,Mengcheng,40,0,,,TRUE
+11611,Penglai,80,0,,,TRUE
+11612,Ca Mau,320,0,,,TRUE
+11613,Jiangxia,20,0,,,TRUE
+11614,Xiangxiang,20,0,,,TRUE
+11615,Boli,20,0,,,TRUE
+11616,Shangcheng,40,0,,,TRUE
+11617,Bancheng,2560,0,,,TRUE
+11618,Yangluo,80,0,,,TRUE
+11619,Guanyang,40,0,,,TRUE
+11620,Beihai,20,0,,,TRUE
+11621,Huadian,20,0,,,TRUE
+11622,Chibi,20,0,,,TRUE
+11623,Qiyang,20,0,,,TRUE
+11624,Long Xuyen,160,0,,,TRUE
+11625,Gi?ng Ri?ng,40,0,,,TRUE
+11626,Changsha,20,0,,,TRUE
+11627,Lingling,20,0,,,TRUE
+11628,Khabarovsk,20,0,,,TRUE
 11629,Pengujan,20,0,,,
-11630,Zhaoyuan,20,0,,,
-11631,???,20,0,,,
-11632,Suzhou,20,0,,,
-11633,Macheng,20,0,,,
-11634,Guiping,20,0,,,
-11635,Mengshan,20,0,,,
-11636,??m D?i,20,0,,,
-11637,Pubei,20,0,,,
-11638,Tanjung Pinang,20,0,,,
-11639,Xinzhou,20,0,,,
-11640,Perth,20,0,,,
-11641,Zhuanghe,20,0,,,
-11642,Pingdu,20,0,,,
-11643,Qidong,20,0,,,
-11644,Sidogede,20,0,,,
-11645,Xinxing,20,0,,,
-11646,Yingshan,20,0,,,
-11647,Kalibening,20,0,,,
-11648,Juxian,20,0,,,
-11649,Xingye,20,0,,,
-11650,Huarong,20,0,,,
-11651,Cao Lanh,20,0,,,
-11652,Tanjung Pering,20,0,,,
-11653,Palembang,20,0,,,
-11654,Xiangtan,20,0,,,
-11655,Th?i Lai,20,0,,,
-11656,Jiujie,20,0,,,
-11657,Gia Rai,20,0,,,
-11658,Indralaya,20,0,,,
-11659,Tongcheng,20,0,,,
-11660,???,20,0,,,
-11661,GÖnh HÖo,20,0,,,
-11662,Gaodu,20,0,,,
-11663,Xianning,20,0,,,
-11664,Chongyang,20,0,,,
-11665,Hengyang,20,0,,,
-11666,Qitaihe,20,0,,,
-11667,Linkou,20,0,,,
-11668,Long M?,20,0,,,
-11669,Zucheng,20,0,,,
-11670,Kotabumi,20,0,,,
-11671,Gaomi,20,0,,,
-11672,Tuanfeng,20,0,,,
-11673,Can Tho,20,0,,,
-11674,Sa Dec City,20,0,,,
-11675,Fengcheng,20,0,,,
-11676,Wulian,20,0,,,
-11677,,20,0,,,
-11678,Pringsewu,20,0,,,
-11679,Automobile City,20,0,,,
-11680,Zhaoping,20,0,,,
-11681,???,20,0,,,
-11682,Nanjiang,20,0,,,
-11683,Chengjun,20,0,,,
-11684,Pizhou,20,0,,,
-11685,Pingjiang,20,0,,,
-11686,Tebing Suluh,20,0,,,
-11687,Huoqiu,20,0,,,
-11688,Yeji,20,0,,,
-11689,Yulin,20,0,,,
-11690,TÉy Ninh,20,0,,,
-11691,Ezhou,20,0,,,
-11692,Zhuzhou,20,0,,,
-11693,Huanggang,20,0,,,
-11694,B?c Liàu,20,0,,,
-11695,Gedong Tataan,20,0,,,
-11696,Hue,20,0,,,
-11697,Gushan,20,0,,,
-11698,Hengyang,20,0,,,
-11699,Da?an,20,0,,,
-11700,Bobai,20,0,,,
-11701,???,20,0,,,
-11702,Qixia,20,0,,,
-11703,???,20,0,,,
-11704,???,20,0,,,
-11705,Fengtai,20,0,,,
-11706,Yantai,20,0,,,
-11707,Meishan,20,0,,,
-11708,Mudanjiang,20,0,,,
-11709,Tonghua,20,0,,,
-11710,Laixi,20,0,,,
-11711,Panji,20,0,,,
-11712,Jianghua,20,0,,,
-11713,Dongfang,20,0,,,
-11714,Cai Be,20,0,,,
-11715,Tanjungsari,20,0,,,
-11716,Jiaozhou,20,0,,,
-11717,Lukou,20,0,,,
-11718,Hengshanxian,20,0,,,
-11719,Bandar Lampung,20,0,,,
-11720,???,20,0,,,
-11721,Tra On,20,0,,,
-11722,Baoqing,20,0,,,
-11723,Gunung Sugih,20,0,,,
-11724,Huanren,20,0,,,
-11725,Beiliu,20,0,,,
-11726,Tonghua,20,0,,,
-11727,Tongshan,20,0,,,
-11728,Changning,20,0,,,
-11729,Zhongshan,20,0,,,
-11730,Laiyang,20,0,,,
-11731,Lingbi,20,0,,,
-11732,Erdaojiang,20,0,,,
-11733,Ningyuan,20,0,,,
-11734,Cai L?y,20,0,,,
-11735,Shouxian,20,0,,,
-11736,Kuandian,20,0,,,
-11737,Xinyi,20,0,,,
-11738,Tianjia?an,20,0,,,
-11739,Huangshi,20,0,,,
-11740,Suining,20,0,,,
-11741,Luotian,20,0,,,
-11742,Metro,20,0,,,
-11743,S¢c Tr?ng,20,0,,,
-11744,Changshou,20,0,,,
-11745,Ch? L†ch,20,0,,,
-11746,Ning'an,20,0,,,
-11747,Xintian,20,0,,,
-11748,Luchuan,20,0,,,
-11749,Huaiyuan,20,0,,,
-11750,Liuyang,20,0,,,
-11751,Rongxian,20,0,,,
-11752,M? Xuyàn,20,0,,,
-11753,Sri Tejo Kencono,20,0,,,
-11754,Dongjingcheng,20,0,,,
-11755,Hengdong,20,0,,,
-11756,Jixi,20,0,,,
-11757,???,20,0,,,
-11758,Muntok,20,0,,,
-11759,Dunhua,20,0,,,
-11760,Trang Bang,20,0,,,
-11761,?????,20,0,,,
-11762,Jiangyuan,20,0,,,
-11763,Baishan,20,0,,,
-11764,Rizhao,20,0,,,
-11765,Tengxian,20,0,,,
-11766,Baimajing,20,0,,,
-11767,Dandong,20,0,,,
-11768,Bengbu,20,0,,,
-11769,My Tho,20,0,,,
-11770,CÖng Long,20,0,,,
-11771,Qingdao,20,0,,,
-11772,Shatian,20,0,,,
-11773,Anpu,20,0,,,
-11774,Hengshan,20,0,,,
-11775,Hezhou,20,0,,,
-11776,????,20,0,,,
-11777,Liling,20,0,,,
-11778,Tan An,20,0,,,
-11779,Muling,20,0,,,
-11780,Donghai,20,0,,,
-11781,Tan Hiep,20,0,,,
-11782,L?ch H?i Th??ng,20,0,,,
-11783,Suqian,20,0,,,
-11784,C? Chi,20,0,,,
-11785,Kalianda,20,0,,,
-11786,Donggang,20,0,,,
-11787,??c Hïa,20,0,,,
-11788,Huangdao,20,0,,,
-11789,???,20,0,,,
-11790,Lu'an,20,0,,,
-11791,Dayao,20,0,,,
-11792,Mo Cay,20,0,,,
-11793,Sixian,20,0,,,
-11794,Yingshan,20,0,,,
-11795,Hengche,20,0,,,
-11796,TrÖ Vinh City,20,0,,,
-11797,Mekarsari,20,0,,,
-11798,Pukou,20,0,,,
-11799,???,20,0,,,
-11800,Ho Chi Minh City,20,0,,,
-11801,Ganyu,20,0,,,
-11802,Ben Cat,20,0,,,
-11803,Lanshanxian,20,0,,,
-11804,T?ktaedonggok,20,0,,,
-11805,Leiyang,20,0,,,
-11806,???,20,0,,,
-11807,Mekarjaya,20,0,,,
-11808,Lianjiang,20,0,,,
-11809,Qichun,20,0,,,
-11810,Yangxin,20,0,,,
-11811,Shangli,20,0,,,
-11812,Jiahe,20,0,,,
-11813,Cenxi,20,0,,,
-11814,Changfeng,20,0,,,
-11815,Susong-ri,20,0,,,
-11816,Wuzhou,20,0,,,
-11817,Mekarjaya,20,0,,,
-11818,Huoshan,20,0,,,
-11819,Kunshe,20,0,,,
-11820,???,20,0,,,
-11821,?Ö N?ng,20,0,,,
-11822,Kedung Ringin,20,0,,,
-11823,Ryongchon,20,0,,,
-11824,???,20,0,,,
-11825,???,20,0,,,
-11826,Pingxiang,20,0,,,
-11827,,20,0,,,
-11828,Youxian,20,0,,,
-11829,Leizhou,20,0,,,
-11830,TÉn Uyàn,20,0,,,
-11831,??ng XoÖi,20,0,,,
-11832,???,20,0,,,
-11833,S?n Giang,20,0,,,
-11834,Cilegon,20,0,,,
-11835,???????,20,0,,,
-11836,Ledong,20,0,,,
-11837,Go Cong,20,0,,,
-11838,Lianyungang,20,0,,,
-11839,???,20,0,,,
-11840,Sihong,20,0,,,
-11841,Wuhe,20,0,,,
-11842,Zhanjiang,20,0,,,
-11843,Lingao,20,0,,,
-11844,Anren,20,0,,,
-11845,???,20,0,,,
-11846,Matian,20,0,,,
-11847,Danzhou,20,0,,,
-11848,Mishan,20,0,,,
-11849,Shuyang,20,0,,,
-11850,???,20,0,,,
-11851,Bçnh ??i,20,0,,,
-11852,Pandeglang,20,0,,,
-11853,Meichuan,20,0,,,
-11854,Guiyang,20,0,,,
-11855,Yomju,20,0,,,
-11856,Weihai,20,0,,,
-11857,Xinyi,20,0,,,
-11858,Linjiang,20,0,,,
-11859,Bayah Barat,20,0,,,
-11860,Huazhou,20,0,,,
-11861,Luxi,20,0,,,
-11862,Jakarta,20,0,,,
-11863,Xinning,20,0,,,
-11864,Hoi An,20,0,,,
-11865,Rushan,20,0,,,
-11866,Linwu,20,0,,,
-11867,Hi?p Ph??c,20,0,,,
-11868,??k HÖ,20,0,,,
-11869,Wuxue,20,0,,,
-11870,Yongxing,20,0,,,
-11871,Ji'an,20,0,,,
-11872,Tongrim,20,0,,,
-11873,Gaozhou,20,0,,,
-11874,Rangkasbitung,20,0,,,
-11875,Chaling,20,0,,,
-11876,Yunan,20,0,,,
-11877,Changqi,20,0,,,
-11878,Siyang,20,0,,,
-11879,Lianzhou,20,0,,,
-11880,Dingyuan,20,0,,,
-11881,Hefei,20,0,,,
-11882,Xuwen County,20,0,,,
-11883,Cholsan,20,0,,,
-11884,Wanzai,20,0,,,
-11885,Zhangpu,20,0,,,
-11886,Guanyun,20,0,,,
-11887,Chenzhou,20,0,,,
-11888,Kon Tum,20,0,,,
+11630,Zhaoyuan,40,0,,,TRUE
+11631,???,1280,0,,,TRUE
+11632,Suzhou,40,0,,,TRUE
+11633,Macheng,40,0,,,TRUE
+11634,Guiping,20,0,,,TRUE
+11635,Mengshan,20,0,,,TRUE
+11636,??m D?i,20,0,,,TRUE
+11637,Pubei,20,0,,,TRUE
+11638,Tanjung Pinang,320,0,,,TRUE
+11639,Xinzhou,20,0,,,TRUE
+11640,Perth,20,0,,,TRUE
+11641,Zhuanghe,20,0,,,TRUE
+11642,Pingdu,20,0,,,TRUE
+11643,Qidong,20,0,,,TRUE
+11644,Sidogede,80,0,,,TRUE
+11645,Xinxing,40,0,,,TRUE
+11646,Yingshan,40,0,,,TRUE
+11647,Kalibening,20,0,,,TRUE
+11648,Juxian,40,0,,,TRUE
+11649,Xingye,20,0,,,TRUE
+11650,Huarong,80,0,,,TRUE
+11651,Cao Lanh,320,0,,,TRUE
+11652,Tanjung Pering,40,0,,,TRUE
+11653,Palembang,20,0,,,TRUE
+11654,Xiangtan,20,0,,,TRUE
+11655,Th?i Lai,2560,0,,,TRUE
+11656,Jiujie,20,0,,,TRUE
+11657,Gia Rai,160,0,,,TRUE
+11658,Indralaya,40,0,,,TRUE
+11659,Tongcheng,20,0,,,TRUE
+11660,???,20,0,,,TRUE
+11661,GÖnh HÖo,20,0,,,TRUE
+11662,Gaodu,1280,0,,,TRUE
+11663,Xianning,40,0,,,TRUE
+11664,Chongyang,20,0,,,TRUE
+11665,Hengyang,40,0,,,TRUE
+11666,Qitaihe,160,0,,,TRUE
+11667,Linkou,20,0,,,TRUE
+11668,Long M?,80,0,,,TRUE
+11669,Zucheng,40,0,,,TRUE
+11670,Kotabumi,80,0,,,TRUE
+11671,Gaomi,40,0,,,TRUE
+11672,Tuanfeng,20,0,,,TRUE
+11673,Can Tho,160,0,,,TRUE
+11674,Sa Dec City,320,0,,,TRUE
+11675,Fengcheng,20,0,,,TRUE
+11676,Wulian,40,0,,,TRUE
+11677,,20,0,,,TRUE
+11678,Pringsewu,160,0,,,TRUE
+11679,Automobile City,20,0,,,TRUE
+11680,Zhaoping,20,0,,,TRUE
+11681,???,320,0,,,TRUE
+11682,Nanjiang,20,0,,,TRUE
+11683,Chengjun,20,0,,,TRUE
+11684,Pizhou,80,0,,,TRUE
+11685,Pingjiang,20,0,,,TRUE
+11686,Tebing Suluh,160,0,,,TRUE
+11687,Huoqiu,40,0,,,TRUE
+11688,Yeji,160,0,,,TRUE
+11689,Yulin,20,0,,,TRUE
+11690,TÉy Ninh,80,0,,,TRUE
+11691,Ezhou,20,0,,,TRUE
+11692,Zhuzhou,20,0,,,TRUE
+11693,Huanggang,20,0,,,TRUE
+11694,B?c Liàu,80,0,,,TRUE
+11695,Gedong Tataan,80,0,,,TRUE
+11696,Hue,40,0,,,TRUE
+11697,Gushan,20,0,,,TRUE
+11698,Hengyang,20,0,,,TRUE
+11699,Da?an,20,0,,,TRUE
+11700,Bobai,20,0,,,TRUE
+11701,???,80,0,,,TRUE
+11702,Qixia,40,0,,,TRUE
+11703,???,80,0,,,TRUE
+11704,???,40,0,,,TRUE
+11705,Fengtai,640,0,,,TRUE
+11706,Yantai,20,0,,,TRUE
+11707,Meishan,20,0,,,TRUE
+11708,Mudanjiang,20,0,,,TRUE
+11709,Tonghua,80,0,,,TRUE
+11710,Laixi,20,0,,,TRUE
+11711,Panji,20,0,,,TRUE
+11712,Jianghua,20,0,,,TRUE
+11713,Dongfang,20,0,,,TRUE
+11714,Cai Be,160,0,,,TRUE
+11715,Tanjungsari,640,0,,,TRUE
+11716,Jiaozhou,40,0,,,TRUE
+11717,Lukou,640,0,,,TRUE
+11718,Hengshanxian,20,0,,,TRUE
+11719,Bandar Lampung,40,0,,,TRUE
+11720,???,1280,0,,,TRUE
+11721,Tra On,20,0,,,TRUE
+11722,Baoqing,20,0,,,TRUE
+11723,Gunung Sugih,160,0,,,TRUE
+11724,Huanren,20,0,,,TRUE
+11725,Beiliu,80,0,,,TRUE
+11726,Tonghua,20,0,,,TRUE
+11727,Tongshan,40,0,,,TRUE
+11728,Changning,20,0,,,TRUE
+11729,Zhongshan,20,0,,,TRUE
+11730,Laiyang,40,0,,,TRUE
+11731,Lingbi,20,0,,,TRUE
+11732,Erdaojiang,160,0,,,TRUE
+11733,Ningyuan,20,0,,,TRUE
+11734,Cai L?y,160,0,,,TRUE
+11735,Shouxian,20,0,,,TRUE
+11736,Kuandian,20,0,,,TRUE
+11737,Xinyi,40,0,,,TRUE
+11738,Tianjia?an,80,0,,,TRUE
+11739,Huangshi,40,0,,,TRUE
+11740,Suining,40,0,,,TRUE
+11741,Luotian,20,0,,,TRUE
+11742,Metro,80,0,,,TRUE
+11743,S¢c Tr?ng,160,0,,,TRUE
+11744,Changshou,20,0,,,TRUE
+11745,Ch? L†ch,20,0,,,TRUE
+11746,Ning'an,20,0,,,TRUE
+11747,Xintian,20,0,,,TRUE
+11748,Luchuan,20,0,,,TRUE
+11749,Huaiyuan,640,0,,,TRUE
+11750,Liuyang,20,0,,,TRUE
+11751,Rongxian,20,0,,,TRUE
+11752,M? Xuyàn,1280,0,,,TRUE
+11753,Sri Tejo Kencono,40,0,,,TRUE
+11754,Dongjingcheng,20,0,,,TRUE
+11755,Hengdong,20,0,,,TRUE
+11756,Jixi,20,0,,,TRUE
+11757,???,20,0,,,TRUE
+11758,Muntok,40,0,,,TRUE
+11759,Dunhua,20,0,,,TRUE
+11760,Trang Bang,1280,0,,,TRUE
+11761,?????,1280,0,,,TRUE
+11762,Jiangyuan,40,0,,,TRUE
+11763,Baishan,20,0,,,TRUE
+11764,Rizhao,20,0,,,TRUE
+11765,Tengxian,20,0,,,TRUE
+11766,Baimajing,40,0,,,TRUE
+11767,Dandong,20,0,,,TRUE
+11768,Bengbu,40,0,,,TRUE
+11769,My Tho,160,0,,,TRUE
+11770,CÖng Long,160,0,,,TRUE
+11771,Qingdao,20,0,,,TRUE
+11772,Shatian,20,0,,,TRUE
+11773,Anpu,20,0,,,TRUE
+11774,Hengshan,320,0,,,TRUE
+11775,Hezhou,40,0,,,TRUE
+11776,????,20,0,,,TRUE
+11777,Liling,40,0,,,TRUE
+11778,Tan An,640,0,,,TRUE
+11779,Muling,20,0,,,TRUE
+11780,Donghai,40,0,,,TRUE
+11781,Tan Hiep,1280,0,,,TRUE
+11782,L?ch H?i Th??ng,20,0,,,TRUE
+11783,Suqian,80,0,,,TRUE
+11784,C? Chi,2560,0,,,TRUE
+11785,Kalianda,40,0,,,TRUE
+11786,Donggang,40,0,,,TRUE
+11787,??c Hïa,2560,0,,,TRUE
+11788,Huangdao,80,0,,,TRUE
+11789,???,1280,0,,,TRUE
+11790,Lu'an,40,0,,,TRUE
+11791,Dayao,640,0,,,TRUE
+11792,Mo Cay,80,0,,,TRUE
+11793,Sixian,80,0,,,TRUE
+11794,Yingshan,20,0,,,TRUE
+11795,Hengche,20,0,,,TRUE
+11796,TrÖ Vinh City,160,0,,,TRUE
+11797,Mekarsari,20,0,,,TRUE
+11798,Pukou,640,0,,,TRUE
+11799,???,20,0,,,TRUE
+11800,Ho Chi Minh City,20,0,,,TRUE
+11801,Ganyu,1280,0,,,TRUE
+11802,Ben Cat,2560,0,,,TRUE
+11803,Lanshanxian,20,0,,,TRUE
+11804,T?ktaedonggok,20,0,,,TRUE
+11805,Leiyang,20,0,,,TRUE
+11806,???,20,0,,,TRUE
+11807,Mekarjaya,20,0,,,TRUE
+11808,Lianjiang,20,0,,,TRUE
+11809,Qichun,20,0,,,TRUE
+11810,Yangxin,40,0,,,TRUE
+11811,Shangli,40,0,,,TRUE
+11812,Jiahe,20,0,,,TRUE
+11813,Cenxi,20,0,,,TRUE
+11814,Changfeng,20,0,,,TRUE
+11815,Susong-ri,20,0,,,TRUE
+11816,Wuzhou,20,0,,,TRUE
+11817,Mekarjaya,20,0,,,TRUE
+11818,Huoshan,40,0,,,TRUE
+11819,Kunshe,20,0,,,TRUE
+11820,???,20,0,,,TRUE
+11821,?Ö N?ng,80,0,,,TRUE
+11822,Kedung Ringin,40,0,,,TRUE
+11823,Ryongchon,20,0,,,TRUE
+11824,???,20,0,,,TRUE
+11825,???,20,0,,,TRUE
+11826,Pingxiang,40,0,,,TRUE
+11827,,20,0,,,TRUE
+11828,Youxian,20,0,,,TRUE
+11829,Leizhou,20,0,,,TRUE
+11830,TÉn Uyàn,2560,0,,,TRUE
+11831,??ng XoÖi,160,0,,,TRUE
+11832,???,80,0,,,TRUE
+11833,S?n Giang,160,0,,,TRUE
+11834,Cilegon,160,0,,,TRUE
+11835,???????,20,0,,,TRUE
+11836,Ledong,20,0,,,TRUE
+11837,Go Cong,40,0,,,TRUE
+11838,Lianyungang,20,0,,,TRUE
+11839,???,20,0,,,TRUE
+11840,Sihong,20,0,,,TRUE
+11841,Wuhe,80,0,,,TRUE
+11842,Zhanjiang,20,0,,,TRUE
+11843,Lingao,20,0,,,TRUE
+11844,Anren,20,0,,,TRUE
+11845,???,20,0,,,TRUE
+11846,Matian,20,0,,,TRUE
+11847,Danzhou,20,0,,,TRUE
+11848,Mishan,20,0,,,TRUE
+11849,Shuyang,20,0,,,TRUE
+11850,???,40,0,,,TRUE
+11851,Bçnh ??i,40,0,,,TRUE
+11852,Pandeglang,40,0,,,TRUE
+11853,Meichuan,20,0,,,TRUE
+11854,Guiyang,20,0,,,TRUE
+11855,Yomju,20,0,,,TRUE
+11856,Weihai,40,0,,,TRUE
+11857,Xinyi,20,0,,,TRUE
+11858,Linjiang,20,0,,,TRUE
+11859,Bayah Barat,20,0,,,TRUE
+11860,Huazhou,40,0,,,TRUE
+11861,Luxi,40,0,,,TRUE
+11862,Jakarta,20,0,,,TRUE
+11863,Xinning,20,0,,,TRUE
+11864,Hoi An,2560,0,,,TRUE
+11865,Rushan,20,0,,,TRUE
+11866,Linwu,20,0,,,TRUE
+11867,Hi?p Ph??c,2560,0,,,TRUE
+11868,??k HÖ,40,0,,,TRUE
+11869,Wuxue,40,0,,,TRUE
+11870,Yongxing,20,0,,,TRUE
+11871,Ji'an,20,0,,,TRUE
+11872,Tongrim,20,0,,,TRUE
+11873,Gaozhou,20,0,,,TRUE
+11874,Rangkasbitung,20,0,,,TRUE
+11875,Chaling,40,0,,,TRUE
+11876,Yunan,20,0,,,TRUE
+11877,Changqi,20,0,,,TRUE
+11878,Siyang,40,0,,,TRUE
+11879,Lianzhou,20,0,,,TRUE
+11880,Dingyuan,20,0,,,TRUE
+11881,Hefei,20,0,,,TRUE
+11882,Xuwen County,20,0,,,TRUE
+11883,Cholsan,20,0,,,TRUE
+11884,Wanzai,40,0,,,TRUE
+11885,Zhangpu,80,0,,,TRUE
+11886,Guanyun,40,0,,,TRUE
+11887,Chenzhou,40,0,,,TRUE
+11888,Kon Tum,20,0,,,TRUE
 11889,Ph£ M?,20,0,,,
-11890,Taegwan,20,0,,,
-11891,Maoming,20,0,,,
-11892,Kolelet Wetan,20,0,,,
-11893,Sanya,20,0,,,
-11894,Gia Ki?m,20,0,,,
-11895,Talagahiang,20,0,,,
-11896,Wendeng,20,0,,,
-11897,Shucheng,20,0,,,
-11898,Wuchuan,20,0,,,
-11899,CÉy X?ng,20,0,,,
+11890,Taegwan,20,0,,,TRUE
+11891,Maoming,20,0,,,TRUE
+11892,Kolelet Wetan,20,0,,,TRUE
+11893,Sanya,20,0,,,TRUE
+11894,Gia Ki?m,80,0,,,TRUE
+11895,Talagahiang,20,0,,,TRUE
+11896,Wendeng,20,0,,,TRUE
+11897,Shucheng,20,0,,,TRUE
+11898,Wuchuan,20,0,,,TRUE
+11899,CÉy X?ng,80,0,,,TRUE
 11900,Suxian,20,0,,,
-11901,Jinjiang,20,0,,,
-11902,Tam K?,20,0,,,
-11903,Palabuhanratu,20,0,,,
-11904,Huangmei,20,0,,,
-11905,Yichun,20,0,,,
-11906,Pleiku,20,0,,,
-11907,Vung Tau,20,0,,,
-11908,Antu,20,0,,,
+11901,Jinjiang,20,0,,,TRUE
+11902,Tam K?,40,0,,,TRUE
+11903,Palabuhanratu,20,0,,,TRUE
+11904,Huangmei,20,0,,,TRUE
+11905,Yichun,40,0,,,TRUE
+11906,Pleiku,160,0,,,TRUE
+11907,Vung Tau,20,0,,,TRUE
+11908,Antu,20,0,,,TRUE
 11909,???,20,0,,,
-11910,Ruichang,20,0,,,
-11911,???,20,0,,,
-11912,Ba Ria,20,0,,,
-11913,Yifeng,20,0,,,
-11914,Zixing,20,0,,,
-11915,Long Khanh,20,0,,,
-11916,Pangkalpinang,20,0,,,
-11917,Sonchon,20,0,,,
-11918,??k Mil,20,0,,,
-11919,Yizhang,20,0,,,
-11920,Taihu,20,0,,,
-11921,Luojing,20,0,,,
-11922,Poxin,20,0,,,
-11923,Susong,20,0,,,
-11924,Huaiji,20,0,,,
-11925,Haikou,20,0,,,
-11926,??nh Qu†n,20,0,,,
-11927,Luoding,20,0,,,
-11928,Deqing,20,0,,,
-11929,Lintouxu,20,0,,,
-11930,Ngai Giao,20,0,,,
-11931,Shayuan,20,0,,,
-11932,Kusong,20,0,,,
-11933,Guannan,20,0,,,
-11934,Tan Phu,20,0,,,
-11935,Ch? Sà,20,0,,,
-11936,Qianshan,20,0,,,
-11937,Huai'an,20,0,,,
-11938,Tunchang,20,0,,,
-11939,Xiaochikou,20,0,,,
-11940,Jiujiang,20,0,,,
-11941,Xuyi,20,0,,,
-11942,Shanggao,20,0,,,
-11943,Tongcheng,20,0,,,
-11944,Fenyi,20,0,,,
-11945,???,20,0,,,
-11946,Xiangshui,20,0,,,
-11947,Dingan,20,0,,,
-11948,Ea T'Ling,20,0,,,
-11949,Kanggye,20,0,,,
-11950,Kwaksan,20,0,,,
-11951,Magang,20,0,,,
-11952,Bojong,20,0,,,
-11953,Rongcheng,20,0,,,
-11954,V?nh An,20,0,,,
-11955,Lianshui,20,0,,,
-11956,De'an,20,0,,,
-11957,Huaining,20,0,,,
-11958,Bohe,20,0,,,
-11959,Buìn Ma Thu?t,20,0,,,
-11960,Toboali,20,0,,,
-11961,Suifenhe,20,0,,,
-11962,Fengxin,20,0,,,
-11963,Kongcheng,20,0,,,
-11964,Jongju,20,0,,,
-11965,Qu?ng Ng?i,20,0,,,
-11966,???,20,0,,,
-11967,Lujiang,20,0,,,
-11968,Qu?ng Ph£,20,0,,,
-11969,Taechon,20,0,,,
-11970,Gongqingcheng,20,0,,,
-11971,Diancheng,20,0,,,
-11972,B?o L?c,20,0,,,
-11973,Anyi,20,0,,,
-11974,Wangqing,20,0,,,
-11975,Yunfu,20,0,,,
-11976,Anfu,20,0,,,
-11977,Lingshui,20,0,,,
-11978,Hukou,20,0,,,
-11979,Xinyu,20,0,,,
-11980,Lushan,20,0,,,
-11981,Guangning,20,0,,,
-11982,Gaoan,20,0,,,
-11983,Jonchon,20,0,,,
-11984,Yongxiu,20,0,,,
-11985,Yangchun,20,0,,,
-11986,Unsan,20,0,,,
-11987,Chuzhou,20,0,,,
-11988,Lechang,20,0,,,
-11989,Qionghai,20,0,,,
-11990,La Gi,20,0,,,
-11991,Yanji,20,0,,,
-11992,Binhai,20,0,,,
-11993,Wangjiang,20,0,,,
-11994,Yangxi,20,0,,,
-11995,An Khà,20,0,,,
-11996,Chaohu,20,0,,,
-11997,Wanning,20,0,,,
-11998,Helong,20,0,,,
-11999,Jinhu,20,0,,,
-12000,Anqing,20,0,,,
-12001,Unjon,20,0,,,
-12002,Quanjiao,20,0,,,
-12003,Di Linh,20,0,,,
-12004,Zongyang,20,0,,,
-12005,,20,0,,,
-12006,Wenchengzhen,20,0,,,
-12007,,20,0,,,
-12008,Xinxing,20,0,,,
-12009,Baoying,20,0,,,
-12010,Nanchang,20,0,,,
-12011,Zhaoqing,20,0,,,
-12012,Mentengsari,20,0,,,
-12013,Funing,20,0,,,
-12014,Ea Kar,20,0,,,
-12015,Longjing,20,0,,,
-12016,???,20,0,,,
-12017,???,20,0,,,
-12018,Chongnam,20,0,,,
-12019,Pisangsambo,20,0,,,
-12020,Cipeuyeum,20,0,,,
-12021,Hanshan,20,0,,,
-12022,?inh V?n,20,0,,,
-12023,Huichon,20,0,,,
-12024,Anju,20,0,,,
-12025,,20,0,,,
-12026,Phan Thiet,20,0,,,
-12027,Tam Quan,20,0,,,
-12028,Sihui,20,0,,,
-12029,Yangjiang,20,0,,,
-12030,Mundok,20,0,,,
-12031,Wuwei,20,0,,,
-12032,Citeko Kaler,20,0,,,
-12033,Tumen,20,0,,,
-12034,Kujang,20,0,,,
-12035,Ciwidey,20,0,,,
-12036,Zhangshu,20,0,,,
-12037,Shaoguan,20,0,,,
-12038,Tianchang,20,0,,,
-12039,Ph£ Phong,20,0,,,
-12040,Nanchang,20,0,,,
-12041,Qingyuan,20,0,,,
-12042,Kaechon,20,0,,,
-12043,Ji'an,20,0,,,
-12044,Bandung,20,0,,,
-12045,Dalat,20,0,,,
-12046,Liàn Kh??ng,20,0,,,
-12047,Dongzhi,20,0,,,
-12048,???,20,0,,,
-12049,Ji'an,20,0,,,
-12050,Purwakarta,20,0,,,
-12051,Chizhou,20,0,,,
-12052,Xingan,20,0,,,
-12053,Jianhu,20,0,,,
-12054,???,20,0,,,
-12055,Luhe,20,0,,,
-12056,Pukou,20,0,,,
-12057,Suichuan,20,0,,,
-12058,Sukchon,20,0,,,
-12059,Shuikoucun,20,0,,,
-12060,Ont?an-nodongjagu,20,0,,,
-12061,???,20,0,,,
-12062,Taihe,20,0,,,
-12063,Hexian,20,0,,,
-12064,Fengcheng,20,0,,,
-12065,Jishui,20,0,,,
-12066,???,20,0,,,
-12067,Enping,20,0,,,
-12068,Phyongwon,20,0,,,
-12069,Tongling,20,0,,,
-12070,Yingde,20,0,,,
-12071,Mandalakasih,20,0,,,
-12072,Nanjing,20,0,,,
-12073,Ma'anshan,20,0,,,
-12074,Quy Nh?n,20,0,,,
-12075,Musan,20,0,,,
-12076,Sheyang,20,0,,,
-12077,Wan'an,20,0,,,
-12078,Hyesan,20,0,,,
-12079,Onchon,20,0,,,
-12080,Guangzhou,20,0,,,
-12081,Sirnajaya,20,0,,,
-12082,Cikajang,20,0,,,
-12083,Tokchon,20,0,,,
-12084,Leping,20,0,,,
-12085,Gaoyou,20,0,,,
-12086,Phan R° C?a,20,0,,,
-12087,Sillyeonpo,20,0,,,
-12088,Wuhu,20,0,,,
-12089,Shilingzhen,20,0,,,
-12090,Garut,20,0,,,
-12091,Yongfeng,20,0,,,
-12092,Dangtu,20,0,,,
-12093,Subang,20,0,,,
-12094,Qingyang,20,0,,,
-12095,???,20,0,,,
-12096,,20,0,,,
-12097,Yancheng,20,0,,,
-12098,Dongshan,20,0,,,
-12099,Kaiping,20,0,,,
-12100,P'y?ngs?ng,20,0,,,
-12101,Yizhen,20,0,,,
-12102,Shixing,20,0,,,
-12103,Cikembulan,20,0,,,
-12104,Fanchang,20,0,,,
-12105,Jinxian,20,0,,,
-12106,Sukanegla,20,0,,,
-12107,Poyang,20,0,,,
-12108,Dayu,20,0,,,
-12109,Pyongyang,20,0,,,
-12110,Haurgeulis,20,0,,,
-12111,Hoeryong,20,0,,,
-12112,Kangson,20,0,,,
-12113,Heshan,20,0,,,
-12114,Shuikou,20,0,,,
-12115,Fogang,20,0,,,
-12116,Pamanukan,20,0,,,
-12117,Kwail,20,0,,,
-12118,Sumedang,20,0,,,
-12119,Hunchun,20,0,,,
-12120,,20,0,,,
-12121,Nampo,20,0,,,
-12122,Malangbong,20,0,,,
-12123,Taean,20,0,,,
-12124,Yangzhou,20,0,,,
-12125,Xinghua,20,0,,,
-12126,Nanxiong,20,0,,,
-12127,Sumuradem,20,0,,,
-12128,Serang,20,0,,,
-12129,Unryul,20,0,,,
-12130,Taishan,20,0,,,
-12131,???,20,0,,,
-12132,Tuy Hïa,20,0,,,
-12133,Ninh Hïa,20,0,,,
-12134,Nha Trang,20,0,,,
-12135,Shaobo,20,0,,,
-12136,Tasikmalaya,20,0,,,
-12137,V?n Gi?,20,0,,,
-12138,Tanjung Pandan,20,0,,,
-12139,Yugan,20,0,,,
-12140,Jiangdu,20,0,,,
-12141,Chongren,20,0,,,
-12142,Conghua,20,0,,,
-12143,Nanling,20,0,,,
-12144,Le'an,20,0,,,
-12145,Ganzhou,20,0,,,
-12146,Phan Rang - Th†p ChÖm,20,0,,,
-12147,Jingdezhen,20,0,,,
-12148,Nankang,20,0,,,
-12149,Taiping,20,0,,,
-12150,Jurong,20,0,,,
-12151,Songnim,20,0,,,
-12152,???,20,0,,,
-12153,Zhenjiang,20,0,,,
-12154,Unchon,20,0,,,
-12155,Ussurijsk,20,0,,,
-12156,Wuhu,20,0,,,
-12157,Kangdong,20,0,,,
-12158,Xiongxiangcun,20,0,,,
-12159,Jatiwangi,20,0,,,
-12160,Cam Ranh,20,0,,,
-12161,Lishui,20,0,,,
-12162,???,20,0,,,
-12163,Fuzhou,20,0,,,
-12164,Wengyuan,20,0,,,
-12165,Majalengka,20,0,,,
-12166,???,20,0,,,
-12167,Anak,20,0,,,
-12168,Gaochun,20,0,,,
-12169,Xingguo,20,0,,,
-12170,Dongxian,20,0,,,
-12171,Zhongxin,20,0,,,
-12172,Kyonghung,20,0,,,
-12173,Leping,20,0,,,
-12174,Jatibarang,20,0,,,
-12175,Taizhou,20,0,,,
-12176,Dafeng,20,0,,,
-12177,Jingxian,20,0,,,
-12178,Indramayu,20,0,,,
-12179,Cirebon,20,0,,,
-12180,???,20,0,,,
-12181,Zhongshan,20,0,,,
-12182,Yihuang,20,0,,,
-12183,Xinfeng,20,0,,,
-12184,Sinhung,20,0,,,
-12185,Danyang,20,0,,,
-12186,Chengxiang,20,0,,,
-12187,Sinchon,20,0,,,
-12188,Wannian,20,0,,,
-12189,Arjawinangun,20,0,,,
-12190,Wanqingsha,20,0,,,
-12191,Qianjin Committee,20,0,,,
-12192,Xuancheng,20,0,,,
-12193,???,20,0,,,
-12194,???,20,0,,,
-12195,Dongtai,20,0,,,
-12196,Xinfeng,20,0,,,
-12197,Singaraja,20,0,,,
-12198,Karangampel Kidul,20,0,,,
-12199,Kuningan,20,0,,,
-12200,Sariw?n,20,0,,,
-12201,Yangzhong,20,0,,,
-12202,Banjar,20,0,,,
-12203,Jaeryong,20,0,,,
-12204,,20,0,,,
-12205,???,20,0,,,
-12206,Thaethan,20,0,,,
-12207,???,20,0,,,
-12208,Mache,20,0,,,
-12209,Pangandaran,20,0,,,
-12210,Hoechang,20,0,,,
-12211,Zhuhai,20,0,,,
-12212,Ciherang,20,0,,,
-12213,Langseb,20,0,,,
-12214,Rason,20,0,,,
-12215,Jiangyan,20,0,,,
-12216,???,20,0,,,
-12217,Longnan,20,0,,,
-12218,Xinqiao,20,0,,,
-12219,Lianping,20,0,,,
-12220,Yangdok,20,0,,,
-12221,Ch?ngjin,20,0,,,
-12222,Jintan,20,0,,,
-12223,Unpha,20,0,,,
-12224,Hamhung,20,0,,,
-12225,Hamju,20,0,,,
-12226,Jinxi,20,0,,,
-12227,Karangsembung,20,0,,,
-12228,Jongphyong,20,0,,,
-12229,Longmen,20,0,,,
-12230,Ongjin,20,0,,,
-12231,Taixing,20,0,,,
-12232,Yingtan,20,0,,,
-12233,Majenang,20,0,,,
-12234,Liyang,20,0,,,
-12235,Babakan,20,0,,,
-12236,Pyoksong,20,0,,,
-12237,Dexing,20,0,,,
-12238,Nancheng,20,0,,,
-12239,Kumya,20,0,,,
-12240,Coloane,20,0,,,
-12241,???,20,0,,,
-12242,Guixi,20,0,,,
-12243,Ningdu,20,0,,,
-12244,Haian,20,0,,,
-12245,Huangqiao,20,0,,,
-12246,Nanfeng,20,0,,,
-12247,Haeju,20,0,,,
-12248,Lishi,20,0,,,
-12249,???,20,0,,,
-12250,Changzhou,20,0,,,
-12251,Vladivostok,20,0,,,
-12252,Kowon,20,0,,,
-12253,Tegal,20,0,,,
-12254,Ningguo,20,0,,,
-12255,Guangchang,20,0,,,
-12256,Cilacap,20,0,,,
-12257,Hongwon,20,0,,,
-12258,Huangshan,20,0,,,
-12259,Shexian,20,0,,,
-12260,Chonnae,20,0,,,
-12261,Heping,20,0,,,
-12262,Boluo,20,0,,,
-12263,Yiyang,20,0,,,
-12264,Pagojengan,20,0,,,
-12265,,20,0,,,
-12266,Wangon,20,0,,,
-12267,Rugao,20,0,,,
-12268,Anyuan,20,0,,,
-12269,Maos,20,0,,,
-12270,Koksan,20,0,,,
-12271,Ajibarang,20,0,,,
-12272,Jingjiang,20,0,,,
-12273,Sinpho,20,0,,,
-12274,Hong Kong,20,0,,,
-12275,Jiangyin,20,0,,,
-12276,Heyuan,20,0,,,
-12277,???,20,0,,,
-12278,Hongxingcun,20,0,,,
-12279,Huizhou,20,0,,,
-12280,Guangde,20,0,,,
-12281,Tung Chung,20,0,,,
-12282,Binangun,20,0,,,
-12283,Sinpyong,20,0,,,
-12284,Hengfeng,20,0,,,
-12285,Yixing,20,0,,,
-12286,???,20,0,,,
-12287,Purwokerto,20,0,,,
-12288,Munchon,20,0,,,
-12289,Shibei,20,0,,,
-12290,Chongdan,20,0,,,
-12291,Sha Tin,20,0,,,
-12292,Singye,20,0,,,
-12293,Lichuan,20,0,,,
-12294,Ruijin,20,0,,,
-12295,Riwon,20,0,,,
-12296,Dingshu,20,0,,,
-12297,Phyongsan,20,0,,,
-12298,Suzhou,20,0,,,
-12299,Shicheng,20,0,,,
-12300,Zhangjiagang,20,0,,,
-12301,Qingyang,20,0,,,
-12302,Clekatakan,20,0,,,
-12303,Yantian,20,0,,,
-12304,Kimch'aek,20,0,,,
-12305,Tanchon,20,0,,,
-12306,???,20,0,,,
-12307,Rah?ng,20,0,,,
-12308,Wonsan,20,0,,,
-12309,Pemalang,20,0,,,
-12310,Omong-ri,20,0,,,
-12311,Xunwu,20,0,,,
-12312,Kuichong Sub-district,20,0,,,
-12313,Shangrao,20,0,,,
-12314,Klampok,20,0,,,
-12315,Gombong,20,0,,,
-12316,Yonan,20,0,,,
-12317,Longchuan,20,0,,,
-12318,Jinfeng,20,0,,,
-12319,Nantong,20,0,,,
-12320,???,20,0,,,
-12321,Pedurungan,20,0,,,
-12322,Paechon,20,0,,,
-12323,Mandiraja,20,0,,,
-12324,Changxing,20,0,,,
-12325,Pemangkat,20,0,,,
-12326,Singkawang,20,0,,,
-12327,Panjunan,20,0,,,
-12328,Anji,20,0,,,
-12329,???,20,0,,,
-12330,Kebumen,20,0,,,
-12331,Changting,20,0,,,
-12332,Yushan,20,0,,,
-12333,Ninghua,20,0,,,
-12334,Pekalongan,20,0,,,
-12335,Banjarnegara,20,0,,,
-12336,Fenghuang,20,0,,,
-12337,,20,0,,,
-12338,Guangfeng,20,0,,,
-12339,Kosan,20,0,,,
-12340,Zijin,20,0,,,
-12341,Rudong,20,0,,,
-12342,Chun'an,20,0,,,
-12343,Kaesong,20,0,,,
-12344,???,20,0,,,
-12345,Wuping,20,0,,,
-12346,Changshu,20,0,,,
-12347,Shaowu,20,0,,,
-12348,Huzhou,20,0,,,
-12349,Zhangzhishan,20,0,,,
-12350,Caohu,20,0,,,
-12351,Pontianak,20,0,,,
-12352,Sepho,20,0,,,
-12353,Jilong,20,0,,,
-12354,Purworejo,20,0,,,
-12355,P'y?nghwa-ri,20,0,,,
-12356,Chuanjiang,20,0,,,
-12357,???,20,0,,,
-12358,Sambas,20,0,,,
-12359,Huacheng,20,0,,,
-12360,???,20,0,,,
-12361,Bixi,20,0,,,
-12362,Lin'an,20,0,,,
-12363,Xingning,20,0,,,
-12364,Huangbu,20,0,,,
-12365,Wonosobo,20,0,,,
-12366,Deqing,20,0,,,
-12367,Jiangshan,20,0,,,
-12368,Quzhou,20,0,,,
-12369,???,20,0,,,
-12370,"Wuyishan, Fujian",20,0,,,
-12371,Rowosari,20,0,,,
-12372,Haimen,20,0,,,
-12373,Jiande,20,0,,,
-12374,?Jiaolin,20,0,,,
-12375,Wates,20,0,,,
-12376,Bengkayang,20,0,,,
-12377,Shanghang,20,0,,,
-12378,Wuhua,20,0,,,
-12379,Temanggung,20,0,,,
-12380,Nanxun,20,0,,,
-12381,????,20,0,,,
-12382,Meilong Town,20,0,,,
-12383,???,20,0,,,
-12384,Semarang,20,0,,,
-12385,Anliu,20,0,,,
-12386,Hangzhou,20,0,,,
-12387,Meizhou,20,0,,,
-12388,Nahodka,20,0,,,
-12389,Seoul,20,0,,,
-12390,???,20,0,,,
-12391,Shaxi,20,0,,,
-12392,Tonglu,20,0,,,
-12393,Gongping,20,0,,,
-12394,Yogyakarta,20,0,,,
-12395,Magelang,20,0,,,
-12396,Fuyang,20,0,,,
-12397,Dongducheon-si,20,0,,,
-12398,Shanwei,20,0,,,
-12399,Lvsigang,20,0,,,
-12400,Shanghai,20,0,,,
-12401,Shengze,20,0,,,
-12402,???,20,0,,,
-12403,Jianyang,20,0,,,
-12404,Lanxi,20,0,,,
-12405,Lili,20,0,,,
-12406,Qiandeng,20,0,,,
-12407,???,20,0,,,
-12408,Pucheng,20,0,,,
-12409,Jiaxing,20,0,,,
-12410,???,20,0,,,
-12411,Lufeng,20,0,,,
-12412,???,20,0,,,
-12413,Chongming,20,0,,,
-12414,Yong'an,20,0,,,
-12415,Salatiga,20,0,,,
-12416,Wonosari,20,0,,,
-12417,Fengshun,20,0,,,
-12418,Ketapang,20,0,,,
-12419,Qidong,20,0,,,
-12420,Sanming,20,0,,,
-12421,Jinhua,20,0,,,
-12422,Ngabang,20,0,,,
-12423,,20,0,,,
-12424,Jiashan,20,0,,,
-12425,Haining,20,0,,,
-12426,Pujiang,20,0,,,
-12427,Longyan,20,0,,,
-12428,Shaxian,20,0,,,
-12429,Suichang,20,0,,,
-12430,Jieyang,20,0,,,
-12431,Hwado-eup,20,0,,,
-12432,Zhuji,20,0,,,
-12433,Diankou,20,0,,,
-12434,Jieshi,20,0,,,
-12435,Combongan,20,0,,,
-12436,Jian'ou,20,0,,,
-12437,???,20,0,,,
-12438,Demak,20,0,,,
-12439,Pinghu,20,0,,,
-12440,Dapu,20,0,,,
-12441,Kuitan,20,0,,,
-12442,Donghe,20,0,,,
-12443,Zhujing,20,0,,,
-12444,Pati,20,0,,,
-12445,Sukoharjo,20,0,,,
-12446,Nanping,20,0,,,
-12447,Aojiang,20,0,,,
-12448,Haiyan,20,0,,,
-12449,Longquan,20,0,,,
-12450,Chuncheon-si,20,0,,,
-12451,Yiwu,20,0,,,
-12452,Wonokarto,20,0,,,
-12453,Gwangju-si,20,0,,,
-12454,Kuching,20,0,,,
-12455,Yexie,20,0,,,
-12456,Fengqiao,20,0,,,
-12457,Jiazi,20,0,,,
-12458,???,20,0,,,
-12459,Fotang,20,0,,,
-12460,Zhangping,20,0,,,
-12461,Songyang,20,0,,,
-12462,Chowol-eup,20,0,,,
-12463,????,20,0,,,
-12464,Wuyi,20,0,,,
-12465,Tinglin,20,0,,,
-12466,Longjiang,20,0,,,
-12467,Purwodadi,20,0,,,
-12468,Sragen,20,0,,,
-12469,Pacitan,20,0,,,
-12470,???,20,0,,,
-12471,Jinshan,20,0,,,
-12472,Xiecun,20,0,,,
-12473,Raoyang,20,0,,,
-12474,Shenquan,20,0,,,
-12475,Yongkang,20,0,,,
-12476,Shangyu,20,0,,,
-12477,Pyeongtaek-si,20,0,,,
-12478,Youxi,20,0,,,
-12479,Cixi,20,0,,,
-12480,???,20,0,,,
+11910,Ruichang,20,0,,,TRUE
+11911,???,320,0,,,TRUE
+11912,Ba Ria,1280,0,,,TRUE
+11913,Yifeng,40,0,,,TRUE
+11914,Zixing,20,0,,,TRUE
+11915,Long Khanh,40,0,,,TRUE
+11916,Pangkalpinang,40,0,,,TRUE
+11917,Sonchon,20,0,,,TRUE
+11918,??k Mil,160,0,,,TRUE
+11919,Yizhang,20,0,,,TRUE
+11920,Taihu,20,0,,,TRUE
+11921,Luojing,20,0,,,TRUE
+11922,Poxin,20,0,,,TRUE
+11923,Susong,40,0,,,TRUE
+11924,Huaiji,20,0,,,TRUE
+11925,Haikou,20,0,,,TRUE
+11926,??nh Qu†n,80,0,,,TRUE
+11927,Luoding,20,0,,,TRUE
+11928,Deqing,20,0,,,TRUE
+11929,Lintouxu,20,0,,,TRUE
+11930,Ngai Giao,160,0,,,TRUE
+11931,Shayuan,20,0,,,TRUE
+11932,Kusong,20,0,,,TRUE
+11933,Guannan,80,0,,,TRUE
+11934,Tan Phu,80,0,,,TRUE
+11935,Ch? Sà,80,0,,,TRUE
+11936,Qianshan,20,0,,,TRUE
+11937,Huai'an,20,0,,,TRUE
+11938,Tunchang,20,0,,,TRUE
+11939,Xiaochikou,80,0,,,TRUE
+11940,Jiujiang,40,0,,,TRUE
+11941,Xuyi,40,0,,,TRUE
+11942,Shanggao,20,0,,,TRUE
+11943,Tongcheng,160,0,,,TRUE
+11944,Fenyi,20,0,,,TRUE
+11945,???,20,0,,,TRUE
+11946,Xiangshui,640,0,,,TRUE
+11947,Dingan,20,0,,,TRUE
+11948,Ea T'Ling,2560,0,,,TRUE
+11949,Kanggye,20,0,,,TRUE
+11950,Kwaksan,20,0,,,TRUE
+11951,Magang,20,0,,,TRUE
+11952,Bojong,20,0,,,TRUE
+11953,Rongcheng,40,0,,,TRUE
+11954,V?nh An,40,0,,,TRUE
+11955,Lianshui,20,0,,,TRUE
+11956,De'an,80,0,,,TRUE
+11957,Huaining,20,0,,,TRUE
+11958,Bohe,20,0,,,TRUE
+11959,Buìn Ma Thu?t,320,0,,,TRUE
+11960,Toboali,40,0,,,TRUE
+11961,Suifenhe,20,0,,,TRUE
+11962,Fengxin,20,0,,,TRUE
+11963,Kongcheng,20,0,,,TRUE
+11964,Jongju,20,0,,,TRUE
+11965,Qu?ng Ng?i,40,0,,,TRUE
+11966,???,160,0,,,TRUE
+11967,Lujiang,20,0,,,TRUE
+11968,Qu?ng Ph£,40,0,,,TRUE
+11969,Taechon,20,0,,,TRUE
+11970,Gongqingcheng,40,0,,,TRUE
+11971,Diancheng,20,0,,,TRUE
+11972,B?o L?c,160,0,,,TRUE
+11973,Anyi,40,0,,,TRUE
+11974,Wangqing,40,0,,,TRUE
+11975,Yunfu,80,0,,,TRUE
+11976,Anfu,20,0,,,TRUE
+11977,Lingshui,20,0,,,TRUE
+11978,Hukou,20,0,,,TRUE
+11979,Xinyu,20,0,,,TRUE
+11980,Lushan,40,0,,,TRUE
+11981,Guangning,20,0,,,TRUE
+11982,Gaoan,20,0,,,TRUE
+11983,Jonchon,20,0,,,TRUE
+11984,Yongxiu,20,0,,,TRUE
+11985,Yangchun,20,0,,,TRUE
+11986,Unsan,20,0,,,TRUE
+11987,Chuzhou,20,0,,,TRUE
+11988,Lechang,20,0,,,TRUE
+11989,Qionghai,20,0,,,TRUE
+11990,La Gi,80,0,,,TRUE
+11991,Yanji,20,0,,,TRUE
+11992,Binhai,20,0,,,TRUE
+11993,Wangjiang,80,0,,,TRUE
+11994,Yangxi,20,0,,,TRUE
+11995,An Khà,160,0,,,TRUE
+11996,Chaohu,20,0,,,TRUE
+11997,Wanning,40,0,,,TRUE
+11998,Helong,20,0,,,TRUE
+11999,Jinhu,20,0,,,TRUE
+12000,Anqing,20,0,,,TRUE
+12001,Unjon,20,0,,,TRUE
+12002,Quanjiao,40,0,,,TRUE
+12003,Di Linh,80,0,,,TRUE
+12004,Zongyang,20,0,,,TRUE
+12005,,20,0,,,TRUE
+12006,Wenchengzhen,20,0,,,TRUE
+12007,,20,0,,,TRUE
+12008,Xinxing,20,0,,,TRUE
+12009,Baoying,20,0,,,TRUE
+12010,Nanchang,20,0,,,TRUE
+12011,Zhaoqing,20,0,,,TRUE
+12012,Mentengsari,20,0,,,TRUE
+12013,Funing,20,0,,,TRUE
+12014,Ea Kar,40,0,,,TRUE
+12015,Longjing,20,0,,,TRUE
+12016,???,40,0,,,TRUE
+12017,???,20,0,,,TRUE
+12018,Chongnam,20,0,,,TRUE
+12019,Pisangsambo,160,0,,,TRUE
+12020,Cipeuyeum,20,0,,,TRUE
+12021,Hanshan,20,0,,,TRUE
+12022,?inh V?n,80,0,,,TRUE
+12023,Huichon,20,0,,,TRUE
+12024,Anju,20,0,,,TRUE
+12025,,20,0,,,TRUE
+12026,Phan Thiet,80,0,,,TRUE
+12027,Tam Quan,320,0,,,TRUE
+12028,Sihui,40,0,,,TRUE
+12029,Yangjiang,40,0,,,TRUE
+12030,Mundok,20,0,,,TRUE
+12031,Wuwei,20,0,,,TRUE
+12032,Citeko Kaler,80,0,,,TRUE
+12033,Tumen,20,0,,,TRUE
+12034,Kujang,20,0,,,TRUE
+12035,Ciwidey,80,0,,,TRUE
+12036,Zhangshu,20,0,,,TRUE
+12037,Shaoguan,40,0,,,TRUE
+12038,Tianchang,40,0,,,TRUE
+12039,Ph£ Phong,20,0,,,TRUE
+12040,Nanchang,160,0,,,TRUE
+12041,Qingyuan,20,0,,,TRUE
+12042,Kaechon,20,0,,,TRUE
+12043,Ji'an,40,0,,,TRUE
+12044,Bandung,20,0,,,TRUE
+12045,Dalat,40,0,,,TRUE
+12046,Liàn Kh??ng,320,0,,,TRUE
+12047,Dongzhi,20,0,,,TRUE
+12048,???,20,0,,,TRUE
+12049,Ji'an,20,0,,,TRUE
+12050,Purwakarta,80,0,,,TRUE
+12051,Chizhou,20,0,,,TRUE
+12052,Xingan,40,0,,,TRUE
+12053,Jianhu,20,0,,,TRUE
+12054,???,2560,0,,,TRUE
+12055,Luhe,320,0,,,TRUE
+12056,Pukou,160,0,,,TRUE
+12057,Suichuan,40,0,,,TRUE
+12058,Sukchon,20,0,,,TRUE
+12059,Shuikoucun,20,0,,,TRUE
+12060,Ont?an-nodongjagu,20,0,,,TRUE
+12061,???,20,0,,,TRUE
+12062,Taihe,40,0,,,TRUE
+12063,Hexian,20,0,,,TRUE
+12064,Fengcheng,40,0,,,TRUE
+12065,Jishui,20,0,,,TRUE
+12066,???,2560,0,,,TRUE
+12067,Enping,20,0,,,TRUE
+12068,Phyongwon,20,0,,,TRUE
+12069,Tongling,20,0,,,TRUE
+12070,Yingde,20,0,,,TRUE
+12071,Mandalakasih,20,0,,,TRUE
+12072,Nanjing,20,0,,,TRUE
+12073,Ma'anshan,320,0,,,TRUE
+12074,Quy Nh?n,80,0,,,TRUE
+12075,Musan,20,0,,,TRUE
+12076,Sheyang,20,0,,,TRUE
+12077,Wan'an,20,0,,,TRUE
+12078,Hyesan,20,0,,,TRUE
+12079,Onchon,20,0,,,TRUE
+12080,Guangzhou,20,0,,,TRUE
+12081,Sirnajaya,20,0,,,TRUE
+12082,Cikajang,20,0,,,TRUE
+12083,Tokchon,20,0,,,TRUE
+12084,Leping,40,0,,,TRUE
+12085,Gaoyou,40,0,,,TRUE
+12086,Phan R° C?a,160,0,,,TRUE
+12087,Sillyeonpo,20,0,,,TRUE
+12088,Wuhu,20,0,,,TRUE
+12089,Shilingzhen,2560,0,,,TRUE
+12090,Garut,20,0,,,TRUE
+12091,Yongfeng,20,0,,,TRUE
+12092,Dangtu,1280,0,,,TRUE
+12093,Subang,40,0,,,TRUE
+12094,Qingyang,20,0,,,TRUE
+12095,???,1280,0,,,TRUE
+12096,,20,0,,,TRUE
+12097,Yancheng,40,0,,,TRUE
+12098,Dongshan,20,0,,,TRUE
+12099,Kaiping,20,0,,,TRUE
+12100,P'y?ngs?ng,20,0,,,TRUE
+12101,Yizhen,40,0,,,TRUE
+12102,Shixing,20,0,,,TRUE
+12103,Cikembulan,20,0,,,TRUE
+12104,Fanchang,20,0,,,TRUE
+12105,Jinxian,20,0,,,TRUE
+12106,Sukanegla,40,0,,,TRUE
+12107,Poyang,20,0,,,TRUE
+12108,Dayu,20,0,,,TRUE
+12109,Pyongyang,20,0,,,TRUE
+12110,Haurgeulis,40,0,,,TRUE
+12111,Hoeryong,20,0,,,TRUE
+12112,Kangson,20,0,,,TRUE
+12113,Heshan,40,0,,,TRUE
+12114,Shuikou,40,0,,,TRUE
+12115,Fogang,20,0,,,TRUE
+12116,Pamanukan,40,0,,,TRUE
+12117,Kwail,20,0,,,TRUE
+12118,Sumedang,20,0,,,TRUE
+12119,Hunchun,40,0,,,TRUE
+12120,,20,0,,,TRUE
+12121,Nampo,20,0,,,TRUE
+12122,Malangbong,20,0,,,TRUE
+12123,Taean,20,0,,,TRUE
+12124,Yangzhou,80,0,,,TRUE
+12125,Xinghua,40,0,,,TRUE
+12126,Nanxiong,20,0,,,TRUE
+12127,Sumuradem,20,0,,,TRUE
+12128,Serang,40,0,,,TRUE
+12129,Unryul,20,0,,,TRUE
+12130,Taishan,20,0,,,TRUE
+12131,???,320,0,,,TRUE
+12132,Tuy Hïa,40,0,,,TRUE
+12133,Ninh Hïa,80,0,,,TRUE
+12134,Nha Trang,80,0,,,TRUE
+12135,Shaobo,40,0,,,TRUE
+12136,Tasikmalaya,20,0,,,TRUE
+12137,V?n Gi?,80,0,,,TRUE
+12138,Tanjung Pandan,80,0,,,TRUE
+12139,Yugan,20,0,,,TRUE
+12140,Jiangdu,640,0,,,TRUE
+12141,Chongren,20,0,,,TRUE
+12142,Conghua,40,0,,,TRUE
+12143,Nanling,20,0,,,TRUE
+12144,Le'an,20,0,,,TRUE
+12145,Ganzhou,20,0,,,TRUE
+12146,Phan Rang - Th†p ChÖm,80,0,,,TRUE
+12147,Jingdezhen,20,0,,,TRUE
+12148,Nankang,80,0,,,TRUE
+12149,Taiping,80,0,,,TRUE
+12150,Jurong,20,0,,,TRUE
+12151,Songnim,20,0,,,TRUE
+12152,???,320,0,,,TRUE
+12153,Zhenjiang,160,0,,,TRUE
+12154,Unchon,20,0,,,TRUE
+12155,Ussurijsk,20,0,,,TRUE
+12156,Wuhu,40,0,,,TRUE
+12157,Kangdong,20,0,,,TRUE
+12158,Xiongxiangcun,2560,0,,,TRUE
+12159,Jatiwangi,40,0,,,TRUE
+12160,Cam Ranh,320,0,,,TRUE
+12161,Lishui,20,0,,,TRUE
+12162,???,160,0,,,TRUE
+12163,Fuzhou,20,0,,,TRUE
+12164,Wengyuan,20,0,,,TRUE
+12165,Majalengka,20,0,,,TRUE
+12166,???,2560,0,,,TRUE
+12167,Anak,20,0,,,TRUE
+12168,Gaochun,80,0,,,TRUE
+12169,Xingguo,20,0,,,TRUE
+12170,Dongxian,20,0,,,TRUE
+12171,Zhongxin,20,0,,,TRUE
+12172,Kyonghung,20,0,,,TRUE
+12173,Leping,20,0,,,TRUE
+12174,Jatibarang,20,0,,,TRUE
+12175,Taizhou,2560,0,,,TRUE
+12176,Dafeng,80,0,,,TRUE
+12177,Jingxian,20,0,,,TRUE
+12178,Indramayu,160,0,,,TRUE
+12179,Cirebon,20,0,,,TRUE
+12180,???,80,0,,,TRUE
+12181,Zhongshan,640,0,,,TRUE
+12182,Yihuang,20,0,,,TRUE
+12183,Xinfeng,40,0,,,TRUE
+12184,Sinhung,20,0,,,TRUE
+12185,Danyang,20,0,,,TRUE
+12186,Chengxiang,20,0,,,TRUE
+12187,Sinchon,20,0,,,TRUE
+12188,Wannian,20,0,,,TRUE
+12189,Arjawinangun,20,0,,,TRUE
+12190,Wanqingsha,20,0,,,TRUE
+12191,Qianjin Committee,20,0,,,TRUE
+12192,Xuancheng,20,0,,,TRUE
+12193,???,40,0,,,TRUE
+12194,???,80,0,,,TRUE
+12195,Dongtai,80,0,,,TRUE
+12196,Xinfeng,20,0,,,TRUE
+12197,Singaraja,20,0,,,TRUE
+12198,Karangampel Kidul,40,0,,,TRUE
+12199,Kuningan,20,0,,,TRUE
+12200,Sariw?n,20,0,,,TRUE
+12201,Yangzhong,640,0,,,TRUE
+12202,Banjar,40,0,,,TRUE
+12203,Jaeryong,20,0,,,TRUE
+12204,,20,0,,,TRUE
+12205,???,20,0,,,TRUE
+12206,Thaethan,20,0,,,TRUE
+12207,???,20,0,,,TRUE
+12208,Mache,20,0,,,TRUE
+12209,Pangandaran,40,0,,,TRUE
+12210,Hoechang,20,0,,,TRUE
+12211,Zhuhai,20,0,,,TRUE
+12212,Ciherang,20,0,,,TRUE
+12213,Langseb,20,0,,,TRUE
+12214,Rason,20,0,,,TRUE
+12215,Jiangyan,2560,0,,,TRUE
+12216,???,20,0,,,TRUE
+12217,Longnan,20,0,,,TRUE
+12218,Xinqiao,1280,0,,,TRUE
+12219,Lianping,20,0,,,TRUE
+12220,Yangdok,20,0,,,TRUE
+12221,Ch?ngjin,20,0,,,TRUE
+12222,Jintan,40,0,,,TRUE
+12223,Unpha,20,0,,,TRUE
+12224,Hamhung,20,0,,,TRUE
+12225,Hamju,20,0,,,TRUE
+12226,Jinxi,40,0,,,TRUE
+12227,Karangsembung,80,0,,,TRUE
+12228,Jongphyong,20,0,,,TRUE
+12229,Longmen,20,0,,,TRUE
+12230,Ongjin,20,0,,,TRUE
+12231,Taixing,2560,0,,,TRUE
+12232,Yingtan,20,0,,,TRUE
+12233,Majenang,160,0,,,TRUE
+12234,Liyang,20,0,,,TRUE
+12235,Babakan,20,0,,,TRUE
+12236,Pyoksong,20,0,,,TRUE
+12237,Dexing,40,0,,,TRUE
+12238,Nancheng,20,0,,,TRUE
+12239,Kumya,20,0,,,TRUE
+12240,Coloane,20,0,,,TRUE
+12241,???,20,0,,,TRUE
+12242,Guixi,40,0,,,TRUE
+12243,Ningdu,20,0,,,TRUE
+12244,Haian,2560,0,,,TRUE
+12245,Huangqiao,2560,0,,,TRUE
+12246,Nanfeng,20,0,,,TRUE
+12247,Haeju,20,0,,,TRUE
+12248,Lishi,20,0,,,TRUE
+12249,???,2560,0,,,TRUE
+12250,Changzhou,640,0,,,TRUE
+12251,Vladivostok,80,0,,,TRUE
+12252,Kowon,20,0,,,TRUE
+12253,Tegal,20,0,,,TRUE
+12254,Ningguo,20,0,,,TRUE
+12255,Guangchang,40,0,,,TRUE
+12256,Cilacap,40,0,,,TRUE
+12257,Hongwon,20,0,,,TRUE
+12258,Huangshan,20,0,,,TRUE
+12259,Shexian,160,0,,,TRUE
+12260,Chonnae,20,0,,,TRUE
+12261,Heping,20,0,,,TRUE
+12262,Boluo,160,0,,,TRUE
+12263,Yiyang,40,0,,,TRUE
+12264,Pagojengan,80,0,,,TRUE
+12265,,20,0,,,TRUE
+12266,Wangon,20,0,,,TRUE
+12267,Rugao,2560,0,,,TRUE
+12268,Anyuan,20,0,,,TRUE
+12269,Maos,20,0,,,TRUE
+12270,Koksan,20,0,,,TRUE
+12271,Ajibarang,20,0,,,TRUE
+12272,Jingjiang,2560,0,,,TRUE
+12273,Sinpho,20,0,,,TRUE
+12274,Hong Kong,20,0,,,TRUE
+12275,Jiangyin,2560,0,,,TRUE
+12276,Heyuan,40,0,,,TRUE
+12277,???,640,0,,,TRUE
+12278,Hongxingcun,40,0,,,TRUE
+12279,Huizhou,20,0,,,TRUE
+12280,Guangde,40,0,,,TRUE
+12281,Tung Chung,20,0,,,TRUE
+12282,Binangun,20,0,,,TRUE
+12283,Sinpyong,20,0,,,TRUE
+12284,Hengfeng,20,0,,,TRUE
+12285,Yixing,80,0,,,TRUE
+12286,???,20,0,,,TRUE
+12287,Purwokerto,20,0,,,TRUE
+12288,Munchon,20,0,,,TRUE
+12289,Shibei,2560,0,,,TRUE
+12290,Chongdan,20,0,,,TRUE
+12291,Sha Tin,1280,0,,,TRUE
+12292,Singye,20,0,,,TRUE
+12293,Lichuan,40,0,,,TRUE
+12294,Ruijin,20,0,,,TRUE
+12295,Riwon,20,0,,,TRUE
+12296,Dingshu,20,0,,,TRUE
+12297,Phyongsan,20,0,,,TRUE
+12298,Suzhou,80,0,,,TRUE
+12299,Shicheng,20,0,,,TRUE
+12300,Zhangjiagang,1280,0,,,TRUE
+12301,Qingyang,2560,0,,,TRUE
+12302,Clekatakan,20,0,,,TRUE
+12303,Yantian,20,0,,,TRUE
+12304,Kimch'aek,20,0,,,TRUE
+12305,Tanchon,20,0,,,TRUE
+12306,???,2560,0,,,TRUE
+12307,Rah?ng,20,0,,,TRUE
+12308,Wonsan,20,0,,,TRUE
+12309,Pemalang,20,0,,,TRUE
+12310,Omong-ri,20,0,,,TRUE
+12311,Xunwu,20,0,,,TRUE
+12312,Kuichong Sub-district,20,0,,,TRUE
+12313,Shangrao,20,0,,,TRUE
+12314,Klampok,20,0,,,TRUE
+12315,Gombong,20,0,,,TRUE
+12316,Yonan,20,0,,,TRUE
+12317,Longchuan,20,0,,,TRUE
+12318,Jinfeng,2560,0,,,TRUE
+12319,Nantong,1280,0,,,TRUE
+12320,???,20,0,,,TRUE
+12321,Pedurungan,40,0,,,TRUE
+12322,Paechon,20,0,,,TRUE
+12323,Mandiraja,160,0,,,TRUE
+12324,Changxing,40,0,,,TRUE
+12325,Pemangkat,20,0,,,TRUE
+12326,Singkawang,40,0,,,TRUE
+12327,Panjunan,40,0,,,TRUE
+12328,Anji,40,0,,,TRUE
+12329,???,2560,0,,,TRUE
+12330,Kebumen,40,0,,,TRUE
+12331,Changting,20,0,,,TRUE
+12332,Yushan,20,0,,,TRUE
+12333,Ninghua,20,0,,,TRUE
+12334,Pekalongan,20,0,,,TRUE
+12335,Banjarnegara,160,0,,,TRUE
+12336,Fenghuang,2560,0,,,TRUE
+12337,,2560,0,,,TRUE
+12338,Guangfeng,40,0,,,TRUE
+12339,Kosan,20,0,,,TRUE
+12340,Zijin,20,0,,,TRUE
+12341,Rudong,2560,0,,,TRUE
+12342,Chun'an,20,0,,,TRUE
+12343,Kaesong,20,0,,,TRUE
+12344,???,2560,0,,,TRUE
+12345,Wuping,20,0,,,TRUE
+12346,Changshu,1280,0,,,TRUE
+12347,Shaowu,20,0,,,TRUE
+12348,Huzhou,20,0,,,TRUE
+12349,Zhangzhishan,2560,0,,,TRUE
+12350,Caohu,2560,0,,,TRUE
+12351,Pontianak,40,0,,,TRUE
+12352,Sepho,20,0,,,TRUE
+12353,Jilong,80,0,,,TRUE
+12354,Purworejo,20,0,,,TRUE
+12355,P'y?nghwa-ri,20,0,,,TRUE
+12356,Chuanjiang,2560,0,,,TRUE
+12357,???,40,0,,,TRUE
+12358,Sambas,20,0,,,TRUE
+12359,Huacheng,20,0,,,TRUE
+12360,???,20,0,,,TRUE
+12361,Bixi,2560,0,,,TRUE
+12362,Lin'an,20,0,,,TRUE
+12363,Xingning,40,0,,,TRUE
+12364,Huangbu,80,0,,,TRUE
+12365,Wonosobo,40,0,,,TRUE
+12366,Deqing,20,0,,,TRUE
+12367,Jiangshan,160,0,,,TRUE
+12368,Quzhou,20,0,,,TRUE
+12369,???,40,0,,,TRUE
+12370,"Wuyishan, Fujian",40,0,,,TRUE
+12371,Rowosari,20,0,,,TRUE
+12372,Haimen,2560,0,,,TRUE
+12373,Jiande,20,0,,,TRUE
+12374,?Jiaolin,40,0,,,TRUE
+12375,Wates,80,0,,,TRUE
+12376,Bengkayang,20,0,,,TRUE
+12377,Shanghang,20,0,,,TRUE
+12378,Wuhua,40,0,,,TRUE
+12379,Temanggung,20,0,,,TRUE
+12380,Nanxun,320,0,,,TRUE
+12381,????,2560,0,,,TRUE
+12382,Meilong Town,20,0,,,TRUE
+12383,???,20,0,,,TRUE
+12384,Semarang,80,0,,,TRUE
+12385,Anliu,20,0,,,TRUE
+12386,Hangzhou,160,0,,,TRUE
+12387,Meizhou,20,0,,,TRUE
+12388,Nahodka,20,0,,,TRUE
+12389,Seoul,20,0,,,TRUE
+12390,???,20,0,,,TRUE
+12391,Shaxi,2560,0,,,TRUE
+12392,Tonglu,20,0,,,TRUE
+12393,Gongping,20,0,,,TRUE
+12394,Yogyakarta,40,0,,,TRUE
+12395,Magelang,20,0,,,TRUE
+12396,Fuyang,2560,0,,,TRUE
+12397,Dongducheon-si,2560,0,,,TRUE
+12398,Shanwei,20,0,,,TRUE
+12399,Lvsigang,2560,0,,,TRUE
+12400,Shanghai,80,0,,,TRUE
+12401,Shengze,160,0,,,TRUE
+12402,???,20,0,,,TRUE
+12403,Jianyang,20,0,,,TRUE
+12404,Lanxi,40,0,,,TRUE
+12405,Lili,160,0,,,TRUE
+12406,Qiandeng,2560,0,,,TRUE
+12407,???,2560,0,,,TRUE
+12408,Pucheng,40,0,,,TRUE
+12409,Jiaxing,80,0,,,TRUE
+12410,???,20,0,,,TRUE
+12411,Lufeng,20,0,,,TRUE
+12412,???,2560,0,,,TRUE
+12413,Chongming,1280,0,,,TRUE
+12414,Yong'an,40,0,,,TRUE
+12415,Salatiga,160,0,,,TRUE
+12416,Wonosari,160,0,,,TRUE
+12417,Fengshun,20,0,,,TRUE
+12418,Ketapang,20,0,,,TRUE
+12419,Qidong,160,0,,,TRUE
+12420,Sanming,20,0,,,TRUE
+12421,Jinhua,20,0,,,TRUE
+12422,Ngabang,20,0,,,TRUE
+12423,,20,0,,,TRUE
+12424,Jiashan,40,0,,,TRUE
+12425,Haining,80,0,,,TRUE
+12426,Pujiang,20,0,,,TRUE
+12427,Longyan,20,0,,,TRUE
+12428,Shaxian,20,0,,,TRUE
+12429,Suichang,20,0,,,TRUE
+12430,Jieyang,20,0,,,TRUE
+12431,Hwado-eup,20,0,,,TRUE
+12432,Zhuji,40,0,,,TRUE
+12433,Diankou,80,0,,,TRUE
+12434,Jieshi,20,0,,,TRUE
+12435,Combongan,2560,0,,,TRUE
+12436,Jian'ou,20,0,,,TRUE
+12437,???,20,0,,,TRUE
+12438,Demak,2560,0,,,TRUE
+12439,Pinghu,320,0,,,TRUE
+12440,Dapu,20,0,,,TRUE
+12441,Kuitan,20,0,,,TRUE
+12442,Donghe,640,0,,,TRUE
+12443,Zhujing,40,0,,,TRUE
+12444,Pati,80,0,,,TRUE
+12445,Sukoharjo,2560,0,,,TRUE
+12446,Nanping,20,0,,,TRUE
+12447,Aojiang,20,0,,,TRUE
+12448,Haiyan,640,0,,,TRUE
+12449,Longquan,20,0,,,TRUE
+12450,Chuncheon-si,40,0,,,TRUE
+12451,Yiwu,40,0,,,TRUE
+12452,Wonokarto,80,0,,,TRUE
+12453,Gwangju-si,2560,0,,,TRUE
+12454,Kuching,80,0,,,TRUE
+12455,Yexie,40,0,,,TRUE
+12456,Fengqiao,40,0,,,TRUE
+12457,Jiazi,20,0,,,TRUE
+12458,???,1280,0,,,TRUE
+12459,Fotang,20,0,,,TRUE
+12460,Zhangping,20,0,,,TRUE
+12461,Songyang,40,0,,,TRUE
+12462,Chowol-eup,2560,0,,,TRUE
+12463,????,20,0,,,TRUE
+12464,Wuyi,80,0,,,TRUE
+12465,Tinglin,40,0,,,TRUE
+12466,Longjiang,20,0,,,TRUE
+12467,Purwodadi,20,0,,,TRUE
+12468,Sragen,320,0,,,TRUE
+12469,Pacitan,20,0,,,TRUE
+12470,???,20,0,,,TRUE
+12471,Jinshan,80,0,,,TRUE
+12472,Xiecun,40,0,,,TRUE
+12473,Raoyang,40,0,,,TRUE
+12474,Shenquan,20,0,,,TRUE
+12475,Yongkang,40,0,,,TRUE
+12476,Shangyu,2560,0,,,TRUE
+12477,Pyeongtaek-si,2560,0,,,TRUE
+12478,Youxi,20,0,,,TRUE
+12479,Cixi,320,0,,,TRUE
+12480,???,320,0,,,TRUE
 12481,???,20,0,,,
-12482,???,20,0,,,
-12483,Sanggau,20,0,,,
-12484,Alasdowo,20,0,,,
-12485,Hengdian,20,0,,,
-12486,???,20,0,,,
-12487,Yunhe,20,0,,,
-12488,Asan-si,20,0,,,
-12489,???,20,0,,,
-12490,Heyang,20,0,,,
-12491,Juwana,20,0,,,
-12492,Cheonan-si,20,0,,,
-12493,Nanjing,20,0,,,
-12494,Sokcho-si,20,0,,,
-12495,Lishui,20,0,,,
-12496,Pinghe,20,0,,,
-12497,Raoping,20,0,,,
-12498,???,20,0,,,
-12499,Madiun,20,0,,,
-12500,Nicheng,20,0,,,
-12501,Jinyun,20,0,,,
-12502,Josari,20,0,,,
-12503,,20,0,,,
-12504,Shengzhou,20,0,,,
-12505,???,20,0,,,
-12506,Gutian,20,0,,,
-12507,Kepuh Rubuh,20,0,,,
-12508,Rembang,20,0,,,
-12509,Ngawi,20,0,,,
-12510,Sekadau,20,0,,,
+12482,???,20,0,,,TRUE
+12483,Sanggau,40,0,,,TRUE
+12484,Alasdowo,80,0,,,TRUE
+12485,Hengdian,160,0,,,TRUE
+12486,???,20,0,,,TRUE
+12487,Yunhe,40,0,,,TRUE
+12488,Asan-si,2560,0,,,TRUE
+12489,???,20,0,,,TRUE
+12490,Heyang,20,0,,,TRUE
+12491,Juwana,160,0,,,TRUE
+12492,Cheonan-si,2560,0,,,TRUE
+12493,Nanjing,20,0,,,TRUE
+12494,Sokcho-si,40,0,,,TRUE
+12495,Lishui,20,0,,,TRUE
+12496,Pinghe,40,0,,,TRUE
+12497,Raoping,20,0,,,TRUE
+12498,???,20,0,,,TRUE
+12499,Madiun,160,0,,,TRUE
+12500,Nicheng,2560,0,,,TRUE
+12501,Jinyun,20,0,,,TRUE
+12502,Josari,320,0,,,TRUE
+12503,,2560,0,,,TRUE
+12504,Shengzhou,80,0,,,TRUE
+12505,???,20,0,,,TRUE
+12506,Gutian,20,0,,,TRUE
+12507,Kepuh Rubuh,2560,0,,,TRUE
+12508,Rembang,40,0,,,TRUE
+12509,Ngawi,160,0,,,TRUE
+12510,Sekadau,20,0,,,TRUE
 12511,Blora,20,0,,,
-12512,Xinchang,20,0,,,
-12513,Zhangzhou,20,0,,,
-12514,Zhaoan,20,0,,,
-12515,Wonju-si,20,0,,,
-12516,Dehua,20,0,,,
-12517,Trenggalek,20,0,,,
-12518,Yunxiao,20,0,,,
-12519,Gunsan-si,20,0,,,
-12520,Purworejo,20,0,,,
-12521,Yongchun,20,0,,,
-12522,???,20,0,,,
-12523,Longhai,20,0,,,
-12524,Cheongju-si,20,0,,,
-12525,Taishun,20,0,,,
-12526,Zhangpu,20,0,,,
-12527,Anxi,20,0,,,
-12528,Ningbo,20,0,,,
-12529,Xikou,20,0,,,
-12530,Xiamen,20,0,,,
-12531,Tulungagung,20,0,,,
-12532,XianJu,20,0,,,
-12533,Jiudongshan,20,0,,,
-12534,Jiuzhen,20,0,,,
-12535,Nganjuk,20,0,,,
-12536,Chungju-si,20,0,,,
-12537,Fenghua,20,0,,,
-12538,Tiantai,20,0,,,
-12539,Qingtian,20,0,,,
-12540,Daejeon,20,0,,,
+12512,Xinchang,20,0,,,TRUE
+12513,Zhangzhou,320,0,,,TRUE
+12514,Zhaoan,20,0,,,TRUE
+12515,Wonju-si,40,0,,,TRUE
+12516,Dehua,20,0,,,TRUE
+12517,Trenggalek,20,0,,,TRUE
+12518,Yunxiao,20,0,,,TRUE
+12519,Gunsan-si,160,0,,,TRUE
+12520,Purworejo,40,0,,,TRUE
+12521,Yongchun,20,0,,,TRUE
+12522,???,2560,0,,,TRUE
+12523,Longhai,640,0,,,TRUE
+12524,Cheongju-si,40,0,,,TRUE
+12525,Taishun,20,0,,,TRUE
+12526,Zhangpu,80,0,,,TRUE
+12527,Anxi,20,0,,,TRUE
+12528,Ningbo,640,0,,,TRUE
+12529,Xikou,40,0,,,TRUE
+12530,Xiamen,20,0,,,TRUE
+12531,Tulungagung,640,0,,,TRUE
+12532,XianJu,20,0,,,TRUE
+12533,Jiudongshan,20,0,,,TRUE
+12534,Jiuzhen,20,0,,,TRUE
+12535,Nganjuk,80,0,,,TRUE
+12536,Chungju-si,80,0,,,TRUE
+12537,Fenghua,20,0,,,TRUE
+12538,Tiantai,40,0,,,TRUE
+12539,Qingtian,20,0,,,TRUE
+12540,Daejeon,20,0,,,TRUE
 12541,Luncang,20,0,,,
-12542,Wencheng,20,0,,,
-12543,Fu'an,20,0,,,
-12544,Bojonegoro,20,0,,,
-12545,Wenxi,20,0,,,
-12546,Gembongan,20,0,,,
-12547,Iksan-si,20,0,,,
-12548,Kediri,20,0,,,
-12549,Nan'an,20,0,,,
-12550,Gangneung-si,20,0,,,
-12551,Jecheon-si,20,0,,,
-12552,Kertosono,20,0,,,
-12553,Xianyou,20,0,,,
-12554,Meishan,20,0,,,
+12542,Wencheng,20,0,,,TRUE
+12543,Fu'an,20,0,,,TRUE
+12544,Bojonegoro,80,0,,,TRUE
+12545,Wenxi,20,0,,,TRUE
+12546,Gembongan,640,0,,,TRUE
+12547,Iksan-si,20,0,,,TRUE
+12548,Kediri,640,0,,,TRUE
+12549,Nan'an,80,0,,,TRUE
+12550,Gangneung-si,40,0,,,TRUE
+12551,Jecheon-si,40,0,,,TRUE
+12552,Kertosono,20,0,,,TRUE
+12553,Xianyou,40,0,,,TRUE
+12554,Meishan,160,0,,,TRUE
 12555,Bayat,20,0,,,
-12556,Xiang'an,20,0,,,
-12557,Qiaotou,20,0,,,
-12558,Beilun,20,0,,,
-12559,Blitar,20,0,,,
-12560,???,20,0,,,
-12561,Honglai,20,0,,,
-12562,Kunjang,20,0,,,
-12563,Ningde,20,0,,,
-12564,,20,0,,,
-12565,Sintang,20,0,,,
-12566,Fuzhou,20,0,,,
-12567,Perak,20,0,,,
-12568,Pare,20,0,,,
-12569,Quanzhou,20,0,,,
-12570,Tuban,20,0,,,
-12571,Jeonju,20,0,,,
-12572,Ninghai,20,0,,,
-12573,Linhai,20,0,,,
-12574,Pangkalan Bun,20,0,,,
-12575,Daishan,20,0,,,
-12576,Jombang,20,0,,,
-12577,Babat,20,0,,,
-12578,Wenzhou,20,0,,,
-12579,Sanmen,20,0,,,
-12580,Luoyuan,20,0,,,
-12581,Yongjia,20,0,,,
+12556,Xiang'an,1280,0,,,TRUE
+12557,Qiaotou,20,0,,,TRUE
+12558,Beilun,2560,0,,,TRUE
+12559,Blitar,1280,0,,,TRUE
+12560,???,80,0,,,TRUE
+12561,Honglai,80,0,,,TRUE
+12562,Kunjang,20,0,,,TRUE
+12563,Ningde,20,0,,,TRUE
+12564,,40,0,,,TRUE
+12565,Sintang,20,0,,,TRUE
+12566,Fuzhou,20,0,,,TRUE
+12567,Perak,40,0,,,TRUE
+12568,Pare,80,0,,,TRUE
+12569,Quanzhou,20,0,,,TRUE
+12570,Tuban,40,0,,,TRUE
+12571,Jeonju,20,0,,,TRUE
+12572,Ninghai,40,0,,,TRUE
+12573,Linhai,40,0,,,TRUE
+12574,Pangkalan Bun,80,0,,,TRUE
+12575,Daishan,20,0,,,TRUE
+12576,Jombang,20,0,,,TRUE
+12577,Babat,40,0,,,TRUE
+12578,Wenzhou,20,0,,,TRUE
+12579,Sanmen,40,0,,,TRUE
+12580,Luoyuan,40,0,,,TRUE
+12581,Yongjia,20,0,,,TRUE
 12582,Shuitou,20,0,,,
 12583,Zhoushan,20,0,,,
 12584,,20,0,,,
 12585,Putian,20,0,,,
 12586,Fengting,20,0,,,
-12587,Sungai Tendang,20,0,,,
+12587,Sungai Tendang,20,0,,,TRUE
 12588,Fuding,20,0,,,
-12589,Sukoanyar,20,0,,,
+12589,Sukoanyar,20,0,,,TRUE
 12590,Nanga Pinoh,20,0,,,
 12591,Hui'an,20,0,,,
-12592,Slorok,20,0,,,
-12593,Cangnan,20,0,,,
-12594,Xiapu,20,0,,,
-12595,Lianjiang,20,0,,,
-12596,Quangang,20,0,,,
-12597,Huangyan,20,0,,,
-12598,Sibu,20,0,,,
-12599,???,20,0,,,
-12600,Changle,20,0,,,
+12592,Slorok,160,0,,,TRUE
+12593,Cangnan,160,0,,,TRUE
+12594,Xiapu,20,0,,,TRUE
+12595,Lianjiang,40,0,,,TRUE
+12596,Quangang,160,0,,,TRUE
+12597,Huangyan,320,0,,,TRUE
+12598,Sibu,40,0,,,TRUE
+12599,???,40,0,,,TRUE
+12600,Changle,80,0,,,TRUE
 12601,Mojokerto,320,0,,,TRUE
 12602,Yueqing,20,0,,,TRUE
 12603,Pingyang,640,0,,,TRUE
@@ -13043,7 +13043,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 13042,Penrith,640,0,,,TRUE
 13043,Sydney,20,0,,,TRUE
 13044,Nabire,20,0,,,TRUE
-13045,Moanemani,20,0,,,
+13045,Moanemani,20,0,,,TRUE
 13046,Dunedin,20,0,,,TRUE
 13047,Newcastle,20,0,,,TRUE
 13048,Biak Kota,20,0,,,TRUE
@@ -13094,7 +13094,7 @@ ID_HDC_G0,UC_NM_MN,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_
 13093,Laiagam,20,0,,,
 13094,,20,0,,,
 13095,Mendi,40,0,,,TRUE
-13096,Wabag,20,0,,,
+13096,Wabag,160,0,,,TRUE
 13097,Wewak,160,0,,,TRUE
 13098,Mambisanda,20,0,,,
 13099,Ialibu,20,0,,,
