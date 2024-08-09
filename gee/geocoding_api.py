@@ -65,7 +65,7 @@ df.loc[df['Inspected_names'].notna() & (df['Inspected_names'] != ''), 'UC_NM_MN'
 
 
 df.loc[df['SELECT'] == 'Source', 'geometry'] = [
-    Point(xy) for xy in zip(df.loc[df['SELECT'] == 'Source', 'GCPNT_LON'], df.loc[df['SELECT'] == 'Source', 'COM_LAT'])]
+    Point(xy) for xy in zip(df.loc[df['SELECT'] == 'Source', 'GCPNT_LON'], df.loc[df['SELECT'] == 'Source', 'GCPNT_LAT'])]
 df.loc[df['SELECT'] == 'COM', 'geometry'] = [
     Point(xy) for xy in zip(df.loc[df['SELECT'] == 'COM', 'COM_LON'], df.loc[df['SELECT'] == 'COM', 'COM_LAT'])]
 df.loc[df['SELECT'] == 'Overture', 'geometry'] = [
@@ -96,4 +96,14 @@ for cID in df['ID_HDC_G0']:
         maxPixels=1e9
     ).get('builtup')
     df.loc[df['ID_HDC_G0'] == cID, 'COULD_DO'] = bool(ee.Number(non_na_pixels).gt(0).getInfo())
-df.to_csv('data/city_data_checked_wz_todo.csv', index=False)
+df.to_csv('data/city_data_to_check_wz_todo.csv', index=False)
+
+###### Check city name
+df = pd.read_csv('data/city_data_checked.csv', encoding='latin1', low_memory=False)
+filtered_df_1 = df[pd.isna(df['UC_NM_MN'])]
+df = df[~pd.isna(df['UC_NM_MN'])]
+pattern = re.compile(r'[^\x00-\x7F]')
+filtered_df_2 = df[df['UC_NM_MN'].apply(lambda x: pattern.search(x) is not None)]
+filtered_df = pd.concat([filtered_df_1, filtered_df_2], ignore_index=True)
+filtered_df = filtered_df.sort_values(by='ID_HDC_G0')
+filtered_df.to_csv('data/city_name_to_check.csv', index=False)
