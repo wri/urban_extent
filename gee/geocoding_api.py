@@ -49,6 +49,35 @@ city_list = df[['ID_HDC_G0', 'UC_NM_MN', 'CTR_MN_NM']]
 city_list = geocode_address(city_list, api_key)
 city_list.to_csv('data/city_data_google.csv')
 
+def reverse_geocode(lat, lng):
+    url = f'https://maps.googleapis.com/maps/api/geocode/json?latlng={lat},{lng}&key={GOOGLE_MAPS_API_KEY}'
+    response = requests.get(url)
+    if response.status_code == 200:
+        data = response.json()
+        if data['status'] == 'OK':
+            address_components = data['results'][0]['address_components']
+            city = province = country = None
+            for component in address_components:
+                if 'locality' in component['types']:
+                    city = component['long_name']
+                elif 'administrative_area_level_1' in component['types']:
+                    province = component['long_name']
+                elif 'country' in component['types']:
+                    country = component['long_name']
+            return city, province, country
+    return None, None, None
+
+df = pd.read_csv('data/city_data_checked.csv', encoding='latin1', low_memory=False)
+# Extract latitude and longitude from geometry
+df[['lng', 'lat']] = df['geometry'].str.extract(r'POINT \(([-\d.]+) ([-\d.]+)\)')
+# Convert to numeric
+df['lat'] = pd.to_numeric(df['lat'])
+df['lng'] = pd.to_numeric(df['lng'])
+# Apply reverse_geocode function
+df[['G_city', 'G_province', 'G_country']] = df.apply(
+    lambda row: pd.Series(reverse_geocode(row['lat'], row['lng'])), axis=1
+)
+df.to_csv('data/city_name_to_check.csv')
 
 ###### Convert manual check results to checked dataset
 df = pd.read_csv('data/city_data_to_check_wz.csv', encoding='latin1', low_memory=False)
@@ -78,6 +107,7 @@ df.loc[df['SELECT'] == 'Inspected', 'geometry'] = [
 gdf = gpd.GeoDataFrame(df, geometry='geometry')
 gdf.drop(columns=['SELECT', 'Inspected_LON', 'Inspected_LAT', 'Inspected_names'], axis=1, inplace=True)
 gdf = gdf.dropna(subset=['geometry'])
+gdf.drop(columns=['COM_LON', 'COM_LAT', 'G_FULL_NAME', 'G_LON', 'G_LAT', 'Overture_names', 'Overture_LON', 'Overture_LAT'], axis=1, inplace=True)
 gdf.to_csv('data/city_data_checked.csv', index=False)
 
 gdf = gdf.loc[df['GRGN_L1'] == 'Africa', :]
