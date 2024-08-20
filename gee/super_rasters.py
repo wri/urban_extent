@@ -59,12 +59,12 @@ def get_urban_extents(IDS, CITIES_LIST, cities_track):
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980').filter(ee.Filter.stringContains('system:index', '3764')).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_2010').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
 
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_1980').filter(ee.Filter.stringContains('system:index', '13133')).aggregate_array('system:index').getInfo()
-# image_ids
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2015').filter(ee.Filter.stringContains('system:index', '5933')).aggregate_array('system:index').getInfo()
+# print(image_ids)
 # len(image_ids)
 # # Delete images
 # for image_id in image_ids:
-#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_1980/'+image_id)
+#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2015/'+image_id)
 #     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980/'+image_id)
 #     print("Deleted:", image_id)
 
@@ -124,7 +124,7 @@ import pandas as pd
 
 IDS = geelayers.CITY_DATA.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
 # FULL_IDS = geelayers.CITY_DATA_POINT.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
-cities_track = pd.read_csv('data/checked_cities_track_1990.csv', encoding='latin1', low_memory=False)
+cities_track = pd.read_csv('data/checked_cities_track_2020.csv', encoding='latin1', low_memory=False)
 cities_track.set_index('ID_HDC_G0', inplace=True)
 # filter out checked cities
 filtered_cities = cities_track[cities_track['NEED_CENTROID_CHECK']!=False]
@@ -145,4 +145,4 @@ while len(TASKS) > 0:
     total_mins = total_mins + 0.25
 print('Success!')
 
-cities_track.to_csv('data/checked_cities_track_1990.csv', encoding='latin1')
+cities_track.to_csv('data/checked_cities_track_2020.csv', encoding='latin1')

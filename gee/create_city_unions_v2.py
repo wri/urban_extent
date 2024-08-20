@@ -11,7 +11,8 @@ scale = 100
 YEARS = [1980, 1990, 2000, 2005, 2010, 2015, 2020]
 REF_YEAR = 2020
 
-urbext_ref = ee.FeatureCollection(f'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_{REF_YEAR}')
+urbext_ref = ee.FeatureCollection(f'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/GHSL_BUthresh10pct_JRCs_{REF_YEAR}')
+# projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_{REF_YEAR}
 urbext_data_ref = geemap.ee_to_df(urbext_ref)
 #Create overlap graph
 nodes = []
@@ -40,7 +41,8 @@ for i in range(len(component_lists_ref)):
 print('\n\nDone building reference ID list\n')
 
 for year in YEARS:
-    urbext_year = ee.FeatureCollection(f'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_{year}')
+    urbext_year = ee.FeatureCollection(f'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/GHSL_BUthresh10pct_JRCs_{year}')
+    # projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_{year}
     urbext_data_year = geemap.ee_to_df(urbext_year)
     #Create overlap graph
     nodes = []
@@ -71,17 +73,29 @@ for year in YEARS:
     def makeFeature(idlist, ref_idstring, ref_year):
         idstring = '_'.join([str(i) for i in idlist])
         old_features = urbext_year.filter(ee.Filter.inList('ID_HDC_G0', ee.List(idlist)))
-        def getFeatureString(features, varname):
-            result_list = features.aggregate_array(varname).getInfo()
-            result_list = list(set(result_list))
-            result_list.sort()
-            return '_'.join(result_list)
-        namestring = getFeatureString(old_features, 'UC_NM_MN')
-        countryisostring = getFeatureString(old_features, 'CTR_MN_ISO')
-        countrynamestring = getFeatureString(old_features, 'CTR_MN_NM')
-        region2string = getFeatureString(old_features, 'GRGN_L2')
-        region1string = getFeatureString(old_features, 'GRGN_L1')
-        return idstring, ee.Feature(old_features.geometry().dissolve(), ee.Dictionary({'city_ids': idstring, 'year': year, 'city_name': namestring, 'country_ISO': countryisostring, 'country_name': countrynamestring, 'region2': region2string, 'region1': region1string, 'reference_idstring': ref_idstring, 'reference_year': ref_year}))
+        # def getFeatureString(features, varname):
+        #     result_list = features.aggregate_array(varname).getInfo()
+        #     result_list = list(set(result_list))
+        #     result_list.sort()
+        #     return '_'.join(result_list)
+        
+        filtered_df = urbext_data_year[urbext_data_year['ID_HDC_G0'].isin(idlist)]
+        max_id = filtered_df.loc[filtered_df['P15'].idxmax()]['ID_HDC_G0']
+        max_name = filtered_df.loc[filtered_df['P15'].idxmax()]['UC_NM_MN']
+        sorted_df = filtered_df.sort_values(by='ID_HDC_G0', ascending=False)
+
+        namestring =  '_'.join(sorted_df['UC_NM_MN'].astype(str).unique())
+        countryisostring =  '_'.join(sorted_df['CTR_MN_ISO'].astype(str).unique())
+        countrynamestring =  '_'.join(sorted_df['CTR_MN_NM'].astype(str).unique())
+        region2string =  '_'.join(sorted_df['GRGN_L2'].astype(str).unique())
+        region1string =  '_'.join(sorted_df['GRGN_L1'].astype(str).unique())
+
+        # namestring = getFeatureString(old_features, 'UC_NM_MN')
+        # countryisostring = getFeatureString(old_features, 'CTR_MN_ISO')
+        # countrynamestring = getFeatureString(old_features, 'CTR_MN_NM')
+        # region2string = getFeatureString(old_features, 'GRGN_L2')
+        # region1string = getFeatureString(old_features, 'GRGN_L1')
+        return idstring, ee.Feature(old_features.geometry().dissolve(), ee.Dictionary({'UC_NM_MN': max_name, 'ID_HDC_G0': max_id, 'city_ids': idstring, 'year': year, 'city_name': namestring, 'country_ISO': countryisostring, 'country_name': countrynamestring, 'region2': region2string, 'region1': region1string, 'reference_idstring': ref_idstring, 'reference_year': ref_year}))
 
     # Store new features in dict, keyed by idstring
     new_features_dict = defaultdict(list)
@@ -115,6 +129,7 @@ for year in YEARS:
     exportTask = ee.batch.Export.table.toAsset(
         collection = nf_year,
         description = f'urbext_unions_{year}',
-        assetId = f'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/urbanextents_unions_{year}'
+        assetId = f'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/urbanextents_unions_{year}'
+        # projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/urbanextents_unions_{year}
     )
     exportTask.start()

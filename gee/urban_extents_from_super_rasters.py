@@ -35,8 +35,9 @@ AREA_REDUCER=ee.Reducer.sum().combine(
 
 YEAR = 2020
 
-ROOT= 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024' #'users/emackres'
-SUFFIX= 'JRCs_africa' #'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
+ROOT= 'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024'
+# 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024' #'users/emackres'
+SUFFIX= 'JRCs' #'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}_{YEAR}'
 
 
