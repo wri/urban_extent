@@ -9,8 +9,7 @@ ee.Initialize()
 
 scale = 100
 
-# YEARS = [1980, 1990, 2000, 2005, 2010, 2015, 2020]
-YEARS = [2015, 2020]
+YEARS = [1980, 1990, 2000, 2005, 2010, 2015, 2020]
 REF_YEAR = 2020
 
 urbext_ref = ee.FeatureCollection(f'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/GHSL_BUthresh10pct_JRCs_{REF_YEAR}')
@@ -150,3 +149,21 @@ for year in YEARS:
             # projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/urbanextents_unions_{year}
         )
         exportTask.start()
+
+
+# If exported in chunks, merge the chunk assets
+for year in YEARS:
+    # Load the FeatureCollection assets
+    collection1 = ee.FeatureCollection(f'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/urbanextents_unions_{year}_chunk_1')
+    collection2 = ee.FeatureCollection(f'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/urbanextents_unions_{year}_chunk_2')
+    
+    # Merge the FeatureCollections
+    merged_collection = collection1.merge(collection2)
+
+    # Export the merged FeatureCollection to a new asset
+    task = ee.batch.Export.table.toAsset(
+        collection=merged_collection,
+        description=f'Merged_Collection_Export_{year}',
+        assetId=f'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/urbanextents_unions_{year}' # Specify the output asset path
+    )
+    task.start()
