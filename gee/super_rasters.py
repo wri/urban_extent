@@ -53,27 +53,6 @@ def get_urban_extents(IDS, CITIES_LIST, cities_track):
     return TASKS
 
 
-###### Remove images
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.stringContains('system:index', '12497')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980').filter(ee.Filter.stringContains('system:index', '3764')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_2010').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
-
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2015').filter(ee.Filter.stringContains('system:index', '5933')).aggregate_array('system:index').getInfo()
-# print(image_ids)
-# len(image_ids)
-# # Delete images
-# for image_id in image_ids:
-#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2015/'+image_id)
-#     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980/'+image_id)
-#     print("Deleted:", image_id)
-
-
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_50').filter(ee.Filter.eq('study_area_scale_factor', 320)).aggregate_array('system:index').getInfo()
-# len(image_ids)
-
-
-
 ###### Scale factor check
 def post_check_task_scale(TASKS, cities_track):
     for i in range(len(TASKS) - 1, -1, -1):
@@ -95,7 +74,6 @@ def post_check_task_scale(TASKS, cities_track):
                         maxPixels=1e9
                     ).get('builtup')
                 cities_track.loc[cID, 'NEED_CENTROID_CHECK'] = bool(ee.Number(non_na_pixels).gt(0).getInfo())
-                # cities_track.loc[cID, 'NEED_CENTROID_CHECK'] = True
                 del TASKS[i]
         elif TASKS[i].status()['state']=='COMPLETED':
             done_image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.eq('scale_factor_set', 'True')).aggregate_array('system:index').getInfo()
@@ -146,3 +124,19 @@ while len(TASKS) > 0:
 print('Success!')
 
 cities_track.to_csv('data/checked_cities_track_2020.csv', encoding='latin1')
+
+
+###### Remove images
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.stringContains('system:index', '12497')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980').filter(ee.Filter.stringContains('system:index', '3764')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_2010').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020').filter(ee.Filter.stringContains('system:index', '4909')).aggregate_array('system:index').getInfo()
+
+# print(image_ids)
+# len(image_ids)
+# # Delete images
+# for image_id in image_ids:
+#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020/'+image_id)
+#     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980/'+image_id)
+#     print("Deleted:", image_id)
