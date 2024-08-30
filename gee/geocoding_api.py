@@ -80,18 +80,15 @@ df[['G_city', 'G_province', 'G_country']] = df.apply(
 df.to_csv('data/city_name_to_check.csv')
 
 ###### Convert manual check results to checked dataset
-df = pd.read_csv('data/city_data_to_check_wz.csv', encoding='latin1', low_memory=False)
+df = pd.read_csv('data/city_data_to_check.csv', encoding='latin1', low_memory=False)
 
-df.loc[df['SELECT'].notna() & (df['SELECT'] != '') & (df['SELECT'] != 'ToDo'), 'USE_COM'] = 'FALSE'
-df.loc[df['SELECT'].notna() & (df['SELECT'] != '') & (df['SELECT'] != 'ToDo'), 'USE_INSPECTED_CENTROIDS'] = 'FALSE'
-df.loc[df['SELECT'].notna() & (df['SELECT'] != '') & (df['SELECT'] != 'ToDo'), 'UC_NM_MN'] = df['UC_NM_MN_ORIGINAL']
-
+df['USE_COM'] = 'FALSE'
+df['USE_INSPECTED'] = 'FALSE'
+df['UC_NM_MN'] = df['UC_NM_MN_ORIGINAL']
 
 df.loc[df['SELECT'] == 'COM', 'USE_COM'] = 'TRUE'
-df.loc[df['SELECT'] == 'Inspected', 'USE_INSPECTED_CENTROIDS'] = 'TRUE'
-df.loc[df['SELECT'] == 'Google', 'USE_INSPECTED_CENTROIDS'] = 'TRUE'
+df.loc[df['SELECT'] == 'Inspected', 'USE_INSPECTED'] = 'TRUE'
 df.loc[df['Inspected_names'].notna() & (df['Inspected_names'] != ''), 'UC_NM_MN'] = df['Inspected_names']
-
 
 df.loc[df['SELECT'] == 'Source', 'geometry'] = [
     Point(xy) for xy in zip(df.loc[df['SELECT'] == 'Source', 'GCPNT_LON'], df.loc[df['SELECT'] == 'Source', 'GCPNT_LAT'])]
@@ -103,11 +100,17 @@ df.loc[df['SELECT'] == 'Google', 'geometry'] = [
     Point(xy) for xy in zip(df.loc[df['SELECT'] == 'Google', 'G_LON'], df.loc[df['SELECT'] == 'Google', 'G_LAT'])]
 df.loc[df['SELECT'] == 'Inspected', 'geometry'] = [
     Point(xy) for xy in zip(df.loc[df['SELECT'] == 'Inspected', 'Inspected_LON'], df.loc[df['SELECT'] == 'Inspected', 'Inspected_LAT'])]
+df.loc[df['SELECT'] == 'ToDo', 'geometry'] = [
+    Point(xy) for xy in zip(df.loc[df['SELECT'] == 'ToDo', 'GCPNT_LON'], df.loc[df['SELECT'] == 'ToDo', 'GCPNT_LAT'])]
 
 gdf = gpd.GeoDataFrame(df, geometry='geometry')
-gdf.drop(columns=['SELECT', 'Inspected_LON', 'Inspected_LAT', 'Inspected_names'], axis=1, inplace=True)
+gdf.drop(columns=['Inspected_LON', 'Inspected_LAT', 'Inspected_names'], axis=1, inplace=True)
 gdf = gdf.dropna(subset=['geometry'])
 gdf.drop(columns=['COM_LON', 'COM_LAT', 'G_FULL_NAME', 'G_LON', 'G_LAT', 'Overture_names', 'Overture_LON', 'Overture_LAT'], axis=1, inplace=True)
+gdf = gdf.rename(columns={'SELECT': 'CENTER_SOURCE'})
+gdf.to_csv('data/city_data_checked_all.csv', index=False)
+
+gdf = gdf.loc[df['SELECT'] != 'ToDo', :]
 gdf.to_csv('data/city_data_checked.csv', index=False)
 
 gdf = gdf.loc[df['GRGN_L1'] == 'Africa', :]
