@@ -20,15 +20,16 @@
 1. Assets for African cities:
     - Cities centroid points asset ID: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/city_data_checked_africa`
     - Urban extent ImageCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_{year}`
-    - Urban polygon FeatureCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_{year}`
-    - Unioned urban polygon FeatureCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/urbanextents_unions_{year}`
+    - Urban polygons FeatureCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_{year}`
+    - Unioned urban polygons FeatureCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/urbanextents_unions_{year}`
         ###### * `{year}` select from 1980/1990/2000/2005/2010/2015/2020
 
 2. Assets for global cities:
     - Cities centroid points asset ID: `projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/city_data_checked`
     - Urban extent ImageCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_{year}`
-    - Urban polygon FeatureCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/GHSL_BUthresh10pct_JRCs_{year}`
-    - Unioned urban polygon FeatureCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/urbanextents_unions_{year}`
+    - Urban polygons FeatureCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/GHSL_BUthresh10pct_JRCs_{year}`
+    - Unioned urban polygons FeatureCollection asset IDs: `projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/urbanextents_unions_{year}`
+    - Full cities centroid points asset ID: `projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/city_data_checked_all` (includes cities without clear urban areas)
         ###### * `{year}` select from 1980/1990/2000/2005/2010/2015/2020
 
 ## Metadata for features and images
@@ -37,6 +38,7 @@
 - **ID_HDC_G0**: A unique city ID from the source, useful as a key for merging tables.
 - **P15**: The population data for 2015 from the source.
 - **B15**: The built-up area in 2015 from the source.
+- **CENTER_SOURCE**: Source of the selected city centroid point - Source/COM/Overture/Google/Inspected/ToDo.
 - **study_center_lat**: Selected city centroid point coordinate - latitude.
 - **study_center_lon**: Selected city centroid point coordinate - longitude.
 - **bu_city_center_lat**: Non NA start point coordinate - latitude.
