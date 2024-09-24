@@ -32,7 +32,7 @@ $$
 3.	For each year, classify each built-up pixel within the study area based on the percent of pixels that are built-up within its 1-km2 circular neighborhood, an area with a radius roughly equivalent to a ten-minute walk. If 50% or more of the pixels in the circle are built-up, the pixel is classified as _Urban_. If less than 50% but 25% or more of the pixels in the circle are built-up, the pixel is classified as _Suburban_. If less than 25% of the pixels in the circle are built-up, the pixel is classified as _Rural_.
 4.	If any of the _Urban_, _Suburban_, or _Rural_ pixels touches the boundary of the maximum area of interest in step 2, it suggests that the urban extent mapping may be constrained by the predefined study area. In such cases, we double the scale factor and re-run steps 2 and 3. The process begins with an initial scale factor of 20. If the urban extent is still insufficiently covered when the scale factor reaches 2560, a visual inspection of the city on the map was conducted. Based on the inspection, the scale factor was manually adjusted as necessary to ensure complete coverage of the urban extent (this was required for 11 cities for the year 2020 and the same or fewer cities in previous years).
 5.	Vectorize all contiguous _Urban_ and _Suburban_ pixels to form urban cluster polygons. 
-6.	Calculate the influence distance $d$ of each urban cluster with an area A as the depth of a buffering ring around a circle with an area A and ring area equal to 0.25A. 
+6.	Calculate the influence distance $d$ of each urban cluster with an area $A$ as the depth of a buffering ring around a circle with an area $A$ and ring area equal to $0.25A$. 
 
 $$
 d = \sqrt{\frac{1.25A}{\pi}} - \sqrt{\frac{A}{\pi}} = \sqrt{A} \cdot 0.06659 \qquad (2)
