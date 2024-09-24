@@ -23,7 +23,7 @@ To map the urban extent of any city, we followed the steps articulated here:
     2. obtain centroids from Overture Maps, matched by city and country names; 
     3. obtain centroids from Google Map API, matched by city and country names; 
     4. manually inspect and adjust the centroid points if none of the prior methods provided satisfactory results.
-2.	For each city _i_, define an overly inclusive maximum area of interest (the “study area”) using a radius (_R<sub>i</sub>_) from the city centroid based on estimated city population (_P<sub>i</sub>_) and slope (_S<sub>r</sub>_) and intercept (_I<sub>r</sub>_) from the linear average relationships between population and built-up area for all cities in each geographical region of GHS-UCDB R2019A and scaling it by a scale factor (_F<sub>i</sub>_) initially set at 20. The population and built-up area data used to establish this relationship were from 2015, as provided by GHS-UCDB R2019A. 
+2.	For each city _i_, define an overly inclusive maximum area of interest (the “study area”) using a radius ($R_i$) from the city centroid based on estimated city population ($P_i$) and slope ($S_r$) and intercept ($I_r$) from the linear average relationships between population and built-up area for all cities in each geographical region of GHS-UCDB R2019A and scaling it by a scale factor ($F_i$) initially set at 20. The population and built-up area data used to establish this relationship were from 2015, as provided by GHS-UCDB R2019A. 
 
 $$
 R_i = \sqrt{\frac{e^{\left( S_r \cdot \ln(P_i) + I_r \right)} \cdot F_i}{\pi}} \qquad (1)
@@ -32,7 +32,7 @@ $$
 3.	For each year, classify each built-up pixel within the study area based on the percent of pixels that are built-up within its 1-km2 circular neighborhood, an area with a radius roughly equivalent to a ten-minute walk. If 50% or more of the pixels in the circle are built-up, the pixel is classified as _Urban_. If less than 50% but 25% or more of the pixels in the circle are built-up, the pixel is classified as _Suburban_. If less than 25% of the pixels in the circle are built-up, the pixel is classified as _Rural_.
 4.	If any of the _Urban_, _Suburban_, or _Rural_ pixels touches the boundary of the maximum area of interest in step 2, it suggests that the urban extent mapping may be constrained by the predefined study area. In such cases, we double the scale factor and re-run steps 2 and 3. The process begins with an initial scale factor of 20. If the urban extent is still insufficiently covered when the scale factor reaches 2560, a visual inspection of the city on the map was conducted. Based on the inspection, the scale factor was manually adjusted as necessary to ensure complete coverage of the urban extent (this was required for 11 cities for the year 2020 and the same or fewer cities in previous years).
 5.	Vectorize all contiguous _Urban_ and _Suburban_ pixels to form urban cluster polygons. 
-6.	Calculate the influence distance d of each urban cluster with an area A as the depth of a buffering ring around a circle with an area A and ring area equal to 0.25A. 
+6.	Calculate the influence distance $d$ of each urban cluster with an area A as the depth of a buffering ring around a circle with an area A and ring area equal to 0.25A. 
 
 $$
 d = \sqrt{\frac{1.25A}{\pi}} - \sqrt{\frac{A}{\pi}} = \sqrt{A} \cdot 0.06659 \qquad (2)
