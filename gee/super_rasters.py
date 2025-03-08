@@ -2,7 +2,7 @@ import re
 from unidecode import unidecode
 import ee
 # ee.Authenticate(force=True)
-ee.Initialize(project='sustained-kit-322619')
+ee.Initialize()
 
 import config
 import geelayers
