@@ -35,7 +35,7 @@ AREA_REDUCER=ee.Reducer.sum().combine(
 
 YEAR = 2020
 
-ROOT= 'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024'
+ROOT= 'projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025'
 # 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024' #'users/emackres'
 SUFFIX= 'JRCs' #'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
 SR_ID=f'{ROOT}/builtup_density_{SUFFIX}_{YEAR}'
@@ -182,7 +182,7 @@ description=re.sub('[\.\,\/]','--',name)
 asset_id=f'{ROOT}/GHSL_BUthresh10pct_{name}'
 print('\n'*1)
 print(f'EXPORTING [{SUPER_IC.size().getInfo()}]:', asset_id)
-# pprint(SUPER_IC.aggregate_array('ID_HDC_G0').getInfo())
+# pprint(SUPER_IC.aggregate_array('ORIG_FID').getInfo())
 
 task=ee.batch.Export.table.toAsset(
       collection=urban_extents_fc, 

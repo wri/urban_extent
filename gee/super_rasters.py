@@ -2,7 +2,7 @@ import re
 from unidecode import unidecode
 import ee
 # ee.Authenticate(force=True)
-ee.Initialize()
+ee.Initialize(project='sustained-kit-322619')
 
 import config
 import geelayers
@@ -16,9 +16,9 @@ def get_urban_extents(IDS, CITIES_LIST, cities_track):
     for i, ident in enumerate(IDS):
         if ident in CITIES_LIST:
             # get on city centroid feature
-            feat = ee.Feature(geelayers.CITY_DATA_POINT.filter(ee.Filter.eq('ID_HDC_G0', ident)).first())
+            feat = ee.Feature(geelayers.CITY_DATA_POINT.filter(ee.Filter.eq('ORIG_FID', ident)).first())
             # feat.getInfo()
-            city_name = feat.getString('UC_NM_MN').getInfo()
+            city_name = feat.getString('CIES_NM_TL').getInfo()
             print(f'{i}: {city_name} [{ident}]')
             # get feature for city boundary as defined by vectorize function
             # feat = ee.Feature(helpers.get_super_feat(feat))
@@ -69,7 +69,7 @@ def post_check_task_scale(TASKS, cities_track):
             else:
                 non_na_pixels = geelayers.BU_CONNECTED.reduceRegion(
                         reducer=ee.Reducer.count(),
-                        geometry=ee.Feature(ee.FeatureCollection(geelayers.CITY_DATA_POLY).filter(ee.Filter.eq('ID_HDC_G0',cID)).first()).geometry(),
+                        geometry=ee.Feature(ee.FeatureCollection(geelayers.CITY_DATA_POLY).filter(ee.Filter.eq('ORIG_FID',cID)).first()).geometry(),
                         scale=100,
                         maxPixels=1e9
                     ).get('builtup')
@@ -85,7 +85,7 @@ def post_check_task_scale(TASKS, cities_track):
                     TASKS = TASKS + get_urban_extents(IDS, [cID], cities_track)
                     del TASKS[i]
                 else:
-                    city_point = ee.Feature(ee.FeatureCollection(geelayers.CITY_DATA_POINT).filter(ee.Filter.eq('ID_HDC_G0',cID)).first()) 
+                    city_point = ee.Feature(ee.FeatureCollection(geelayers.CITY_DATA_POINT).filter(ee.Filter.eq('ORIG_FID',cID)).first()) 
                     count_image = ee.ImageCollection(config.IC_ID).filterBounds(city_point.geometry()).aggregate_array('system:index').getInfo()
                     if len(count_image) > 1:
                         cities_track.loc[cID, 'DONE'] = True
@@ -100,10 +100,10 @@ def post_check_task_scale(TASKS, cities_track):
 import time
 import pandas as pd
 
-IDS = geelayers.CITY_DATA.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
-# FULL_IDS = geelayers.CITY_DATA_POINT.sort('P15', False).aggregate_array('ID_HDC_G0').getInfo()
-cities_track = pd.read_csv('data/checked_cities_track_2020.csv', encoding='latin1', low_memory=False)
-cities_track.set_index('ID_HDC_G0', inplace=True)
+IDS = geelayers.CITY_DATA.sort('P_R23_2020', False).aggregate_array('ORIG_FID').getInfo()
+# FULL_IDS = geelayers.CITY_DATA_POINT.sort('P_R23_2020', False).aggregate_array('ORIG_FID').getInfo()
+cities_track = pd.read_csv('data/guppd_checked_cities_track_2020.csv', encoding='latin1', low_memory=False)
+cities_track.set_index('ORIG_FID', inplace=True)
 # filter out checked cities
 filtered_cities = cities_track[cities_track['NEED_CENTROID_CHECK']!=False]
 
@@ -123,7 +123,7 @@ while len(TASKS) > 0:
     total_mins = total_mins + 0.25
 print('Success!')
 
-cities_track.to_csv('data/checked_cities_track_2020.csv', encoding='latin1')
+cities_track.to_csv('data/guppd_checked_cities_track_2020.csv', encoding='latin1')
 
 
 ###### Remove images
