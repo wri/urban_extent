@@ -1,11 +1,11 @@
 ORIG_FID,CIES_NM_TL,STUDY_AREA_SCALE_FACTOR,NO_RUNS,NEED_CENTROID_CHECK,NEED_MAP_CHECK,DONE
-1,"Gomrok-E D?gh?r?n, Gamrak Dogarron",20,0,,,FALSE
-2,Ghorian,20,0,,,FALSE
-3,"Karab?gh, Kharabagh, Qarab?gh, Qarah B?gh, Qareh B?gh, Qa?a B?qh, Qarreh Baghe",20,0,,,FALSE
-4,Torgun,20,0,,,FALSE
-5,Hearat,20,0,,,FALSE
-6,Guzrah,20,0,,,FALSE
-7,Shinesne,20,0,,,FALSE
-8,N/A,20,0,,,FALSE
-9,Qaleh No,20,0,,,FALSE
-10,Farah,20,0,,,FALSE
+1,"Gomrok-E D?gh?r?n, Gamrak Dogarron",20,1,True,,False
+2,Ghorian,20,1,True,,False
+3,"Karab?gh, Kharabagh, Qarab?gh, Qarah B?gh, Qareh B?gh, Qa?a B?qh, Qarreh Baghe",20,1,True,,False
+4,Torgun,20,1,True,,False
+5,Hearat,20,1,True,,False
+6,Guzrah,20,1,True,,False
+7,Shinesne,20,1,True,,False
+8,,20,1,True,,False
+9,Qaleh No,20,1,True,,False
+10,Farah,20,1,True,,False

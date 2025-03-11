@@ -19,10 +19,10 @@ GHSL_2020 = GHSL.filter(ee.Filter.stringContains('system:index', '2020'))
 # New City data from GHSL
 ## Polygons
 # CITY_DATA_POLY = ee.FeatureCollection('projects/wri-datalab/AUE/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2')
-CITY_DATA_POLY = ee.FeatureCollection('/projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/guppd_v1_poly')
+CITY_DATA_POLY = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/guppd_v1_poly')
 ## Checked city points
 # CITY_DATA_POINT = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/city_data_checked')
-CITY_DATA_POINT = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/guppd_v1').limit(10)
+CITY_DATA_POINT = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/guppd_v1')#.limit(10)
 # 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_checked'
 # 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/city_data_checked_africa'
 # 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_Kigali_Nairobi_Addis'
