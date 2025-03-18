@@ -72,7 +72,7 @@ df = df[df['B15'] != 0]
 # Use GRGN_L2 as regions for regression
 # Replace value Polynesia with Melanesia in column 'GRGN_L2'
 # Only 1 city in Polynesia
-df['GRGN_L2'] = df['GRGN_L2'].replace('Polynesia', 'Melanesia')
+df['GRGN_L2'] = df['GRGN_L2'].replace('Polynesia', 'Melanesia')#.replace('Caribbean', 'Latin America and the Caribbean').replace('South America', 'Latin America and the Caribbean').replace('Central America', 'Latin America and the Caribbean').replace('Australia/New Zealand', 'Australia and New Zealand').replace('Middle Africa', 'Australia and New Zealand')
 df['GRGN_L2'].value_counts()
 
 results = {}

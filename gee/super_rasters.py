@@ -18,7 +18,7 @@ def get_urban_extents(IDS, CITIES_LIST, cities_track):
             # get on city centroid feature
             feat = ee.Feature(geelayers.CITY_DATA_POINT.filter(ee.Filter.eq('ORIG_FID', ident)).first())
             # feat.getInfo()
-            city_name = feat.getString('CIES_NM_TL').getInfo()
+            city_name = feat.getString('CIES_NM_TL').slice(0,80).getInfo()
             print(f'{i}: {city_name} [{ident}]')
             # get feature for city boundary as defined by vectorize function
             # feat = ee.Feature(helpers.get_super_feat(feat))
@@ -102,8 +102,10 @@ import pandas as pd
 
 IDS = geelayers.CITY_DATA.sort('P_R23_2020', False).aggregate_array('ORIG_FID').getInfo()
 # FULL_IDS = geelayers.CITY_DATA_POINT.sort('P_R23_2020', False).aggregate_array('ORIG_FID').getInfo()
-cities_track = pd.read_csv('data/guppd_checked_cities_track_2020.csv', encoding='latin1', low_memory=False)
+cities_track = pd.read_csv('data/guppd_checked_cities_track_2020.csv', encoding='utf-8', low_memory=False)
 cities_track.set_index('ORIG_FID', inplace=True)
+## limit number of cities for testing
+# cities_track = cities_track.head(20)
 # filter out checked cities
 filtered_cities = cities_track[cities_track['NEED_CENTROID_CHECK']!=False]
 
@@ -123,7 +125,7 @@ while len(TASKS) > 0:
     total_mins = total_mins + 0.25
 print('Success!')
 
-cities_track.to_csv('data/guppd_checked_cities_track_2020.csv', encoding='latin1')
+cities_track.to_csv('data/guppd_checked_cities_track_2020.csv', encoding='utf-8')
 
 
 ###### Remove images

@@ -62,7 +62,7 @@ def get_circle_data_simple(feat, city_track):
     # cID = ee.Number(feat.get('ID_HDC_G0')).toInt()
     centroid = feat.geometry()
     crs = get_crs(centroid)
-    region = ee.String(feat.get('SUBREG')).trim()
+    region = ee.String(feat.get('GRGN_L2')).trim()
     pop = feat.getNumber('P_R23_2020')
     est_area = get_area(pop, region)
     est_influence_distance = get_influence_distance(est_area)
