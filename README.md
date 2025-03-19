@@ -86,6 +86,17 @@ $$
     - Full cities centroid points asset ID: `projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/city_data_checked_all` (includes cities without clear urban areas)
         ###### * `{year}` select from 1980/1990/2000/2005/2010/2015/2020
 
+## Supporting data in [data](gee/data) folder
+- [GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2.csv](gee/data/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2.csv): Cities data from [Urban Centre Database UCDB R2019A](https://human-settlement.emergency.copernicus.eu/ghs_stat_ucdb2015mt_r2019a.php).
+- [checked_cities_track_{year}.csv](gee/data/checked_cities_track_2020.csv): Tracking sheets used when generating urban extents data in August 2024.
+- [checked_cities_track_africs_{year}.csv](gee/data/checked_cities_track_africa_2020.csv): Tracking sheets used when generating urban extents data for African cities in July 2024.
+- [city_data_checked.csv](gee/data/city_data_checked.csv): Finalized cities centroid points.
+- [city_data_checked_africa.csv](gee/data/city_data_checked_africa.csv): Finalized cities centroid points for African cities.
+- [city_data_checked_all.csv](gee/data/city_data_checked_all.csv): Finalized full cities centroid points (includes cities without clear urban areas).
+- [city_data_to_check.csv](gee/data/city_data_to_check.csv): Cities centroid points from 4 sources: GHS-UCDB R2019A, GHS-UCDB R2019A with the Center of Mass function applied, Overture map, Google Map API. And a record of final selection result from [Source, COM, Overture, Google, Inspected, ToDo] (ToDo indicate the cities don't have clear urban areas for any given year).
+
+    ###### * `{year}` select from 1980/1990/2000/2005/2010/2015/2020
+
 ## Metadata for features and images
 - **UC_NM_MN_ORIGINAL**: The original city name from the source.
 - **UC_NM_MN**: A cleaned version of the city name. This column includes corrections for non-English characters and fills in missing values, providing a more standardized city name than the original.
@@ -106,3 +117,7 @@ $$
 - **[city_ids]**: IDs of the unioned cities, joined by '_'.
 
     ###### * Unioned city polygon FeatureCollection used a different column name system labeled in [], it also has less city metadata information than other assets.
+
+## GEE scripts for visual inspection
+- For city centroid inspection: https://code.earthengine.google.com/5ba6666a76deed96625415f010c575e0
+- For scale factor inspection on map: https://code.earthengine.google.com/8f62fbcff29e790b13d01deb44049e97
