@@ -89,11 +89,11 @@ $$
 ## Supporting data in [data](gee/data) folder
 - [GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2.csv](gee/data/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2.csv): Cities data from [Urban Centre Database UCDB R2019A](https://human-settlement.emergency.copernicus.eu/ghs_stat_ucdb2015mt_r2019a.php).
 - [checked_cities_track_{year}.csv](gee/data/checked_cities_track_2020.csv): Tracking sheets used when generating urban extents data in August 2024.
-- [checked_cities_track_africs_{year}.csv](gee/data/checked_cities_track_africa_2020.csv): Tracking sheets used when generating urban extents data for African cities in July 2024.
+- [checked_cities_track_africa_{year}.csv](gee/data/checked_cities_track_africa_2020.csv): Tracking sheets used when generating urban extents data for African cities in July 2024.
 - [city_data_checked.csv](gee/data/city_data_checked.csv): Finalized cities centroid points.
 - [city_data_checked_africa.csv](gee/data/city_data_checked_africa.csv): Finalized cities centroid points for African cities.
 - [city_data_checked_all.csv](gee/data/city_data_checked_all.csv): Finalized full cities centroid points (includes cities without clear urban areas).
-- [city_data_to_check.csv](gee/data/city_data_to_check.csv): Cities centroid points from 4 sources: GHS-UCDB R2019A, GHS-UCDB R2019A with the Center of Mass function applied, Overture map, Google Map API. And a record of final selection result from [Source, COM, Overture, Google, Inspected, ToDo] (ToDo indicate the cities don't have clear urban areas for any given year).
+- [city_data_to_check.csv](gee/data/city_data_to_check.csv): Cities centroid points from 4 sources: GHS-UCDB R2019A, GHS-UCDB R2019A with the Center of Mass function applied, Overture map, Google Map API. And a record of final selection results from [Source, COM, Overture, Google, Inspected, ToDo] (ToDo indicates the cities don't have clear urban areas for any given year).
 
     ###### * `{year}` select from 1980/1990/2000/2005/2010/2015/2020
 
