@@ -78,7 +78,7 @@ def post_check_task_scale(TASKS, cities_track):
         elif TASKS[i].status()['state']=='COMPLETED':
             done_image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.eq('scale_factor_set', 'True')).aggregate_array('system:index').getInfo()
             if TASKS[i].status()['description'] not in done_image_ids:
-                if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 2560: 
+                if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 20480: 
                     ee.data.deleteAsset(config.IC_ID + '/' + TASKS[i].status()['description'])
                     cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 2
                     cities_track.loc[cID, 'NO_RUNS'] = 0
@@ -102,12 +102,15 @@ import pandas as pd
 
 IDS = geelayers.CITY_DATA.sort('P_R23_2020', False).aggregate_array('ORIG_FID').getInfo()
 # FULL_IDS = geelayers.CITY_DATA_POINT.sort('P_R23_2020', False).aggregate_array('ORIG_FID').getInfo()
-cities_track = pd.read_csv('data/guppd_checked_cities_track_2020.csv', encoding='utf-8', low_memory=False)
+cities_track = pd.read_csv('data/guppd_checked_cities_track_1980_guppd_v1_wUCnewcent.csv', encoding='utf-8', low_memory=False)
 cities_track.set_index('ORIG_FID', inplace=True)
 ## limit number of cities for testing
 # cities_track = cities_track.head(20)
 # filter out checked cities
 filtered_cities = cities_track[cities_track['NEED_CENTROID_CHECK']!=False]
+# filtered_cities = cities_track[cities_track['NEED_MAP_CHECK']!=False]
+# filtered_cities = cities_track[cities_track['DONE']!=True]
+
 
 total_mins = 0
 TASKS = get_urban_extents(IDS, filtered_cities.index.tolist(), cities_track) 
@@ -125,7 +128,7 @@ while len(TASKS) > 0:
     total_mins = total_mins + 0.25
 print('Success!')
 
-cities_track.to_csv('data/guppd_checked_cities_track_2020.csv', encoding='utf-8')
+cities_track.to_csv('data/guppd_checked_cities_track_1980_guppd_v1_wUCnewcent.csv', encoding='utf-8')
 
 
 ###### Remove images

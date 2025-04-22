@@ -47,7 +47,7 @@ USE_COMPLETED_FILTER = True # used
 # Set output image collection for all processed cities
 ROOT='projects/wri-datalab/cities/urban_land_use/data'
 # Update image collection year to [1980, 1990, 2000, 2005, 2010, 2015, 2020]
-IC_ID = f'{ROOT}/global_GUPPD_Mar2025/builtup_density_JRCs_2020'
+IC_ID = f'{ROOT}/global_GUPPD_Mar2025/builtup_density_JRCs_1980a'
 # f'{ROOT}/african_cities_July2024/builtup_density_JRCs_africa_1980'
 # f'{ROOT}/test_tori_Apr2024/builtup_density_JRCs_Kigali_Nairobi_Addis'
 
@@ -57,7 +57,7 @@ IC_ID = f'{ROOT}/global_GUPPD_Mar2025/builtup_density_JRCs_2020'
 BuiltAreaThresh = 1000
 # set the built-up year for which to produce extents
 # [1980, 1990, 2000, 2005, 2010, 2015, 2020]
-mapYear = 2020
+mapYear = 1980
 
 # Use old UCDB population and built-up area estimates for regional calibration
 # City data from Global Human Settlement Layer (GHSL, 13K cities)
