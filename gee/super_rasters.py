@@ -1,12 +1,13 @@
+import helpers
+import geelayers
+import config
+import time
+import pandas as pd
 import re
 from unidecode import unidecode
 import ee
 # ee.Authenticate(force=True)
 ee.Initialize()
-
-import config
-import geelayers
-import helpers
 
 
 # Create a function called get_super_feat
@@ -16,16 +17,16 @@ def get_urban_extents(IDS, CITIES_LIST, cities_track):
     for i, ident in enumerate(IDS):
         if ident in CITIES_LIST:
             # get on city centroid feature
-            feat = ee.Feature(geelayers.CITY_DATA_POINT.filter(ee.Filter.eq('ORIG_FID', ident)).first())
+            feat = ee.Feature(config.CITY_DATA_POINT.filter(ee.Filter.eq(config.CITY_ID_COL, ident)).first())
             # feat.getInfo()
-            city_name = feat.getString('CIES_NM_TL').slice(0,80).getInfo()
+            city_name = feat.getString(config.CITY_NAME_COL).slice(0, 80).getInfo()
             print(f'{i}: {city_name} [{ident}]')
             # get feature for city boundary as defined by vectorize function
             # feat = ee.Feature(helpers.get_super_feat(feat))
             city_track = cities_track.loc[ident]
-            circle_feat = helpers.get_circle_data_simple(feat, city_track)# get_circle_data
+            circle_feat = helpers.get_circle_data_simple(feat, city_track)  # get_circle_data
             feat = helpers.vectorize(circle_feat)
-            feat = feat.set({'scale_factor_set':ee.Algorithms.If(ee.Feature(circle_feat).contains(ee.Feature(feat)),'True','False')})
+            feat = feat.set({'scale_factor_set': ee.Algorithms.If(ee.Feature(circle_feat).contains(ee.Feature(feat)), 'True', 'False')})
             # print_info(super_feat=feat.toDictionary())
             print('='*100)
             asset_name = unidecode(f'{city_name}-{ident}-{config.mapYear}')
@@ -57,35 +58,39 @@ def get_urban_extents(IDS, CITIES_LIST, cities_track):
 def post_check_task_scale(TASKS, cities_track):
     for i in range(len(TASKS) - 1, -1, -1):
         cID = int(TASKS[i].status()['description'].split('-')[-2])
-        if TASKS[i].status()['state']=='RUNNING':
+        if TASKS[i].status()['state'] == 'RUNNING':
             continue
-        elif TASKS[i].status()['state']=='READY':
+        elif TASKS[i].status()['state'] == 'READY':
             continue
-        elif TASKS[i].status()['state']=='FAILED':
-            if cities_track.loc[cID, 'NO_RUNS'] < 1:    
+        elif TASKS[i].status()['state'] == 'FAILED':
+            if cities_track.loc[cID, 'NO_RUNS'] < 1:
                 cities_track.loc[cID, 'NO_RUNS'] = cities_track.loc[cID, 'NO_RUNS'] + 1
-                TASKS = TASKS + get_urban_extents(IDS, [cID], cities_track) 
+                TASKS = TASKS + get_urban_extents(IDS, [cID], cities_track)
                 del TASKS[i]
             else:
+                point_buffer = ee.Feature(ee.FeatureCollection(config.CITY_DATA_POINT).filter(ee.Filter.eq(config.CITY_ID_COL, cID)).first()).geometry().buffer(2000)
                 non_na_pixels = geelayers.BU_CONNECTED.reduceRegion(
-                        reducer=ee.Reducer.count(),
-                        geometry=ee.Feature(ee.FeatureCollection(geelayers.CITY_DATA_POLY).filter(ee.Filter.eq('ORIG_FID',cID)).first()).geometry(),
-                        scale=100,
-                        maxPixels=1e9
-                    ).get('builtup')
+                    reducer=ee.Reducer.count(),
+                    geometry=point_buffer,
+                    scale=100,
+                    maxPixels=1e9
+                ).get('builtup')
                 cities_track.loc[cID, 'NEED_CENTROID_CHECK'] = bool(ee.Number(non_na_pixels).gt(0).getInfo())
                 del TASKS[i]
-        elif TASKS[i].status()['state']=='COMPLETED':
+        elif TASKS[i].status()['state'] == 'COMPLETED':
             done_image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.eq('scale_factor_set', 'True')).aggregate_array('system:index').getInfo()
             if TASKS[i].status()['description'] not in done_image_ids:
-                if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 20480: 
+                if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 20000:
                     ee.data.deleteAsset(config.IC_ID + '/' + TASKS[i].status()['description'])
-                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 2
+                    if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 2000:
+                        cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 1.5)
+                    else:
+                        cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] + 1000
                     cities_track.loc[cID, 'NO_RUNS'] = 0
                     TASKS = TASKS + get_urban_extents(IDS, [cID], cities_track)
                     del TASKS[i]
                 else:
-                    city_point = ee.Feature(ee.FeatureCollection(geelayers.CITY_DATA_POINT).filter(ee.Filter.eq('ORIG_FID',cID)).first()) 
+                    city_point = ee.Feature(ee.FeatureCollection(config.CITY_DATA_POINT).filter(ee.Filter.eq(config.CITY_ID_COL, cID)).first())
                     count_image = ee.ImageCollection(config.IC_ID).filterBounds(city_point.geometry()).aggregate_array('system:index').getInfo()
                     if len(count_image) > 1:
                         cities_track.loc[cID, 'DONE'] = True
@@ -97,28 +102,30 @@ def post_check_task_scale(TASKS, cities_track):
                 del TASKS[i]
     return TASKS, cities_track
 
-import time
-import pandas as pd
 
-IDS = geelayers.CITY_DATA.sort('P_R23_2020', False).aggregate_array('ORIG_FID').getInfo()
-# FULL_IDS = geelayers.CITY_DATA_POINT.sort('P_R23_2020', False).aggregate_array('ORIG_FID').getInfo()
-cities_track = pd.read_csv('data/guppd_checked_cities_track_1980_guppd_v1_wUCnewcent.csv', encoding='utf-8', low_memory=False)
-cities_track.set_index('ORIG_FID', inplace=True)
-## limit number of cities for testing
+#
+# RUN
+#
+IDS = geelayers.CITY_DATA.sort(config.CITY_POP_COL, False).aggregate_array(config.CITY_ID_COL).getInfo()
+# FULL_IDS = config.CITY_DATA_POINT.sort(config.CITY_POP_COL, False).aggregate_array(config.CITY_ID_COL).getInfo()
+cities_track = pd.read_csv(config.CITY_TRACKER, encoding='latin1', low_memory=False)
+cities_track.set_index(config.CITY_ID_COL, inplace=True)
+# limit number of cities for testing
 # cities_track = cities_track.head(20)
 # filter out checked cities
-filtered_cities = cities_track[cities_track['NEED_CENTROID_CHECK']!=False]
-# filtered_cities = cities_track[cities_track['NEED_MAP_CHECK']!=False]
+filtered_cities = cities_track[(cities_track['NEED_CENTROID_CHECK'] != False) & (cities_track['DONE']!=True)]
+# filtered_cities = cities_track[cities_track['NEED_MAP_CHECK']==True]
 # filtered_cities = cities_track[cities_track['DONE']!=True]
-
+filtered_cities = cities_track[(cities_track['STUDY_AREA_SCALE_FACTOR'] == 1) & (cities_track['DONE'] != True)]
+filtered_cities = cities_track[cities_track.index==9110]
 
 total_mins = 0
-TASKS = get_urban_extents(IDS, filtered_cities.index.tolist(), cities_track) 
+TASKS = get_urban_extents(IDS, filtered_cities.index.tolist(), cities_track)
 
 while len(TASKS) > 0:
     if total_mins == 0:
         print('No of submitted tasks: ' + str(len(TASKS)))
-    TASKS, cities_track = post_check_task_scale(TASKS, cities_track) ########post_check_task
+    TASKS, cities_track = post_check_task_scale(TASKS, cities_track)  # post_check_task
     print('No of tasks to check: ' + str(len(TASKS)))
     print('No of tasks need centroid check: ' + str(cities_track['NEED_CENTROID_CHECK'].sum()))
     print('No of tasks need map check: ' + str(cities_track['NEED_MAP_CHECK'].sum()))
@@ -137,11 +144,15 @@ cities_track.to_csv('data/guppd_checked_cities_track_1980_guppd_v1_wUCnewcent.cs
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980').filter(ee.Filter.stringContains('system:index', '3764')).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_2010').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020').filter(ee.Filter.stringContains('system:index', '4909')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_1980a').filter(ee.Filter.eq('ORIG_FID', 34547)).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_1980a').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
+
 
 # print(image_ids)
 # len(image_ids)
 # # Delete images
 # for image_id in image_ids:
-#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020/'+image_id)
+#     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020/'+image_id)
 #     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980/'+image_id)
+#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_1980a/'+image_id)
 #     print("Deleted:", image_id)

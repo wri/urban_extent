@@ -1,10 +1,9 @@
-import os
 import ee
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
-import matplotlib.pyplot as plt
 ee.Initialize()
+
 
 #
 # CONFIG
@@ -21,13 +20,12 @@ ratio=A(circle)/A ~ alpha^2 * pi
 
 Note that city centers might be far from "centered"
 """""""""""""""""""""""""""""""""""""""""""""""""""
-#CONSTANTS
-OFFSET = None
-LIMIT = None
+#
+# CONSTANTS
+#
 DRY_RUN = False
-OFFSET = 0
 MAX_NNN_DISTANCE = 2500
-MAX_ERR = 10
+MAX_ERR = 1
 MINPIXS = 10
 SUBURBAN_BOUND = 0.25
 URBAN_BOUND = 0.5
@@ -42,22 +40,16 @@ PPOLICY = {
     'builtup': 'mode',
     'density': 'mean',
 }
-USE_COMPLETED_FILTER = True # used
+USE_COMPLETED_FILTER = True  # used
 
-# Set output image collection for all processed cities
-ROOT='projects/wri-datalab/cities/urban_land_use/data'
-# Update image collection year to [1980, 1990, 2000, 2005, 2010, 2015, 2020]
-IC_ID = f'{ROOT}/global_GUPPD_Mar2025/builtup_density_JRCs_1980a'
-# f'{ROOT}/african_cities_July2024/builtup_density_JRCs_africa_1980'
-# f'{ROOT}/test_tori_Apr2024/builtup_density_JRCs_Kigali_Nairobi_Addis'
 
+#
+# SETTINGS.OPTIONAL
+#
 # Built-up layer options
 # select pixel built-up density threshold
 # minimum m2 built out of possible 10000 for each GHSL grid cell included
 BuiltAreaThresh = 1000
-# set the built-up year for which to produce extents
-# [1980, 1990, 2000, 2005, 2010, 2015, 2020]
-mapYear = 1980
 
 # Use old UCDB population and built-up area estimates for regional calibration
 # City data from Global Human Settlement Layer (GHSL, 13K cities)
@@ -72,7 +64,8 @@ df = df[df['B15'] != 0]
 # Use GRGN_L2 as regions for regression
 # Replace value Polynesia with Melanesia in column 'GRGN_L2'
 # Only 1 city in Polynesia
-df['GRGN_L2'] = df['GRGN_L2'].replace('Polynesia', 'Melanesia')#.replace('Caribbean', 'Latin America and the Caribbean').replace('South America', 'Latin America and the Caribbean').replace('Central America', 'Latin America and the Caribbean').replace('Australia/New Zealand', 'Australia and New Zealand').replace('Middle Africa', 'Australia and New Zealand')
+df['GRGN_L2'] = df['GRGN_L2'].replace('Polynesia', 'Melanesia')
+# .replace('Caribbean', 'Latin America and the Caribbean').replace('South America', 'Latin America and the Caribbean').replace('Central America', 'Latin America and the Caribbean').replace('Australia/New Zealand', 'Australia and New Zealand').replace('Middle Africa', 'Australia and New Zealand')
 df['GRGN_L2'].value_counts()
 
 results = {}
@@ -92,3 +85,41 @@ for region in df['GRGN_L2'].unique():
     }
 
 FIT_PARAMS = ee.Dictionary(results)
+
+
+#
+# SETTINGS.REQUIRED
+#
+# Set the built-up year for which to produce extents
+# [1980, 1990, 2000, 2005, 2010, 2015, 2020]
+mapYear = 1980
+
+# Set output image collection for all processed cities
+ROOT = 'projects/wri-datalab/cities/urban_land_use/data'
+# Update output image collection id
+IC_ID = f'{ROOT}/global_GUPPD_Mar2025/builtup_density_JRCs_{mapYear}a'
+# f'{ROOT}/african_cities_July2024/builtup_density_JRCs_africa_1980'
+# f'{ROOT}/test_tori_Apr2024/builtup_density_JRCs_Kigali_Nairobi_Addis'
+
+# Input city point feature collection
+# Checked city points
+# CITY_DATA_POINT = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/city_data_checked')
+CITY_DATA_POINT = ee.FeatureCollection(
+    'projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/guppd_v1_wUCnewcent')
+# 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_checked'
+# 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/city_data_checked_africa'
+# 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_Kigali_Nairobi_Addis'
+# Polygons [not used]
+# CITY_DATA_POLY = ee.FeatureCollection('projects/wri-datalab/AUE/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2')
+# CITY_DATA_POLY = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/guppd_v1_poly')
+
+# Column names from the city point data attributes
+# unique city numeric id
+CITY_ID_COL = 'ORIG_FID'
+# city name
+CITY_NAME_COL = 'CIES_NM_TL'
+# city population
+CITY_POP_COL = 'P_R23_2020'
+
+# CSV file for result and progress tracking
+CITY_TRACKER = 'data/guppd_checked_cities_track_1980_guppd_v1_wUCnewcent.csv'
