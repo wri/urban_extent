@@ -1,6 +1,3 @@
-import helpers
-import geelayers
-import config
 import time
 import pandas as pd
 import re
@@ -8,6 +5,10 @@ from unidecode import unidecode
 import ee
 # ee.Authenticate(force=True)
 ee.Initialize()
+
+import config
+import geelayers
+import helpers
 
 
 # Create a function called get_super_feat
@@ -68,7 +69,7 @@ def post_check_task_scale(TASKS, cities_track):
                 TASKS = TASKS + get_urban_extents(IDS, [cID], cities_track)
                 del TASKS[i]
             else:
-                point_buffer = ee.Feature(ee.FeatureCollection(config.CITY_DATA_POINT).filter(ee.Filter.eq(config.CITY_ID_COL, cID)).first()).geometry().buffer(2000)
+                point_buffer = ee.Feature(ee.FeatureCollection(config.CITY_DATA_POINT).filter(ee.Filter.eq(config.CITY_ID_COL, cID)).first()).geometry().buffer(1800)
                 non_na_pixels = geelayers.BU_CONNECTED.reduceRegion(
                     reducer=ee.Reducer.count(),
                     geometry=point_buffer,
