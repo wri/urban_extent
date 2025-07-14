@@ -92,7 +92,7 @@ FIT_PARAMS = ee.Dictionary(results)
 #
 # Set the built-up year for which to produce extents
 # [1980, 1990, 2000, 2005, 2010, 2015, 2020]
-mapYear = 1980
+mapYear = 2020
 
 # Set output image collection for all processed cities
 ROOT = 'projects/wri-datalab/cities/urban_land_use/data'
@@ -122,4 +122,4 @@ CITY_NAME_COL = 'CIES_NM_TL'
 CITY_POP_COL = 'P_R23_2020'
 
 # CSV file for result and progress tracking
-CITY_TRACKER = 'data/guppd_checked_cities_track_1980_guppd_v1_wUCnewcent.csv'
+CITY_TRACKER = f'data/guppd_checked_cities_track_{mapYear}_guppd_v1_wUCnewcent.csv'
