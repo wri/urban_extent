@@ -83,12 +83,12 @@ def post_check_task_scale(TASKS, cities_track):
     for task in complete_tasks:
         cID = int(task.status()['description'].split('-')[-2])
         if task.status()['description'] not in done_image_ids:
-            if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 20000:
+            if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 15000:
                 ee.data.deleteAsset(config.IC_ID + '/' + task.status()['description'])
                 if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 2000:
-                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 1.5)
+                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 1.8)
                 else:
-                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] + 1000
+                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] + 1500
                 cities_track.loc[cID, 'NO_RUNS'] = 0
                 TASKS = TASKS + get_urban_extents(IDS, [cID], cities_track)
             else:
