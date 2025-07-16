@@ -132,14 +132,13 @@ IDS = geelayers.CITY_DATA.sort(config.CITY_POP_COL, False).aggregate_array(confi
 # FULL_IDS = config.CITY_DATA_POINT.sort(config.CITY_POP_COL, False).aggregate_array(config.CITY_ID_COL).getInfo()
 cities_track = pd.read_csv(config.CITY_TRACKER, encoding='latin1', low_memory=False)
 cities_track.set_index(config.CITY_ID_COL, inplace=True)
-# limit number of cities for testing
-# cities_track = cities_track.head(20)
+
 # filter out checked cities
 filtered_cities = cities_track[(cities_track['NEED_CENTROID_CHECK'] != False) & (cities_track['NEED_CENTROID_CHECK'] != True) & (cities_track['DONE']!=True)]
 # filtered_cities = cities_track[cities_track['NEED_MAP_CHECK']==True]
-filtered_cities = cities_track[cities_track['DONE']!=True]
-filtered_cities = cities_track[(cities_track['STUDY_AREA_SCALE_FACTOR'] == 1) & (cities_track['DONE'] != True)]
-filtered_cities = cities_track[cities_track.index==9110]
+# filtered_cities = cities_track[cities_track['DONE']!=True]
+# filtered_cities = cities_track[(cities_track['STUDY_AREA_SCALE_FACTOR'] == 1) & (cities_track['DONE'] != True)]
+# filtered_cities = cities_track[cities_track.index==9110]
 
 total_mins = 0
 TASKS = get_urban_extents(IDS, filtered_cities.index.tolist(), cities_track)
@@ -171,14 +170,14 @@ cities_track.to_csv(config.CITY_TRACKER, encoding='utf-8')
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_2010').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020').filter(ee.Filter.stringContains('system:index', '4909')).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a').filter(ee.Filter.eq('ORIG_FID', 34547)).aggregate_array('system:index').getInfo()
-image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
 
 
-print(image_ids)
-len(image_ids)
-# Delete images
-for image_id in image_ids:
-    # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020/'+image_id)
-    # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980/'+image_id)
-    ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a/'+image_id)
-    print("Deleted:", image_id)
+# print(image_ids)
+# len(image_ids)
+# # Delete images
+# for image_id in image_ids:
+#     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020/'+image_id)
+#     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980/'+image_id)
+#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a/'+image_id)
+#     print("Deleted:", image_id)
