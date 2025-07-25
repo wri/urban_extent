@@ -138,7 +138,7 @@ filtered_cities = cities_track[(cities_track['NEED_CENTROID_CHECK'] != False) & 
 # filtered_cities = cities_track[cities_track['NEED_MAP_CHECK']==True]
 # filtered_cities = cities_track[cities_track['DONE']!=True]
 # filtered_cities = cities_track[(cities_track['STUDY_AREA_SCALE_FACTOR'] == 1) & (cities_track['DONE'] != True)]
-# filtered_cities = cities_track[cities_track.index==9110]
+# filtered_cities = cities_track[cities_track.index==12429]
 
 total_mins = 0
 TASKS = get_urban_extents(IDS, filtered_cities.index.tolist(), cities_track)
@@ -161,7 +161,8 @@ while len(TASKS) > 0:
 print('Success!')
 
 cities_track.to_csv(config.CITY_TRACKER, encoding='utf-8')
-
+print('Number of cities in the centroid database: ' + str(ee.FeatureCollection(config.CITY_DATA_POINT).size().getInfo()))
+print('Number of cities in the GEE collection: ' + str(ee.ImageCollection(config.IC_ID).size().getInfo()))
 
 ###### Remove images
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
