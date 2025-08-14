@@ -120,6 +120,8 @@ CITY_ID_COL = 'ORIG_FID'
 CITY_NAME_COL = 'CIES_NM_TL'
 # city population
 CITY_POP_COL = 'P_R23_2020'
+# city region
+CITY_REG_COL = 'GRGN_L2'
 
 # CSV file for result and progress tracking
 CITY_TRACKER = f'data/guppd_checked_cities_track_{mapYear}_guppd_v1_wUCnewcent.csv'
