@@ -1,3 +1,6 @@
+import helpers
+import geelayers
+import config
 import time
 import pandas as pd
 import re
@@ -5,10 +8,6 @@ from unidecode import unidecode
 import ee
 # ee.Authenticate(force=True)
 ee.Initialize()
-
-import config
-import geelayers
-import helpers
 
 
 # Create a function called get_super_feat
@@ -78,7 +77,7 @@ def post_check_task_scale(TASKS, cities_track):
             complete_tasks.append(TASKS[i])
             del TASKS[i]
 
-   # Check if scale factor is set for COMPLETED cities 
+   # Check if scale factor is set for COMPLETED cities
     done_image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.eq('scale_factor_set', 'True')).aggregate_array('system:index').getInfo()
     for task in complete_tasks:
         cID = int(task.status()['description'].split('-')[-2])
@@ -99,12 +98,12 @@ def post_check_task_scale(TASKS, cities_track):
                 else:
                     cities_track.loc[cID, 'NEED_MAP_CHECK'] = True
         else:
-            cities_track.loc[cID, 'DONE'] = True 
-    
+            cities_track.loc[cID, 'DONE'] = True
+
     # Determine if need centroid check for failed tasks
     cIDs = [int(t.status()['description'].split('-')[-2])
             for t in failed_tasks]
-    cIDs = list(set(cIDs))  
+    cIDs = list(set(cIDs))
     points_fc = ee.FeatureCollection(config.CITY_DATA_POINT).filter(ee.Filter.inList(config.CITY_ID_COL, cIDs))
     points_buffer = points_fc.map(lambda f: f.buffer(1800))
 
@@ -143,11 +142,11 @@ cities_track = pd.read_csv(config.CITY_TRACKER, encoding='latin1', low_memory=Fa
 cities_track.set_index(config.CITY_ID_COL, inplace=True)
 
 # filter out checked cities
-filtered_cities = cities_track[(cities_track['NEED_CENTROID_CHECK'] != False) & (cities_track['NEED_CENTROID_CHECK'] != True) & (cities_track['DONE']!=True)]
+filtered_cities = cities_track[(cities_track['NEED_CENTROID_CHECK'] != False) & (cities_track['NEED_CENTROID_CHECK'] != True) & (cities_track['DONE'] != True)]
 # filtered_cities = cities_track[cities_track['NEED_MAP_CHECK']==True]
-# filtered_cities = cities_track[cities_track['DONE']!=True]
+# filtered_cities = cities_track[cities_track['DONE']==False]
 # filtered_cities = cities_track[(cities_track['STUDY_AREA_SCALE_FACTOR'] == 1) & (cities_track['DONE'] != True)]
-# filtered_cities = cities_track[cities_track.index==12429]
+# filtered_cities = cities_track[cities_track.index==12429]  # Atlanta
 
 total_mins = 0
 TASKS = get_urban_extents(IDS, filtered_cities.index.tolist(), cities_track)

@@ -15,9 +15,12 @@ def get_circle_data_simple(feat, city_track):
     crs = get_crs(centroid)
     region = ee.String(feat.get(config.CITY_REG_COL)).trim()
     pop = feat.getNumber(config.CITY_POP_COL)
+
     est_area = get_area(pop, region)
     est_influence_distance = get_influence_distance(est_area)
-    scaled_area = est_area.multiply(float(city_track['STUDY_AREA_SCALE_FACTOR']))
+
+    scale_factor = float(city_track['STUDY_AREA_SCALE_FACTOR'])
+    scaled_area = est_area.multiply(scale_factor)
     radius = get_radius(scaled_area)
     study_bounds = centroid.buffer(radius, config.MAX_ERR)
 
@@ -40,7 +43,7 @@ def get_circle_data_simple(feat, city_track):
             'scaled_area': scaled_area,
             'study_radius': radius,
             'est_influence_distance': est_influence_distance,
-            'study_area_scale_factor': float(city_track['STUDY_AREA_SCALE_FACTOR']),
+            'study_area_scale_factor': scale_factor,
             # 'use_center_of_mass': str(city_track['USE_COM']),
             # 'use_inspected_centroid': str(city_track['USE_INSPECTED_CENTROIDS']),
             'builtup_year': config.mapYear
@@ -66,6 +69,8 @@ def vectorize(data):
         rightValue=bu_centroid,
         maxError=config.MAX_ERR
     )
+    # flatten multipolygons to polygons and fill holes in vector polygons
+    feats = flatten_to_polygons(feats).map(fill_polygon)
     # buffer each vector feature by its influence distance (function of its area)
     feats = ee.FeatureCollection(feats.map(buffered_feat))
     # dissolve all vectors to merge overlapping influence area features
@@ -76,7 +81,7 @@ def vectorize(data):
     # fill holes in vector polygons
     feats = fill_polygons(feats)
     # return vector polygons as a single feature
-    return ee.Feature(feats.geometry()).copyProperties(data)
+    return ee.Feature(feats).copyProperties(data)
 
 
 #
@@ -88,17 +93,6 @@ def _filter_and_geom_type(f, valid_check):
 
 def _geom_type(f):
     return ee.Feature(f).set({'geomType': f.geometry().type()})
-
-
-def flatten_geometry_collection(feat):
-    feat = ee.Feature(feat)
-    geom = feat.geometry()
-    return ee.FeatureCollection(geom.geometries().map(lambda g: feat.setGeometry(g)))
-
-
-def flatten_multipolygon(feat):
-    geom = ee.Feature(feat).geometry()
-    return ee.FeatureCollection(geom.coordinates().map(lambda coords: ee.Feature(ee.Geometry.Polygon(coords))))
 
 
 def fill_polygon(feat):
@@ -127,80 +121,6 @@ def flatten_to_polygons(feats, valid_check=None):
 def fill_polygons(feats):
     feats = flatten_to_polygons(feats).map(fill_polygon)
     return feats.geometry().dissolve()
-
-
-def fill_holes_ALGO(feat, max_fill):
-    def _filler(coords):
-        poly = ee.Geometry.Polygon(coords)
-        return ee.Algorithms.If(poly.area(config.MAX_ERR).gt(max_fill), coords)
-    feat = ee.Feature(feat)
-    ncoords = feat.geometry().coordinates().map(_filler, True)
-    return ee.Algorithms.If(ncoords.size(), feat.setGeometry(ee.Geometry.Polygon(ncoords)))
-
-
-def fill_holes(feat, max_fill):
-    coords_list = feat.geometry().coordinates()
-    outer = coords_list.slice(0, 1)
-    inner = coords_list.slice(1)
-
-    def _coords_feat(coords):
-        poly = ee.Geometry.Polygon(coords)
-        return ee.Feature(poly, {
-            'area': poly.area(config.MAX_ERR),
-            'coords': coords
-        })
-    coords_fc = ee.FeatureCollection(inner.map(_coords_feat))
-    coords_fc = coords_fc.filter(ee.Filter.gte('area', max_fill))
-
-    def _get_coords(feat):
-        return ee.Feature(feat).get('coords')
-    coords_list = coords_fc.toList(coords_fc.size().add(1)).map(_get_coords)
-    coords_list = outer.cat(coords_list)
-    return feat.setGeometry(ee.Geometry.Polygon(coords_list))
-
-
-#  fixes for built-up excluded during hole filling
-
-def add_coord_length(feat):
-    feat = ee.Feature(feat)
-    geom = feat.geometry()
-    coord_length = geom.coordinates().size()
-    return feat.set({
-        'coord_length': coord_length
-    })
-
-
-def hole_filling_method(feats, max_fill):
-    feats = feats.map(add_coord_length)
-    flat_feats = feats.filter(ee.Filter.lte('coord_length', 1))
-    complex_feats = feats  # .filter(ee.Filter.gt('coord_length',1))
-
-    def fill_small(feat):
-        return fill_holes(feat, max_fill)
-    complex_feats = complex_feats.map(fill_small)
-    feats = ee.FeatureCollection([
-        #    flat_feats,
-        complex_feats
-    ]).flatten()
-    return feats
-
-
-def flatten_to_polygons_and_fill_holes(feats, max_fill):
-    feats = ee.FeatureCollection(feats)
-    feats = feats.map(_geom_type)
-    gc_filter = ee.Filter.eq('geomType', 'GeometryCollection')
-    mpoly_filter = ee.Filter.eq('geomType', 'MultiPolygon')
-    other_filter = ee.Filter.Or(gc_filter, mpoly_filter).Not()
-    gc_data = feats.filter(gc_filter).map(flatten_geometry_collection).flatten()
-    mpoly_data = feats.filter(mpoly_filter).map(flatten_multipolygon).flatten()
-    other_data = feats.filter(other_filter)
-
-    gc_data = hole_filling_method(gc_data, max_fill)
-    mpoly_data = hole_filling_method(mpoly_data, max_fill)
-    other_data = hole_filling_method(other_data, max_fill)
-
-    feats = other_data.merge(gc_data).merge(mpoly_data)
-    return feats
 
 
 #
@@ -264,17 +184,6 @@ def get_influence_distance(area):
     return ee.Number(area).sqrt().multiply(config.GROWTH_RATE)
 
 
-def polygon_feat_boundry(feat):
-    feat = ee.Feature(feat)
-    geom = ee.Geometry.Polygon(feat.geometry().coordinates().get(0))
-    return ee.Feature(geom)
-
-
-def set_geom_type(feat):
-    feat = ee.Feature(feat)
-    return feat.set('geomType', feat.geometry().type())
-
-
 def geom_feat(g):
     return ee.Feature(ee.Geometry(g))
 
@@ -294,24 +203,6 @@ def flatten_multipolygon(feat):
     return ee.FeatureCollection(coords_list.map(coords_feat))
 
 
-def fill_polygons(feats):
-    feats = feats.map(set_geom_type)
-    gc_filter = ee.Filter.eq('geomType', 'GeometryCollection')
-    mpoly_filter = ee.Filter.eq('geomType', 'MultiPolygon')
-    poly_filter = ee.Filter.eq('geomType', 'Polygon')
-    gc_data = feats.filter(gc_filter).map(
-        flatten_geometry_collection).flatten()
-    mpoly_data = feats.filter(mpoly_filter).map(flatten_multipolygon).flatten()
-    poly_data = feats.filter(poly_filter)
-    feats = ee.FeatureCollection([
-        poly_data,
-        gc_data,
-        mpoly_data]).flatten()
-    feats = feats.map(set_geom_type).filter(poly_filter)
-    feats = feats.map(polygon_feat_boundry)
-    return feats
-
-
 def buffered_feat(feat):
     feat = ee.Feature(feat)
     area = feat.area(config.MAX_ERR)
@@ -319,7 +210,6 @@ def buffered_feat(feat):
 
 
 def buffered_feat_area(feat, area):
-    feat = ee.Feature(feat)
     area = ee.Number(area)
     infl = get_influence_distance(area)
     return feat.buffer(infl, config.MAX_ERR).set('buffer', infl)
