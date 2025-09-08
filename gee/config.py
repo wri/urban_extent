@@ -2,8 +2,9 @@ import ee
 import pandas as pd
 import numpy as np
 from sklearn.linear_model import LinearRegression
-ee.Initialize()
 
+
+ee.Initialize()
 
 #
 # CONFIG
@@ -25,7 +26,7 @@ Note that city centers might be far from "centered"
 #
 DRY_RUN = False
 MAX_NNN_DISTANCE = 2500
-MAX_ERR = 1
+MAX_ERR = 10
 MINPIXS = 10
 SUBURBAN_BOUND = 0.25
 URBAN_BOUND = 0.5
@@ -91,7 +92,10 @@ FIT_PARAMS = ee.Dictionary(results)
 # SETTINGS.REQUIRED
 #
 # Set the built-up year for which to produce extents
-# [1980, 1990, 2000, 2005, 2010, 2015, 2020]
+YEARS = [1980, 1990, 2000, 2005, 2010, 2015, 2020]
+# Set city union reference year
+REF_YEAR = 2020
+# Set map year for output image collection
 mapYear = 2020
 
 # Set output image collection for all processed cities

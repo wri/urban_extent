@@ -1,14 +1,16 @@
-import helpers
-import geelayers
-import config
 import time
 import pandas as pd
 import re
-from unidecode import unidecode
 import ee
+from unidecode import unidecode
+
+import helpers
+import geelayers
+import config
+
+
 # ee.Authenticate(force=True)
 ee.Initialize()
-
 
 # Create a function called get_super_feat
 def get_urban_extents(IDS, CITIES_LIST, cities_track):
@@ -85,9 +87,9 @@ def post_check_task_scale(TASKS, cities_track):
             if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 15000:
                 ee.data.deleteAsset(config.IC_ID + '/' + task.status()['description'])
                 if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 2000:
-                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 1.8)
+                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 2)
                 else:
-                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] + 1500
+                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] + 2000
                 cities_track.loc[cID, 'NO_RUNS'] = 0
                 TASKS = TASKS + get_urban_extents(IDS, [cID], cities_track)
             else:

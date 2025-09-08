@@ -4,7 +4,7 @@ ee.Initialize()
 import config
 import geelayers
 
-
+##### helpers.py
 # MAIN
 
 def get_circle_data(feat, city_track):
@@ -169,3 +169,76 @@ def fill_holes(feat, max_fill):
     coords_list = coords_fc.toList(coords_fc.size().add(1)).map(_get_coords)
     coords_list = outer.cat(coords_list)
     return feat.setGeometry(ee.Geometry.Polygon(coords_list))
+
+
+##### urban_extents_from_super_rasters.py
+
+
+# ROOT= 'projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025'
+# # 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024' #'users/emackres'
+# SUFFIX= 'JRCs' #'GHSL_BUthresh10pct' #'Kigali_GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh10pct' #'GHSL_GHSLthresh5pct' #'WSFevo' 'GHSL2023_2015'  'WSFevo_2015' 'GHSL_WSFunion_2015'
+# SR_ID=f'{ROOT}/builtup_density_{SUFFIX}_{config.mapYear}'
+
+
+# DEST_NAME=f'{SUFFIX}_{config.mapYear}'#_{REGION_SHORT}'
+# DEST_NAME=f'{SUFFIX}'#_{YEAR}'
+
+# #
+# # HELPERS
+# #
+# def get_influence_distance(area):
+#   return ee.Number(area).sqrt().multiply(GROWTH_RATE)
+
+
+# def fill_small(feat):
+#   return h.fill_holes(feat,MAX_FILL)
+
+
+#
+# MAIN
+#
+# def add_coord_length(feat):
+#   feat=ee.Feature(feat)
+#   geom=feat.geometry()
+#   coord_length=geom.coordinates().size()
+#   geom_type=geom.type()
+#   return feat.set({
+#       'coord_length': coord_length
+#     })
+
+
+#
+# EXPORT
+#
+# name=DEST_NAME
+# count=SUPER_IC.size()
+# split_pos=count.divide(2).toInt()
+# limit_pos=count.subtract(LIMIT)
+
+# if SPLIT_INDEX is not False:
+#   name=f'{name}_split{SPLIT_INDEX}'
+#   if SPLIT_INDEX==1:
+#     SUPER_IC=SUPER_IC.limit(count.subtract(split_pos),'City__Name',False)  
+#   else:
+#     SUPER_IC=SUPER_IC.limit(split_pos,'City__Name',True)  
+
+
+# if TEST_CITY:
+#   name=f'TESTER_{TEST_CITY}'
+#   SUPER_IC=SUPER_IC.filter(ee.Filter.eq('City__Name',TEST_CITY))
+# else:
+#   if LIMIT:
+#     SUPER_IC=SUPER_IC.limit(LIMIT,'Pop_2010',False)#.filter(ee.Filter.inList('City__Name',['Shanghai, Shanghai']))
+#     name=f'{name}-lim{LIMIT}'
+#     # SUPER_IC=SUPER_IC.limit(limit_pos,'Pop_2010',True).sort('system:asset_size')
+#     # name=f'{name}-lim{LIMIT}remainder'
+#   else:
+#     SUPER_IC=SUPER_IC.sort('Pop_2010')
+
+
+# if VECTOR_BUFFER:
+#   name=f'{name}-b{VECTOR_BUFFER}'
+# if VECTOR_SCALE:
+#   name=f'{name}-vs{VECTOR_SCALE}'
+# if RASTER_BUFFER:
+#   name=f'{name}-rb{RASTER_BUFFER}-smask'
