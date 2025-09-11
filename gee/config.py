@@ -96,12 +96,12 @@ YEARS = [1980, 1990, 2000, 2005, 2010, 2015, 2020]
 # Set city union reference year
 REF_YEAR = 2020
 # Set map year for output image collection
-mapYear = 2020
+mapYear = 1980
 
 # Set output image collection for all processed cities
 ROOT = 'projects/wri-datalab/cities/urban_land_use/data'
 # Update output image collection id
-IC_ID = f'{ROOT}/global_GUPPD_Mar2025/builtup_density_JRCs_{mapYear}a'
+IC_ID = f'{ROOT}/global_GUPPD_Sept2025/builtup_density_JRCs_{mapYear}'
 # f'{ROOT}/african_cities_July2024/builtup_density_JRCs_africa_1980'
 # f'{ROOT}/test_tori_Apr2024/builtup_density_JRCs_Kigali_Nairobi_Addis'
 
@@ -109,7 +109,7 @@ IC_ID = f'{ROOT}/global_GUPPD_Mar2025/builtup_density_JRCs_{mapYear}a'
 # Checked city points
 # CITY_DATA_POINT = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/city_data_checked')
 CITY_DATA_POINT = ee.FeatureCollection(
-    'projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/guppd_v1_wUCnewcent')
+    'projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Sept2025/guppd_v1_wUCnewcent_spotadditions')
 # 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_checked'
 # 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/city_data_checked_africa'
 # 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_Kigali_Nairobi_Addis'
@@ -128,4 +128,4 @@ CITY_POP_COL = 'P_R23_2020'
 CITY_REG_COL = 'GRGN_L2'
 
 # CSV file for result and progress tracking
-CITY_TRACKER = f'data/guppd_checked_cities_track_{mapYear}_guppd_v1_wUCnewcent.csv'
+CITY_TRACKER = f'data/guppd_checked_cities_track_{mapYear}_guppd_v1_wUCnewcent_spotadditions.csv'
