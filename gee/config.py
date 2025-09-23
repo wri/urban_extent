@@ -57,10 +57,15 @@ BuiltAreaThresh = 1000
 # https://human-settlement.emergency.copernicus.eu/ghs_stat_ucdb2015mt_r2019a.php
 # linear average relationships between population and built-up area
 df = pd.read_csv('data/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2.csv', encoding='latin1', low_memory=False)
+# df = pd.read_csv('data/guppd_v1.csv', encoding='latin1', low_memory=False)
 # Drop rows where all columns are NaN
 df = df.dropna(how='all')
 # Drop rows where B15 is 0
 df = df[df['B15'] != 0]
+# df = df[df['AREA_SQKM'] != 0]
+# df = df[df['P_R23_2020'] >= 30000]
+# df = df[df['P_R23_2020'] != 0]
+
 
 # Use GRGN_L2 as regions for regression
 # Replace value Polynesia with Melanesia in column 'GRGN_L2'
@@ -86,7 +91,6 @@ for region in df['GRGN_L2'].unique():
     }
 
 FIT_PARAMS = ee.Dictionary(results)
-
 
 #
 # SETTINGS.REQUIRED
