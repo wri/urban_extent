@@ -121,7 +121,7 @@ def post_check_task_scale(TASKS, cities_track):
         props = feat['properties']
         cID = int(props[config.CITY_ID_COL])
         count = int(props.get('count', 0))
-        cities_track.loc[cID, 'NEED_CENTROID_CHECK'] = (count > 10)
+        cities_track.loc[cID, 'NEED_CENTROID_CHECK'] = bool(count > 10)
 
         if cities_track.loc[cID, 'NEED_CENTROID_CHECK']:
             cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] / 1.8)
@@ -182,7 +182,7 @@ print('Number of cities in the GEE collection: ' + str(ee.ImageCollection(config
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020').filter(ee.Filter.stringContains('system:index', '4909')).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a').filter(ee.Filter.eq('ORIG_FID', 34547)).aggregate_array('system:index').getInfo()
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
-
+# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Sept2025/builtup_density_JRCs_1980').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
 
 # print(image_ids)
 # len(image_ids)
@@ -190,5 +190,5 @@ print('Number of cities in the GEE collection: ' + str(ee.ImageCollection(config
 # for image_id in image_ids:
 #     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020/'+image_id)
 #     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980/'+image_id)
-#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a/'+image_id)
+#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Sept2025/builtup_density_JRCs_1980/'+image_id)
 #     print("Deleted:", image_id)
