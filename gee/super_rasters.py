@@ -84,12 +84,9 @@ def post_check_task_scale(TASKS, cities_track):
     for task in complete_tasks:
         cID = int(task.status()['description'].split('-')[-2])
         if task.status()['description'] not in done_image_ids:
-            if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 15000:
+            if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 10000:
                 ee.data.deleteAsset(config.IC_ID + '/' + task.status()['description'])
-                if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] < 2000:
-                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 2)
-                else:
-                    cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] + 2000
+                cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] * 2)
                 cities_track.loc[cID, 'NO_RUNS'] = 0
                 TASKS = TASKS + get_urban_extents(IDS, [cID], cities_track)
             else:
@@ -124,7 +121,7 @@ def post_check_task_scale(TASKS, cities_track):
         cities_track.loc[cID, 'NEED_CENTROID_CHECK'] = bool(count > 10)
 
         if cities_track.loc[cID, 'NEED_CENTROID_CHECK']:
-            cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] / 1.8)
+            cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] / 2)
             if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] >= 4:
                 get_urban_extents(IDS, [cID], cities_track)
                 cities_track.loc[cID, 'NEED_MAP_CHECK'] = True
@@ -173,6 +170,7 @@ print('Success!')
 cities_track.to_csv(config.CITY_TRACKER, encoding='utf-8')
 print('Number of cities in the centroid database: ' + str(ee.FeatureCollection(config.CITY_DATA_POINT).size().getInfo()))
 print('Number of cities in the GEE collection: ' + str(ee.ImageCollection(config.IC_ID).size().getInfo()))
+
 
 ###### Remove images
 # image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
