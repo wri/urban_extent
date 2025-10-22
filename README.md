@@ -14,16 +14,16 @@
 
     | ID_HDC_G0 | UC_NM_MN    | STUDY_AREA_SCALE_FACTOR | NO_RUNS | NEED_CENTROID_CHECK | NEED_MAP_CHECK | DONE |
     |-----------|-------------|-------------------------|---------|---------------------|----------------|------|
-    | 1         | City Name 1 | 20                      | 0       |                     |                |      |
-    | 2         | City Name 2 | 20                      | 0       |                     |                |      |
-    | 3         | City Name 3 | 20                      | 0       |                     |                |      |
+    | 1         | City Name 1 | 4                       | 0       |                     |                |      |
+    | 2         | City Name 2 | 4                       | 0       |                     |                |      |
+    | 3         | City Name 3 | 4                       | 0       |                     |                |      |
 
     - **ID_HDC_G0**: Column for unique city ID. Update the column name if using data from other source.
     - **UC_NM_MN**: Column for the city name. Update the column name if using data from other source.
-    - **STUDY_AREA_SCALE_FACTOR**: Set to 20 as the default initial value. It will be increased automatically in loops if it is not large enough.
+    - **STUDY_AREA_SCALE_FACTOR**: Set to 4 as the default initial value. It will be increased automatically in loops if it is not large enough.
     - **NO_RUNS**: Set to 0 as default initial value.
     - **NEED_CENTROID_CHECK**: Empty as initial value. It will be set to `TRUE` if an urban area for the city cannot be found.
-    - **NEED_MAP_CHECK**: Empty as initial value. It will be set to `TRUE` if scale factor of 2560 is not large enough.
+    - **NEED_MAP_CHECK**: Empty as initial value. It will be set to `TRUE` if scale factor of 16384 is not large enough.
     - **DONE**: Empty as initial value. It will be set to `TRUE` when urban extent area has been successfully generated for the city.
 
     After each run for all cities, review the tracking sheet:
@@ -46,14 +46,14 @@ To map the urban extent of any city, we followed the steps articulated here:
     2. obtain centroids from Overture Maps, matched by city and country names; 
     3. obtain centroids from Google Map API, matched by city and country names; 
     4. manually inspect and adjust the centroid points if none of the prior methods provided satisfactory results.
-2.	For each city _i_, define an overly inclusive maximum area of interest (the “study area”) using a radius ($R_i$) from the city centroid based on estimated city population ($P_i$) and slope ($S_r$) and intercept ($I_r$) from the linear average relationships between population and built-up area for all cities in each geographical region of GHS-UCDB R2019A and scaling it by a scale factor ($F_i$) initially set at 20. The population and built-up area data used to establish this relationship were from 2015, as provided by GHS-UCDB R2019A. 
+2.	For each city _i_, define an overly inclusive maximum area of interest (the “study area”) using a radius ($R_i$) from the city centroid based on estimated city population ($P_i$) and slope ($S_r$) and intercept ($I_r$) from the linear average relationships between population and built-up area for all cities in each geographical region of GHS-UCDB R2019A and scaling it by a scale factor ($F_i$) initially set at 4. The population and built-up area data used to establish this relationship were from 2015, as provided by GHS-UCDB R2019A. 
 
 $$
 R_i = \sqrt{\frac{e^{\left( S_r \cdot \ln(P_i) + I_r \right)} \cdot F_i}{\pi}} \qquad (1)
 $$
 
 3.	For each year, classify each built-up pixel within the study area based on the percent of pixels that are built-up within its 1-km2 circular neighborhood, an area with a radius roughly equivalent to a ten-minute walk. If 50% or more of the pixels in the circle are built-up, the pixel is classified as _Urban_. If less than 50% but 25% or more of the pixels in the circle are built-up, the pixel is classified as _Suburban_. If less than 25% of the pixels in the circle are built-up, the pixel is classified as _Rural_.
-4.	If any of the _Urban_, _Suburban_, or _Rural_ pixels touches the boundary of the maximum area of interest in step 2, it suggests that the urban extent mapping may be constrained by the predefined study area. In such cases, we double the scale factor and re-run steps 2 and 3. The process begins with an initial scale factor of 20. If the urban extent is still insufficiently covered when the scale factor reaches 2560, a visual inspection of the city on the map was conducted. Based on the inspection, the scale factor was manually adjusted as necessary to ensure complete coverage of the urban extent (this was required for 11 cities for the year 2020 and the same or fewer cities in previous years).
+4.	If any of the _Urban_, _Suburban_, or _Rural_ pixels touches the boundary of the maximum area of interest in step 2, it suggests that the urban extent mapping may be constrained by the predefined study area. In such cases, we double the scale factor and re-run steps 2 and 3. The process begins with an initial scale factor of 4. If the urban extent is still insufficiently covered when the scale factor reaches 16384, a visual inspection of the city on the map was conducted. Based on the inspection, the scale factor was manually adjusted as necessary to ensure complete coverage of the urban extent (this was required for 11 cities for the year 2020 and the same or fewer cities in previous years).
 5.	Vectorize all contiguous _Urban_ and _Suburban_ pixels to form urban cluster polygons. 
 6.	Calculate the influence distance $d$ of each urban cluster with an area $A$ as the depth of a buffering ring around a circle with an area $A$ and ring area equal to $0.25A$. 
 
@@ -105,7 +105,7 @@ $$
 - **study_center_lon**: Selected city centroid point coordinate - longitude.
 - **bu_city_center_lat**: Non NA start point coordinate - latitude.
 - **bu_city_center_lon**:  Non NA start point coordinate - longitude.
-- **study_area_scale_factor**: Scale factor - 20/40/80/160/320/640/1280/2560/5120/10240/20480
+- **study_area_scale_factor**: Scale factor - 4/8/16/32/64/128/256/512/1024/2048/4096/8192/16384
 - **GRGN_L1 [region1]**: The continent from source.
 - **GRGN_L2 [region2]**: More detailed regional information from the source, used for B15-P15 regression. 
 - **[city_name_large]**: The name of the largest constituent city (based on population in 2015) within a unioned city.
@@ -118,3 +118,64 @@ $$
 ## GEE scripts for visual inspection
 - For city centroid inspection: https://code.earthengine.google.com/5ba6666a76deed96625415f010c575e0
 - For scale factor inspection on map: https://code.earthengine.google.com/8f62fbcff29e790b13d01deb44049e97
+
+## Guidance for handling interrupted runs
+With the current setup, runs cannot be interrupted midway, as the task IDs tracked on the Google Earth Engine (GEE) side will be lost. If a run breaks in the middle, follow the steps below to resume and clean up properly.
+
+1. Remove incomplete images from the output ImageCollection
+
+    After a failed run, some urban extent images may still appear in your GEE assets. However, these may have an incomplete scale factor. The `scale_factor_set` property determines whether an image’s scale factor was successfully set. You’ll need to remove images where `scale_factor_set` is `FALSE` using the script below: 
+    ```python
+    # Get a list of image ids from the output ImageCollection where 'scale_factor_set' is False
+    image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
+
+    # Check image id list
+    print(image_ids)
+    len(image_ids)
+
+    # Delete images
+    for image_id in image_ids:
+        ee.data.deleteAsset(config.IC_ID + '/' + image_id)
+        print("Deleted:", image_id)
+    ```
+
+2. Export a clean list of successfully generated cities
+
+    Export a clean list of cities that successfully generated urban extent images (i.e., the remaining images in the ImageCollection). This will create a CSV file named ORIG_FID_and_scale_export.csv in your Google Drive home folder.
+
+    ```javascript
+    // Load ImageCollection
+    var col = ee.ImageCollection('YOUR/IMAGE/COLLECTION/PATH');
+
+    // Map over it to build a FeatureCollection of just the three properties
+    var propsFC = col.map(function(img) {
+    return ee.Feature(
+        null,
+        {
+        ORIG_FID: img.get('ORIG_FID'),
+        study_area_scale_factor: img.get('study_area_scale_factor'),
+        scale_factor_set: img.get('scale_factor_set')
+        }
+    );
+    });
+
+    // Export to Drive as CSV
+    Export.table.toDrive({
+    collection: propsFC,
+    description: 'ORIG_FID_and_scale_export',
+    fileFormat: 'CSV',
+    selectors: ['ORIG_FID', 'study_area_scale_factor', 'scale_factor_set']
+    });
+    ```
+
+3. Update the tracking sheet
+
+    Compare the exported list (ORIG_FID_and_scale_export.csv) with your tracking sheet, and update it manually:
+    - Mark **DONE** as `TRUE` for all and only the cities listed in the exported CSV. 
+    - Ensure the **STUDY_AREA_SCALE_FACTOR** values in the tracking sheet match those in the CSV.
+    - Reset the number of runs **NO_RUNS** to 0 for all cities.
+    - (Optional) Double the scale factor for all cities without any tags in the following columns: **NEED_CENTROID_CHECK**, **NEED_MAP_CHECK**, and **DONE**.
+
+4. Restart the Run
+
+    Re-run [super_raster.py](gee/super_raster.py). Make sure the `filtered_cities` variable correctly represents the remaining cities that still need to be processed.

@@ -119,15 +119,17 @@ def post_check_task_scale(TASKS, cities_track):
         cID = int(props[config.CITY_ID_COL])
         count = int(props.get('count', 0))
         cities_track.loc[cID, 'NEED_CENTROID_CHECK'] = bool(count > 10)
+        if not bool(count > 10):
+            cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = 4
 
-        if cities_track.loc[cID, 'NEED_CENTROID_CHECK']:
-            cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] / 2)
-            if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] >= 4:
-                get_urban_extents(IDS, [cID], cities_track)
-                cities_track.loc[cID, 'NEED_MAP_CHECK'] = True
-                cities_track.loc[cID, 'DONE'] = False
-            else:
-                cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = 4
+        # if cities_track.loc[cID, 'NEED_CENTROID_CHECK']:
+        #     cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = round(cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] / 2)
+        #     if cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] >= 4:
+        #         get_urban_extents(IDS, [cID], cities_track)
+        #         cities_track.loc[cID, 'NEED_MAP_CHECK'] = True
+        #         cities_track.loc[cID, 'DONE'] = False
+        #     else:
+        #         cities_track.loc[cID, 'STUDY_AREA_SCALE_FACTOR'] = 4
 
     return TASKS, cities_track
 
