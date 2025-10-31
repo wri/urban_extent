@@ -100,7 +100,7 @@ YEARS = [1980, 1990, 2000, 2005, 2010, 2015, 2020]
 # Set city union reference year
 REF_YEAR = 2020
 # Set map year for output image collection
-mapYear = 1980
+mapYear = 2020
 
 # Set output image collection for all processed cities
 ROOT = 'projects/wri-datalab/cities/urban_land_use/data'

@@ -174,21 +174,15 @@ print('Number of cities in the centroid database: ' + str(ee.FeatureCollection(c
 print('Number of cities in the GEE collection: ' + str(ee.ImageCollection(config.IC_ID).size().getInfo()))
 
 
-###### Remove images
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/builtup_density_JRCs_checked_point_1980').filter(ee.Filter.stringContains('system:index', '12497')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980').filter(ee.Filter.stringContains('system:index', '3764')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_2010').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020').filter(ee.Filter.stringContains('system:index', '4909')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a').filter(ee.Filter.eq('ORIG_FID', 34547)).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/builtup_density_JRCs_2020a').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
-# image_ids = ee.ImageCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Sept2025/builtup_density_JRCs_1980').filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
+# # ###### Remove images
+# image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.eq('scale_factor_set', 'False')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.stringContains('system:index', '7416')).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.eq('ORIG_FID', 104253)).aggregate_array('system:index').getInfo()
+# image_ids = ee.ImageCollection(config.IC_ID).filter(ee.Filter.gt('study_area_scale_factor', 20000)).aggregate_array('system:index').getInfo()
 
 # print(image_ids)
 # len(image_ids)
 # # Delete images
 # for image_id in image_ids:
-#     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/builtup_density_JRCs_2020/'+image_id)
-#     # ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/builtup_density_JRCs_africa_1980/'+image_id)
-#     ee.data.deleteAsset('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Sept2025/builtup_density_JRCs_1980/'+image_id)
+#     ee.data.deleteAsset(config.IC_ID+'/'+image_id)
 #     print("Deleted:", image_id)
