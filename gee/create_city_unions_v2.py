@@ -2,6 +2,7 @@ import ee
 import geemap
 import networkx as nx
 import math
+import re
 from collections import defaultdict
 
 import config
@@ -10,8 +11,7 @@ import config
 # ee.Authenticate()
 ee.Initialize()
 
-urbext_ref = ee.FeatureCollection(f'projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/GHSL_BUthresh10pct_JRCs_{config.REF_YEAR}')
-# projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_{REF_YEAR}
+urbext_ref = ee.FeatureCollection(config.URBAN_EXTENTS_FC.format(year=config.REF_YEAR))
 urbext_data_ref = geemap.ee_to_df(urbext_ref)
 # Create overlap graph
 nodes = []
@@ -42,8 +42,7 @@ for i in range(len(component_lists_ref)):
 print('\n\nDone building reference ID list\n')
 
 for year in config.YEARS:
-    urbext_year = ee.FeatureCollection(f'{config.ROOT}/global_cities_Aug2024/GHSL_BUthresh10pct_JRCs_{year}')
-    # projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/GHSL_BUthresh10pct_JRCs_africa_{year}
+    urbext_year = ee.FeatureCollection(config.URBAN_EXTENTS_FC.format(year=year))
     urbext_data_year = geemap.ee_to_df(urbext_year)
     # Create overlap graph
     nodes = []
@@ -81,9 +80,9 @@ for year in config.YEARS:
         sorted_df = filtered_df.sort_values(by=config.CITY_ID_COL, ascending=False)
 
         namestring = '_'.join(sorted_df[config.CITY_NAME_COL].astype(str).unique())
-        countryisostring = '_'.join(sorted_df['CTR_MN_ISO'].astype(str).unique())
-        countrynamestring = '_'.join(sorted_df['CTR_MN_NM'].astype(str).unique())
-        region2string = '_'.join(sorted_df['GRGN_L2'].astype(str).unique())
+        countryisostring = '_'.join(sorted_df[config.CTR_ISO_COL].astype(str).unique())
+        countrynamestring = '_'.join(sorted_df[config.CTR_NAME_COL].astype(str).unique())
+        region2string = '_'.join(sorted_df[config.CITY_REG_COL].astype(str).unique())
         region1string = '_'.join(sorted_df['GRGN_L1'].astype(str).unique())
 
         return idstring, ee.Feature(old_features.geometry().dissolve(), ee.Dictionary({'city_name_large': max_name, 'city_id_large': max_id, 'city_ids': idstring, 'year': year, 'city_names': namestring, 'country_ISO': countryisostring, 'country_name': countrynamestring, 'region2': region2string, 'region1': region1string, 'reference_idstring': ref_idstring, 'reference_year': ref_year}))
@@ -130,10 +129,12 @@ for year in config.YEARS:
             chunk_collection = ee.FeatureCollection(features_chunk)
 
             # Create export task
+            urbext_union_assetId = config.URBAN_EXTENTS_UNIONS.format(year=year) + '_chunk_' + str(i+1)
+            description = re.sub('[\.\,\/]', '--', urbext_union_assetId.split('/')[-1])
             exportTask = ee.batch.Export.table.toAsset(
                 collection=chunk_collection,
-                description=f'urbext_unions_{year}_chunk_{i+1}',
-                assetId=f'{config.ROOT}/global_cities_Aug2024/urbanextents_unions_{year}_chunk_{i+1}'
+                description=description,
+                assetId=urbext_union_assetId
             )
 
             # Start the export task
@@ -142,29 +143,52 @@ for year in config.YEARS:
     else:
         nf_year = ee.FeatureCollection(new_features_list)
 
+        urbext_union_assetId = config.URBAN_EXTENTS_UNIONS.format(year=year)
+        description = re.sub('[\.\,\/]', '--', urbext_union_assetId.split('/')[-1])
         exportTask = ee.batch.Export.table.toAsset(
             collection=nf_year,
-            description=f'urbext_unions_{year}',
-            assetId=f'{config.ROOT}/global_cities_Aug2024/urbanextents_unions_{year}'
+            description=description,
+            assetId=urbext_union_assetId
             # projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/urbanextents_unions_{year}
         )
         exportTask.start()
 
 
 # If exported in chunks, merge the chunk assets
+# Run this part separately after all chunk exports are complete
 for year in config.YEARS:
-    # Load the FeatureCollection assets
-    collection1 = ee.FeatureCollection(f'{config.ROOT}/global_cities_Aug2024/urbanextents_unions_{year}_chunk_1')
-    collection2 = ee.FeatureCollection(f'{config.ROOT}/global_cities_Aug2024/urbanextents_unions_{year}_chunk_2')
+    chunk_collections = []
 
-    # Merge the FeatureCollections
-    merged_collection = collection1.merge(collection2)
+    # try chunk_1, chunk_2, ... until one doesn't exist
+    i = 1
+    while True:
+        asset_path = config.URBAN_EXTENTS_UNIONS.format(year=year) + '_chunk_' + str(i)
+        try:
+            # check if the asset exists
+            ee.data.getAsset(asset_path)
+            # if we get here, it exists → add to list
+            chunk_fc = ee.FeatureCollection(asset_path)
+            chunk_collections.append(chunk_fc)
+            i += 1
+        except Exception:
+            # asset doesn't exist → stop looking for more chunks
+            break
 
-    # Export the merged FeatureCollection to a new asset
+    # if no chunks found, skip this year
+    if not chunk_collections:
+        print(f'No chunks found for year {year}, skipping.')
+        continue
+
+    # merge all found chunks
+    merged_collection = chunk_collections[0]
+    for fc in chunk_collections[1:]:
+        merged_collection = merged_collection.merge(fc)
+
+    # export to final asset
     task = ee.batch.Export.table.toAsset(
         collection=merged_collection,
         description=f'Merged_Collection_Export_{year}',
-        # Specify the output asset path
-        assetId=f'{config.ROOT}/global_cities_Aug2024/urbanextents_unions_{year}'
+        assetId=config.URBAN_EXTENTS_UNIONS.format(year=year)
     )
     task.start()
+    print(f'Started export for {year}')

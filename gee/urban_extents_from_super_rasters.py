@@ -1,9 +1,8 @@
 import ee
-import helpers as h
 import re
 
 import config
-
+import helpers
 
 ee.Initialize()
 
@@ -11,14 +10,9 @@ ee.Initialize()
 # CONFIG
 #
 VECTOR_SCALE = None
-INPUT_VECTOR_SCALE = VECTOR_SCALE
-LIMIT = None
 DRY_RUN = False
 RASTER_BUFFER = False
 VECTOR_BUFFER = None
-TEST_CITY = None
-ENSURE_FEATS = False
-SPLIT_INDEX = False
 ENSURE_FEATS = True
 
 
@@ -41,7 +35,8 @@ else:
 #
 # IMPORTS
 #
-SUPER_IC = ee.ImageCollection(config.IC_ID).filter(ee.Filter.eq('builtup_year', config.mapYear))
+SUPER_IC = ee.ImageCollection(config.IC_ID).filter(
+    ee.Filter.eq('builtup_year', config.mapYear))
 # .filter(ee.Filter.eq('Reg_Name',REGION))#.filter(ee.Filter.eq('City__Name','Kigali'))#
 
 
@@ -53,7 +48,7 @@ else:
     GHSL_CRS = "EPSG:3857"
 
     GHSL_TRANSFORM = _proj['transform']
-    print("GHSL PROJ:", GHSL_CRS, GHSL_TRANSFORM)
+    # print("GHSL PROJ:", GHSL_CRS, GHSL_TRANSFORM)
     TRANSFORM = GHSL_TRANSFORM
     VECTOR_SCALE = None
 
@@ -86,8 +81,9 @@ def urban_extent(im):
         reducer=AREA_REDUCER,
         selectors=AREA_PROPS
     )
-    data = data.rename(['sum', 'suburban_area_sum', 'urban_area_sum'], AREA_PROPS)
-    feats = h.flatten_to_polygons_and_fill_holes(feats, MAX_FILL)
+    data = data.rename(['sum', 'suburban_area_sum',
+                       'urban_area_sum'], AREA_PROPS)
+    feats = helpers.flatten_to_polygons_and_fill_holes(feats, MAX_FILL)
     feat = ee.Feature(feats.geometry(config.MAX_ERR), data)
     if VECTOR_BUFFER:
         feat = feat.buffer(VECTOR_BUFFER, config.MAX_ERR)
@@ -102,15 +98,13 @@ if ENSURE_FEATS:
         ee.Filter.gt('nb_input_features', 0))
 
 
-description = re.sub('[\.\,\/]', '--', f"JRCs_{config.mapYear}a")
-asset_id = f'{config.ROOT}/global_GUPPD_Mar2025/GHSL_BUthresh10pct_JRCs_{config.mapYear}a'
-print('\n'*1)
-print(f'EXPORTING [{SUPER_IC.size().getInfo()}]:', asset_id)
-
+urbext_assetId = config.URBAN_EXTENTS_FC.format(year=config.mapYear)
+print(f'EXPORTING [{SUPER_IC.size().getInfo()}]:', urbext_assetId)
+description = re.sub('[\.\,\/]', '--', urbext_assetId.split('/')[-1])
 task = ee.batch.Export.table.toAsset(
     collection=urban_extents_fc,
     description=description,
-    assetId=asset_id)
+    assetId=urbext_assetId)
 if DRY_RUN:
     print('--dry_run')
 else:

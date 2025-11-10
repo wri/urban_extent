@@ -4,9 +4,9 @@ import re
 import ee
 from unidecode import unidecode
 
-import helpers
-import geelayers
 import config
+import geelayers
+import helpers
 
 
 # ee.Authenticate(force=True)

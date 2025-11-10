@@ -74,7 +74,8 @@ def vectorize(data):
     # buffer each vector feature by its influence distance (function of its area)
     feats = ee.FeatureCollection(feats.map(buffered_feat))
     # dissolve all vectors to merge overlapping influence area features
-    geoms = feats.geometry(config.MAX_ERR).dissolve(config.MAX_ERR).geometries()
+    geoms = feats.geometry(config.MAX_ERR).dissolve(
+        config.MAX_ERR).geometries()
     feats = ee.FeatureCollection(geoms.map(geom_feat))
     # filter to retain only merged vector features that are within CENTROID_SEARCH_RADIUS of bu_centroid
     feats = feats.filter(centroid_filter)
@@ -105,13 +106,16 @@ def flatten_to_polygons(feats, valid_check=None):
     feats = feats.map(_geom_type)
     gc_filter = ee.Filter.eq('geomType', 'GeometryCollection')
     mpoly_filter = ee.Filter.eq('geomType', 'MultiPolygon')
-    gc_data = feats.filter(gc_filter).map(flatten_geometry_collection).flatten()
+    gc_data = feats.filter(gc_filter).map(
+        flatten_geometry_collection).flatten()
     mpoly_data = feats.filter(mpoly_filter).map(flatten_multipolygon).flatten()
-    feats = feats.filter(ee.Filter.Or(gc_filter, mpoly_filter).Not()).merge(gc_data).merge(mpoly_data)
+    feats = feats.filter(ee.Filter.Or(gc_filter, mpoly_filter).Not()).merge(
+        gc_data).merge(mpoly_data)
     if valid_check is None:
         feats = feats.map(_geom_type)
     else:
-        feats = feats.map(lambda f: _filter_and_geom_type(f, valid_check), True)
+        feats = feats.map(
+            lambda f: _filter_and_geom_type(f, valid_check), True)
     return feats.filter(ee.Filter.eq('geomType', 'Polygon'))
 
 
@@ -140,7 +144,8 @@ def get_radius(area):
 
 
 def nearest_non_null(centroid):
-    distance_im = ee.FeatureCollection([centroid]).distance(config.MAX_NNN_DISTANCE)
+    distance_im = ee.FeatureCollection(
+        [centroid]).distance(config.MAX_NNN_DISTANCE)
     bounds = ee.Geometry.Point(centroid.coordinates()).buffer(
         config.MAX_NNN_DISTANCE, config.MAX_ERR)
     nearest = distance_im.addBands(ee.Image.pixelLonLat()).updateMask(geelayers.BU).reduceRegion(
@@ -217,10 +222,79 @@ def buffered_feat_area(feat, area):
 
 def buffered_feat_circle(image):
     # Create the point geometry from the latitude and longitude
-    point = ee.Geometry.Point([image.get('study_center_lon'), image.get('study_center_lat')])
+    point = ee.Geometry.Point(
+        [image.get('study_center_lon'), image.get('study_center_lat')])
     # Create the circle buffer around the point with the specified radius
     circle = point.buffer(ee.Number(image.get('study_radius')))
     # Copy all the properties from the original feature
     circle = ee.Feature(circle, image.toDictionary())
 
     return circle
+
+
+#
+# URBAN EXTENT FROM SUPER RASTERS HELPERS
+#
+#  fixes for built-up excluded during hole filling
+def add_coord_length(feat):
+    feat = ee.Feature(feat)
+    geom = feat.geometry()
+    coord_length = geom.coordinates().size()
+    return feat.set({
+        'coord_length': coord_length
+    })
+
+
+def fill_holes(feat, max_fill):
+    coords_list = feat.geometry().coordinates()
+    outer = coords_list.slice(0, 1)
+    inner = coords_list.slice(1)
+
+    def _coords_feat(coords):
+        poly = ee.Geometry.Polygon(coords)
+        return ee.Feature(poly, {
+            'area': poly.area(config.MAX_ERR),
+            'coords': coords
+        })
+    coords_fc = ee.FeatureCollection(inner.map(_coords_feat))
+    coords_fc = coords_fc.filter(ee.Filter.gte('area', max_fill))
+
+    def _get_coords(feat):
+        return ee.Feature(feat).get('coords')
+    coords_list = coords_fc.toList(coords_fc.size().add(1)).map(_get_coords)
+    coords_list = outer.cat(coords_list)
+    return feat.setGeometry(ee.Geometry.Polygon(coords_list))
+
+
+def hole_filling_method(feats, max_fill):
+    feats = feats.map(add_coord_length)
+    flat_feats = feats.filter(ee.Filter.lte('coord_length', 1))
+    complex_feats = feats  # .filter(ee.Filter.gt('coord_length',1))
+
+    def fill_small(feat):
+        return fill_holes(feat, max_fill)
+    complex_feats = complex_feats.map(fill_small)
+    feats = ee.FeatureCollection([
+        #    flat_feats,
+        complex_feats
+    ]).flatten()
+    return feats
+
+
+def flatten_to_polygons_and_fill_holes(feats, max_fill):
+    feats = ee.FeatureCollection(feats)
+    feats = feats.map(_geom_type)
+    gc_filter = ee.Filter.eq('geomType', 'GeometryCollection')
+    mpoly_filter = ee.Filter.eq('geomType', 'MultiPolygon')
+    other_filter = ee.Filter.Or(gc_filter, mpoly_filter).Not()
+    gc_data = feats.filter(gc_filter).map(
+        flatten_geometry_collection).flatten()
+    mpoly_data = feats.filter(mpoly_filter).map(flatten_multipolygon).flatten()
+    other_data = feats.filter(other_filter)
+
+    gc_data = hole_filling_method(gc_data, max_fill)
+    mpoly_data = hole_filling_method(mpoly_data, max_fill)
+    other_data = hole_filling_method(other_data, max_fill)
+
+    feats = other_data.merge(gc_data).merge(mpoly_data)
+    return feats

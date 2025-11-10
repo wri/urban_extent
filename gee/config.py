@@ -104,19 +104,19 @@ mapYear = 2020
 
 # Set output image collection for all processed cities
 ROOT = 'projects/wri-datalab/cities/urban_land_use/data'
+VERSION = 'global_GUPPD_Sept2025'
+# 'test_tori_Apr2024'/'african_cities_July2024'/'global_cities_Aug2024'/'global_GUPPD_Sept2025'
 # Update output image collection id
-IC_ID = f'{ROOT}/global_GUPPD_Sept2025/builtup_density_JRCs_{mapYear}'
-# f'{ROOT}/african_cities_July2024/builtup_density_JRCs_africa_1980'
-# f'{ROOT}/test_tori_Apr2024/builtup_density_JRCs_Kigali_Nairobi_Addis'
+IC_ID = f'{ROOT}/{VERSION}/builtup_density_JRCs_{mapYear}'
+# f'{ROOT}/{VERSION}/builtup_density_JRCs_africa_{mapYear}'
+# f'{ROOT}/{VERSION}/builtup_density_JRCs_Kigali_Nairobi_Addis'
 
 # Input city point feature collection
 # Checked city points
-# CITY_DATA_POINT = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_cities_Aug2024/city_data_checked')
-CITY_DATA_POINT = ee.FeatureCollection(
-    'projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Sept2025/guppd_v1_wUCnewcent_spotadditions')
-# 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_checked'
-# 'projects/wri-datalab/cities/urban_land_use/data/african_cities_July2024/city_data_checked_africa'
-# 'projects/wri-datalab/cities/urban_land_use/data/test_tori_Apr2024/city_data_Kigali_Nairobi_Addis'
+CITY_DATA_POINT = ee.FeatureCollection(f'{ROOT}/{VERSION}/guppd_v1_wUCnewcent_spotadditions')
+# f'{ROOT}/{VERSION}/city_data_checked_africa'
+# f'{ROOT}/{VERSION}/city_data_checked'
+# f'{ROOT}/{VERSION}/city_data_Kigali_Nairobi_Addis'
 # Polygons [not used]
 # CITY_DATA_POLY = ee.FeatureCollection('projects/wri-datalab/AUE/GHS_STAT_UCDB2015MT_GLOBE_R2019A_V1_2')
 # CITY_DATA_POLY = ee.FeatureCollection('projects/wri-datalab/cities/urban_land_use/data/global_GUPPD_Mar2025/guppd_v1_poly')
@@ -130,6 +130,14 @@ CITY_NAME_COL = 'CIES_NM_TL'
 CITY_POP_COL = 'P_R23_2020'
 # city region
 CITY_REG_COL = 'GRGN_L2'
+# country iso code
+CTR_ISO_COL = 'CTR_MN_ISO'
+# country name
+CTR_NAME_COL = 'CTR_MN_NM'
 
 # CSV file for result and progress tracking
 CITY_TRACKER = f'data/guppd_checked_cities_track_{mapYear}_guppd_v1_wUCnewcent_spotadditions.csv'
+
+# Output urban extents feature collection IDs
+URBAN_EXTENTS_FC = f'{ROOT}/{VERSION}/GHSL_BUthresh10pct_JRCs_africa_{{year}}'
+URBAN_EXTENTS_UNIONS = f'{ROOT}/{VERSION}/urbanextents_unions_{{year}}'
