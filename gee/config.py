@@ -139,5 +139,5 @@ CTR_NAME_COL = 'CTR_MN_NM'
 CITY_TRACKER = f'data/guppd_checked_cities_track_{mapYear}_guppd_v1_wUCnewcent_spotadditions.csv'
 
 # Output urban extents feature collection IDs
-URBAN_EXTENTS_FC = f'{ROOT}/{VERSION}/GHSL_BUthresh10pct_JRCs_africa_{{year}}'
+URBAN_EXTENTS_FC = f'{ROOT}/{VERSION}/GHSL_BUthresh10pct_JRCs_{{year}}'
 URBAN_EXTENTS_UNIONS = f'{ROOT}/{VERSION}/urbanextents_unions_{{year}}'

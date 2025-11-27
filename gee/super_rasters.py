@@ -151,6 +151,7 @@ filtered_cities = cities_track[(cities_track['NEED_CENTROID_CHECK'] != False) & 
 
 total_mins = 0
 TASKS = get_urban_extents(IDS, filtered_cities.index.tolist(), cities_track)
+# TASKS = get_urban_extents(IDS[IDS.index(12294):], filtered_cities.index.tolist(), cities_track)
 
 while len(TASKS) > 0:
     if total_mins == 0:
