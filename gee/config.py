@@ -113,7 +113,7 @@ IC_ID = f'{ROOT}/{VERSION}/builtup_density_JRCs_{mapYear}'
 
 # Input city point feature collection
 # Checked city points
-CITY_DATA_POINT = ee.FeatureCollection(f'{ROOT}/{VERSION}/guppd_v1_wUCnewcent_spotadditions')
+CITY_DATA_POINT = ee.FeatureCollection(f'{ROOT}/{VERSION}/guppd_v1_wUCnewcent_spotadditions_updated19122025')
 # f'{ROOT}/{VERSION}/city_data_checked_africa'
 # f'{ROOT}/{VERSION}/city_data_checked'
 # f'{ROOT}/{VERSION}/city_data_Kigali_Nairobi_Addis'
