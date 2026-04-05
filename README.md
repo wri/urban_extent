@@ -38,10 +38,10 @@
 
 6. Run [urban_extents_from_super_raster.py](gee/urban_extents_from_super_raster.py) to generate the urban extent vectors. Update `YEAR`, `ROOT`, `SUFFIX`, `SR_ID`, `DEST_NAME` for your input (urban extent ImageCollection) and output (urban extent FeatureCollection) asset IDs on GEE. 
 
-7. Run [create_city_unions.py](gee/create_city_unions.py) to union the overlapped city polygons. If necessary, run consolidation code at end of the script to consolidate chunked outputs.
-8. Run [calc_stats.py](gee/calc_stats.py) to add populations and areas at risk of flooding, landslide, and extreme heat to the urban extent features. If necessary, run consolidation code at end of the script to consolidate single-year outputs into one file.
-9. [urban-extent.ipynb](gee/urban-extent.ipynb) is used for interactive visualization.
-10. Tracking sheets and city centroid points are stored in the [data](gee/data) folder.
+7. [urban-extent.ipynb](gee/urban-extent.ipynb) is used for interactive visualization.
+8. Tracking sheets and city centroid points are stored in the [data](gee/data) folder.
+9. Run [create_city_unions.py](gee/create_city_unions.py) to union the overlapped city polygons. If necessary, run consolidation code at end of the script to consolidate chunked outputs.
+10. Run [calc_stats.py](gee/calc_stats.py) to add populations and areas at risk of flooding, landslide, and extreme heat to the urban extent features. If necessary, run consolidation code at end of the script to consolidate single-year outputs into one file.
 
 ## Method used to delineate urban extents
 To map the urban extent of any city, we followed the steps articulated here:
